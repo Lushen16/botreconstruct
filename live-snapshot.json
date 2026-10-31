@@ -4,17 +4,17 @@
     "name": "pka_live_session",
     "version": 1
   },
-  "pid": 25492,
+  "pid": 38660,
   "image": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe",
-  "generatedAt": "2026-10-31T01:12:53.079364+00:00",
+  "generatedAt": "2026-10-31T03:24:20.584994+00:00",
   "player": {
     "name": "Nobutdopai",
     "pos": {
-      "x": 3318,
-      "y": 2256,
+      "x": 3321,
+      "y": 2266,
       "z": 9
     },
-    "struct_va": "0x1e65bf4a070"
+    "struct_va": "0x1ddeb87f060"
   },
   "creatures": [
     {
@@ -44,6 +44,6 @@
     "module_base": "0x7ff716f80000"
   },
   "creaturesGeneratedAt": "2026-10-29T02:57:16.973150+00:00",
-  "clientWindowTitle": "PokeAlliance",
+  "clientWindowTitle": "PokeAlliance - Nobutdopai",
   "online": true
 }

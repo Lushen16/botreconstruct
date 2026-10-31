@@ -289,11 +289,18 @@ def identity_profile(handle, pid, creature_vtable, player_vtable):
     }
 
 def _write_json_atomic(path, value):
+    import time
     target = Path(path)
     temporary = target.with_suffix(target.suffix + ".tmp")
     text = json.dumps(value, ensure_ascii=False)
+    temporary.write_text(text, encoding="utf-8")
+    for _ in range(4):
+        try:
+            temporary.replace(target)
+            return
+        except OSError:
+            time.sleep(0.015)
     try:
-        temporary.write_text(text, encoding="utf-8")
         temporary.replace(target)
     except OSError:
         target.write_text(text, encoding="utf-8")
@@ -334,6 +341,10 @@ def stream_snapshot(handle, pid, player_name, output, interval_ms=300, rescan_ms
                 pass
             time.sleep(max(1.0, rescan_ms / 1000))
 
+    try:
+        state["creature_vas"] = rtti.scan_instances(handle, CREATURE_VTABLE)
+    except Exception:
+        pass
     threading.Thread(target=rescan, name="creature-rescan", daemon=True).start()
     try:
         while True:

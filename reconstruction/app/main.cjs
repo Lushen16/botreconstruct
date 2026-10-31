@@ -38,6 +38,7 @@ let liveProvider = null;
 let creatureProvider = null;
 let itemProvider = null;
 let itemProviderAttempt = null;
+let creatureProviderAttempt = null;
 const CREATURES_FILE = path.resolve(root, process.env.PKA_CREATURES_FILE || path.join(dataRoot, 'live-creatures.json'));
 const ITEMS_FILE = path.resolve(root, process.env.PKA_ITEMS_FILE || path.join(dataRoot, 'live-items.json'));
 let livePid = null;
@@ -133,6 +134,24 @@ function providerStatus(value) {
   }
 }
 
+function startCreatureProvider(python, pid, playerName) {
+  if (process.env.PKA_CREATURES_FILE || creatureProvider
+      || typeof playerName !== 'string' || !playerName.trim()) return;
+  const identity = JSON.stringify([pid, playerName.trim()]);
+  if (creatureProviderAttempt === identity) return;
+  creatureProviderAttempt = identity;
+  const child = spawn(python, [path.join(root, 'tools/scan_creatures.py'), '--pid', String(pid),
+    '--player-name', playerName.trim(), '--stream', '--interval-ms', '300',
+    '--output', CREATURES_FILE], { cwd: root, windowsHide: true, stdio: ['ignore', 'ignore', 'pipe'] });
+  creatureProvider = child;
+  child.stderr.on('data', value => console.error('creature scanner:', value.toString().trim()));
+  child.on('error', error => console.error('creature scanner:', error.message));
+  child.on('exit', code => {
+    console.error('creature scanner exit:', code);
+    if (creatureProvider === child) creatureProvider = null;
+  });
+}
+
 function startItemProvider(python, pid, playerName) {
   if (!keyboardBackend || process.env.PKA_ITEMS_FILE || itemProvider
       || typeof playerName !== 'string' || !playerName.trim()) return;
@@ -159,20 +178,16 @@ function startLiveProvider() {
     livePid = options.pid;
     liveProvider = spawn(python, [PROVIDER, ...options.args, '--creatures-interval-s', '0'],
       { cwd: root, windowsHide: true, stdio: ['ignore', 'pipe', 'pipe'] });
-    if (!process.env.PKA_CREATURES_FILE) {
-      creatureProvider = spawn(python, [path.join(root, 'tools/scan_creatures.py'), '--pid', String(livePid),
-        '--player-name', process.env.PKA_PLAYER_NAME || '', '--stream', '--interval-ms', '300',
-        '--output', CREATURES_FILE], { cwd: root, windowsHide: true, stdio: ['ignore', 'ignore', 'pipe'] });
-      creatureProvider.stderr.on('data', value => console.error('creature scanner:', value.toString().trim()));
-      creatureProvider.on('error', error => console.error('creature scanner:', error.message));
-      creatureProvider.on('exit', code => { console.error('creature scanner exit:', code); creatureProvider = null; });
-    }
+    startCreatureProvider(python, livePid, process.env.PKA_PLAYER_NAME);
     startItemProvider(python, livePid, process.env.PKA_PLAYER_NAME);
     providerStatus({ status: 'starting' });
     createInterface({ input: liveProvider.stdout }).on('line', line => {
       try {
         const status = JSON.parse(line);
-        if (status.ok && status.pid === livePid) startItemProvider(python, livePid, status.player?.name);
+        if (status.ok && status.pid === livePid) {
+          startCreatureProvider(python, livePid, status.player?.name);
+          startItemProvider(python, livePid, status.player?.name);
+        }
         providerStatus({ status: status.ok ? 'observing' : status.errorCode === 'process-access-denied' ? 'blocked' : 'waiting',
           error: status.error || null, errorCode: status.errorCode || null, win32Error: status.win32Error ?? null });
       } catch {}
@@ -237,6 +252,7 @@ function mapInfo(controller) {
 
 function stopLiveProvider() {
   itemProviderAttempt = null;
+  creatureProviderAttempt = null;
   if (itemProvider) { try { itemProvider.kill(); } catch {} itemProvider = null; }
   if (creatureProvider) { try { creatureProvider.kill(); } catch {} creatureProvider = null; }
   if (!liveProvider) return;
