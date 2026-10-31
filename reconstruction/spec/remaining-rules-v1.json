@@ -1,0 +1,130 @@
+{
+  "contract": "pka-remaining-rules-v1",
+  "status": "specified-partial",
+  "basis": [
+    "release-manifest rules com entrada parcial observada no dump estatico",
+    "native_remaining_rules_evidence.json: constantes, keys e predicado de timeout com ancora byte-exata",
+    "native_runtime_evidence.json e reconstruction/NATIVE_RUNTIME.md: contexto estatico parcial"
+  ],
+  "rules": [
+    {
+      "id": "BestTileScore",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "escolher melhor tile de combate"
+      ],
+      "inputs": [
+        "telemetry.tiles",
+        "telemetry.position",
+        "telemetry.creatures"
+      ],
+      "config": [
+        "hoenn.bestTile",
+        "hoenn.bestTileRange",
+        "hoenn.bestTileMaxWaitMs",
+        "hoenn.bestTileRetryMs"
+      ],
+      "outputs": [
+        "tileChoice"
+      ],
+      "blockedBy": [
+        "ranking/desempate do score nao observado"
+      ],
+      "evidence": [
+        "default_config.json",
+        "reconstruction/telemetry.cjs",
+        "native_remaining_rules_evidence.json",
+        "reconstruction/NATIVE_RUNTIME.md"
+      ],
+      "notes": "tickBestTile 0x92730..0x93c63: construtor 0x93b04 liga vtable 0xeb6e0; contexto 0x9d9ef le bestTileMaxWaitMs/RetryMs/Range/perfectLureTimeoutMs; constantes .rdata decodificadas (2.0/200.0/4000.0/2500.0/1400.0/4.0/100.0/1.0); strings reais de box 8x8. Formula de score e desempates seguem pendentes. Ver native_remaining_rules_evidence.json."
+    },
+    {
+      "id": "NextTeam",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "trocar de time/pokemon"
+      ],
+      "inputs": [
+        "telemetry.roster",
+        "telemetry.activeSlot"
+      ],
+      "config": [
+        "hoenn.roster"
+      ],
+      "outputs": [
+        "switchPokemon"
+      ],
+      "blockedBy": [
+        "predicado de troca por hp nao observado"
+      ],
+      "evidence": [
+        "default_config.json",
+        "reconstruction/protocol.cjs",
+        "native_remaining_rules_evidence.json",
+        "reconstruction/NATIVE_RUNTIME.md"
+      ],
+      "notes": "tickHoenn 0x9b4c0 consome roster em 0x9b683; cvttsd2si de health em 0x9b6b3, limite 6 slots (cmp rax,6 em 0x9b6a9) e rotacao modulo (cdq/idiv em 0x9b6c8..0x9b6ce). Criterio exato de troca por hp segue parcial. Ver native_remaining_rules_evidence.json."
+    },
+    {
+      "id": "ComboBuffDone",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "aplicar buff/medicine antes do combo"
+      ],
+      "inputs": [
+        "telemetry.conditions",
+        "telemetry.moves"
+      ],
+      "config": [
+        "target.combo.useMedicine",
+        "target.combo.useMedicineBeforeCombo",
+        "target.combo.medicineHotkey"
+      ],
+      "outputs": [
+        "hotkey"
+      ],
+      "blockedBy": [
+        "ACK do ComboStep e contagem de buffs por step nao observados"
+      ],
+      "evidence": [
+        "default_config.json",
+        "native_remaining_rules_evidence.json",
+        "reconstruction/NATIVE_RUNTIME.md"
+      ],
+      "notes": "Gate de config confirmado em 0x57df5..0x57f8d: useMedicine+useMedicineBeforeCombo+medicineHotkey/medicineActionBar; sem hotkey retorna 'Configure a hotkey de Medicine ou desative Medicine.' Gate de combo em 0x57f90..0x5818d compara elapsed contra 1000ms (comisd 0x57fe8) e contagem 3.0 (ucomisd 0x58097). Dispatch do combo em 0xa1633..0xa1800 monta pedido com pokestopToComboMs/gateStopped/useReadyGate/cycleAtSafeSpot/gateReadyPct/readyPct/gateDpsMinHp, confirmando a ordem gate->combo. ACK e contagem de buffs seguem parciais. Ver native_remaining_rules_evidence.json."
+    },
+    {
+      "id": "HealerDeployReady",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "liberar deploy quando time pronto"
+      ],
+      "inputs": [
+        "telemetry.roster",
+        "telemetry.moves"
+      ],
+      "config": [
+        "hoenn.useReadyGate",
+        "hoenn.gateReadyPct",
+        "hoenn.gateMinHp",
+        "hoenn.pokeReadyTimeoutMs"
+      ],
+      "outputs": [
+        "gate"
+      ],
+      "blockedBy": [
+        "agregacao roster-wide (gateReadyPct/gateMinHp) nao observada"
+      ],
+      "evidence": [
+        "default_config.json",
+        "native_remaining_rules_evidence.json",
+        "reconstruction/NATIVE_RUNTIME.md"
+      ],
+      "notes": "Predicado resolvido: ready = (now - deployStableSince) > max(pokeReadyTimeoutMs, 1000). Anchors byte-exatas em 0x9d240..0x9d2c7 (subsd/maxsd/comisd/jbe, const 1000.0 em rdata 0xecf80). Gate agrega ainda nao observado. Ver native_remaining_rules_evidence.json."
+    }
+  ]
+}

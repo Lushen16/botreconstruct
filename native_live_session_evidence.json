@@ -1,0 +1,82 @@
+{
+  "name": "live-session-evidence",
+  "captured_at": "2026-10-23",
+  "processes": {
+    "game": {"name": "PokeAlliance_dx.exe", "pid": 37152},
+    "engine": {"name": "PKAengine.exe", "pid": 5580, "path": "C:\\Program Files\\Litfix\\PKAengine.exe"},
+    "proxy": {"path": "C:\\Program Files\\Litfix\\PKA-Proxy.exe"}
+  },
+  "stomp_region": {
+    "allocation_base": "0x7ff85c470000",
+    "header": "zerado (e_magic 0000, sem PE signature) em todas as sessoes",
+    "marker_PKA_INIT_SESSION": "0x7ff85c5557d8",
+    "marker_rva": "0xe57d8"
+  },
+  "dumps": {
+    "full_image": {
+      "path": "dumps/pid37152_msftedit.memory.bin",
+      "size": 3309568,
+      "sha256": "91f6aaef8fcebd9097d1994c1a36b558aaeb890391e997b94cfd018eb9ca49e8"
+    },
+    "text": {
+      "path": "dumps/msftedit_text_live_37152.bin",
+      "size": 2650112,
+      "sha256": "e44df8d64929672b20252f54b6a2221c7ae5a7082e11a832213f1d6f84062b3f"
+    },
+    "rebuilt_pe": {
+      "path": "dumps/payload_reconstructed_live37152.dll",
+      "sha256": "36b3b165a62b5ec9c42c4089438649260b533a39a2e8c35faf6d1f1ee14ee2d5",
+      "evidence": "dumps/payload_reconstructed_live37152.dll.evidence.json",
+      "template": "C:\\Windows\\System32\\msftedit.dll"
+    }
+  },
+  "build_difference": {
+    "conclusion": "O payload vivo (PID 37152) e uma build DIFERENTE da sessao 32336: strings de config deslocadas ~0xa80, codigo sem correspondencia byte-a-byte, prologue de tickBestTile em 0x61b60 (vivo) vs 0x612b0 (32336).",
+    "evidence": [
+      {"key": "bestTileMaxWaitMs", "rva_32336": "0xe8ea8", "rva_live": "0xe9940", "delta": "0xa98"},
+      {"key": "pokeReadyTimeoutMs", "rva_32336": "0xe8c60", "rva_live": "0xe96f8", "delta": "0xa98"},
+      {"key": "useMedicineBeforeCombo", "rva_32336": "0xe62b8", "rva_live": "0xe6d38", "delta": "0xa80"},
+      {"key": "PKA-INIT-SESSION", "rva_32336": "0xe3d58", "rva_live": "0xe47d8", "delta": "0xa80"},
+      {"anchor": "tickBestTile prologue", "rva_32336": "0x612b0", "rva_live": "0x61b60"},
+      {"anchor": "movsd xmm6,[rip+0x59fe0] @0x92e98", "present_live": false}
+    ],
+    "note": "Strings de config sao compartilhadas entre builds; o codigo de instrucao difere. A build 37152 nao tem as mesmas ancoras de codigo da 32336."
+  },
+  "identity_status": {
+    "original_name": "RESOLVED",
+    "name": "shiba_bots.dll",
+    "origin": "Recurso embutido (encriptado) no injetor a497a7a52bf97c5bcc5fad69c7958ce6.exe.tmp; extraido em runtime como %s\\dll\\shiba_bots.dll via FindResource/LockResource/CreateFileW/WriteFile, injetado no jogo e deletado.",
+    "evidence_strings_in_injector": [
+      "%.*s\\dll\\shiba_bots.dll",
+      "%s.tmp",
+      ".pka-before-unblock-",
+      "C:\\OTPbot",
+      "\\OTPbot",
+      "PKA-MENU-RUN-V1"
+    ],
+    "injector_apis": [
+      "FindResourceA",
+      "LoadResource",
+      "LockResource",
+      "CreateFileW",
+      "WriteFile",
+      "VirtualProtect",
+      "LoadLibraryExW",
+      "CheckRemoteDebuggerPresent",
+      "IsDebuggerPresent"
+    ],
+    "raw_file_unavailable": "O recurso do payload esta encriptado/compactado no injetor (sem marcadores PKA em claro); o arquivo shiba_bots.dll e criado e apagado a cada injecao.",
+    "capture_recipe": {
+      "tool": "tools/seize_payload_dll.py",
+      "how": "Rodar o seizer ANTES de o menu do bot iniciar a injecao; ele abre o DLL com GENERIC_READ sem FILE_SHARE_DELETE, travando o DeleteFile do injetor, e copia os bytes desencriptados.",
+      "command": "python tools/seize_payload_dll.py --dir \"<pasta dll do menu>\" --out dumps/seized --pattern shiba --timeout 240",
+      "status": "PRONTO; a extracao exige sessao logada (ShibaLauncher + jogo + iniciar) que nao pude acionar sem a UI do usuario; jogo restaurado apos tentativa."
+    },
+    "resolved_at": "2026-10-23"
+  },
+  "limitations": [
+    "Leitura read-only via OpenProcess+VirtualQueryEx+ReadProcessMemory; nada foi escrito no alvo.",
+    "PKAengine.exe/PKA-Proxy.exe escaneados em disco: apenas a string 'PKAengine' (nome proprio), sem payload embutido identificavel.",
+    "Scan de memoria do jogo: 0 candidatos a PE intacto alem da regiao stompada; marcadores PKA apenas na regiao 0x7ff85c470000."
+  ]
+}

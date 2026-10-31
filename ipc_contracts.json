@@ -1,0 +1,706 @@
+{
+  "authority": "static-source",
+  "runtime_verified": false,
+  "apis": [
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "namespace": "pkaLook",
+      "method": "onShow",
+      "channels": [
+        {
+          "channel": "pka-look:show",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "namespace": "pkaLook",
+      "method": "copy",
+      "channels": [
+        {
+          "channel": "pka-look:copy",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "namespace": "pkaLook",
+      "method": "close",
+      "channels": [
+        {
+          "channel": "pka-look:close",
+          "operation": "send",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "bootstrap",
+      "channels": [
+        {
+          "channel": "pka:bootstrap",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "pause",
+      "channels": [
+        {
+          "channel": "pka:pause",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "view",
+      "channels": [
+        {
+          "channel": "pka:view",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "performance",
+      "channels": [
+        {
+          "channel": "pka:performance",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "shortcuts",
+      "channels": [
+        {
+          "channel": "pka:shortcuts",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "mapInfo",
+      "channels": [
+        {
+          "channel": "pka:mapInfo",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "openMap",
+      "channels": [
+        {
+          "channel": "pka:openMap",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "resetMap",
+      "channels": [
+        {
+          "channel": "pka:resetMap",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "walkerProfiles",
+      "channels": [
+        {
+          "channel": "pka:walkerProfiles",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "loadWalkerProfile",
+      "channels": [
+        {
+          "channel": "pka:loadWalkerProfile",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "mapRegion",
+      "channels": [
+        {
+          "channel": "pka:mapRegion",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "command",
+      "channels": [
+        {
+          "channel": "pka:command",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "save",
+      "channels": [
+        {
+          "channel": "pka:save",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "autosave",
+      "channels": [
+        {
+          "channel": "pka:autosave",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "copyText",
+      "channels": [
+        {
+          "channel": "pka:copyText",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "showLook",
+      "channels": [
+        {
+          "channel": "pka:showLook",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "quit",
+      "channels": [
+        {
+          "channel": "pka:quit",
+          "operation": "invoke",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onClosing",
+      "channels": [
+        {
+          "channel": "pka:closing",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "select",
+      "channels": [
+        {
+          "channel": "pka:select",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "remove",
+      "channels": [
+        {
+          "channel": "pka:remove",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "importProfile",
+      "channels": [
+        {
+          "channel": "pka:import",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "exportProfile",
+      "channels": [
+        {
+          "channel": "pka:export",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "monitor",
+      "channels": [
+        {
+          "channel": "pka:monitor",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "gmLearning",
+      "channels": [
+        {
+          "channel": "pka:gmLearning",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onSettings",
+      "channels": [
+        {
+          "channel": "pka:settings",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onGmProfiles",
+      "channels": [
+        {
+          "channel": "pka:gm-profiles",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "runtime",
+      "channels": [
+        {
+          "channel": "pka:runtime",
+          "operation": "invoke",
+          "resolution": "static-wrapper"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onAlertSound",
+      "channels": [
+        {
+          "channel": "pka:alert-sound",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onAlertState",
+      "channels": [
+        {
+          "channel": "pka:alert-state",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onSnapshot",
+      "channels": [
+        {
+          "channel": "pka:snapshot",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "namespace": "pka",
+      "method": "onNotice",
+      "channels": [
+        {
+          "channel": "pka:notice",
+          "operation": "on",
+          "resolution": "literal"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka-look:show",
+      "dynamic": false,
+      "expression": "\"pka-look:show\""
+    },
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka-look:show",
+      "dynamic": false,
+      "expression": "\"pka-look:show\""
+    },
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka-look:copy",
+      "dynamic": false,
+      "expression": "\"pka-look:copy\""
+    },
+    {
+      "file": "look-preload.cjs",
+      "line": 1,
+      "operation": "send",
+      "channel": "pka-look:close",
+      "dynamic": false,
+      "expression": "\"pka-look:close\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": null,
+      "dynamic": true,
+      "expression": "`pka:${e}`"
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:bootstrap",
+      "dynamic": false,
+      "expression": "\"pka:bootstrap\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:pause",
+      "dynamic": false,
+      "expression": "\"pka:pause\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:view",
+      "dynamic": false,
+      "expression": "\"pka:view\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:performance",
+      "dynamic": false,
+      "expression": "\"pka:performance\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:mapInfo",
+      "dynamic": false,
+      "expression": "\"pka:mapInfo\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:openMap",
+      "dynamic": false,
+      "expression": "\"pka:openMap\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:resetMap",
+      "dynamic": false,
+      "expression": "\"pka:resetMap\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:mapRegion",
+      "dynamic": false,
+      "expression": "\"pka:mapRegion\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:command",
+      "dynamic": false,
+      "expression": "\"pka:command\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:autosave",
+      "dynamic": false,
+      "expression": "\"pka:autosave\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:copyText",
+      "dynamic": false,
+      "expression": "\"pka:copyText\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:showLook",
+      "dynamic": false,
+      "expression": "\"pka:showLook\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "invoke",
+      "channel": "pka:quit",
+      "dynamic": false,
+      "expression": "\"pka:quit\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:closing",
+      "dynamic": false,
+      "expression": "\"pka:closing\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:closing",
+      "dynamic": false,
+      "expression": "\"pka:closing\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:settings",
+      "dynamic": false,
+      "expression": "\"pka:settings\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:settings",
+      "dynamic": false,
+      "expression": "\"pka:settings\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:gm-profiles",
+      "dynamic": false,
+      "expression": "\"pka:gm-profiles\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:gm-profiles",
+      "dynamic": false,
+      "expression": "\"pka:gm-profiles\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:alert-sound",
+      "dynamic": false,
+      "expression": "\"pka:alert-sound\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:alert-sound",
+      "dynamic": false,
+      "expression": "\"pka:alert-sound\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:alert-state",
+      "dynamic": false,
+      "expression": "\"pka:alert-state\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:alert-state",
+      "dynamic": false,
+      "expression": "\"pka:alert-state\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:snapshot",
+      "dynamic": false,
+      "expression": "\"pka:snapshot\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:snapshot",
+      "dynamic": false,
+      "expression": "\"pka:snapshot\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "on",
+      "channel": "pka:notice",
+      "dynamic": false,
+      "expression": "\"pka:notice\""
+    },
+    {
+      "file": "preload.cjs",
+      "line": 1,
+      "operation": "removeListener",
+      "channel": "pka:notice",
+      "dynamic": false,
+      "expression": "\"pka:notice\""
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "pid": 49889,
+  "authenticated": true,
+  "events": [],
+  "stdout": [
+    "PKA_READY pid=49889 pipe=\\\\.\\pipe\\pka-runtime-2-49889",
+    "PKA_CLIENT",
+    "PKA_AUTH pid=49889"
+  ]
+}

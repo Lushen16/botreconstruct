@@ -1,0 +1,418 @@
+{
+  "version": 1,
+  "source": "release-manifest.json protection.rules (decision-bytecode-v1)",
+  "authority": "menuside reconstruction; native thresholds remain UNVERIFIED",
+  "statusLegend": {
+    "implemented": "coberto por motor independente e testes deterministicos",
+    "partial": "coberto em parte; semantica nativa/limitacoes declaradas",
+    "unsupported": "sem implementacao nesta fase",
+    "native-unknown": "regra nativa sem contrato observado"
+  },
+  "rules": [
+    {
+      "id": "Emergency",
+      "group": "healer",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/healer-engine.cjs"
+      ],
+      "config": [
+        "hoenn.potionHpPercent",
+        "hoenn.potionCooldownMs",
+        "healer.healHpPercent"
+      ],
+      "notes": "Potion/pet heal priority antes de combate."
+    },
+    {
+      "id": "TargetMinimum",
+      "group": "target",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/target-engine.cjs"
+      ],
+      "config": [
+        "hoenn.perfectLure",
+        "hoenn.minWildsToEngage",
+        "hoenn.forceBox"
+      ],
+      "notes": "Abaixo do minimo retorna luring sem atacar."
+    },
+    {
+      "id": "TargetRank",
+      "group": "target",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/target-engine.cjs"
+      ],
+      "config": [
+        "target.shinyPriorityEnabled",
+        "target.ignoredCreaturesText"
+      ],
+      "notes": "canAttack + ignore + shiny + Chebyshev + id."
+    },
+    {
+      "id": "BestTileScore",
+      "group": "hoenn",
+      "status": "partial",
+      "evidence": [
+        "native_remaining_rules_evidence.json",
+        "reconstruction/spec/remaining-rules-v1.json"
+      ],
+      "config": [
+        "hoenn.bestTile",
+        "hoenn.bestTileRange",
+        "hoenn.bestTileMaxWaitMs"
+      ],
+      "notes": "Constantes e keys config observadas em tickBestTile 0x92730..0x93c63; ranking/desempate ainda parciais."
+    },
+    {
+      "id": "HoennMinimum",
+      "group": "hoenn",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/target-engine.cjs"
+      ],
+      "config": [
+        "hoenn.minWildsToEngage",
+        "hoenn.formation"
+      ],
+      "notes": "Minimo usado; ciclo/formation de Hoenn nao implementado."
+    },
+    {
+      "id": "NextTeam",
+      "group": "hoenn",
+      "status": "partial",
+      "evidence": [
+        "native_remaining_rules_evidence.json",
+        "reconstruction/spec/remaining-rules-v1.json"
+      ],
+      "config": [
+        "hoenn.roster"
+      ],
+      "notes": "Roster consumido, rotacao modulo 6 slots observada em tickHoenn; predicado de troca por hp ainda parcial."
+    },
+    {
+      "id": "HealWanted",
+      "group": "healer",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/healer-engine.cjs"
+      ],
+      "config": [
+        "healer.healHpPercent",
+        "hoenn.potionHpPercent"
+      ],
+      "notes": "Limiares de vida."
+    },
+    {
+      "id": "TargetEligible",
+      "group": "target",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/target-engine.cjs"
+      ],
+      "config": [
+        "target.ignoredCreaturesText"
+      ],
+      "notes": "Filtro de elegibilidade."
+    },
+    {
+      "id": "PathEstimate",
+      "group": "walker",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/walker-engine.cjs"
+      ],
+      "config": [
+        "walker.smartWalking"
+      ],
+      "notes": "Chebyshev por eixo; sem A*/obstaculos/andares."
+    },
+    {
+      "id": "PathCost",
+      "group": "walker",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/walker-engine.cjs"
+      ],
+      "config": [
+        "walker.smartWalking"
+      ],
+      "notes": "Custo implicito na escolha de eixo; sem modelo de custo."
+    },
+    {
+      "id": "ComboMoveValid",
+      "group": "target",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/target-engine.cjs"
+      ],
+      "config": [
+        "target.combo.sequenceText"
+      ],
+      "notes": "Tokens mN/nativeSequence filtrados."
+    },
+    {
+      "id": "ComboAck",
+      "group": "target",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/transport.cjs"
+      ],
+      "config": [
+        "target.combo.stepDelay"
+      ],
+      "notes": "Transport espera ACK; automacao ainda nao bloqueia passo por ACK."
+    },
+    {
+      "id": "ComboBuffDone",
+      "group": "target",
+      "status": "partial",
+      "evidence": [
+        "native_remaining_rules_evidence.json",
+        "reconstruction/spec/remaining-rules-v1.json"
+      ],
+      "config": [
+        "target.combo.useMedicine",
+        "target.combo.useMedicineBeforeCombo"
+      ],
+      "notes": "Gate de config useMedicine/useMedicineBeforeCombo/medicineHotkey confirmado em 0x57df5; consts 1000ms e 3.0 em 0x57fe8/0x58097. Ordem buff->combo e ACK parciais."
+    },
+    {
+      "id": "AlertOnline",
+      "group": "alerts",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "Gate de sessao online->offline; notify/pause via alerts-engine."
+    },
+    {
+      "id": "AlertMatches",
+      "group": "alerts",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "hp/creature/hunt_pokemon/teleport e chat local por talk implementados no subset; filtros nativos de chat e classificacao player/GM/setas/viewers/captura seguem sem prova. Decoder de eventos validado diferencialmente em alert_vectors.json."
+    },
+    {
+      "id": "AlertRepeat",
+      "group": "alerts",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "soundRepeatEnabled/soundRepeatSeconds implementados."
+    },
+    {
+      "id": "AlertSuppressed",
+      "group": "alerts",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "hpOnce/repeat/cooldown implementados no subset suportado."
+    },
+    {
+      "id": "CaptureEligible",
+      "group": "looting",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "reconstruction/fixtures/telemetry-schema2-inspection-redacted.json"
+      ],
+      "config": [
+        "looting.captureEnabled",
+        "looting.maxCaptureDist"
+      ],
+      "notes": "inspection schema2 observado; id/andar/distancia; visibilidade nativa nao observada."
+    },
+    {
+      "id": "CaptureBall",
+      "group": "looting",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "reconstruction/fixtures/telemetry-schema2-inspection-redacted.json"
+      ],
+      "config": [
+        "looting.captureEntries"
+      ],
+      "notes": "itemCounts id/count observado; ball primaria/fallback; consumo nativo nao observado."
+    },
+    {
+      "id": "CaptureRank",
+      "group": "looting",
+      "status": "partial",
+      "evidence": [
+        "native_capture_evidence.json",
+        "native_capture_static.json",
+        "native_capture_disasm.txt",
+        "reconstruction/CAPTURE_NATIVE.md",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "tests/capture_native.test.cjs"
+      ],
+      "config": [
+        "looting.captureEntries"
+      ],
+      "notes": "Comparador deterministico comprovado no dump e implementado offline; sem modo aleatorio/ciclo nativo completo."
+    },
+    {
+      "id": "CaptureApproach",
+      "group": "looting",
+      "status": "partial",
+      "evidence": [
+        "native_capture_evidence.json",
+        "native_capture_static.json",
+        "native_capture_disasm.txt",
+        "reconstruction/CAPTURE_NATIVE.md",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "tests/capture_native.test.cjs"
+      ],
+      "config": [
+        "looting.captureAfterCombat"
+      ],
+      "notes": "Planejamento useWith e revalidacao comprovados offline. Binding do worker em 0x8461a -> 0xc6360 -> 0xcfe40 resolvido; registro pendente nao prova consumo/hook/ACK. Ver reconstruction/NATIVE_RUNTIME.md e native_runtime_evidence.json."
+    },
+    {
+      "id": "CaptureDelay",
+      "group": "looting",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "reconstruction/fixtures/telemetry-schema2-inspection-redacted.json"
+      ],
+      "config": [
+        "looting.captureDelay"
+      ],
+      "notes": "captureDelay puro; depende de CaptureEligible."
+    },
+    {
+      "id": "LureLeadScore",
+      "group": "lure",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/lure-engine.cjs",
+        "reconstruction/engines/native-random.cjs",
+        "native_runtime_evidence.json",
+        "reconstruction/NATIVE_RUNTIME.md",
+        "tests/native_runtime.test.cjs"
+      ],
+      "config": [
+        "target.luring.maxDistance",
+        "target.luring.frontRegroupMargin"
+      ],
+      "notes": "Distancia/margem locais; janela aleatoria usa segundos inteiros recuperados em 0x8ed30/0x64ea0, testados em native_runtime.test.cjs. TravelLure::plan 0x6f610 identificado; score, desempates e recuperacao completos continuam parciais. Ver reconstruction/NATIVE_RUNTIME.md."
+    },
+    {
+      "id": "LureCandidate",
+      "group": "lure",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/lure-engine.cjs"
+      ],
+      "config": [
+        "target.luring.enabled"
+      ],
+      "notes": "Criatura atacavel mais proxima."
+    },
+    {
+      "id": "LureRecovered",
+      "group": "lure",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/lure-engine.cjs"
+      ],
+      "config": [
+        "target.luring.maxDistance"
+      ],
+      "notes": "Timeout 8s / release 3s (documentado no LEIA-ME)."
+    },
+    {
+      "id": "HealerTimeout",
+      "group": "healer",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/healer-engine.cjs"
+      ],
+      "config": [
+        "healer.healHpPercent"
+      ],
+      "notes": "Cooldowns de potion/medicine/heal; sem timeout de deploy."
+    },
+    {
+      "id": "HealerDeployReady",
+      "group": "healer",
+      "status": "partial",
+      "evidence": [
+        "native_remaining_rules_evidence.json",
+        "reconstruction/spec/remaining-rules-v1.json"
+      ],
+      "config": [
+        "hoenn.pokeReadyTimeoutMs"
+      ],
+      "notes": "Predicado elapsed > max(pokeReadyTimeoutMs,1000) com clamp 1000ms observado em 0x9d2b7; agregacao roster-wide pendente."
+    },
+    {
+      "id": "AlertNearby",
+      "group": "alerts",
+      "status": "partial",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "Creature por range/z implementado; player continua bloqueado."
+    },
+    {
+      "id": "AlertTeleport",
+      "group": "alerts",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "Delta >=3 tiles apos teleportIntervalMs."
+    },
+    {
+      "id": "AlertDue",
+      "group": "alerts",
+      "status": "implemented",
+      "evidence": [
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "notes": "Agendamento por intervalo de repeticao."
+    }
+  ]
+}

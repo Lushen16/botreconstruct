@@ -1,0 +1,263 @@
+{
+  "text_sha256": "7c0fd219dc24f3fa273ded518eca8ea840d3395f00d14e78beacb4ffd7c50ea4",
+  "base": "0x7ff85c470000",
+  "functions": {
+    "native_init": {
+      "start": 140704676861328,
+      "len": 1280,
+      "rva": "0x15590",
+      "strings": [
+        {
+          "insn": "0x7ff85c485682",
+          "string": "starting"
+        },
+        {
+          "insn": "0x7ff85c4856aa",
+          "string": "bd2d8b2422bb60f6f72dc4bc9c4df0f0c560c5e15fbff89662ea85794a9575bb"
+        },
+        {
+          "insn": "0x7ff85c4856b7",
+          "string": "74bc739c8e0b207ea4007b420f7bd6fa8cbd6d2f3345b90d06e205a1232a89e4"
+        },
+        {
+          "insn": "0x7ff85c4856c4",
+          "string": "954de5c4a36a173f50059b77d9089fb99ce91d79b1d6ba6c45199bcabf514751"
+        },
+        {
+          "insn": "0x7ff85c4857a6",
+          "string": "PKA-INIT-NATIVE"
+        },
+        {
+          "insn": "0x7ff85c485995",
+          "string": "ready"
+        },
+        {
+          "insn": "0x7ff85c4859a4",
+          "string": "PKA-INIT-SESSION"
+        }
+      ]
+    },
+    "dispatcher": {
+      "start": 140704676850752,
+      "len": 800,
+      "rva": "0x12c40",
+      "strings": [
+        {
+          "insn": "0x7ff85c482c8f",
+          "string": "follow"
+        },
+        {
+          "insn": "0x7ff85c482c96",
+          "string": "attack"
+        },
+        {
+          "insn": "0x7ff85c482cde",
+          "string": "follow"
+        },
+        {
+          "insn": "0x7ff85c482ce5",
+          "string": "attack"
+        }
+      ]
+    },
+    "tick_validation": {
+      "start": 140704677341014,
+      "len": 1792,
+      "rva": "0x8a756",
+      "strings": [
+        {
+          "insn": "0x7ff85c4fa794",
+          "string": "walker"
+        },
+        {
+          "insn": "0x7ff85c4fa7a7",
+          "string": "walker"
+        },
+        {
+          "insn": "0x7ff85c4fa7ba",
+          "string": "waypoints"
+        },
+        {
+          "insn": "0x7ff85c4fa7d2",
+          "string": "Adicione waypoints ao Walker."
+        },
+        {
+          "insn": "0x7ff85c4fa7de",
+          "string": "target"
+        },
+        {
+          "insn": "0x7ff85c4fa7f5",
+          "string": "monsters"
+        },
+        {
+          "insn": "0x7ff85c4fa814",
+          "string": "Adicione uma criatura ao Target."
+        },
+        {
+          "insn": "0x7ff85c4fa820",
+          "string": "instanceModeEnabled"
+        },
+        {
+          "insn": "0x7ff85c4fa837",
+          "string": "Modo instância ainda não disponível. Desative para iniciar."
+        },
+        {
+          "insn": "0x7ff85c4fa843",
+          "string": "enabled"
+        },
+        {
+          "insn": "0x7ff85c4fa8ae",
+          "string": "autoRevive"
+        },
+        {
+          "insn": "0x7ff85c4fa8c4",
+          "string": "enabled"
+        },
+        {
+          "insn": "0x7ff85c4fa8d4",
+          "string": "autoRevive"
+        },
+        {
+          "insn": "0x7ff85c4fa8ea",
+          "string": "hotkey"
+        },
+        {
+          "insn": "0x7ff85c4fa935",
+          "string": "Configure a hotkey de Revive."
+        },
+        {
+          "insn": "0x7ff85c4fa941",
+          "string": "enabled"
+        },
+        {
+          "insn": "0x7ff85c4fa958",
+          "string": "usePokeStop"
+        },
+        {
+          "insn": "0x7ff85c4fa96f",
+          "string": "conditionEvents"
+        },
+        {
+          "insn": "0x7ff85c4fa983",
+          "string": "Monitor de PokeStop indisponível."
+        },
+        {
+          "insn": "0x7ff85c4fa98f",
+          "string": "healer"
+        },
+        {
+          "insn": "0x7ff85c4fa9a9",
+          "string": "healer"
+        },
+        {
+          "insn": "0x7ff85c4fa9bf",
+          "string": "healHpPercent"
+        },
+        {
+          "insn": "0x7ff85c4fa9d6",
+          "string": "healPokemonName"
+        },
+        {
+          "insn": "0x7ff85c4faa25",
+          "string": "Configure HP e Pokémon de cura."
+        },
+        {
+          "insn": "0x7ff85c4faa34",
+          "string": "healHpPercent"
+        },
+        {
+          "insn": "0x7ff85c4faa4d",
+          "string": "healPokemonName"
+        },
+        {
+          "insn": "0x7ff85c4faa88",
+          "string": "returnPokemonName"
+        },
+        {
+          "insn": "0x7ff85c4faaaf",
+          "string": "returnPokemonName"
+        },
+        {
+          "insn": "0x7ff85c4fab16",
+          "string": "healer"
+        },
+        {
+          "insn": "0x7ff85c4fab40",
+          "string": "tools"
+        },
+        {
+          "insn": "0x7ff85c4fab60",
+          "string": "tools"
+        },
+        {
+          "insn": "0x7ff85c4fab97",
+          "string": "looting"
+        },
+        {
+          "insn": "0x7ff85c4fabaa",
+          "string": "looting"
+        },
+        {
+          "insn": "0x7ff85c4fabbd",
+          "string": "captureEnabled"
+        },
+        {
+          "insn": "0x7ff85c4fabd0",
+          "string": "captureVersion"
+        },
+        {
+          "insn": "0x7ff85c4fabec",
+          "string": "Ative a captura e use a DLL atualizada."
+        },
+        {
+          "insn": "0x7ff85c4fabf5",
+          "string": "hoenn"
+        },
+        {
+          "insn": "0x7ff85c4fac0c",
+          "string": "roster"
+        },
+        {
+          "insn": "0x7ff85c4fac2d",
+          "string": "Hoenn precisa dos seis Pokémon da pokebar."
+        },
+        {
+          "insn": "0x7ff85c4fac67",
+          "string": "formation"
+        },
+        {
+          "insn": "0x7ff85c4fac7f",
+          "string": "3x2"
+        },
+        {
+          "insn": "0x7ff85c4facaa",
+          "string": "hoenn"
+        },
+        {
+          "insn": "0x7ff85c4facba",
+          "string": "roster"
+        },
+        {
+          "insn": "0x7ff85c4fad0c",
+          "string": "uuid"
+        },
+        {
+          "insn": "0x7ff85c4fad66",
+          "string": "name"
+        },
+        {
+          "insn": "0x7ff85c4fada6",
+          "string": "uuid"
+        },
+        {
+          "insn": "0x7ff85c4fadc8",
+          "string": "uuid"
+        },
+        {
+          "insn": "0x7ff85c4fade2",
+          "string": "uuid"
+        }
+      ]
+    }
+  }
+}

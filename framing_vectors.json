@@ -1,0 +1,953 @@
+{
+  "generatedAt": "2026-10-22T13:24:02.717Z",
+  "authority": "controlled-pure-function-execution",
+  "hashes": {
+    "telemetry": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+    "pipe-bridge": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4"
+  },
+  "KIND": {
+    "challenge": 1,
+    "authenticate": 2,
+    "welcome": 3,
+    "state": 4,
+    "telemetry": 5,
+    "automation": 6,
+    "startup": 7,
+    "automation_revoked": 8,
+    "manual": 9,
+    "ack": 10,
+    "automation_control": 11,
+    "automation_lease": 12
+  },
+  "MAX_FRAME": 2105344,
+  "casesSha256": "4df93c2c97b520644b856017d8542dc2afe0cb8bf06f625cae5b7f838c624716",
+  "cases": [
+    {
+      "kind": 1,
+      "payloadHex": "",
+      "observedHex": "0000000001000000"
+    },
+    {
+      "kind": 1,
+      "payloadHex": "00",
+      "observedHex": "010000000100000000"
+    },
+    {
+      "kind": 1,
+      "payloadHex": "616263",
+      "observedHex": "0300000001000000616263"
+    },
+    {
+      "kind": 1,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000001000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 1,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000001000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 1,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000100000061c3a7c3a36f"
+    },
+    {
+      "kind": 1,
+      "payloadHex": "080706",
+      "observedHex": "0300000001000000080706"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "",
+      "observedHex": "0000000002000000"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "00",
+      "observedHex": "010000000200000000"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "616263",
+      "observedHex": "0300000002000000616263"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000002000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000002000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000200000061c3a7c3a36f"
+    },
+    {
+      "kind": 2,
+      "payloadHex": "080706",
+      "observedHex": "0300000002000000080706"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "",
+      "observedHex": "0000000003000000"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "00",
+      "observedHex": "010000000300000000"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "616263",
+      "observedHex": "0300000003000000616263"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000003000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000003000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000300000061c3a7c3a36f"
+    },
+    {
+      "kind": 3,
+      "payloadHex": "080706",
+      "observedHex": "0300000003000000080706"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "",
+      "observedHex": "0000000004000000"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "00",
+      "observedHex": "010000000400000000"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "616263",
+      "observedHex": "0300000004000000616263"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000004000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000004000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000400000061c3a7c3a36f"
+    },
+    {
+      "kind": 4,
+      "payloadHex": "080706",
+      "observedHex": "0300000004000000080706"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "",
+      "observedHex": "0000000005000000"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "00",
+      "observedHex": "010000000500000000"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "616263",
+      "observedHex": "0300000005000000616263"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000005000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000005000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000500000061c3a7c3a36f"
+    },
+    {
+      "kind": 5,
+      "payloadHex": "080706",
+      "observedHex": "0300000005000000080706"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "",
+      "observedHex": "0000000006000000"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "00",
+      "observedHex": "010000000600000000"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "616263",
+      "observedHex": "0300000006000000616263"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000006000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000006000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000600000061c3a7c3a36f"
+    },
+    {
+      "kind": 6,
+      "payloadHex": "080706",
+      "observedHex": "0300000006000000080706"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "",
+      "observedHex": "0000000007000000"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "00",
+      "observedHex": "010000000700000000"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "616263",
+      "observedHex": "0300000007000000616263"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000007000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000007000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000700000061c3a7c3a36f"
+    },
+    {
+      "kind": 7,
+      "payloadHex": "080706",
+      "observedHex": "0300000007000000080706"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "",
+      "observedHex": "0000000008000000"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "00",
+      "observedHex": "010000000800000000"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "616263",
+      "observedHex": "0300000008000000616263"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000008000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000008000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000800000061c3a7c3a36f"
+    },
+    {
+      "kind": 8,
+      "payloadHex": "080706",
+      "observedHex": "0300000008000000080706"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "",
+      "observedHex": "0000000009000000"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "00",
+      "observedHex": "010000000900000000"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "616263",
+      "observedHex": "0300000009000000616263"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000009000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000009000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000900000061c3a7c3a36f"
+    },
+    {
+      "kind": 9,
+      "payloadHex": "080706",
+      "observedHex": "0300000009000000080706"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "",
+      "observedHex": "000000000a000000"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "00",
+      "observedHex": "010000000a00000000"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "616263",
+      "observedHex": "030000000a000000616263"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "300000000a000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff0000000a000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000a00000061c3a7c3a36f"
+    },
+    {
+      "kind": 10,
+      "payloadHex": "080706",
+      "observedHex": "030000000a000000080706"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "",
+      "observedHex": "000000000b000000"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "00",
+      "observedHex": "010000000b00000000"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "616263",
+      "observedHex": "030000000b000000616263"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "300000000b000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff0000000b000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000b00000061c3a7c3a36f"
+    },
+    {
+      "kind": 11,
+      "payloadHex": "080706",
+      "observedHex": "030000000b000000080706"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "",
+      "observedHex": "000000000c000000"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "00",
+      "observedHex": "010000000c00000000"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "616263",
+      "observedHex": "030000000c000000616263"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "300000000c000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff0000000c000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000c00000061c3a7c3a36f"
+    },
+    {
+      "kind": 12,
+      "payloadHex": "080706",
+      "observedHex": "030000000c000000080706"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "",
+      "observedHex": "0000000000000000"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "00",
+      "observedHex": "010000000000000000"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "616263",
+      "observedHex": "0300000000000000616263"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000000000061c3a7c3a36f"
+    },
+    {
+      "kind": 0,
+      "payloadHex": "080706",
+      "observedHex": "0300000000000000080706"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "",
+      "observedHex": "00000000ff000000"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "00",
+      "observedHex": "01000000ff00000000"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "616263",
+      "observedHex": "03000000ff000000616263"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "30000000ff000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff000000ff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "06000000ff00000061c3a7c3a36f"
+    },
+    {
+      "kind": 255,
+      "payloadHex": "080706",
+      "observedHex": "03000000ff000000080706"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "",
+      "observedHex": "0000000000010000"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "00",
+      "observedHex": "010000000001000000"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "616263",
+      "observedHex": "0300000000010000616263"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000010000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000010000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000001000061c3a7c3a36f"
+    },
+    {
+      "kind": 256,
+      "payloadHex": "080706",
+      "observedHex": "0300000000010000080706"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "",
+      "observedHex": "00000000ffff0000"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "00",
+      "observedHex": "01000000ffff000000"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "616263",
+      "observedHex": "03000000ffff0000616263"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "30000000ffff0000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff000000ffff0000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "06000000ffff000061c3a7c3a36f"
+    },
+    {
+      "kind": 65535,
+      "payloadHex": "080706",
+      "observedHex": "03000000ffff0000080706"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "",
+      "observedHex": "00000000ffffffff"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "00",
+      "observedHex": "01000000ffffffff00"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "616263",
+      "observedHex": "03000000ffffffff616263"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "30000000ffffffffa5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "06000000ffffffff61c3a7c3a36f"
+    },
+    {
+      "kind": 4294967295,
+      "payloadHex": "080706",
+      "observedHex": "03000000ffffffff080706"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "",
+      "observedHex": "0000000002000000"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "00",
+      "observedHex": "010000000200000000"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "616263",
+      "observedHex": "0300000002000000616263"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000002000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000002000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000200000061c3a7c3a36f"
+    },
+    {
+      "kind": "2",
+      "payloadHex": "080706",
+      "observedHex": "0300000002000000080706"
+    },
+    {
+      "kind": null,
+      "payloadHex": "",
+      "observedHex": "0000000000000000"
+    },
+    {
+      "kind": null,
+      "payloadHex": "00",
+      "observedHex": "010000000000000000"
+    },
+    {
+      "kind": null,
+      "payloadHex": "616263",
+      "observedHex": "0300000000000000616263"
+    },
+    {
+      "kind": null,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": null,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": null,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000000000061c3a7c3a36f"
+    },
+    {
+      "kind": null,
+      "payloadHex": "080706",
+      "observedHex": "0300000000000000080706"
+    },
+    {
+      "kind": true,
+      "payloadHex": "",
+      "observedHex": "0000000001000000"
+    },
+    {
+      "kind": true,
+      "payloadHex": "00",
+      "observedHex": "010000000100000000"
+    },
+    {
+      "kind": true,
+      "payloadHex": "616263",
+      "observedHex": "0300000001000000616263"
+    },
+    {
+      "kind": true,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000001000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": true,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000001000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": true,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000100000061c3a7c3a36f"
+    },
+    {
+      "kind": true,
+      "payloadHex": "080706",
+      "observedHex": "0300000001000000080706"
+    },
+    {
+      "kind": false,
+      "payloadHex": "",
+      "observedHex": "0000000000000000"
+    },
+    {
+      "kind": false,
+      "payloadHex": "00",
+      "observedHex": "010000000000000000"
+    },
+    {
+      "kind": false,
+      "payloadHex": "616263",
+      "observedHex": "0300000000000000616263"
+    },
+    {
+      "kind": false,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": false,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": false,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000000000061c3a7c3a36f"
+    },
+    {
+      "kind": false,
+      "payloadHex": "080706",
+      "observedHex": "0300000000000000080706"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "",
+      "observedHex": "0000000001000000"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "00",
+      "observedHex": "010000000100000000"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "616263",
+      "observedHex": "0300000001000000616263"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000001000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000001000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000100000061c3a7c3a36f"
+    },
+    {
+      "kind": 1.5,
+      "payloadHex": "080706",
+      "observedHex": "0300000001000000080706"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "",
+      "observedHex": "0000000000000000"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "00",
+      "observedHex": "010000000000000000"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "616263",
+      "observedHex": "0300000000000000616263"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000000000061c3a7c3a36f"
+    },
+    {
+      "kind": {
+        "$number": "NaN"
+      },
+      "payloadHex": "080706",
+      "observedHex": "0300000000000000080706"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "",
+      "observedHex": "0000000000000000"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "00",
+      "observedHex": "010000000000000000"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "616263",
+      "observedHex": "0300000000000000616263"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000000000061c3a7c3a36f"
+    },
+    {
+      "kind": {
+        "$undefined": true
+      },
+      "payloadHex": "080706",
+      "observedHex": "0300000000000000080706"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "",
+      "observedHex": "0000000000000000"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "00",
+      "observedHex": "010000000000000000"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "616263",
+      "observedHex": "0300000000000000616263"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "observedHex": "3000000000000000a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "observedHex": "ff00000000000000ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "61c3a7c3a36f",
+      "observedHex": "060000000000000061c3a7c3a36f"
+    },
+    {
+      "kind": {
+        "$number": "-0"
+      },
+      "payloadHex": "080706",
+      "observedHex": "0300000000000000080706"
+    }
+  ],
+  "originalMainExecuted": false,
+  "connectionsOpened": false,
+  "proofFunctionInvoked": false,
+  "credentialsRead": false,
+  "limitations": [
+    "Finite Buffer payloads only; no receiver/parser behavior is claimed.",
+    "Authentication proof is neither invoked nor reconstructed.",
+    "The original frame encoder accepts payloads larger than MAX_FRAME; that constant is not enforced here.",
+    "The independent encoder explicitly rejects non-Buffer payloads rather than reproducing incidental original errors."
+  ]
+}

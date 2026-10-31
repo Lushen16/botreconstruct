@@ -1,0 +1,103 @@
+{
+  "spec": "automation-v1",
+  "scenarios": [
+    {
+      "id": "gate-offline",
+      "session": { "online": false },
+      "steps": [
+        { "now": 0, "expect": { "status": "blocked", "reason": "offline", "emitted": [] } }
+      ]
+    },
+    {
+      "id": "walk-east",
+      "config": { "walker": { "waypoints": [{ "action": "walk", "pos": { "x": 103, "y": 100, "z": 7 }, "param": "" }] } },
+      "telemetry": { "position": { "x": 100, "y": 100, "z": 7 }, "creatures": [] },
+      "steps": [
+        { "now": 0, "expect": { "status": "walking", "emitted": [["walk", 1]] } }
+      ]
+    },
+    {
+      "id": "target-nearest",
+      "config": { "target": { "combo": { "enabled": false } }, "hoenn": { "perfectLure": false, "minWildsToEngage": 0 } },
+      "telemetry": {
+        "position": { "x": 100, "y": 100, "z": 7 },
+        "creatures": [
+          { "id": 5, "name": "Wild", "type": 1, "healthPercent": 100, "canAttack": true, "pos": { "x": 101, "y": 100, "z": 7 } },
+          { "id": 6, "name": "Wild", "type": 1, "healthPercent": 100, "canAttack": true, "pos": { "x": 105, "y": 100, "z": 7 } }
+        ]
+      },
+      "steps": [
+        { "now": 0, "expect": { "status": "combat", "emitted": [["attack", 5]] } }
+      ]
+    },
+    {
+      "id": "perfect-lure-below-min",
+      "config": {
+        "hoenn": { "perfectLure": true, "minWildsToEngage": 3 },
+        "walker": { "waypoints": [{ "action": "walk", "pos": { "x": 110, "y": 100, "z": 7 }, "param": "" }] }
+      },
+      "telemetry": {
+        "position": { "x": 100, "y": 100, "z": 7 },
+        "creatures": [{ "id": 1, "name": "Wild", "type": 1, "healthPercent": 100, "canAttack": true, "pos": { "x": 102, "y": 100, "z": 7 } }]
+      },
+      "steps": [
+        { "now": 0, "expect": { "status": "luring", "emitted": [["walk", 1]] } }
+      ]
+    },
+    {
+      "id": "lure-distance-hold-release",
+      "config": {
+        "hoenn": { "perfectLure": true, "minWildsToEngage": 3 },
+        "target": { "luring": { "enabled": true, "maxDistance": 3 } },
+        "walker": { "waypoints": [{ "action": "walk", "pos": { "x": 110, "y": 100, "z": 7 }, "param": "" }] }
+      },
+      "telemetry": {
+        "position": { "x": 100, "y": 100, "z": 7 },
+        "creatures": [{ "id": 1, "name": "Wild", "type": 1, "healthPercent": 100, "canAttack": true, "pos": { "x": 105, "y": 100, "z": 7 } }]
+      },
+      "steps": [
+        { "now": 0, "expect": { "status": "lure-hold", "lureState": "holding", "emitted": [] } },
+        { "now": 8100, "expect": { "status": "luring", "lureState": "release", "emitted": [["walk", 1]] } }
+      ]
+    },
+    {
+      "id": "lure-dynamic-regroup",
+      "config": {
+        "hoenn": { "perfectLure": true, "minWildsToEngage": 3 },
+        "target": { "luring": { "frontEnabled": true, "maxDistance": 3, "frontRegroupMargin": 5, "frontRegroupSteps": 3 } },
+        "walker": { "waypoints": [{ "action": "walk", "pos": { "x": 120, "y": 100, "z": 7 }, "param": "" }] }
+      },
+      "telemetry": {
+        "position": { "x": 100, "y": 100, "z": 7 },
+        "creatures": [{ "id": 1, "name": "Wild", "type": 1, "healthPercent": 100, "canAttack": true, "pos": { "x": 110, "y": 100, "z": 7 } }]
+      },
+      "steps": [
+        { "now": 0, "expect": { "status": "luring", "lureState": "regroup", "emitted": [["chase", 1], ["walk", 1]] } }
+      ]
+    },
+    {
+      "id": "lure-random-window",
+      "config": {
+        "hoenn": { "perfectLure": true, "minWildsToEngage": 3 },
+        "target": { "luring": { "randomEnabled": true, "randomMinSeconds": 5, "randomMaxSeconds": 5 } },
+        "walker": { "waypoints": [{ "action": "walk", "pos": { "x": 110, "y": 100, "z": 7 }, "param": "" }] }
+      },
+      "telemetry": {
+        "position": { "x": 100, "y": 100, "z": 7 },
+        "creatures": [{ "id": 1, "name": "Wild", "type": 1, "healthPercent": 100, "canAttack": true, "pos": { "x": 102, "y": 100, "z": 7 } }]
+      },
+      "steps": [
+        { "now": 0, "expect": { "status": "lure-hold", "lureState": "random-wait", "emitted": [] } },
+        { "now": 5000, "expect": { "status": "luring", "lureState": "random-walk", "emitted": [["walk", 1]] } }
+      ]
+    },
+    {
+      "id": "healer-potion-first",
+      "config": { "hoenn": { "potionHpPercent": 60, "potionHotkey": "F1", "potionCooldownMs": 1500 } },
+      "telemetry": { "position": { "x": 100, "y": 100, "z": 7 }, "healthPercent": 40, "creatures": [] },
+      "steps": [
+        { "now": 0, "expect": { "status": "heal", "emitted": [["hotkey", "F1"]] } }
+      ]
+    }
+  ]
+}

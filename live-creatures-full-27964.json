@@ -1,0 +1,7766 @@
+{
+  "schema": 2,
+  "tool": {
+    "name": "scan_creatures",
+    "version": 1
+  },
+  "generatedAt": "2026-10-26T18:31:36.613332+00:00",
+  "pid": 27964,
+  "image": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe",
+  "layout": {
+    "pos_offset": "0x30",
+    "name_offset": "0x80",
+    "name_max": 32,
+    "id_offset": null,
+    "hp_offset": null,
+    "canattack_offset": null,
+    "type_offset": null,
+    "confirmed": [
+      "pos",
+      "name"
+    ],
+    "unverified": [
+      "id",
+      "healthPercent",
+      "canAttack",
+      "type"
+    ]
+  },
+  "player": null,
+  "creatures": [
+    {
+      "id": null,
+      "name": "PokeAllianceV3.log",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 12288,
+        "y": 12448,
+        "z": 0
+      },
+      "struct_va": "0x1f8888f4a10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "WWW",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 12,
+        "y": 848,
+        "z": 1
+      },
+      "struct_va": "0x1f888ab2320",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "WWW",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 12,
+        "y": 868,
+        "z": 1
+      },
+      "struct_va": "0x1f888ab4730",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ClearImage96Bpp",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 48,
+        "y": 7,
+        "z": 0
+      },
+      "struct_va": "0x1f888c1f708",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "C8d'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f891981408",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PREC",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 504,
+        "y": 3018,
+        "z": 1
+      },
+      "struct_va": "0x1f8919c736c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ARGET",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 103,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f891bc8710",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "E9f'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 28,
+        "y": 3,
+        "z": 0
+      },
+      "struct_va": "0x1f89ec80468",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Yyg'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 28,
+        "y": 3,
+        "z": 0
+      },
+      "struct_va": "0x1f89edc04a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Conta ou E-mail",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 124,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f89f4f5258",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Zqs2wm",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f89fac8498",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Fhw9",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f89fad1458",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Lky8",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f89fad23f8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Idioma",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 55,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f89fef6b18",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Registrar",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 73,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f89fef71a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Recuperar",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 81,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f89fefc6f8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Jp51",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8a47c9398",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Hh79",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8a47d13b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VerticalScrollBar",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 29281,
+        "y": 29285,
+        "z": 0
+      },
+      "struct_va": "0x1f8a4d8e990",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Pesca",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 43,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8a58726c8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "LhhH",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 7168,
+        "y": 768,
+        "z": 0
+      },
+      "struct_va": "0x1f8a5dfd267",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Batalha",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 62,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f8a62faf78",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Exeggutor",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 70,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8a630c9a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DSA-SHAKE-256s",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x1f8a6f03574",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KHy'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a80f1388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KNy-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a80f7388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "JLx'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a81f5398",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "JBx-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a81fb398",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KEy.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a81fc388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "S1N4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8a8288508",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KEl.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a94fc388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "IHDR",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 2,
+        "z": 0
+      },
+      "struct_va": "0x1f8a97b6c5c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KuQ'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98cc388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Put'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98cc538",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KkQ-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98d2388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "MkK-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98d23e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "BkF-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98d2418",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "CjI.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98d3408",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Qjw.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98d3528",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Vjr.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8a98d3558",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Fp--",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aa0c9458",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Xp7-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aa0c94b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Od '",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aa4dd3c8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Xd3'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aa4dd4b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Rd5'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aa4dd518",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RZ5-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aa4e3518",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "K3R4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aaa8a388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Minimapa",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 77,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f8aabe7e08",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "EH84",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ab3f1468",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Bj8d",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ab6d3418",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OyC4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4c03c8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "AyE4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4c0428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FyH4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4c0458",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "QtZ'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4cd528",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SgT0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4de508",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "YfR1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4df4a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "GYH2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4e0448",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "MXF3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4e13e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "WWX",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ac4ee548",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "HzI4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8acec33b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "MzL4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8acec33e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DzE4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8acec3478",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PzQ4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8acec3538",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SELL",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 36,
+        "y": 14,
+        "z": 1
+      },
+      "struct_va": "0x1f8acf7e378",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PoppinsSemibold12",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 12,
+        "y": 10,
+        "z": 13
+      },
+      "struct_va": "0x1f8adb087f0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "QyA'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adfc0528",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "UiE7",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adfd0568",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ShO0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adfd1508",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "YkI1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adfd24a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "GjS2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adfd3448",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "WXC",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adfe1548",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ADQd",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8adffd428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Rastreador",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 89,
+        "y": 24,
+        "z": 1
+      },
+      "struct_va": "0x1f8ae798d08",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ABi'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae7fb428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "W9u",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 33071,
+        "y": 10497,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae980548",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Brg-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 12
+      },
+      "struct_va": "0x1f8ae9cb418",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Grd-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae9cb448",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Dra-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae9cb478",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ikn4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae9d23a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Nkk4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae9d23d8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ckh4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8ae9d2408",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Hhn'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aead13b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ghg'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aead1448",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Dhb'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aead1478",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Hnn-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aead73b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Mni-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aead73e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Igm4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aeade3a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ega4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8aeade468",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Aoa",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 127,
+        "y": 127,
+        "z": 0
+      },
+      "struct_va": "0x1f8aefd6428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Wos",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 127,
+        "y": 127,
+        "z": 0
+      },
+      "struct_va": "0x1f8aefd6548",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "MKmd",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 127,
+        "y": 127,
+        "z": 0
+      },
+      "struct_va": "0x1f8aeff23e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8af1fccd0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8af1fd300",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8af1fd3b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Unif",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1040,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x1f8af5a1acc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RAME",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 976,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x1f8af5a228c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Nobutdopai",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3296,
+        "y": 2212,
+        "z": 7
+      },
+      "struct_va": "0x1f8b1790560",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Offs",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x1f8b1860ff4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SHIN",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x1f8b186a054",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b19ebb80",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b19ebef0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RAME",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1792,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x1f8b1a3808c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "COOR",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1776,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x1f8b1a391cc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Unif",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1744,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x1f8b1a3980c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b1a5bb50",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b1a5bec0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b1a5c020",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b1a5c230",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b1a5c4f0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEXCOORD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 15
+      },
+      "struct_va": "0x1f8b1a5c650",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "C4D",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8b1e972a0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Q3D",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8b1e97a40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "A3D",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8b1e97d80",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Unif",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1520,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x1f8b531f98c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Flaaffyy",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 124,
+        "y": 49,
+        "z": 13
+      },
+      "struct_va": "0x1f8bbf69596",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Croconaww",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 121,
+        "y": 33,
+        "z": 13
+      },
+      "struct_va": "0x1f8bbf69611",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Kc4'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3248,
+        "y": 3247,
+        "z": 0
+      },
+      "struct_va": "0x1f8bcdda388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "YcZ'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3292,
+        "y": 3291,
+        "z": 0
+      },
+      "struct_va": "0x1f8bcdda4a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "AQB5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 55829,
+        "y": 55830,
+        "z": 0
+      },
+      "struct_va": "0x1f8bcde8428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "UBM'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 7797,
+        "y": 7796,
+        "z": 0
+      },
+      "struct_va": "0x1f8bd6fb568",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DEk5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 25060,
+        "y": 25230,
+        "z": 0
+      },
+      "struct_va": "0x1f8be0fc478",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "B9c-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 39953,
+        "y": 39954,
+        "z": 0
+      },
+      "struct_va": "0x1f8be280418",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Z9k-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 39975,
+        "y": 39976,
+        "z": 0
+      },
+      "struct_va": "0x1f8be280498",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "D a.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 64207,
+        "y": 64208,
+        "z": 0
+      },
+      "struct_va": "0x1f8bea99478",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TB2.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 65246,
+        "y": 65245,
+        "z": 0
+      },
+      "struct_va": "0x1f8beafb578",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Headbutt",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 67,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42cba58",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Rock Smash",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 82,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42cce08",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Nv. 23",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 56,
+        "y": 28,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42cf568",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Saldo",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 42,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42d0288",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Nobutdopai",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 164,
+        "y": 42,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42d2358",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Sem Guild",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 94,
+        "y": 28,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42d29e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Titan 3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 60,
+        "y": 26,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42d57d8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Entrar",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 52,
+        "y": 26,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42d92e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Alterar senha",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 93,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42d9978",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Alterar e-mail",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 96,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42da008",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Sair",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 29,
+        "y": 22,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42da698",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Nobutdopai",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 69,
+        "y": 19,
+        "z": 1
+      },
+      "struct_va": "0x1f8c42db3b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Whh3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2048,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8c4ebd15b",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "E6S3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1549,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8cd98f468",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ZIr",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 504,
+        "y": 22,
+        "z": 0
+      },
+      "struct_va": "0x1f8e383dad4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "T6J",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 206,
+        "y": 11,
+        "z": 0
+      },
+      "struct_va": "0x1f8e3bffe54",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "N2I",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 22,
+        "z": 0
+      },
+      "struct_va": "0x1f8e3bfffd4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "P2K",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 968,
+        "y": 376,
+        "z": 1
+      },
+      "struct_va": "0x1f8e3c0048c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "S7N",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 56,
+        "z": 0
+      },
+      "struct_va": "0x1f8e3c00494",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VgD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8e7c37ec0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OfD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8e7c407a0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SfD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8e7c40c60",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FDn",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16896,
+        "y": 17024,
+        "z": 0
+      },
+      "struct_va": "0x1f8e7ed39be",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RV5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8e7fc6f00",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Rs -",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 12
+      },
+      "struct_va": "0x1f8e82ca518",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ur-.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 12
+      },
+      "struct_va": "0x1f8e82cb568",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "WAB",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8e851c950",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ART'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 49,
+        "y": 47,
+        "z": 0
+      },
+      "struct_va": "0x1f8edbeb428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "XRO'",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 49,
+        "y": 47,
+        "z": 0
+      },
+      "struct_va": "0x1f8edbeb4b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DLS1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 49,
+        "y": 47,
+        "z": 0
+      },
+      "struct_va": "0x1f8edbf5478",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ADT9",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 49,
+        "y": 47,
+        "z": 0
+      },
+      "struct_va": "0x1f8edbfd428",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FQl-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 29,
+        "z": 4
+      },
+      "struct_va": "0x1f8eede8458",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "A0C",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8eeeaade0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "E'C",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8eeeab560",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DI5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8ef632190",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "NI5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8ef632bd0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "IyG",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 504,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8eff0bf4c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Yvi-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8effcf4a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Uve-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8effcf568",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Iiy.",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x1f8effd03a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SL6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f2ca3250",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VL6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8f2ca36b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SHIN",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x1f8f3176aa4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SHIN",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 5,
+        "z": 2
+      },
+      "struct_va": "0x1f8f3177c74",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TyA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f3933070",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TTA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8f39367b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SyA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f3938a50",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ADA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f3939f50",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Oq6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f3eaa000",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "As5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f3ee6870",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "KxA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f47c70b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "NxA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f47c7370",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ar5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8f491d5d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Np5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4925d30",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Vp5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f49262b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ur6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4af49d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "M'D",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4b00ad0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "W'D",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4b01250",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "S'D",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4b01730",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "AxC",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4b01e90",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Dr6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4b04bd0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Lr6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 32759,
+        "z": 0
+      },
+      "struct_va": "0x1f8f4b04f10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "IR6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f6661f40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "LR6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f6661f60",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Il6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f67f8040",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Zi7",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 16,
+        "y": 504,
+        "z": 0
+      },
+      "struct_va": "0x1f8f75afb10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "H2ojI",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 32764,
+        "z": 0
+      },
+      "struct_va": "0x496a6f3120",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PEDDTDDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 4,
+        "z": 4
+      },
+      "struct_va": "0x7ff5a74d27ce",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Proxy-",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 10,
+        "y": 15143,
+        "z": 0
+      },
+      "struct_va": "0x7ff71834f3ac",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PVEZ5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 45,
+        "z": 2
+      },
+      "struct_va": "0x7ff71835a464",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "BBCD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x7ff718361060",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "D3D11VA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 24,
+        "y": 195,
+        "z": 10
+      },
+      "struct_va": "0x7ff7183780f8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Type 1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 14,
+        "y": 7,
+        "z": 4
+      },
+      "struct_va": "0x7ff718384374",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PFR",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 2,
+        "z": 0
+      },
+      "struct_va": "0x7ff71838cbdc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Ascender",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 2,
+        "z": 2
+      },
+      "struct_va": "0x7ff71838eef0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "AxisLabel",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ff71838ef00",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "AxisType",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 6,
+        "z": 2
+      },
+      "struct_va": "0x7ff71838ef10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Apr",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 59,
+        "y": 59,
+        "z": 12
+      },
+      "struct_va": "0x7ff7183c892c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Jun",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 12,
+        "y": 59,
+        "z": 0
+      },
+      "struct_va": "0x7ff7183c8934",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ASRange",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 145,
+        "y": 1,
+        "z": 8
+      },
+      "struct_va": "0x7ff7183caa00",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "CONF",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 17,
+        "z": 0
+      },
+      "struct_va": "0x7ff7183cea34",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OID",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32759,
+        "y": 7,
+        "z": 7
+      },
+      "struct_va": "0x7ff718416ab4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OpenAL Community",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 6,
+        "y": 2,
+        "z": 4
+      },
+      "struct_va": "0x7ff7184b5340",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ZIP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 9,
+        "y": 10,
+        "z": 10
+      },
+      "struct_va": "0x7ff7184f5344",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Monday",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 61,
+        "y": 45,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c13f03c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "MarkSideEffects",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c15eb40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VectorizeLeft",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x7ffc0c15eb50",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RequiredTranslate",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 2,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c15eb60",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "POINT",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x7ffc0c16e140",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PHONG",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 1
+      },
+      "struct_va": "0x7ffc0c16e148",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "INVSRCCOLOR",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 2,
+        "z": 2
+      },
+      "struct_va": "0x7ffc0c16e150",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "INVSRCALPHA",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 4,
+        "z": 1
+      },
+      "struct_va": "0x7ffc0c16e170",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Tangent",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 768,
+        "y": 16,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c1776c8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "UTF-8",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 41,
+        "y": 158,
+        "z": 13
+      },
+      "struct_va": "0x7ffc0c75671c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FATAL",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 56576,
+        "y": 256,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c7af2b3",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OSGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 76,
+        "y": 2,
+        "z": 8
+      },
+      "struct_va": "0x7ffc0c7e4164",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e476c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 3,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e4a0c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e4cac",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 3,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e4f6c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e522c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 3,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e54fc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e57cc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 3,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7e5a9c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RDEFD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 5,
+        "z": 3
+      },
+      "struct_va": "0x7ffc0c7fa2b4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 60,
+        "y": 2,
+        "z": 5
+      },
+      "struct_va": "0x7ffc0c7fa628",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 6,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c7fa900",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 60,
+        "y": 2,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7fabf8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SwizzleProperties",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 204,
+        "y": 92,
+        "z": 2
+      },
+      "struct_va": "0x7ffc0c7fb324",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SwizzleProperties",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 92,
+        "y": 2,
+        "z": 3
+      },
+      "struct_va": "0x7ffc0c7fc618",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SwizzleProperties",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 204,
+        "y": 92,
+        "z": 2
+      },
+      "struct_va": "0x7ffc0c7fcf94",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Clear11 VS",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 32,
+        "y": 2,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c7fdf10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OSGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 8,
+        "y": 56,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c7fe65c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SHDR8",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 3,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c7fec88",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "BufferToTextureGS",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 64,
+        "y": 2,
+        "z": 4
+      },
+      "struct_va": "0x7ffc0c804880",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PixelsPerRow",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 40,
+        "y": 8,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c804a80",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RDEFp",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c805174",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 5,
+        "z": 1
+      },
+      "struct_va": "0x7ffc0c8051ec",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 3,
+        "z": 1
+      },
+      "struct_va": "0x7ffc0c8053fc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 4,
+        "z": 1
+      },
+      "struct_va": "0x7ffc0c80560c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OSGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 76,
+        "y": 2,
+        "z": 8
+      },
+      "struct_va": "0x7ffc0c807764",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNt",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 5,
+        "z": 6
+      },
+      "struct_va": "0x7ffc0c807b5c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ISGNP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 5,
+        "z": 6
+      },
+      "struct_va": "0x7ffc0c807f2c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Direct3DCreate9Ex",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 48896,
+        "y": 48896,
+        "z": 0
+      },
+      "struct_va": "0x7ffc0c8140ee",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ANGLERotateInterpolateOffset",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 2,
+        "z": 3
+      },
+      "struct_va": "0x7ffc0c8614e0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Begin",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 5,
+        "y": 36,
+        "z": 0
+      },
+      "struct_va": "0x7ffd16bba1e7",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Begin",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1291,
+        "y": 9216,
+        "z": 0
+      },
+      "struct_va": "0x7ffd16bba2cd",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Begin",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1291,
+        "y": 9216,
+        "z": 0
+      },
+      "struct_va": "0x7ffd16bba3a0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DEL",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 107,
+        "y": 113,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc47de4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 4,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc6f380",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f3a0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f3c0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f3e0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f400",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f420",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f440",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f460",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f480",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DemoMode",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f4a0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SteadyVideo",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f4c0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FluidMotion",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc6f4e0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchGain2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 15,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc70130",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchAngl2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70150",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchGain3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70170",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchAngl3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70190",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchGain4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc701b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchAngl4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc701d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchGain5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc701f0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchAngl5",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70210",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchGain6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70230",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchAngl6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70250",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColorStretchStd",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70270",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColStretchGain",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70290",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ColorVibrance",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1801,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc702b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "CVStrength",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1802,
+        "y": 12,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc702d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "CCStrength",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1808,
+        "y": 15,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc70310",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FrameRateConv",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1808,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70330",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FRCStrength",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1809,
+        "y": 15,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc70350",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPAllFeatures",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1809,
+        "y": 3,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cc70370",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 4,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc70410",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70430",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70450",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70470",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70490",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc704b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc704d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc704f0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70510",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DemoMode",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70530",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SteadyVideo",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70550",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FluidMotion",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cc70570",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "STATp",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 100,
+        "y": 16385,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cc953c4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "STATp",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 5,
+        "y": 16385,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cd47140",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 4,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2ce69270",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce69290",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce692b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce692d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce692f0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce69310",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce69330",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce69350",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce69370",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DemoMode",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce69390",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SteadyVideo",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce693b0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FluidMotion",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce693d0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 4,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2ce6ad40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ad60",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 8,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ad80",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProcess4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ada0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6adc0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile1",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ade0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile2",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ae00",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile3",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ae20",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PSProfile4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ae40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DemoMode",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ae60",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SteadyVideo",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6ae80",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "FluidMotion",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 257,
+        "y": 16,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2ce6aea0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "CodeObject",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 2,
+        "z": 4
+      },
+      "struct_va": "0x7ffd2ce7cc30",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "COLoadEvent",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 6,
+        "y": 5,
+        "z": 6
+      },
+      "struct_va": "0x7ffd2ce7cc40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DwDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cfa3780",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DwDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 209,
+        "y": 241,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2cfcd748",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2cfce080",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDDw",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 85,
+        "y": 117,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cfd1588",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 5,
+        "y": 4,
+        "z": 3
+      },
+      "struct_va": "0x7ffd2cfd1598",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDDw",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 17,
+        "y": 16,
+        "z": 15
+      },
+      "struct_va": "0x7ffd2cfd15c8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Tind",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 16,
+        "z": 4
+      },
+      "struct_va": "0x7ffd2cfdbf0c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "CPUExecutionProvider",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 116,
+        "y": 120,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2cfddb10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDwD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 6,
+        "y": 6,
+        "z": 6
+      },
+      "struct_va": "0x7ffd2d06d048",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDDw",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 5,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2d072850",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDwD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 2,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2d072920",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DDDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 5,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2d072bb0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DwDD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 4,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2d072d40",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Internal",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 48,
+        "y": 7,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2e148220",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PipelineGfx",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 9,
+        "y": 9,
+        "z": 9
+      },
+      "struct_va": "0x7ffd2e14a3e8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "PipelineCs",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 9,
+        "y": 9,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2e14a3f8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "None",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 2,
+        "z": 2
+      },
+      "struct_va": "0x7ffd2e3f2024",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "LatencyRT1NG",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 7,
+        "y": 2,
+        "z": 1
+      },
+      "struct_va": "0x7ffd2e4063a8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "List6",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 9,
+        "y": 8,
+        "z": 5
+      },
+      "struct_va": "0x7ffd2e4063b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VMAPD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 2800,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2f401aa4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "QCOM0D0A",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 11,
+        "y": 20,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2fb70958",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "QCOM0D0A",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 7,
+        "z": 0
+      },
+      "struct_va": "0x7ffd2fb70ce8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPCOT",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd30ac7900",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "EventRegistrationTokenTableKey",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "struct_va": "0x7ffd32aeaaf0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ComImportAdapter",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 3,
+        "z": 3
+      },
+      "struct_va": "0x7ffd32aeab10",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SdbpFindFirstMsiMatch",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 9,
+        "z": 4
+      },
+      "struct_va": "0x7ffd32ecc138",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VMAP4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2984,
+        "y": 1,
+        "z": 4
+      },
+      "struct_va": "0x7ffd345bd2fc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "VMAP4",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2688,
+        "y": 1,
+        "z": 2
+      },
+      "struct_va": "0x7ffd345bd330",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "BMAPT",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 9,
+        "z": 1
+      },
+      "struct_va": "0x7ffd345bd8a4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "DXT5P",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 28,
+        "y": 66,
+        "z": 0
+      },
+      "struct_va": "0x7ffd346b536c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OverlaySize",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 510,
+        "y": 44,
+        "z": 4
+      },
+      "struct_va": "0x7ffd346ccc5c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ShowStatus",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 472,
+        "z": 0
+      },
+      "struct_va": "0x7ffd346ccc68",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OverlaySize",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 510,
+        "y": 44,
+        "z": 4
+      },
+      "struct_va": "0x7ffd346cd65c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ShowStatus",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 472,
+        "z": 0
+      },
+      "struct_va": "0x7ffd346cd668",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OverlaySize",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 470,
+        "y": 44,
+        "z": 4
+      },
+      "struct_va": "0x7ffd346ce2d4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OverlaySize",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 470,
+        "y": 44,
+        "z": 4
+      },
+      "struct_va": "0x7ffd346ce7f4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "BMAPL",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 9,
+        "z": 1
+      },
+      "struct_va": "0x7ffd34702d88",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TEMPP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2056,
+        "y": 248,
+        "z": 0
+      },
+      "struct_va": "0x7ffd34727a30",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPCO",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd351dbd38",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Before Get",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 69,
+        "y": 123,
+        "z": 0
+      },
+      "struct_va": "0x7ffd35742318",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "NOTIFY",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd35742bd4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "UPDATE",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x7ffd35742bdc",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPCO",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd35b4764c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SystemFunction003",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 24614,
+        "y": 24632,
+        "z": 0
+      },
+      "struct_va": "0x7ffd36395f28",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPCOx",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd36a8f8a0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "XCD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 256,
+        "y": 256,
+        "z": 0
+      },
+      "struct_va": "0x7ffd36db2e68",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "IHDR",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1384,
+        "y": 24,
+        "z": 0
+      },
+      "struct_va": "0x7ffd36dcc814",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPCO0",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd36e388c4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RtlDllShutdownInProgress",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 7,
+        "y": 4,
+        "z": 1
+      },
+      "struct_va": "0x7ffd3746cd30",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Sun",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1007,
+        "y": 4,
+        "z": 1
+      },
+      "struct_va": "0x7ffd378e8000",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "Mon",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 4,
+        "y": 1,
+        "z": 0
+      },
+      "struct_va": "0x7ffd378e8004",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "SdbpFindFirstNamedTagHelper",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 6,
+        "y": 2,
+        "z": 2
+      },
+      "struct_va": "0x7ffd37b6c990",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "NULL",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 1,
+        "y": 8,
+        "z": 3
+      },
+      "struct_va": "0x7ffd380f2a88",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "IXPTelAssert",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 3,
+        "y": 1,
+        "z": 8
+      },
+      "struct_va": "0x7ffd380f2a90",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TRUE",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 9,
+        "y": 10,
+        "z": 8
+      },
+      "struct_va": "0x7ffd380f2aa0",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "ZPM",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 48,
+        "y": 96,
+        "z": 1
+      },
+      "struct_va": "0x7ffd381538a4",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "LEVLh",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 2,
+        "z": 0
+      },
+      "struct_va": "0x7ffd3828e2b8",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "OPCOD",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 84,
+        "y": 1,
+        "z": 1
+      },
+      "struct_va": "0x7ffd3829c388",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "RWWaitForSingleObjectWithTimeout",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2307,
+        "y": 2049,
+        "z": 1
+      },
+      "struct_va": "0x7ffd39401f78",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TMP",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 10,
+        "y": 2573,
+        "z": 0
+      },
+      "struct_va": "0x7ffd39a45c1c",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "TASKd",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 2,
+        "y": 2,
+        "z": 2
+      },
+      "struct_va": "0x7ffd39b84294",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    },
+    {
+      "id": null,
+      "name": "EVNTx",
+      "type": null,
+      "healthPercent": null,
+      "canAttack": null,
+      "pos": {
+        "x": 80,
+        "y": 2,
+        "z": 1
+      },
+      "struct_va": "0x7ffd39b85678",
+      "anchors": [
+        "name"
+      ],
+      "field_source": {
+        "pos": "confirmed",
+        "name": "confirmed"
+      }
+    }
+  ],
+  "diagnostics": {
+    "regions_considered": 5419,
+    "regions_read": 5419,
+    "read_failures": 0,
+    "bytes_read": 1939759104,
+    "bytes_budget": 2147483648,
+    "limit_reached": false,
+    "coords_lane": false
+  },
+  "limitations": [
+    "Read-only access (OpenProcess PROCESS_VM_READ | PROCESS_QUERY_INFORMATION); no bytes were written to the target.",
+    "Candidates are located by an in-memory signature (name at struct+name_offset, coords at struct+pos_offset); false positives are possible without a name whitelist.",
+    "Fields id, healthPercent, canAttack, type have no confirmed offset and are reported as null; supply --id-offset/--hp-offset/--canattack-offset/--type-offset to read them."
+  ]
+}

@@ -1,0 +1,285 @@
+"use strict";
+window.PkaHealerUI = {
+  create(e) {
+    const {
+        n: o,
+        button: a,
+        section: t,
+        row: r,
+        input: n,
+        tip: s,
+      } = window.PkaUI.create(e),
+      l = window.PkaHealerModel,
+      i = () => e.getConfig().healer,
+      c = () => e.getSession();
+    let u = null;
+    const d = () => {
+      const e = c();
+      return (
+        !!e?.online &&
+        !e.stale &&
+        !e.error &&
+        !e.authExpired &&
+        e.ageMs <= 1e3 &&
+        e.telemetry?.nativeVerified &&
+        3 === e.telemetry.pulseVersion
+      );
+    };
+    function p() {
+      if (!u) return;
+      const o = c(),
+        a = d(),
+        t = window.PkaUI.set,
+        [r, n, s] = (function () {
+          const o = c(),
+            a = e.getRuntime(),
+            t = a.modules.includes("healer"),
+            r = i();
+          if (r.healHpPercent <= 0)
+            return [
+              "off",
+              "Desligado",
+              "Coloque um valor em “Curar abaixo de (HP%)” para ligar a cura automática.",
+            ];
+          if (!r.healPokemonName.trim() || !r.returnPokemonName.trim())
+            return [
+              "setup",
+              "Falta configurar",
+              "Escolha o Pokémon de cura e o Meu Pokémon com as setas ‹ ›.",
+            ];
+          if (!d())
+            return [
+              "wait",
+              "Aguardando o jogo",
+              "Entre no personagem; o Healer liga sozinho quando o jogo responder.",
+            ];
+          const n = o.telemetry.roster || [],
+            s = (e) => e.trim().toLowerCase(),
+            l = (e) => n.filter((o) => s(o.name) === s(e)).length;
+          for (const [e, o] of [
+            [r.healPokemonName, "Pokémon de cura"],
+            [r.returnPokemonName, "Meu Pokémon"],
+          ]) {
+            if (!l(e))
+              return [
+                "setup",
+                "Falta configurar",
+                `${o} “${e}” não está na pokebar.`,
+              ];
+            if (l(e) > 1)
+              return [
+                "setup",
+                "Falta configurar",
+                `${o}: há dois Pokémon com o nome “${e}”. Renomeie um deles no jogo.`,
+              ];
+          }
+          return e.isAutoPaused?.() || a.paused
+            ? [
+                "paused",
+                "Pausado",
+                "O Healer volta junto com o bot quando você continuar.",
+              ]
+            : t
+              ? [
+                  "on",
+                  "Ligado",
+                  a.phases?.healer || "Aguardando o fim do combate.",
+                ]
+              : [
+                  "wait",
+                  "Ligando…",
+                  "Conferindo a pokebar para ligar a cura automática.",
+                ];
+        })();
+      (t(u.badge, "textContent", n),
+        t(u.badge.dataset, "state", r),
+        t(u.status, "textContent", s));
+      const p = a && l.pokebarNames(o.telemetry.roster).length > 0;
+      for (const e of u.cyclers) t(e, "disabled", !p);
+      (t(
+        u.barHint,
+        "textContent",
+        p
+          ? "Use ‹ › para percorrer sua pokebar. A lista acompanha a ordem atual do jogo."
+          : "Entre no jogo para selecionar pela pokebar. Você também pode digitar os nomes.",
+      ),
+        t(u.hp, "textContent", a ? `${o.healthPercent}%` : "—"),
+        t(u.hpBar, "value", a ? o.healthPercent : 0));
+      const m = a
+        ? o.telemetry.roster.find((e) => e.slot === o.telemetry.activeSlot)
+        : null;
+      (t(
+        u.active,
+        "textContent",
+        m ? `${m.name} · ${m.healthPercent}%` : "Aguardando Pokémon",
+      ),
+        t(
+          u.trigger,
+          "textContent",
+          i().healHpPercent > 0
+            ? `Cura depois do combate quando o seu HP ficar abaixo de ${i().healHpPercent}%.`
+            : "“Curar abaixo de (HP%)” em 0: cura desligada.",
+        ),
+        t(
+          u.flow[0],
+          "textContent",
+          i().healPokemonName || "Escolha o Pokémon de cura",
+        ),
+        t(u.flow[1], "textContent", `Usa a skill m${i().healMoveSlot}`),
+        t(
+          u.flow[2],
+          "textContent",
+          i().healResetSlot
+            ? `Reset no slot ${i().healResetSlot} da action bar`
+            : "Sem reset",
+        ),
+        t(
+          u.flow[3],
+          "textContent",
+          i().returnPokemonName
+            ? `Volta para ${i().returnPokemonName}`
+            : "Escolha o Meu Pokémon",
+        ));
+    }
+    function m(o, a) {
+      if (!d()) return;
+      const t = l.cycleName(c().telemetry.roster, i()[o], a);
+      null !== t && ((i()[o] = t), (u.names[o].value = t), e.changed(), p());
+    }
+    return {
+      render: function (l) {
+        u = { names: {}, cyclers: [], flow: [] };
+        const c = o("div", "bot-workspace healer-workspace"),
+          d = o("section", "bot-editor"),
+          h = o("aside", "bot-aside healer-status");
+        (c.append(d, h), l.append(c));
+        const g = t(
+          d,
+          "Healer",
+          "Cura depois do combate, antes de seguir a rota.",
+        );
+        g.append(
+          o(
+            "p",
+            "hint healer-intro",
+            "Com o seu HP abaixo do limite, troca para o Pokémon de cura, usa a skill, faz o reset e volta para o Meu Pokémon.",
+          ),
+        );
+        const k = r(g);
+        for (const [o, a, t, r, l] of [
+          [
+            "healHpPercent",
+            "Curar abaixo de (HP%)",
+            0,
+            100,
+            "Quando o SEU HP (do treinador) ficar abaixo deste valor, o bot cura depois do combate. 0 desliga a cura.",
+          ],
+          [
+            "healMoveSlot",
+            "Skill de cura (m)",
+            1,
+            100,
+            "Número da skill de cura do Pokémon de cura: 1 = m1, 2 = m2…",
+          ],
+          [
+            "healResetSlot",
+            "Slot de reset",
+            0,
+            50,
+            "Slot da action bar usado depois da cura (o reset da skill). 0 = sem reset.",
+          ],
+        ])
+          s(
+            n(k, a, i(), o, {
+              type: "number",
+              min: t,
+              max: r,
+              change: () => {
+                (e.changed(), p());
+              },
+            }),
+            l,
+          );
+        for (const [t, r, n] of [
+          [
+            "healPokemonName",
+            "Pokémon de cura",
+            "Pokémon que entra para curar você. Use ‹ › para percorrer a sua pokebar.",
+          ],
+          [
+            "returnPokemonName",
+            "Meu Pokémon",
+            "O seu Pokémon de combate, que volta depois da cura.",
+          ],
+        ]) {
+          const s = o("div", "healer-picker"),
+            l = `healer-${t}`,
+            c = o("label", "", r);
+          ((c.htmlFor = l), s.append(c));
+          const d = o("div", "healer-picker-controls"),
+            h = o("input");
+          ((h.type = "text"),
+            (h.id = l),
+            (h.value = i()[t]),
+            (h.placeholder = "Selecione com as setas ou digite o nome"),
+            h.addEventListener("input", () => {
+              ((i()[t] = h.value), e.changed(), p());
+            }),
+            d.append(h),
+            (u.names[t] = h));
+          for (const [e, o, n] of [
+            [-1, "‹", "anterior"],
+            [1, "›", "próximo"],
+          ]) {
+            const s = a(d, o, () => m(t, e), "healer-cycle");
+            (s.setAttribute("aria-label", `${r}: ${n}`),
+              (s.title = `Selecionar ${n} na pokebar`),
+              u.cyclers.push(s));
+          }
+          ((s.title = n), s.append(d), g.append(s));
+        }
+        ((u.barHint = o("p", "hint")), g.append(u.barHint));
+        const P = e.getConfig().tools,
+          f = t(d, "Pausa"),
+          b = r(f);
+        (b.classList.add("healer-pause"),
+          s(
+            n(b, "Tecla de pausa", P, "pauseHotkey"),
+            "Pausa todos os módulos; aperte de novo para continuar de onde parou. Vale com o jogo ou o menu em foco.",
+          ));
+        const v = t(h, "Estado da cura");
+        ((u.badge = o("strong", "healer-badge", "—")),
+          (u.status = o("p", "healer-state-text")),
+          v.append(u.badge, u.status));
+        const x = t(h, "Seu HP");
+        ((u.hp = o("strong", "healer-hp", "—")),
+          (u.hpBar = o("progress")),
+          (u.hpBar.max = 100),
+          u.hpBar.setAttribute("aria-label", "HP do player no Healer"),
+          (u.trigger = o("p", "hint")),
+          x.append(u.hp, u.hpBar, u.trigger));
+        const H = t(h, "Pokémon em uso");
+        ((u.active = o("p", "healer-active")), H.append(u.active));
+        const w = t(h, "Depois do combate"),
+          C = o("ol", "healer-flow");
+        for (const e of ["Pokémon de cura", "Skill", "Reset", "Meu Pokémon"]) {
+          const a = o("li", "", e);
+          (u.flow.push(a), C.append(a));
+        }
+        (w.append(
+          C,
+          o(
+            "p",
+            "hint",
+            "O Walker espera a cura terminar. Se monstros chegarem no meio, o bot luta primeiro e cura depois.",
+          ),
+        ),
+          p());
+      },
+      refresh: p,
+      hide() {
+        u = null;
+      },
+    };
+  },
+};

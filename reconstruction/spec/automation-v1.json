@@ -1,0 +1,140 @@
+{
+  "id": "pka-automation",
+  "version": 1,
+  "basis": "PKA Tools 3.1.9 / Electron 44.7.2",
+  "authority": "menu-side specification reconstructed from shipped configuration, readable renderer/shared models and protocol module",
+  "notClaimed": [
+    "Native DLL decision thresholds (release-manifest decision-bytecode-v1 rules) are not reversed.",
+    "No equivalence with the native engine is claimed.",
+    "Mock server behaviour is a hypothesis, not the real DLL."
+  ],
+  "inputs": {
+    "session": ["pid", "online", "stale", "error", "authExpired", "ageMs", "paused"],
+    "runtime": ["modules", "pid", "paused"],
+    "telemetry": ["position", "healthPercent", "activeSlot", "roster", "creatures", "conditions", "nativeSequence", "pulseVersion", "nativeVerified"],
+    "config": ["target", "healer", "walker", "hoenn", "looting", "alerts", "tools"]
+  },
+  "outputs": {
+    "commands": ["walk", "attack", "talk", "combo", "hotkey", "action", "potion", "switchPokemon", "recallPokemon", "chase", "fight", "order", "orderGround", "stop", "focus"],
+    "reports": ["status", "reason", "emitted", "blocked", "lure.state", "walker.index"]
+  },
+  "components": {
+    "gate": {
+      "states": ["ready", "blocked"],
+      "blockedReasons": ["paused", "offline", "stale", "error", "auth-expired", "stale-snapshot", "no-telemetry", "native-unverified", "pulse-version", "no-position", "runtime-pid"],
+      "rules": [
+        { "reason": "paused", "when": "session.paused or runtime.paused" },
+        { "reason": "offline", "when": "not session.online" },
+        { "reason": "stale", "when": "session.stale" },
+        { "reason": "error", "when": "session.error" },
+        { "reason": "auth-expired", "when": "session.authExpired" },
+        { "reason": "stale-snapshot", "when": "ageMs > 1000" },
+        { "reason": "no-telemetry", "when": "telemetry missing" },
+        { "reason": "native-unverified", "when": "telemetry.nativeVerified !== true" },
+        { "reason": "pulse-version", "when": "telemetry.pulseVersion !== 3" },
+        { "reason": "no-position", "when": "telemetry.position missing" },
+        { "reason": "runtime-pid", "when": "runtime.modules non-empty and runtime.pid !== session.pid" }
+      ],
+      "evidence": "shared/healer.js, renderer/guild-daily.js, lib/native-runtime.jsc (literal gates)"
+    },
+    "walker": {
+      "states": ["idle", "move", "hold", "advance", "done"],
+      "actions": ["walk", "safespot", "box", "stairs", "wait", "say"],
+      "inputs": ["telemetry.position", "telemetry.position.z"],
+      "rules": [
+        { "id": "arrive", "when": "sameTile(position, waypoint.pos)", "output": "advance (or done when not looping)" },
+        { "id": "wait", "when": "action == wait", "guard": "0 <= param <= 3600000", "output": "hold until param ms" },
+        { "id": "say", "when": "action == say", "guard": "1..255 bytes, no control chars", "output": "talk once per visit" },
+        { "id": "stairs", "when": "action == stairs and on tile", "output": "hold until z changes", "timeoutMs": 5000, "onTimeout": "advance(stairs-timeout)" },
+        { "id": "move", "when": "not on tile", "output": "walk(direction 0..7)" },
+        { "id": "stuck", "when": "same position while moving", "threshold": 3, "output": "rotate direction" },
+        { "id": "stall", "when": "same position after rotations", "threshold": 6, "output": "advance(stuck)" }
+      ],
+      "limits": { "waypoints": 2000, "waitMs": 3600000, "sayBytes": 255 },
+      "evidence": "shared/walker.js (ACTIONS, distance, equal, waypoint, insert limit 2000), LEIA-ME (stairs/wait/say semantics)"
+    },
+    "lure": {
+      "modes": ["off", "distance", "dynamic", "random"],
+      "modeSelection": "randomEnabled > frontEnabled > enabled > off (mutually exclusive, same as shared/walker.js setLureMode)",
+      "states": ["off", "idle", "no-monsters", "in-range", "holding", "release", "holding-front", "regroup", "random-walk", "random-wait"],
+      "inputs": ["telemetry.position", "telemetry.creatures[].pos", "telemetry.creatures[].canAttack"],
+      "outputs": ["allowMovement", "chase 0/1 (dynamic)"],
+      "rules": [
+        { "mode": "distance", "when": "nearest > maxDistance", "output": "hold (allowMovement=false)" },
+        { "mode": "distance", "when": "hold > 8000ms", "output": "release for 3000ms" },
+        { "mode": "distance", "when": "nearest <= maxDistance", "output": "allowMovement=true (in-range)" },
+        { "mode": "dynamic", "when": "nearest >= maxDistance + frontRegroupMargin", "output": "chase 1 (regroup), allowMovement=true" },
+        { "mode": "dynamic", "when": "nearest <= maxDistance + frontRegroupSteps", "output": "chase 0 (in-range)" },
+        { "mode": "random", "when": "cycle elapsed", "output": "alternate walk/wait for random duration in [min,max] seconds" }
+      ],
+      "clamps": { "maxDistance": [1, 16], "frontRegroupMargin": [4, 8], "frontRegroupSteps": [1, 4], "randomSeconds": [5, 3600] },
+      "evidence": "target.luring keys in default_config.json, shared/walker.js normalizeLuring/setLureMode, LEIA-ME lure paragraph",
+      "inference": "8000ms/3000ms release is stated in LEIA-ME; thresholds are product documentation, not DLL reversal"
+    },
+    "target": {
+      "states": ["idle", "luring", "attack", "combo", "combat", "hold"],
+      "inputs": ["telemetry.position", "telemetry.creatures", "telemetry.healthPercent", "telemetry.activeSlot", "telemetry.roster", "telemetry.nativeSequence"],
+      "selection": [
+        "filter canAttack === true",
+        "drop names listed in target.ignoredCreaturesText and hoenn.ignoredCreaturesText",
+        "shinyPriorityEnabled: shinyIcon === 1 or lookType === shinyLookType (when defined and different)",
+        "order by Chebyshev distance, then id"
+      ],
+      "gates": [
+        { "id": "perfect-lure", "when": "hoenn.perfectLure and not hoenn.forceBox and attackable < hoenn.minWildsToEngage", "output": "luring (no attack)" },
+        { "id": "low-hp", "when": "combo.lowHpComboPercent > 0 and healthPercent > lowHpComboPercent", "output": "attack only" }
+      ],
+      "combo": {
+        "steps": "combo.sequenceText (mN tokens) or telemetry.nativeSequence when combo.useNativeSequence",
+        "identityGuard": "expectedUuid = roster[activeSlot].uuid; attackTargetId = creature.id",
+        "timing": "combo.stepDelay between steps; attack retry 1000ms",
+        "blocked": "combo without uuid reports missing-uuid and does not send"
+      },
+      "skills": ["target.healSkill (health <= hpPercent)", "target.lureSkill (luring and health >= hpPercent)"],
+      "unimplemented": ["autoRevive (protocol rejects sampled revive parameters)", "combatStanceAuto (fight 1..3 semantics unknown)"],
+      "evidence": "default_config.json, protocol.jsc (COMMANDS, talk/target guards), readable renderer/target.js labels"
+    },
+    "healer": {
+      "states": ["idle", "heal"],
+      "priority": ["potion", "medicine", "pet heal", "pet reset", "return pokemon"],
+      "inputs": ["telemetry.healthPercent", "telemetry.conditions", "telemetry.roster", "telemetry.pokemonName"],
+      "rules": [
+        { "id": "potion", "when": "hoenn.potionHpPercent > 0 and health <= it", "cooldownMs": "hoenn.potionCooldownMs or 1500", "channel": "hoenn.potionHotkey then hoenn.potionActionBar (1..50)" },
+        { "id": "medicine", "when": "conditions non-empty and hoenn.useMedicine", "cooldownMs": 1500, "channel": "hoenn.medicineHotkey then hoenn.medicineActionBar" },
+        { "id": "pet-heal", "when": "healer.healHpPercent > 0 and health <= it", "guard": "healPokemonName resolves to exactly one roster entry", "output": "talk m<healMoveSlot> with expectedUuid" },
+        { "id": "pet-reset", "when": "heal done and healResetSlot != healMoveSlot", "output": "talk m<healResetSlot>" },
+        { "id": "return", "when": "returnPokemonName differs from active pokemon", "output": "switchPokemon <name>" }
+      ],
+      "oneActionPerTick": true,
+      "evidence": "shared/healer.js (autoPlan gates, roster resolution), renderer/healer.js labels"
+    }
+  },
+  "automation": {
+    "priority": ["gate", "healer", "target", "lure", "walker"],
+    "rules": [
+      "healer action ends the tick",
+      "target runs before walking",
+      "lure gates walker movement only; combat still runs",
+      "walker runs when target is idle or luring"
+    ],
+    "evidence": "lib/native-runtime.jsc module phases, renderer gates, LEIA-ME lure paragraph"
+  },
+  "failures": {
+    "gate-blocked": "no command emitted; status blocked with reason",
+    "combo-missing-uuid": "combo step skipped; attack continues; blocked list gains combo-without-uuid",
+    "potion-channel-missing": "no potion; blocked list gains potion-channel-missing",
+    "heal-pokemon-unresolved": "no pet heal; blocked list gains heal-pokemon-unresolved",
+    "stairs-timeout": "advance with reason stairs-timeout",
+    "stuck": "advance with reason stuck",
+    "send-error": "command rejected by protocol encoder; surfaced as error entry"
+  },
+  "settings": {
+    "target.combo": ["enabled", "sequenceText", "stepDelay", "useNativeSequence", "lowHpComboPercent"],
+    "target.healSkill": ["enabled", "move", "hpPercent"],
+    "target.lureSkill": ["enabled", "move", "hpPercent"],
+    "target.luring": ["enabled", "maxDistance", "frontEnabled", "frontRegroupMargin", "frontRegroupSteps", "randomEnabled", "randomMinSeconds", "randomMaxSeconds"],
+    "hoenn": ["minWildsToEngage", "perfectLure", "forceBox", "potionHotkey", "potionActionBar", "potionHpPercent", "potionCooldownMs", "useMedicine", "medicineHotkey", "medicineActionBar"],
+    "healer": ["healHpPercent", "healPokemonName", "healMoveSlot", "healResetSlot", "returnPokemonName"],
+    "walker": ["waypoints", "loop", "startNearestWaypoint", "smartWalking"]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "asarHeaderSha256": "4414d573e7f56bba4f5537726833440b66557027f5bd4d92561fd8bd8f8269d9",
+  "executableSha256": "1b80dc101d2518eb9f5f8952c6f18d735850fb366ce410a771e3259d6f0ca0a7",
+  "automation": "native-dll",
+  "codeProtection": {
+    "format": 1,
+    "method": "v8-bytecode-main",
+    "electron": "44.7.2",
+    "bytenode": "1.7.0",
+    "compiled": [
+      "main.cjs",
+      "lib/native-runtime.cjs",
+      "lib/hotkeys.cjs",
+      "lib/security.cjs",
+      "lib/pipe-bridge.cjs",
+      "lib/menu-view.cjs",
+      "lib/protocol.cjs",
+      "lib/telemetry.cjs",
+      "lib/settings.cjs",
+      "lib/legacy.cjs",
+      "lib/walker-profiles.cjs",
+      "lib/alert-presenter.cjs",
+      "lib/launch.cjs",
+      "lib/map-view.cjs",
+      "lib/otmm.cjs"
+    ],
+    "minified": [
+      "preload.cjs",
+      "look-preload.cjs",
+      "renderer/alert-audio.js",
+      "renderer/alerts.js",
+      "renderer/app.js",
+      "renderer/guild-daily.js",
+      "renderer/healer.js",
+      "renderer/hoenn.js",
+      "renderer/look.js",
+      "renderer/looting.js",
+      "renderer/scripts.js",
+      "renderer/target.js",
+      "renderer/ui.js",
+      "renderer/walker.js",
+      "shared/alerts.js",
+      "shared/diagnostics.js",
+      "shared/healer.js",
+      "shared/hoenn.js",
+      "shared/messages.js",
+      "shared/schema.js",
+      "shared/walker.js"
+    ]
+  },
+  "unsigned": true
+}

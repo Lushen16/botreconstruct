@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-10-22T13:26:20.132Z",
+  "processes": [
+    {
+      "ProcessId": 24556,
+      "ParentProcessId": 5520,
+      "Name": "launcher.exe",
+      "ExecutablePath": "C:\\Users\\yago\\AppData\\Local\\ShibaLauncher\\Client\\launcher.exe"
+    },
+    {
+      "ProcessId": 32084,
+      "ParentProcessId": 27676,
+      "Name": "PokeAlliance_dx.exe",
+      "ExecutablePath": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe"
+    },
+    {
+      "ProcessId": 11732,
+      "ParentProcessId": 22068,
+      "Name": "e8649d900eaf7fab710c2c0337433a4d.exe.tmp",
+      "ExecutablePath": "C:\\Users\\yago\\AppData\\Local\\ShibaLauncher\\Apps\\a497a7a52bf97c5bcc5fad69c7958ce6\\current\\Shiba Bots - Poke Alliance v3.1.9\\dll\\e8649d900eaf7fab710c2c0337433a4d.exe.tmp"
+    },
+    {
+      "ProcessId": 28068,
+      "ParentProcessId": 11732,
+      "Name": "e8649d900eaf7fab710c2c0337433a4d.exe.tmp",
+      "ExecutablePath": "C:\\Users\\yago\\AppData\\Local\\ShibaLauncher\\Apps\\a497a7a52bf97c5bcc5fad69c7958ce6\\current\\Shiba Bots - Poke Alliance v3.1.9\\dll\\e8649d900eaf7fab710c2c0337433a4d.exe.tmp"
+    },
+    {
+      "ProcessId": 29212,
+      "ParentProcessId": 11732,
+      "Name": "e8649d900eaf7fab710c2c0337433a4d.exe.tmp",
+      "ExecutablePath": "C:\\Users\\yago\\AppData\\Local\\ShibaLauncher\\Apps\\a497a7a52bf97c5bcc5fad69c7958ce6\\current\\Shiba Bots - Poke Alliance v3.1.9\\dll\\e8649d900eaf7fab710c2c0337433a4d.exe.tmp"
+    },
+    {
+      "ProcessId": 25448,
+      "ParentProcessId": 11732,
+      "Name": "e8649d900eaf7fab710c2c0337433a4d.exe.tmp",
+      "ExecutablePath": "C:\\Users\\yago\\AppData\\Local\\ShibaLauncher\\Apps\\a497a7a52bf97c5bcc5fad69c7958ce6\\current\\Shiba Bots - Poke Alliance v3.1.9\\dll\\e8649d900eaf7fab710c2c0337433a4d.exe.tmp"
+    }
+  ],
+  "visibleClientModules": [
+    {
+      "ProcessId": 32084,
+      "ModuleName": "PokeAlliance_dx.exe",
+      "FileName": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe",
+      "ModuleMemorySize": 61247488
+    },
+    {
+      "ProcessId": 32084,
+      "ModuleName": "libEGL.dll",
+      "FileName": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\libEGL.dll",
+      "ModuleMemorySize": 524288
+    },
+    {
+      "ProcessId": 32084,
+      "ModuleName": "libGLESv2.dll",
+      "FileName": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\libGLESv2.dll",
+      "ModuleMemorySize": 7151616
+    },
+    {
+      "ProcessId": 32084,
+      "ModuleName": "d3dcompiler_47.dll",
+      "FileName": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\d3dcompiler_47.dll",
+      "ModuleMemorySize": 4771840
+    }
+  ],
+  "pipeNames": [
+    "pka-runtime-2-32084"
+  ],
+  "clientFiles": [
+    {
+      "path": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe",
+      "pe": {
+        "bytes": 37534256,
+        "sha256": "9e4b4dcd735d5c1f709732f903d403a3068a6cf911e1977c4880f62b15d54a11",
+        "valid_headers": true,
+        "e_lfanew": 320,
+        "e_lfanew_raw_hex": "40010000",
+        "machine": 34404,
+        "sections": 7
+      },
+      "literalMarkers": [
+        {
+          "value": "pka-runtime-2-",
+          "asciiOffset": -1,
+          "utf16Offset": -1
+        },
+        {
+          "value": "PKA2/",
+          "asciiOffset": -1,
+          "utf16Offset": -1
+        },
+        {
+          "value": "automation_control",
+          "asciiOffset": -1,
+          "utf16Offset": -1
+        },
+        {
+          "value": "automation_lease",
+          "asciiOffset": -1,
+          "utf16Offset": -1
+        },
+        {
+          "value": "shiba_bots.dll",
+          "asciiOffset": -1,
+          "utf16Offset": -1
+        }
+      ]
+    }
+  ],
+  "connectionsOpened": false,
+  "commandsSent": false,
+  "processMemoryDumped": false,
+  "credentialsRead": false,
+  "originalFilesModified": false,
+  "limitations": [
+    "Pipe names do not establish server ownership or authenticated protocol state.",
+    "Visible module enumeration does not cover all possible in-memory code.",
+    "Absent ASCII/UTF-16 literals do not establish absence of an implementation.",
+    "REA objdump section inspection was unavailable on this Windows host (ERR_REA_WINDOWS_NATIVE)."
+  ]
+}

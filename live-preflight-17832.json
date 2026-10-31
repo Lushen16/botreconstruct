@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-10-28T20:47:28.208Z",
+  "pids": [
+    17832,
+    26100
+  ],
+  "commandsSent": 0,
+  "nativeVerified": false,
+  "pid": 17832,
+  "pipeAvailable": false,
+  "credentialsConfigured": false,
+  "prerequisitesReady": false,
+  "blockers": [
+    "Canal pka-runtime-2-17832 ausente; o cliente aberto sozinho nao inicia o servidor nativo.",
+    "Configure a chave do canal em PKA_CHANNEL_KEY ou PKA_CHANNEL_KEY_FILE para este PID."
+  ],
+  "status": "blocked"
+}

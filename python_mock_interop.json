@@ -1,0 +1,37 @@
+{
+  "pid": 49040,
+  "serverReady": true,
+  "steps": {
+    "authenticated": true,
+    "telemetry": {
+      "position": {
+        "x": 100,
+        "y": 100,
+        "z": 7
+      },
+      "tick": 1,
+      "pulseVersion": 3
+    },
+    "state": {
+      "healthPercent": 90,
+      "protoVersion": 1
+    },
+    "ack": {
+      "commandId": 1,
+      "type": 4,
+      "status": 0,
+      "message": "Comando enviado."
+    },
+    "clientProofLen": 32,
+    "serverProofLen": 32
+  },
+  "ok": true,
+  "stdout": [
+    "PKA_READY pid=49040 pipe=\\\\.\\pipe\\pka-runtime-2-49040",
+    "PKA_CLIENT",
+    "PKA_AUTH pid=49040",
+    "PKA_COMMAND id=1 type=4 bytes=24",
+    "PKA_DISCONNECT"
+  ],
+  "stderr": ""
+}

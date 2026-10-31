@@ -1,0 +1,29 @@
+"use strict";
+!(function () {
+  const o = (o) => document.getElementById(o);
+  let t = null;
+  const e = () => window.pkaLook.close();
+  (window.pkaLook.onShow((e) => {
+    ((t = e),
+      (o("look-title").textContent = e.title || "ID do item"),
+      (o("look-id").textContent = String(e.id)),
+      (o("look-detail").textContent = e.detail || ""),
+      (o("look-note").textContent = e.note || ""),
+      (o("look-note").hidden = !e.note),
+      (o("look-copy").textContent = "Copiar ID"));
+  }),
+    o("look-ok").addEventListener("click", e),
+    o("look-close").addEventListener("click", e),
+    o("look-copy").addEventListener("click", async () => {
+      if (t)
+        try {
+          (await window.pkaLook.copy(String(t.id)),
+            (o("look-copy").textContent = "Copiado!"));
+        } catch {
+          o("look-copy").textContent = "Não copiou";
+        }
+    }),
+    document.addEventListener("keydown", (o) => {
+      ("Escape" !== o.key && "Enter" !== o.key) || e();
+    }));
+})();

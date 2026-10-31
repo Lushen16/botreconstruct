@@ -1,0 +1,35 @@
+{
+  "product": "PKA Tools 3.1.9",
+  "generatedAt": "2026-10-24T01:01:59.616Z",
+  "claims": {
+    "pass": 90,
+    "fail": 0,
+    "total": 90
+  },
+  "decisions": {
+    "total": 30,
+    "implemented": 13,
+    "partial": 17,
+    "unsupported": 0,
+    "native-unknown": 0
+  },
+  "contracts": {
+    "total": 16,
+    "implementable": 16,
+    "blocked": 0,
+    "closed": 16
+  },
+  "mock": {
+    "path": "tools/pka_runtime_server.py",
+    "sha256": "605f328a9fddfb150e62ee5c00ba0d4182b8eddca395f5c1b45eb7d18eabe339",
+    "canonical": true
+  },
+  "native": {
+    "status": "MEMORY-DUMPED",
+    "reason": "stomped .text de msftedit.dll; identidade de arquivo UNVERIFIED; binding do worker 0x8461a -> 0xc6360 -> 0xcfe40; route/TravelLure e segundos aleatorios ligados estaticamente; consumidor/hook/ACK nativos permanecem abertos",
+    "dump": "dumps/msftedit_text_32336.bin",
+    "sha256": "7c0fd219dc24f3fa273ded518eca8ea840d3395f00d14e78beacb4ffd7c50ea4"
+  },
+  "ok": true,
+  "errors": []
+}

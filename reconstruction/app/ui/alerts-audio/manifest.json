@@ -1,0 +1,88 @@
+{
+  "provider": "ElevenLabs",
+  "model": "eleven_multilingual_v2",
+  "voiceId": "JBFqnCBsd6RMkjVDRZzb",
+  "voiceName": "George",
+  "language": "pt-BR",
+  "format": "mp3_44100_128",
+  "source": "https://elevenlabs.io/docs/api-reference/text-to-speech/convert",
+  "clips": [
+    {
+      "type": "hp",
+      "file": "hp.mp3",
+      "text": "Atenção! A vida do seu personagem está baixa.",
+      "bytes": 53959,
+      "sha256": "3012c23526fd1b17b7101524101bf66733e78e64ba0da97e6c118e2bf0736c0f"
+    },
+    {
+      "type": "disconnected",
+      "file": "disconnected.mp3",
+      "text": "Atenção! O cliente foi desconectado.",
+      "bytes": 44346,
+      "sha256": "580b77b6b7db4ab7b0c91139060e7a4b9a564244b01bd2cd64599d53f0d50fa8"
+    },
+    {
+      "type": "chat",
+      "file": "chat.mp3",
+      "text": "Atenção! Você recebeu uma mensagem no chat.",
+      "bytes": 48526,
+      "sha256": "6e0c3099c79c3368d0b54a596cdab0fc06ca597961c80df2202ea0f83f7a6ee8"
+    },
+    {
+      "type": "creature",
+      "file": "creature.mp3",
+      "text": "Atenção! Um Pokémon foi encontrado perto de você.",
+      "bytes": 56885,
+      "sha256": "fa9e753d020d8f56c4c9db8035d42d6a9ac830b7fa2aa7fe4b83b3dc60375fce"
+    },
+    {
+      "type": "player",
+      "file": "player.mp3",
+      "text": "Atenção! Um jogador apareceu na tela.",
+      "bytes": 43510,
+      "sha256": "1eb8fbe0efe3b90bfbe7065fd3b9007860bb0583d58acacc2b6dcce5651a9e68"
+    },
+    {
+      "type": "gm_arrow",
+      "file": "gm_arrow.mp3",
+      "text": "Atenção! Uma seta de GM apareceu na tela.",
+      "bytes": 53959,
+      "sha256": "55a686a1a0e5ce4dc9d1e6094e66c1c6b11039513b2c65cd245b3a26849dfb8c"
+    },
+    {
+      "type": "gm_message",
+      "file": "gm_message.mp3",
+      "text": "Atenção! Você recebeu uma mensagem de GM.",
+      "bytes": 51452,
+      "sha256": "356232dc9185d56f7af2ae2ef64ea104262058c34f4893bdf6c352776c213ad3"
+    },
+    {
+      "type": "hunt_pokemon",
+      "file": "hunt_pokemon.mp3",
+      "text": "Atenção! Um Pokémon diferente da sua hunt apareceu na tela.",
+      "bytes": 64408,
+      "sha256": "145dd3df1ee9088ed158a23c9c63f168066e5b41d9179d076f21eb1d19381325"
+    },
+    {
+      "type": "teleport",
+      "file": "teleport.mp3",
+      "text": "Atenção! Seu personagem mudou de posição rapidamente.",
+      "bytes": 61901,
+      "sha256": "a5f8441907e81a1951ea5e082427a42459426805e97b36b9754121aae6a6f263"
+    },
+    {
+      "type": "camera_viewers",
+      "file": "camera_viewers.mp3",
+      "text": "Atenção! Há espectadores assistindo à sua câmera.",
+      "bytes": 56885,
+      "sha256": "5ff2bfeab1c3c92f69219ba68d0b6bcfaa4df538d3b2e0a44125c6294e3e5849"
+    },
+    {
+      "type": "pokemon_capture",
+      "file": "pokemon_capture.mp3",
+      "text": "Pokémon capturado com sucesso!",
+      "bytes": 34315,
+      "sha256": "d79f6089914322a53dab5112f20b0e3bd1e1312bd2812dd1ba7ce830f6c72e10"
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "archive_sha256": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+  "files": [
+    {
+      "path": "alerts-audio/beep-default.wav",
+      "original": "assets/alerts/beep-default.wav",
+      "sha256": "0fbc5f423b1d1b402c8aa51a19f7879ae543f6df29deb30f1060317b372adc57",
+      "original_sha256": "0fbc5f423b1d1b402c8aa51a19f7879ae543f6df29deb30f1060317b372adc57",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/beep-happy.wav",
+      "original": "assets/alerts/beep-happy.wav",
+      "sha256": "35f91ad60ec556fd5d7eebb07b7e623efcd415b7b31841a23e456070162dfd6e",
+      "original_sha256": "35f91ad60ec556fd5d7eebb07b7e623efcd415b7b31841a23e456070162dfd6e",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/beep-high.wav",
+      "original": "assets/alerts/beep-high.wav",
+      "sha256": "8979bc7e50c48ab6e142a99c504cb1ada403f75bd5e91b31565615db0d34d783",
+      "original_sha256": "8979bc7e50c48ab6e142a99c504cb1ada403f75bd5e91b31565615db0d34d783",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/beep-low.wav",
+      "original": "assets/alerts/beep-low.wav",
+      "sha256": "18957746ed76e3a86c4120dae9c16f0b802c0c0a6cfaf386351e81ecfbdfc914",
+      "original_sha256": "18957746ed76e3a86c4120dae9c16f0b802c0c0a6cfaf386351e81ecfbdfc914",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/beep-pulse.wav",
+      "original": "assets/alerts/beep-pulse.wav",
+      "sha256": "36162638ceab1d67d3e8a648db1d6219f5ffe6291d0287feec9ed6cdd2dde7b9",
+      "original_sha256": "36162638ceab1d67d3e8a648db1d6219f5ffe6291d0287feec9ed6cdd2dde7b9",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/beep-urgent.wav",
+      "original": "assets/alerts/beep-urgent.wav",
+      "sha256": "1b379f966325ca9aaaf264f56f80b456b317a938363d172893a8395cdc2514fa",
+      "original_sha256": "1b379f966325ca9aaaf264f56f80b456b317a938363d172893a8395cdc2514fa",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/camera_viewers.mp3",
+      "original": "assets/alerts/camera_viewers.mp3",
+      "sha256": "5ff2bfeab1c3c92f69219ba68d0b6bcfaa4df538d3b2e0a44125c6294e3e5849",
+      "original_sha256": "5ff2bfeab1c3c92f69219ba68d0b6bcfaa4df538d3b2e0a44125c6294e3e5849",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/chat.mp3",
+      "original": "assets/alerts/chat.mp3",
+      "sha256": "6e0c3099c79c3368d0b54a596cdab0fc06ca597961c80df2202ea0f83f7a6ee8",
+      "original_sha256": "6e0c3099c79c3368d0b54a596cdab0fc06ca597961c80df2202ea0f83f7a6ee8",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/creature.mp3",
+      "original": "assets/alerts/creature.mp3",
+      "sha256": "fa9e753d020d8f56c4c9db8035d42d6a9ac830b7fa2aa7fe4b83b3dc60375fce",
+      "original_sha256": "fa9e753d020d8f56c4c9db8035d42d6a9ac830b7fa2aa7fe4b83b3dc60375fce",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/disconnected.mp3",
+      "original": "assets/alerts/disconnected.mp3",
+      "sha256": "580b77b6b7db4ab7b0c91139060e7a4b9a564244b01bd2cd64599d53f0d50fa8",
+      "original_sha256": "580b77b6b7db4ab7b0c91139060e7a4b9a564244b01bd2cd64599d53f0d50fa8",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/gm_arrow.mp3",
+      "original": "assets/alerts/gm_arrow.mp3",
+      "sha256": "55a686a1a0e5ce4dc9d1e6094e66c1c6b11039513b2c65cd245b3a26849dfb8c",
+      "original_sha256": "55a686a1a0e5ce4dc9d1e6094e66c1c6b11039513b2c65cd245b3a26849dfb8c",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/gm_message.mp3",
+      "original": "assets/alerts/gm_message.mp3",
+      "sha256": "356232dc9185d56f7af2ae2ef64ea104262058c34f4893bdf6c352776c213ad3",
+      "original_sha256": "356232dc9185d56f7af2ae2ef64ea104262058c34f4893bdf6c352776c213ad3",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/hp.mp3",
+      "original": "assets/alerts/hp.mp3",
+      "sha256": "3012c23526fd1b17b7101524101bf66733e78e64ba0da97e6c118e2bf0736c0f",
+      "original_sha256": "3012c23526fd1b17b7101524101bf66733e78e64ba0da97e6c118e2bf0736c0f",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/hunt_pokemon.mp3",
+      "original": "assets/alerts/hunt_pokemon.mp3",
+      "sha256": "145dd3df1ee9088ed158a23c9c63f168066e5b41d9179d076f21eb1d19381325",
+      "original_sha256": "145dd3df1ee9088ed158a23c9c63f168066e5b41d9179d076f21eb1d19381325",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/manifest.json",
+      "original": "assets/alerts/manifest.json",
+      "sha256": "726b86783ba0f8393e40dda06cb87b9ec313bcaf641bedeba158b79e4a68922d",
+      "original_sha256": "726b86783ba0f8393e40dda06cb87b9ec313bcaf641bedeba158b79e4a68922d",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/player.mp3",
+      "original": "assets/alerts/player.mp3",
+      "sha256": "1eb8fbe0efe3b90bfbe7065fd3b9007860bb0583d58acacc2b6dcce5651a9e68",
+      "original_sha256": "1eb8fbe0efe3b90bfbe7065fd3b9007860bb0583d58acacc2b6dcce5651a9e68",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/pokemon_capture.mp3",
+      "original": "assets/alerts/pokemon_capture.mp3",
+      "sha256": "d79f6089914322a53dab5112f20b0e3bd1e1312bd2812dd1ba7ce830f6c72e10",
+      "original_sha256": "d79f6089914322a53dab5112f20b0e3bd1e1312bd2812dd1ba7ce830f6c72e10",
+      "preserved": false
+    },
+    {
+      "path": "alerts-audio/teleport.mp3",
+      "original": "assets/alerts/teleport.mp3",
+      "sha256": "a5f8441907e81a1951ea5e082427a42459426805e97b36b9754121aae6a6f263",
+      "original_sha256": "a5f8441907e81a1951ea5e082427a42459426805e97b36b9754121aae6a6f263",
+      "preserved": false
+    },
+    {
+      "path": "alert-audio.js",
+      "original": "renderer/alert-audio.js",
+      "sha256": "78ec9d505606f829651f26a303f3c9ae081cbabdf98706ed73849f165fd075d7",
+      "original_sha256": "78ec9d505606f829651f26a303f3c9ae081cbabdf98706ed73849f165fd075d7",
+      "preserved": false
+    },
+    {
+      "path": "alerts.js",
+      "original": "renderer/alerts.js",
+      "sha256": "5cf4ed432f22ef1b8e769d84ef406e76f8a742de7a09ccd765c6b1c6e2ccd597",
+      "original_sha256": "5cf4ed432f22ef1b8e769d84ef406e76f8a742de7a09ccd765c6b1c6e2ccd597",
+      "preserved": false
+    },
+    {
+      "path": "app.js",
+      "original": "renderer/app.js",
+      "sha256": "e82e745dd8173473b16d2c78c2a37a8d66b4081a02eda76508dec542c042cf0d",
+      "original_sha256": "34a2ee7a0448a92de386d808e326bb02f6500c6b583903a8b6d5b7e9be4e679f",
+      "preserved": true
+    },
+    {
+      "path": "guild-daily.js",
+      "original": "renderer/guild-daily.js",
+      "sha256": "28237d37adaa4beb7012cb9bc04718683feb03a4a2337091280f974f8dffa7af",
+      "original_sha256": "28237d37adaa4beb7012cb9bc04718683feb03a4a2337091280f974f8dffa7af",
+      "preserved": false
+    },
+    {
+      "path": "healer.js",
+      "original": "renderer/healer.js",
+      "sha256": "91c76afcfcf4cc8b50c845b80914835bbf65e5a75a237bfa099b4ef3b159e35f",
+      "original_sha256": "91c76afcfcf4cc8b50c845b80914835bbf65e5a75a237bfa099b4ef3b159e35f",
+      "preserved": false
+    },
+    {
+      "path": "hoenn.js",
+      "original": "renderer/hoenn.js",
+      "sha256": "5e791b894fe3a529fd2052b604ae68e43e5fbc10bd9a25f7795c4c467f75532f",
+      "original_sha256": "5e791b894fe3a529fd2052b604ae68e43e5fbc10bd9a25f7795c4c467f75532f",
+      "preserved": false
+    },
+    {
+      "path": "index.html",
+      "original": "renderer/index.html",
+      "sha256": "299148892ecac1b859d03ebf1bd26bbd233c72f835b034c33e2c20dcc755829f",
+      "original_sha256": "1b7f950af832d5ae2deb58b9e3ada2163877931c5afbf5cb57f7d02209701fcc",
+      "preserved": true
+    },
+    {
+      "path": "look.css",
+      "original": "renderer/look.css",
+      "sha256": "1e9291e87d303036e977a9b7f20ef56d57c107dd3e11e41afa3868abbb809967",
+      "original_sha256": "1e9291e87d303036e977a9b7f20ef56d57c107dd3e11e41afa3868abbb809967",
+      "preserved": false
+    },
+    {
+      "path": "look.html",
+      "original": "renderer/look.html",
+      "sha256": "bfd81e8e692c63a827b0716370205c8f1bf3d46e3be7cb1d260deb810578f6d4",
+      "original_sha256": "bfd81e8e692c63a827b0716370205c8f1bf3d46e3be7cb1d260deb810578f6d4",
+      "preserved": false
+    },
+    {
+      "path": "look.js",
+      "original": "renderer/look.js",
+      "sha256": "3aeeefce126cbe823ce6943f16a3092efc2df63182ca6a1a8621300f0ce59ee1",
+      "original_sha256": "3aeeefce126cbe823ce6943f16a3092efc2df63182ca6a1a8621300f0ce59ee1",
+      "preserved": false
+    },
+    {
+      "path": "looting.js",
+      "original": "renderer/looting.js",
+      "sha256": "0ceee7c1c0d6da93330576fe536b525108029a9342e8447f00456ef1d2404f17",
+      "original_sha256": "0ceee7c1c0d6da93330576fe536b525108029a9342e8447f00456ef1d2404f17",
+      "preserved": false
+    },
+    {
+      "path": "scripts.js",
+      "original": "renderer/scripts.js",
+      "sha256": "7094a39d98902caa452610d750234dea57ce95a74f161d297b3907bd446474ba",
+      "original_sha256": "7094a39d98902caa452610d750234dea57ce95a74f161d297b3907bd446474ba",
+      "preserved": false
+    },
+    {
+      "path": "style.css",
+      "original": "renderer/style.css",
+      "sha256": "7df0a9cf9b38062b15b1c99160439e2ac6bdc27d3de6ed87597c73f9375d55a3",
+      "original_sha256": "7df0a9cf9b38062b15b1c99160439e2ac6bdc27d3de6ed87597c73f9375d55a3",
+      "preserved": false
+    },
+    {
+      "path": "target.js",
+      "original": "renderer/target.js",
+      "sha256": "ffddfad98fbf469c340bd2480d572258560d3436ad1a136187dead8b462be629",
+      "original_sha256": "ffddfad98fbf469c340bd2480d572258560d3436ad1a136187dead8b462be629",
+      "preserved": false
+    },
+    {
+      "path": "ui.js",
+      "original": "renderer/ui.js",
+      "sha256": "dc2f13b7dd59c986b9fe635cca22651d287b7fb9b20de536db9200e84b3e608a",
+      "original_sha256": "dc2f13b7dd59c986b9fe635cca22651d287b7fb9b20de536db9200e84b3e608a",
+      "preserved": false
+    },
+    {
+      "path": "walker.js",
+      "original": "renderer/walker.js",
+      "sha256": "0477e45699d9ed3e18ba5b5588aaa3f7c58fb3d0d7e4b7a2be47b90c36e2960c",
+      "original_sha256": "e31a24c15e31503a0291fdee8ed88b5b6e766c081f357b22436753453d030df2",
+      "preserved": false
+    },
+    {
+      "path": "alerts-model.js",
+      "original": "shared/alerts.js",
+      "sha256": "424d3dbb18c27a693d681a0fffc21900c4122767d8bd049c07b2183bf9c462db",
+      "original_sha256": "424d3dbb18c27a693d681a0fffc21900c4122767d8bd049c07b2183bf9c462db",
+      "preserved": false
+    },
+    {
+      "path": "diagnostics.js",
+      "original": "shared/diagnostics.js",
+      "sha256": "1de5667a4c69930732ee89653b2be27cbf25f34d2e004e94900a2f5febe7a1ce",
+      "original_sha256": "55e6fecf001a9bbb0b4fda5fb239e876a070906a9c661accd7d3492248435f97",
+      "preserved": false
+    },
+    {
+      "path": "healer-model.js",
+      "original": "shared/healer.js",
+      "sha256": "e7b8d86f413956dd4472bc4895eedad53dc49d1873f269fbc2ac3262abcd7933",
+      "original_sha256": "e7b8d86f413956dd4472bc4895eedad53dc49d1873f269fbc2ac3262abcd7933",
+      "preserved": false
+    },
+    {
+      "path": "hoenn-model.js",
+      "original": "shared/hoenn.js",
+      "sha256": "40dfdadd51be75a6447d07fa1ff68a2afc110b1baaa6006455692af818fd94d7",
+      "original_sha256": "40dfdadd51be75a6447d07fa1ff68a2afc110b1baaa6006455692af818fd94d7",
+      "preserved": false
+    },
+    {
+      "path": "messages.js",
+      "original": "shared/messages.js",
+      "sha256": "eeeb0ac1970bcc15432fe3ad69a35d15c8ac6d3f68315524bbe3e3deb844a0c7",
+      "original_sha256": "eeeb0ac1970bcc15432fe3ad69a35d15c8ac6d3f68315524bbe3e3deb844a0c7",
+      "preserved": false
+    },
+    {
+      "path": "schema.js",
+      "original": "shared/schema.js",
+      "sha256": "4c2c90f32546b8ac6cfcb2c3bb2b061091e75d39efb6f03ba4b60590ddcd4023",
+      "original_sha256": "8aa0fe77cbb90fa27ef132b20abf0951de0ba3e08fe81dd0d9f6e74be439e915",
+      "preserved": true
+    },
+    {
+      "path": "walker-model.js",
+      "original": "shared/walker.js",
+      "sha256": "853a06dc70f9184297e872aa2d34f947c862bcd9cbc97523b2bdbd791ba2a8b0",
+      "original_sha256": "9b77f866763aa6239f6a233cb26cd171f54e866f0073d96a46cb1c3d49b5ea2a",
+      "preserved": false
+    },
+    {
+      "path": "sim.js",
+      "original": null,
+      "preserved": true,
+      "sha256": "df6a126dab02e597fd1c83eeab8c0b43603034350c3e9b4c17cac6fc166019bd",
+      "original_sha256": null
+    }
+  ]
+}

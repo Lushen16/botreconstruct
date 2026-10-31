@@ -1,0 +1,412 @@
+"use strict";
+window.PkaHoennUI = {
+  create(e) {
+    const o = window.PkaUI.create(e),
+      { n: t, button: a, section: n, row: s, tip: r } = o,
+      i = window.PkaSchema.tabs.find((e) => "hoenn" === e.key).fields,
+      d = window.PkaSchema.defaults(i.find((e) => "roster" === e.key).fields);
+    let l = null,
+      m = null,
+      p = "",
+      c = "",
+      u = !1;
+    const k = () => e.getConfig().hoenn,
+      f = () => e.getSession();
+    function g() {
+      const o = f();
+      if (
+        !o?.online ||
+        o.stale ||
+        o.ageMs > 1e3 ||
+        !o.telemetry?.nativeVerified
+      )
+        return !1;
+      const t = JSON.stringify(
+        o.telemetry.roster?.map((e) => [e.uuid, e.name, e.slot]),
+      );
+      if (m === k().roster && p === t && c === k().formation) return !1;
+      const a = window.PkaHoennModel.mirrorSlots(k(), o.telemetry.roster, d);
+      return (
+        (m = k().roster),
+        (p = t),
+        (c = k().formation),
+        a && e.changed(),
+        a
+      );
+    }
+    function h() {
+      if (!l) return;
+      const o = f(),
+        t = e.getRuntime().modules.includes("hoenn"),
+        a =
+          o?.online &&
+          !o.stale &&
+          o.ageMs <= 1e3 &&
+          o.telemetry?.nativeVerified;
+      (window.PkaUI.set(
+        l.start,
+        "textContent",
+        t ? "Pausar Hoenn" : "Iniciar Hoenn",
+      ),
+        window.PkaUI.set(
+          l.start,
+          "disabled",
+          !(t || (a && 3 === o.telemetry?.pulseVersion && k().roster.length)),
+        ),
+        window.PkaUI.set(
+          l.status,
+          "textContent",
+          t
+            ? e.getRuntime().phases?.hoenn || e.getRuntime().phase
+            : "Hoenn pausado · usa os times da tela",
+        ),
+        window.PkaUI.set(
+          l.sync,
+          "textContent",
+          a
+            ? "Slots sincronizados automaticamente com a pokebar."
+            : "Aguardando a pokebar do jogo · os ajustes salvos estão preservados.",
+        ));
+      for (const e of l.cards) {
+        const t = a ? o.telemetry.roster.find((o) => o.uuid === e.uuid) : null,
+          n =
+            t?.moves?.filter((e) => e.spellword && "passive" !== e.spellword) ||
+            [],
+          s = n.length
+            ? Math.round(
+                (n.filter((e) => e.remainingMs <= 0).length / n.length) * 100,
+              )
+            : null;
+        (window.PkaUI.set(
+          e.hp,
+          "textContent",
+          t ? `HP ${t.healthPercent}%` : "HP —",
+        ),
+          window.PkaUI.set(e.bar, "value", t?.healthPercent || 0),
+          window.PkaUI.set(
+            e.cd,
+            "textContent",
+            null === s ? "Skills —" : `Skills prontas ${s}%`,
+          ),
+          e.element.classList.toggle(
+            "active-pokemon",
+            !!t && t.slot === o.telemetry.activeSlot,
+          ));
+      }
+    }
+    function P(d) {
+      (g(), (l = { container: d, cards: [] }));
+      const m = t("div", "hoenn-workspace"),
+        p = t("div", "bot-editor"),
+        c = t("div", "hoenn-teams");
+      (d.append(m), m.append(p, c));
+      const u = n(p, "Rotação de times"),
+        f = s(u);
+      ((l.start = a(
+        f,
+        "Iniciar Hoenn",
+        () => e.run(!e.getRuntime().modules.includes("hoenn")),
+        "primary",
+      )),
+        (l.start.title =
+          "Liga a rotação: lura, usa o combo de cada Pokémon do time, recupera e troca de time. Não precisa do Target."),
+        r(
+          o.toggle(f, "Forçar BOX", k(), "forceBox"),
+          i.find((e) => "forceBox" === e.key).help,
+        ),
+        r(
+          o.select(
+            f,
+            "Formação",
+            k(),
+            "formation",
+            [
+              ["2x3", "2 times de 3 Pokémon"],
+              ["3x2", "3 times de 2 Pokémon"],
+            ],
+            () => {
+              (window.PkaHoennModel.normalizeRoles(k()), e.changed(), g(), b());
+            },
+          ),
+          "Como os seis Pokémon da pokebar se dividem em times. Cada lure usa um time inteiro.",
+        ),
+        (l.status = t("p", "hint")),
+        u.append(l.status),
+        (l.sync = t("p", "hint")),
+        u.append(l.sync));
+      const P = n(p, "Hunt e posicionamento");
+      (o.fields(
+        P,
+        i,
+        k(),
+        [
+          "minWildsToEngage",
+          "ignoredCreaturesText",
+          "targetShinyEnabled",
+          "perfectLure",
+          "bestTile",
+          "positionAround",
+          "positionTiles",
+        ],
+        "hoenn",
+      ),
+        P.append(
+          t(
+            "p",
+            "hint",
+            "Forçar BOX: com o Walker ligado, ao atingir o número de selvagens segue direto ao próximo waypoint BOX. Se o caminho estiver bloqueado, tenta outra BOX; sem alternativa, combate no local. Desmarcado: inicia o combate onde estiver. Ao chegar a um BOX com menos selvagens, combate com os que chegaram.",
+          ),
+        ),
+        P.append(
+          t(
+            "p",
+            "hint",
+            "O treinador se posiciona em relação ao tank e mantém esse tile durante as trocas. To Poke leva cada DPS ao tile onde o tank parou; desmarcado, o DPS vira para a box sem mover o treinador.",
+          ),
+        ));
+      const S = n(p, "Recuperação");
+      (o.fields(
+        S,
+        i,
+        k(),
+        [
+          "potionHotkey",
+          "potionHpPercent",
+          "useMedicine",
+          "medicineHotkey",
+          "useSafeSpot",
+          "forceSafeSpotRecovery",
+          "useReadyGate",
+          "gateReadyPct",
+          "gateMinHp",
+          "gateDpsMinHp",
+          "cycleAtSafeSpot",
+          "autoStance",
+        ],
+        "hoenn",
+      ),
+        S.append(
+          t(
+            "p",
+            "hint",
+            "Potion: configure a mesma hotkey da action bar, com a ação Usar no Pokémon. Perfis antigos mantêm o slot salvo até definir uma hotkey.",
+          ),
+        ));
+      const y = t("details", "bot-advanced");
+      (y.append(t("summary", "", "Tempos e ajustes avançados")), p.append(y));
+      const v = new Set([
+        "roster",
+        "formation",
+        "minWildsToEngage",
+        "ignoredCreaturesText",
+        "targetShinyEnabled",
+        "forceBox",
+        "perfectLure",
+        "bestTile",
+        "positionAround",
+        "positionTiles",
+        "potionHotkey",
+        "potionHpPercent",
+        "useMedicine",
+        "medicineHotkey",
+        "useSafeSpot",
+        "forceSafeSpotRecovery",
+        "useReadyGate",
+        "gateReadyPct",
+        "gateMinHp",
+        "gateDpsMinHp",
+        "cycleAtSafeSpot",
+        "autoStance",
+      ]);
+      o.fields(
+        y,
+        i,
+        k(),
+        i.filter((e) => !v.has(e.key)).map((e) => e.key),
+        "hoenn",
+      );
+      const w = "3x2" === k().formation ? 2 : 3,
+        x = "3x2" === k().formation ? 3 : 2;
+      c.append(
+        t(
+          "p",
+          "hint hoenn-team-help",
+          "O primeiro de cada time é o tank; os demais são DPS, na ordem do combo. Use as setas para trocar a ordem ou mover Pokémon entre times. Os ajustes acompanham cada Pokémon.",
+        ),
+      );
+      for (let i = 0; i < x; i++) {
+        const d = n(c, `Time ${String.fromCharCode(65 + i)}`),
+          m = k().roster.slice(i * w, (i + 1) * w),
+          p = { uuid: m[0]?.uuid || "" };
+        if (m.length) {
+          const t = s(d);
+          t.classList.add("hoenn-team-controls");
+          const a = o.select(
+            t,
+            "Tank do time",
+            p,
+            "uuid",
+            m.map((e) => [e.uuid, e.name]),
+            () => {
+              window.PkaHoennModel.setTank(k(), i, p.uuid) &&
+                (e.changed(), b());
+            },
+          );
+          (a.setAttribute(
+            "aria-label",
+            `Tank do time ${String.fromCharCode(65 + i)}`,
+          ),
+            r(
+              a,
+              "O tank entra primeiro, segura a box e é quem fica fora da ball andando até a próxima lure.",
+            ));
+        }
+        const u = t("div", "hoenn-slots");
+        d.append(u);
+        for (let n = 0; n < w; n++) {
+          const d = i * w + n,
+            m = k().roster[d],
+            p = t("section", "pokemon-slot");
+          if ((u.append(p), !m)) {
+            (p.classList.add("empty-pokemon"),
+              p.append(
+                t("span", "slot-number", `Slot ${d + 1}`),
+                t("p", "hint", "Aguardando Pokémon"),
+              ));
+            continue;
+          }
+          const c = t("div", "pokemon-heading");
+          (c.append(
+            t("span", "slot-number", String(d + 1).padStart(2, "0")),
+            t("strong", "", m.name || `Pokémon ${d + 1}`),
+            t(
+              "span",
+              `role-badge ${m.role}`,
+              "tank" === m.role ? "TANK" : "DPS",
+            ),
+          ),
+            p.append(c));
+          const f = t("div", "pokemon-order");
+          p.append(f);
+          for (const [o, t, n] of [
+            [-1, "Mover antes", "←"],
+            [1, "Mover depois", "→"],
+          ]) {
+            const s = a(
+              f,
+              n,
+              () => {
+                window.PkaHoennModel.swapRoster(k(), d, d + o) &&
+                  (e.changed(),
+                  b(),
+                  l.cards
+                    .find((e) => e.uuid === m.uuid)
+                    ?.element.querySelector(`button[data-order="${o}"]`)
+                    ?.focus());
+              },
+              "pokemon-order-button",
+            );
+            ((s.dataset.order = String(o)),
+              (s.disabled = d + o < 0 || d + o >= k().roster.length),
+              (s.title = `${t}: troca de posição e de time se atravessar a divisão.`),
+              s.setAttribute("aria-label", `${t}: ${m.name}`));
+          }
+          const g = s(p),
+            h = t("span"),
+            P = t("span");
+          g.append(h, P);
+          const S = t("progress");
+          ((S.max = 100),
+            S.setAttribute("aria-label", `HP ${m.name}`),
+            p.append(S));
+          const y = s(p);
+          (r(
+            o.input(y, "Espera antes de trocar (ms)", m, "dwellMs", {
+              type: "number",
+            }),
+            "Depois do combo deste Pokémon, espera este tempo (as skills saírem) antes de chamar o próximo.",
+          ),
+            r(
+              o.input(y, "Skills prontas %", m, "readyPct", {
+                type: "number",
+                max: 100,
+              }),
+              "Na recuperação, quanto da barra azul deste Pokémon precisa estar pronta antes da próxima lure.",
+            ));
+          const v = s(p);
+          (r(
+            o.toggle(v, "PokeStop", m, "usePokestop"),
+            "Manda !pokestop quando este Pokémon sai, para ele ficar parado na box.",
+          ),
+            n &&
+              r(
+                o.toggle(v, "To Poke · ir ao tank", m, "toPoke"),
+                "Este DPS anda até o tile onde o tank parou antes do combo. Desmarcado: ele só vira para a box.",
+              ));
+          const x = t("div", "pokemon-skills");
+          ((x.id = `hoenn-skills-${d}`), (x.hidden = !0));
+          const H = a(
+            p,
+            "Buff e cura",
+            () => {
+              ((x.hidden = !x.hidden),
+                H.setAttribute("aria-expanded", String(!x.hidden)));
+            },
+            "pokemon-skills-button",
+          );
+          ((H.title =
+            "Skills de buff e de cura deste Pokémon, usadas sozinhas pelo HP dele."),
+            H.setAttribute(
+              "aria-label",
+              `Configurar buff e cura de ${m.name || `Pokémon ${d + 1}`}`,
+            ),
+            H.setAttribute("aria-expanded", "false"),
+            H.setAttribute("aria-controls", x.id),
+            p.append(x));
+          for (const [e, t, a] of [
+            ["Buff", "buff", "o buff (uma vez por lure)"],
+            ["Cura", "heal", "a cura"],
+          ]) {
+            const n = s(x);
+            (r(
+              o.toggle(n, e, m, `${t}On`),
+              `Usa ${a} quando o HP deste Pokémon ficar abaixo do HP %.`,
+            ),
+              r(
+                o.input(n, "Skill", m, `${t}Move`, {
+                  type: "number",
+                  min: 1,
+                  max: 100,
+                }),
+                "Número da skill: 1 = m1, 2 = m2…",
+              ),
+              r(
+                o.input(n, "HP %", m, `${t}Hp`, { type: "number", max: 100 }),
+                "A skill sai com o HP do Pokémon abaixo deste valor.",
+              ));
+          }
+          l.cards.push({ uuid: m.uuid, element: p, hp: h, cd: P, bar: S });
+        }
+      }
+      h();
+    }
+    function b() {
+      if (!l) return;
+      const e = l.container;
+      (e.replaceChildren(), P(e));
+    }
+    return {
+      render: P,
+      refresh: h,
+      update() {
+        (g() && (u = !0), document.hidden || (u ? ((u = !1), b()) : h()));
+      },
+      reset() {
+        ((m = null), (u = !1));
+      },
+      hide() {
+        l = null;
+      },
+    };
+  },
+};

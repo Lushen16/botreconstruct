@@ -1,0 +1,19 @@
+:root { color-scheme: dark; font: 11px/1.45 Verdana, 'Segoe UI', sans-serif; color: #c5cdd9; background: #1c1e22; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #1c1e22; }
+button { font: inherit; color: #c5cdd9; background: #23262a; border: 1px solid #30343b; min-height: 28px; padding: 4px 12px; cursor: pointer; }
+button:hover { background: #30343b; border-color: #59616e; }
+button:focus-visible { outline: 2px solid #df5583; outline-offset: 1px; }
+button.primary { background: #cc3366; border-color: #ad2855; color: #f0f0f1; font-weight: 700; }
+button.primary:hover { background: #b72c5b; }
+.look-card { display: flex; flex-direction: column; height: 100%; border: 1px solid #cc3366; }
+.look-bar { display: flex; align-items: center; justify-content: space-between; height: 28px; padding: 0 4px 0 10px; background: #0e1016; color: #f0f0f1; font-weight: 700; -webkit-app-region: drag; user-select: none; }
+.look-bar button { flex-shrink: 0; min-height: 22px; padding: 0 7px; border: 0; background: transparent; color: #929ba8; font-size: 15px; -webkit-app-region: no-drag; }
+#look-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.look-value { display: flex; align-items: baseline; justify-content: center; gap: 10px; padding: 12px 10px 2px; }
+.look-caption { color: #818a91; font-size: 11px; }
+#look-id { color: #f2f4f7; font: 700 32px Consolas, monospace; user-select: all; }
+#look-detail, #look-note { margin: 0; padding: 0 12px; text-align: center; color: #aeb8c5; font-size: 10px; }
+#look-note { margin-top: 4px; color: #7cf39a; }
+.look-buttons { display: flex; gap: 6px; justify-content: center; margin-top: auto; padding: 10px; }
+.look-buttons button { min-width: 100px; }

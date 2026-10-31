@@ -1,0 +1,631 @@
+"use strict";
+window.PkaTarget = {
+  render({
+    container: e,
+    config: o,
+    fields: a,
+    node: t,
+    renderFields: n,
+    changed: r,
+    run: i,
+  }) {
+    const s = o.target,
+      c = s.combo;
+    let d = null,
+      l = 0;
+    const m = a.find((e) => "monsters" === e.key).fields,
+      u = t("div", "target-workspace"),
+      p = t("section", "target-editor"),
+      b = t("section", "target-roster"),
+      g = t("div", "target-options"),
+      v = (e, o) =>
+        `${e === c ? "target.combo" : e === s ? "target" : e === s.autoRevive ? "target.autoRevive" : e === s.combatStanceAuto ? "target.combatStanceAuto" : e === s.healSkill ? "target.healSkill" : "target.lureSkill"}.${o}`;
+    function f(e, o = g) {
+      const a = t("section", "target-section");
+      return (a.append(t("h2", "", e)), o.append(a), a);
+    }
+    function k(e) {
+      const o = t("div", "target-option-row");
+      return (e.append(o), o);
+    }
+    function h(e, o, a, n, i = "text", s = 0, c = 36e5, d = "") {
+      const m = t("label", "target-input", o),
+        u = t("input");
+      return (
+        (u.type = i),
+        (u.id = `target-${n}-${++l}`),
+        (u.value = a[n]),
+        (u.dataset.settingPath = v(a, n)),
+        "number" === i && ((u.min = s), (u.max = c), (u.step = 1)),
+        d && (m.title = d),
+        u.addEventListener("input", () => {
+          ((a[n] = "number" === i ? u.valueAsNumber : u.value), r());
+        }),
+        m.append(u),
+        e.append(m),
+        u
+      );
+    }
+    function S(e, o, a, n, i = "") {
+      const s = t("button", "target-toggle");
+      ((s.type = "button"),
+        (s.dataset.settingPath = v(a, n)),
+        i && (s.title = i));
+      const c = () => {
+        ((s.textContent = `${o}: ${a[n] ? "ON" : "OFF"}`),
+          s.classList.toggle("on", a[n]),
+          s.setAttribute("aria-pressed", String(a[n])));
+      };
+      return (
+        s.addEventListener("click", () => {
+          ((a[n] = !a[n]), c(), r());
+        }),
+        c(),
+        e.append(s),
+        s
+      );
+    }
+    h(
+      f("Ignorar criaturas", p),
+      "Nomes separados por vírgula",
+      s,
+      "ignoredCreaturesText",
+      "text",
+      0,
+      0,
+      "O Target nunca conta nem ataca estes monstros. Separe por vírgula; * vale como curinga (ex.: Shiny *).",
+    );
+    const y = f("Adicionar monstro", p),
+      P = window.PkaSchema.defaults(m),
+      A = t("div", "fields target-monster-fields");
+    function x() {
+      ((P.creatureType = 1),
+        A.replaceChildren(),
+        n(
+          m.filter((e) => "creatureType" !== e.key),
+          P,
+          A,
+          "target-monster",
+        ));
+      const e = A.querySelector("#target-monster-movement"),
+        o = A.querySelector("#target-monster-kiteRange").closest(".field"),
+        a = A.querySelector("#target-monster-randomMoves"),
+        t = () => {
+          ((o.hidden = "kite" !== e.value),
+            (a.hidden = "random_move" !== e.value));
+        };
+      (e.addEventListener("input", t), e.addEventListener("change", t), t());
+    }
+    (x(), y.append(A));
+    const C = k(y),
+      E = t("button", "primary", "+ Adicionar"),
+      q = t("button", "", "Limpar");
+    function M() {
+      ((d = null),
+        Object.assign(P, window.PkaSchema.defaults(m)),
+        (E.textContent = "+ Adicionar"),
+        (q.textContent = "Limpar"),
+        (y.querySelector("h2").textContent = "Adicionar monstro"),
+        x(),
+        Y());
+    }
+    function L(e) {
+      ((d = e),
+        Object.assign(P, structuredClone(s.monsters[e])),
+        (E.textContent = "Atualizar criatura"),
+        (q.textContent = "Cancelar edição"),
+        (y.querySelector("h2").textContent = `Editar ${P.name}`),
+        x(),
+        Y(),
+        y.scrollIntoView({ block: "nearest" }),
+        A.querySelector("input")?.focus({ preventScroll: !0 }));
+    }
+    ((E.type = q.type = "button"),
+      C.append(E, q),
+      (E.title = "Coloca o monstro na lista da direita (ou salva a edição)."),
+      (q.title = "Limpa o formulário sem mexer na lista."),
+      q.addEventListener("click", M),
+      E.addEventListener("click", () => {
+        for (const e of A.querySelectorAll("input,select"))
+          if (!e.reportValidity()) return;
+        P.name.trim()
+          ? (null === d
+              ? s.monsters.push(structuredClone(P))
+              : (s.monsters[d] = structuredClone(P)),
+            r(),
+            M())
+          : A.querySelector("input").focus();
+      }),
+      p.append(g));
+    const R = f("Combo"),
+      w = t("div", "combo-modes");
+    (w.setAttribute("role", "radiogroup"),
+      w.setAttribute("aria-label", "Tipo de combo"),
+      (w.dataset.settingPath = "target.combo.enabled"),
+      R.append(w));
+    const $ = {};
+    for (const [e, o, a] of [
+      ["off", "Desligado", "O Target só ataca o monstro, sem combo."],
+      [
+        "manual",
+        "Sequência (mX)",
+        "O bot solta as skills da sequência abaixo, uma por vez.",
+      ],
+      [
+        "native",
+        "AutoCombo do cliente",
+        "O bot manda o AutoCombo do jogo. As skills são as configuradas no AutoCombo do cliente.",
+      ],
+    ]) {
+      const n = t("button", "combo-mode", o);
+      ((n.type = "button"),
+        (n.dataset.mode = e),
+        (n.title = a),
+        n.setAttribute("role", "radio"),
+        n.addEventListener("click", () => {
+          ((c.enabled = "off" !== e),
+            "off" !== e && (c.useNativeSequence = "native" === e),
+            H(),
+            r());
+        }),
+        ($[e] = n),
+        w.append(n));
+    }
+    const O = t("p", "hint combo-mode-hint");
+    R.append(O);
+    const T = k(R);
+    function H() {
+      const e = c.enabled ? (c.useNativeSequence ? "native" : "manual") : "off";
+      for (const [o, a] of Object.entries($))
+        (a.classList.toggle("selected", o === e),
+          a.setAttribute("aria-checked", String(o === e)));
+      ((T.hidden = "manual" !== e),
+        O.classList.toggle(
+          "inline-warning",
+          "off" === e && c.useNativeSequence,
+        ),
+        (O.textContent =
+          "native" === e
+            ? "Combo ligado com o AutoCombo do jogo: configure as skills no AutoCombo do cliente. A sequência daqui não é usada."
+            : "manual" === e
+              ? "Combo ligado: o bot solta as skills da sequência, na ordem, com o Step entre elas."
+              : c.useNativeSequence
+                ? "O combo está DESLIGADO. Só marcar o AutoCombo não basta: clique em “AutoCombo do cliente” acima para ligar o combo."
+                : "Combo desligado: o Target só ataca o monstro, sem combo e sem Revive depois dele."));
+    }
+    (h(
+      T,
+      "Sequência (m1, m4, m7)",
+      c,
+      "sequenceText",
+      "text",
+      0,
+      0,
+      "As skills do combo, na ordem, separadas por vírgula.",
+    ),
+      h(
+        T,
+        "Intervalo entre skills (ms)",
+        c,
+        "stepDelay",
+        "number",
+        0,
+        36e5,
+        "Espera entre uma skill e a próxima da sequência.",
+      ),
+      H());
+    let N = k(R);
+    (S(
+      N,
+      "Marcar alvo no combo",
+      c,
+      "targetCreaturesEnabled",
+      "ON: a primeira skill marca o alvo, que é mantido durante o Revive. Nos combos seguintes, o Pokémon se aproxima do alvo e o Perfect aguarda, sem refazer o posicionamento. OFF: não marca alvo e repete o posicionamento configurado.",
+    ),
+      h(
+        N,
+        "Espera antes do 1º combo (ms)",
+        c,
+        "lureDelay",
+        "number",
+        0,
+        36e5,
+        "Depois de parar, espera este tempo para os monstros chegarem antes do primeiro combo. Os combos seguintes saem direto.",
+      ));
+    const F = f("Antes do combo");
+    ((N = k(F)),
+      S(
+        N,
+        "PokeStop",
+        c,
+        "usePokeStop",
+        "Manda !pokestop antes do combo, para o seu Pokémon ficar parado no lugar enquanto a box fecha.",
+      ),
+      S(
+        N,
+        "Medicine antes",
+        c,
+        "useMedicineBeforeCombo",
+        "Usa a Medicine no seu Pokémon antes de cada combo.",
+      ),
+      S(
+        N,
+        "Medicine em debuff",
+        c,
+        "useMedicine",
+        "Usa a Medicine quando o seu Pokémon fica com efeito negativo (paralisia, veneno…).",
+      ),
+      (N = k(F)),
+      (h(
+        N,
+        "Hotkey Medicine",
+        c,
+        "medicineHotkey",
+        "text",
+        0,
+        0,
+        "Tecla da action bar com a Medicine em “Usar no Pokémon”.",
+      ).placeholder = "Ex.: F8 / Ctrl+F8"),
+      h(
+        N,
+        "Espera após Medicine (ms)",
+        c,
+        "medicineDelayMs",
+        "number",
+        0,
+        36e5,
+        "Espera depois da Medicine antes do combo.",
+      ));
+    const D = f("Posicionamento");
+    ((N = k(D)),
+      S(
+        N,
+        "Postura automática",
+        s.combatStanceAuto,
+        "enabled",
+        "Muda sozinho para ofensivo no combo e para defensivo andando (o antigo Auto Off/Def).",
+      ),
+      S(
+        N,
+        "Best Tile",
+        c,
+        "bestTileEnabled",
+        "Antes do combo, busca um centro com espaço para 8 monstros ao redor, evitando paredes e obstáculos. Afasta o treinador quando ele ocupa a box.",
+      ),
+      S(
+        N,
+        "Perfect lure",
+        c,
+        "perfectingLureEnabled",
+        "Espera os monstros fecharem em volta do seu Pokémon (a box) antes de soltar o combo.",
+      ),
+      (N = k(D)),
+      h(
+        N,
+        "Perfect: soltar com HP até %",
+        c,
+        "perfectingLureHpPercent",
+        "number",
+        0,
+        100,
+        "Ao atingir este HP ou menos, encerra o ajuste do Best Tile e libera o combo, com a box fechada ou não. 0 desliga a liberação por HP.",
+      ),
+      h(
+        N,
+        "Alcance do Perfect (SQM)",
+        c,
+        "perfectingLureRange",
+        "number",
+        1,
+        7,
+        "Até que distância do seu Pokémon o monstro conta como dentro da box. 1 = colado.",
+      ),
+      S(
+        N,
+        "Rebox",
+        c,
+        "perfectingReboxEnabled",
+        "Com a box cheia e monstros de fora, move o Pokémon um tile em direção a eles antes do combo.",
+      ));
+    const I = t("details", "target-area");
+    (I.append(t("summary", "", "Desenhar área da skill")),
+      D.append(I),
+      (I.title =
+        "Para skills com área diferente de um círculo: desenhe os tiles que a skill acerta."),
+      S(
+        I,
+        "Usar desenho",
+        c,
+        "perfectingSkillMaskEnabled",
+        "ON: o Perfect usa a área desenhada abaixo no lugar do alcance. O Best Tile sempre busca os 8 espaços físicos ao redor do Pokémon.",
+      ),
+      I.append(
+        t("p", "hint", "P = Pokémon. Clique nos tiles atingidos pela skill."),
+      ));
+    const U = t("div", "target-mask");
+    (U.setAttribute("aria-label", "Área da skill"), I.append(U));
+    for (let e = -7; e <= 7; e++)
+      for (let o = -7; o <= 7; o++) {
+        const a = t("button", "mask-tile", 0 === o && 0 === e ? "P" : "");
+        ((a.type = "button"),
+          (a.disabled = !o && !e),
+          (a.title = `${o}, ${e}`),
+          a.setAttribute("aria-label", `Tile ${o}, ${e}`));
+        const n = () => {
+          const t = c.perfectingSkillMask.some((a) => a.dx === o && a.dy === e);
+          (a.classList.toggle("on", t),
+            a.setAttribute("aria-pressed", String(t)));
+        };
+        (a.addEventListener("click", () => {
+          const a = c.perfectingSkillMask.findIndex(
+            (a) => a.dx === o && a.dy === e,
+          );
+          (a < 0
+            ? c.perfectingSkillMask.push({ dx: o, dy: e })
+            : c.perfectingSkillMask.splice(a, 1),
+            n(),
+            r());
+        }),
+          n(),
+          U.append(a));
+      }
+    const j = f("Revive e fim do combate");
+    ((N = k(j)),
+      S(
+        N,
+        "Revive",
+        s.autoRevive,
+        "enabled",
+        "Depois de cada combo, usa o Revive no seu Pokémon (hotkey abaixo).",
+      ),
+      S(
+        N,
+        "Revive seguro",
+        s.autoRevive,
+        "waitForPokemon",
+        "ON: depois do Revive, espera o seu Pokémon aparecer no mapa antes de continuar. OFF: continua logo após o clique.",
+      ),
+      (N = k(j)),
+      (h(
+        N,
+        "Hotkey Revive",
+        s.autoRevive,
+        "hotkey",
+        "text",
+        0,
+        0,
+        "Tecla da action bar com o Revive em “Auto Revive”.",
+      ).placeholder = "Ex.: F9 / Ctrl+F9"),
+      h(
+        N,
+        "Espera após última skill (ms)",
+        s.autoRevive,
+        "interval",
+        "number",
+        1,
+        36e5,
+        "Tempo entre a última skill do combo e o Revive.",
+      ),
+      (N = k(j)),
+      h(
+        N,
+        "Seguir a rota se sobrarem até",
+        c,
+        "finishRemainingCount",
+        "number",
+        0,
+        100,
+        "Depois do combo e do Revive, se sobrarem até este número de monstros vivos na tela, o bot deixa eles para trás e volta a andar. Com cura pendente no Healer, limpa a tela antes de curar. 0 desliga: luta até não sobrar nenhum.",
+      ),
+      S(
+        N,
+        "Deixar Shiny para trás",
+        c,
+        "finishIgnoreShiny",
+        "Vale com “Seguir a rota se sobrarem até”. OFF: com um Shiny vivo o combate continua até ele cair. ON: o Shiny também pode ficar para trás.",
+      ),
+      (N = k(j)),
+      h(
+        N,
+        "Emergência HP do Pokémon %",
+        s,
+        "lowHpComboPercent",
+        "number",
+        0,
+        100,
+        "Com o seu Pokémon abaixo deste HP, um monstro no alcance já basta para parar e atacar, sem esperar o Min Count. 0 desliga.",
+      ),
+      j.append(
+        t(
+          "p",
+          "hint",
+          "Na action bar do jogo: Medicine em “Usar no Pokémon” e Revive em “Auto Revive”. Informe as hotkeys acima.",
+        ),
+      ));
+    const B = f("Skills do Pokémon");
+    for (const [e, o, a] of [
+      [
+        "healSkill",
+        "Cura",
+        "Enquanto o Walker anda lurando, usa Medicine e, 50 ms depois, a skill de cura quando o HP do próprio Pokémon ficar abaixo do limite. Confirma pelo cooldown e tenta novamente se necessário. Configure a hotkey da Medicine em Usar no Pokémon.",
+      ],
+      [
+        "lureSkill",
+        "Buff",
+        "Enquanto o Walker anda lurando, usa o buff uma vez por ciclo quando o HP do próprio Pokémon ficar abaixo do limite. Aceita m8,m9, com pelo menos 250 ms entre as skills. Aguarda o cooldown confirmar cada uso; skills ainda em cooldown ficam pendentes.",
+      ],
+    ])
+      ((N = k(B)),
+        S(N, o, s[e], "enabled", a),
+        h(
+          N,
+          "lureSkill" === e ? "Skills (mX)" : "Skill (mX)",
+          s[e],
+          "move",
+          "text",
+          0,
+          0,
+          "lureSkill" === e
+            ? "Uma skill ou sequência: m8,m9. Intervalo de 250 ms."
+            : "Skill de cura, por exemplo m10. Usa a Medicine configurada acima antes da skill.",
+        ),
+        h(
+          N,
+          "HP %",
+          s[e],
+          "hpPercent",
+          "number",
+          0,
+          100,
+          "A skill sai enquanto anda lurando, com o HP do próprio Pokémon abaixo deste valor.",
+        ));
+    if (s.instanceModeEnabled) {
+      const e = t("details", "target-advanced");
+      ((e.open = !0),
+        e.append(t("summary", "", "Modo instância (ainda indisponível)")),
+        g.append(e),
+        e.append(
+          t(
+            "p",
+            "hint inline-warning",
+            "Este perfil veio com o Modo instância ligado. Ele ainda não funciona nesta versão: desmarque para o Target poder iniciar.",
+          ),
+        ),
+        n(
+          a.filter((e) => "instanceModeEnabled" === e.key),
+          s,
+          e,
+          "target",
+        ));
+    }
+    const z = window.PkaUI.cycleElement(t);
+    ((z.id = "target-cycle"), b.append(z));
+    const V = t("button", "target-start primary", "Iniciar Target");
+    ((V.id = "target-run"),
+      (V.type = "button"),
+      V.addEventListener("click", i),
+      b.append(V));
+    const X = t("p", "target-status", "Pausado");
+    ((X.id = "target-runtime-state"), b.append(X));
+    const W = t("section", "diagnostic-panel");
+    ((W.id = "target-diagnostics"),
+      (W.hidden = !0),
+      W.setAttribute("aria-live", "polite"),
+      W.append(t("h2", "", "Verifique antes de iniciar")));
+    const G = t("ul", "diagnostic-list");
+    ((G.id = "target-issues"), W.append(G), b.append(W));
+    S(
+      f("Prioridade Shiny", b),
+      "★ Atacar Shiny primeiro",
+      s,
+      "shinyPriorityEnabled",
+      "Com um Shiny na tela, ele vira o alvo antes de qualquer outro monstro.",
+    );
+    const Q = f("Monstros configurados", b),
+      _ = t("span", "target-count");
+    Q.querySelector("h2").append(_);
+    const J = t("input");
+    ((J.type = "search"),
+      (J.placeholder = "Buscar criatura"),
+      J.setAttribute("aria-label", "Buscar criatura configurada"),
+      J.addEventListener("input", () => Y()),
+      Q.append(J));
+    const K = t("div", "target-table-wrap");
+    function Y() {
+      ((_.textContent = ` · ${s.monsters.length}`),
+        K.replaceChildren(),
+        s.monsters.length
+          ? s.monsters.forEach((e, o) => {
+              if (
+                !e.name
+                  .toLocaleLowerCase()
+                  .includes(J.value.trim().toLocaleLowerCase())
+              )
+                return;
+              const a = t(
+                  "div",
+                  "target-creature" + (d === o ? " selected" : ""),
+                ),
+                n = t("button", "target-name", e.name);
+              ((n.type = "button"),
+                n.setAttribute(
+                  "aria-label",
+                  `Selecionar ${e.name} para editar`,
+                ),
+                n.addEventListener("click", () => L(o)));
+              const i = t("div", "target-creature-info");
+              (i.append(
+                n,
+                t(
+                  "small",
+                  "",
+                  `HP ${e.hp}% · Range ${e.range} · Prio ${e.priority} · Min ${e.minCount} · ${e.movement.toUpperCase()}`,
+                ),
+              ),
+                a.append(i));
+              const c = t("div", "target-row-actions"),
+                l = t("button", "", "Editar");
+              ((l.type = "button"),
+                l.setAttribute("aria-label", `Editar ${e.name}`),
+                l.addEventListener("click", () => L(o)),
+                c.append(l));
+              for (const [a, n, i] of [
+                [
+                  "↑",
+                  "Subir",
+                  () => {
+                    o &&
+                      ([s.monsters[o - 1], s.monsters[o]] = [
+                        e,
+                        s.monsters[o - 1],
+                      ]);
+                  },
+                ],
+                [
+                  "↓",
+                  "Descer",
+                  () => {
+                    o + 1 < s.monsters.length &&
+                      ([s.monsters[o + 1], s.monsters[o]] = [
+                        e,
+                        s.monsters[o + 1],
+                      ]);
+                  },
+                ],
+                ["×", "Excluir", () => s.monsters.splice(o, 1)],
+              ]) {
+                const o = t("button", "", a);
+                ((o.type = "button"),
+                  o.setAttribute("aria-label", `${n} ${e.name}`),
+                  o.addEventListener("click", () => {
+                    (i(), r(), M());
+                  }),
+                  c.append(o));
+              }
+              (a.append(c), K.append(a));
+            })
+          : K.append(
+              t(
+                "p",
+                "empty-list",
+                "Adicione as criaturas no formulário ao lado.",
+              ),
+            ));
+    }
+    (Q.append(K),
+      Y(),
+      u.append(p, b),
+      e.append(u),
+      (window.PkaTarget.focus = (e) => {
+        const o = e.match(/^target\.monsters(?:\.(\d+)(?:\.(.+))?)?$/u);
+        return o
+          ? (void 0 !== o[1] && s.monsters[Number(o[1])] && L(Number(o[1])),
+            o[2]
+              ? document.getElementById(
+                  `target-monster-${o[2].replaceAll(".", "-")}`,
+                )
+              : A.querySelector("input"))
+          : null;
+      }));
+  },
+};

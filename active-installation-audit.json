@@ -1,0 +1,97 @@
+{
+  "generatedAt": "2026-10-22T13:02:34.504Z",
+  "activeRoot": "C:\\Users\\yago\\AppData\\Local\\ShibaLauncher\\Apps\\a497a7a52bf97c5bcc5fad69c7958ce6\\current\\Shiba Bots - Poke Alliance v3.1.9",
+  "previousRoot": "C:\\Users\\yago\\Documents\\Clone\\Shiba_Bots_App",
+  "comparisons": [
+    {
+      "relative": "dll/resources/app.asar",
+      "size": 9750903,
+      "sha256": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+      "previousSha256": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+      "byteIdentical": true
+    },
+    {
+      "relative": "dll/PKA Tools.exe",
+      "size": 245590016,
+      "sha256": "1b80dc101d2518eb9f5f8952c6f18d735850fb366ce410a771e3259d6f0ca0a7",
+      "previousSha256": "1b80dc101d2518eb9f5f8952c6f18d735850fb366ce410a771e3259d6f0ca0a7",
+      "byteIdentical": true
+    },
+    {
+      "relative": "a497a7a52bf97c5bcc5fad69c7958ce6.exe",
+      "size": 13398697,
+      "sha256": "e652430268062457e82fe8414aed721b7a00fd1a21fc43ac256e296b81297118",
+      "previousSha256": "20d0167024d0ef9ab68e36e1a6bbc12afbdd1d05e7f586373cd99f69bf24a94d",
+      "byteIdentical": false
+    },
+    {
+      "relative": "libs/d3d9.dll",
+      "size": 1866491,
+      "sha256": "f1dee24b04b915996f46c2a10f8f6bebee123451928fcebea056f08962e64223",
+      "previousSha256": "f1dee24b04b915996f46c2a10f8f6bebee123451928fcebea056f08962e64223",
+      "byteIdentical": true
+    },
+    {
+      "relative": "libs/d3dcompiler_47.dll",
+      "size": 3696071,
+      "sha256": "f125ea8196de6b3b580edf84e17d2e835615c6b4c7b72326a9efd8a33c95d1a4",
+      "previousSha256": "f125ea8196de6b3b580edf84e17d2e835615c6b4c7b72326a9efd8a33c95d1a4",
+      "byteIdentical": true
+    },
+    {
+      "relative": "libs/lpeg.dll",
+      "size": 4608,
+      "sha256": "3d3244a8b5d71a40522cb7e314ce481e8068ea1703b9ecdfe4e5760c1157f2cb",
+      "previousSha256": "3d3244a8b5d71a40522cb7e314ce481e8068ea1703b9ecdfe4e5760c1157f2cb",
+      "byteIdentical": true
+    },
+    {
+      "relative": "libs/SFML.Graphics.dll",
+      "size": 67072,
+      "sha256": "24142a1db3357a91958af7ba22be586c23ec4464ba44e602b85126fcf9086806",
+      "previousSha256": "24142a1db3357a91958af7ba22be586c23ec4464ba44e602b85126fcf9086806",
+      "byteIdentical": true
+    },
+    {
+      "relative": "libs/SFML.System.dll",
+      "size": 15640,
+      "sha256": "e33ac2811321f81b4d48632baeb43f14c782b73b39449c4d1e2301eca609ccf2",
+      "previousSha256": "e33ac2811321f81b4d48632baeb43f14c782b73b39449c4d1e2301eca609ccf2",
+      "byteIdentical": true
+    },
+    {
+      "relative": "libs/SFML.Window.dll",
+      "size": 40246,
+      "sha256": "26c083f2464dea143ff741ec9d2afaef4fb10f5b8ddd20e82a7ee0290251f4ba",
+      "previousSha256": "26c083f2464dea143ff741ec9d2afaef4fb10f5b8ddd20e82a7ee0290251f4ba",
+      "byteIdentical": true
+    }
+  ],
+  "temporaryExecutables": [
+    {
+      "name": "1ae1ae7bf17ae3b1b996b1ed9ef348a2.exe.tmp",
+      "size": 245590064,
+      "extraBytes": 48,
+      "originalPrefixMatches": false,
+      "suffixRead": false,
+      "suffixMeaning": "unknown; may contain session-specific data"
+    },
+    {
+      "name": "e0d732effd424372f0de1e2f91646fba.exe.tmp",
+      "size": 245590064,
+      "extraBytes": 48,
+      "originalPrefixMatches": false,
+      "suffixRead": false,
+      "suffixMeaning": "unknown; may contain session-specific data"
+    }
+  ],
+  "originalsModified": false,
+  "executablesLaunched": false,
+  "credentialsRead": false,
+  "limitations": [
+    "Hashes compare on-disk files only, not process memory or native behavior.",
+    "The d3d9.dll identity does not establish that it is the native automation payload.",
+    "Matching installed and copied DLLs does not identify the cause of their malformed bytes.",
+    "Appended executable bytes were not read or interpreted."
+  ]
+}

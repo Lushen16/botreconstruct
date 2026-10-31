@@ -1,0 +1,911 @@
+{
+  "summary": {
+    "root": "C:\\Users\\yago\\Documents\\Clone",
+    "report": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\REPORT_RE_v3.1.9.md",
+    "total": 90,
+    "pass": 90,
+    "fail": 0
+  },
+  "verdicts": [
+    {
+      "id": "claim.app-asar",
+      "path": "Shiba_Bots_App/dll/resources/app.asar",
+      "expected": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+      "note": "Menu Electron (ASAR) - identidade do pacote",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Shiba_Bots_App\\dll\\resources\\app.asar",
+      "actual": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.protocol-jsc",
+      "path": "Extracted_Source/lib/protocol.jsc",
+      "expected": "56522f34578706292530ee7c05f8774b221b6d2e862a55f51e78700cfe10a48e",
+      "note": "Encoder/decoder do IPC",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\lib\\protocol.jsc",
+      "actual": "56522f34578706292530ee7c05f8774b221b6d2e862a55f51e78700cfe10a48e",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.telemetry-jsc",
+      "path": "Extracted_Source/lib/telemetry.jsc",
+      "expected": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+      "note": "Decoder de telemetria",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\lib\\telemetry.jsc",
+      "actual": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.settings-jsc",
+      "path": "Extracted_Source/lib/settings.jsc",
+      "expected": "f521bf39c4a05dca206a0861c5d5b904870a57ca946f0e3cbbef849dbfdbd2aa",
+      "note": "Perfis e validacao",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\lib\\settings.jsc",
+      "actual": "f521bf39c4a05dca206a0861c5d5b904870a57ca946f0e3cbbef849dbfdbd2aa",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.pipe-bridge-jsc",
+      "path": "Extracted_Source/lib/pipe-bridge.jsc",
+      "expected": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "note": "Cliente do canal (handshake/controle)",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\lib\\pipe-bridge.jsc",
+      "actual": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-runtime-jsc",
+      "path": "Extracted_Source/lib/native-runtime.jsc",
+      "expected": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+      "note": "Orquestrador de modulos/leases",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\lib\\native-runtime.jsc",
+      "actual": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.security-jsc",
+      "path": "Extracted_Source/lib/security.jsc",
+      "expected": "afc75885c9ad843beb72b9d4806322c18c2b23c801bb119ae16de39a5dbce823",
+      "note": "Ponte pka-security (DevTools/verify)",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\lib\\security.jsc",
+      "actual": "afc75885c9ad843beb72b9d4806322c18c2b23c801bb119ae16de39a5dbce823",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.bytecode-runtime",
+      "path": "Extracted_Source/bytecode-runtime.cjs",
+      "expected": "dadf0da93f3d317b6f70250a751231eb167146c2c3ff02ebd5101929cb7f4f28",
+      "note": "Loader V8 usado nas sondas",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\bytecode-runtime.cjs",
+      "actual": "dadf0da93f3d317b6f70250a751231eb167146c2c3ff02ebd5101929cb7f4f28",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.main-jsc",
+      "path": "Extracted_Source/main.jsc",
+      "expected": "6fffeefd17a73bce9842ffa5be750b2507215798fbafb3f4f215864ce6f99d02",
+      "note": "Main Electron em bytecode",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\Extracted_Source\\main.jsc",
+      "actual": "6fffeefd17a73bce9842ffa5be750b2507215798fbafb3f4f215864ce6f99d02",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.package-integrity",
+      "path": "RE_PKA/install-metadata/package-integrity.json",
+      "expected": "83874bb25306ed2f30e63b9a822b4189a4ef7da544e9fd3c3a6dc2a4f349269e",
+      "note": "Copia byte-identica: automation=native-dll",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\install-metadata\\package-integrity.json",
+      "actual": "83874bb25306ed2f30e63b9a822b4189a4ef7da544e9fd3c3a6dc2a4f349269e",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.release-manifest",
+      "path": "RE_PKA/install-metadata/release-manifest.json",
+      "expected": "c8be2a791b8577291d0edbd6faa39a2fa119769f7f924a9d7aa157e77c77e7d9",
+      "note": "Copia byte-identica: decision-bytecode-v1",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\install-metadata\\release-manifest.json",
+      "actual": "c8be2a791b8577291d0edbd6faa39a2fa119769f7f924a9d7aa157e77c77e7d9",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.install-version",
+      "path": "RE_PKA/install-metadata/version",
+      "expected": "6c2e974c7c389942acf1219ad8fccd94145bc04778fb735d68244686d80cc7b5",
+      "note": "Copia byte-identica: Electron 44.7.2",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\install-metadata\\version",
+      "actual": "6c2e974c7c389942acf1219ad8fccd94145bc04778fb735d68244686d80cc7b5",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.default-config",
+      "path": "RE_PKA/default_config.json",
+      "expected": "330dafb71eb0a4417de21919ce3fa84068855bd4b26bc03abd886fad901b5f98",
+      "note": "Configuracao distribuida",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\default_config.json",
+      "actual": "330dafb71eb0a4417de21919ce3fa84068855bd4b26bc03abd886fad901b5f98",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.transport",
+      "path": "RE_PKA/reconstruction/transport.cjs",
+      "expected": "8e5671d167c76fd92188fd2dc436f31095e815ead810a6c99ed67b6ee68c8429",
+      "note": "Cliente independente do canal",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\transport.cjs",
+      "actual": "8e5671d167c76fd92188fd2dc436f31095e815ead810a6c99ed67b6ee68c8429",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.telemetry-impl",
+      "path": "RE_PKA/reconstruction/telemetry.cjs",
+      "expected": "79328aa0ce48bd678d599f2909a0f034fea82e660da54f424bd165bc218d1d5a",
+      "note": "Implementacao independente da telemetria; inspection validada diferencialmente",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\telemetry.cjs",
+      "actual": "79328aa0ce48bd678d599f2909a0f034fea82e660da54f424bd165bc218d1d5a",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.spec-json",
+      "path": "RE_PKA/reconstruction/spec/automation-v1.json",
+      "expected": "7194d8c75dae5d54d7b9325c7a426bb224089138d21fa11c04a109198ab9987c",
+      "note": "Especificacao machine-readable",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\spec\\automation-v1.json",
+      "actual": "7194d8c75dae5d54d7b9325c7a426bb224089138d21fa11c04a109198ab9987c",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.fixtures",
+      "path": "RE_PKA/tests/fixtures/automation-v1.json",
+      "expected": "d1682302f60271e8c16dfbfe8337179a85d83789792cb7d14656207ebaebebc0",
+      "note": "Cenarios deterministicos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\fixtures\\automation-v1.json",
+      "actual": "d1682302f60271e8c16dfbfe8337179a85d83789792cb7d14656207ebaebebc0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.transport-live-test",
+      "path": "RE_PKA/tests/transport_live.test.cjs",
+      "expected": "20f0a8cf40addb371949c118e14806332cb7c07babd8c3770192ec6c90e6480b",
+      "note": "Diferencial do handshake contra o modulo original",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\transport_live.test.cjs",
+      "actual": "20f0a8cf40addb371949c118e14806332cb7c07babd8c3770192ec6c90e6480b",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.python-mock",
+      "path": "RE_PKA/tools/pka_runtime_server.py",
+      "expected": "605f328a9fddfb150e62ee5c00ba0d4182b8eddca395f5c1b45eb7d18eabe339",
+      "note": "Mock Named Pipe em Python no contrato verificado",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\pka_runtime_server.py",
+      "actual": "605f328a9fddfb150e62ee5c00ba0d4182b8eddca395f5c1b45eb7d18eabe339",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.python-interop",
+      "path": "RE_PKA/python_mock_interop.json",
+      "expected": "b02e5e064976acb994cb50ab42d0b290762d0876157cea68c445a3fb2486b6d8",
+      "note": "Interop: Transport independente <-> mock Python",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\python_mock_interop.json",
+      "actual": "b02e5e064976acb994cb50ab42d0b290762d0876157cea68c445a3fb2486b6d8",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.python-interop-original",
+      "path": "RE_PKA/python_mock_interop_original.json",
+      "expected": "88e4374226672a20300ea34c9055924b20683729198f504464244f13c0332744",
+      "note": "Interop: PipeBridge original <-> mock Python",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\python_mock_interop_original.json",
+      "actual": "88e4374226672a20300ea34c9055924b20683729198f504464244f13c0332744",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.decision-rules",
+      "path": "RE_PKA/reconstruction/spec/decision-rules-v1.json",
+      "expected": "9c59e1ded836e056cd76a2db52d05cea2f0b23322cd8747184429d0971b2174e",
+      "note": "Matriz das 30 regras do release-manifest",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\spec\\decision-rules-v1.json",
+      "actual": "9c59e1ded836e056cd76a2db52d05cea2f0b23322cd8747184429d0971b2174e",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.decision-checker",
+      "path": "RE_PKA/tools/check_decision_rules.cjs",
+      "expected": "54f2e5e8a42e265d30851c5711052879ce9188eadf471d56d33d56aabab1b4cc",
+      "note": "Verificador da matriz contra manifesto/config",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\check_decision_rules.cjs",
+      "actual": "54f2e5e8a42e265d30851c5711052879ce9188eadf471d56d33d56aabab1b4cc",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.decision-test",
+      "path": "RE_PKA/tests/decision_rules.test.cjs",
+      "expected": "13c52e811521dbed8b22f412a14c5c2324f83920c38d5630cce4082115150a8e",
+      "note": "Teste deterministico da matriz",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\decision_rules.test.cjs",
+      "actual": "13c52e811521dbed8b22f412a14c5c2324f83920c38d5630cce4082115150a8e",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alerts-contract",
+      "path": "RE_PKA/reconstruction/spec/alerts-v1.json",
+      "expected": "6362ba3aaed5416c9ef1f1681469894ba7764b93068120076e897f4c1e05ea25",
+      "note": "7 regras Alert* com entradas/saidas/bloqueios",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\spec\\alerts-v1.json",
+      "actual": "6362ba3aaed5416c9ef1f1681469894ba7764b93068120076e897f4c1e05ea25",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-contract",
+      "path": "RE_PKA/reconstruction/spec/capture-v1.json",
+      "expected": "30e17a01ede91c08fa377b1f2590e6093868c9ee411bf01bb7b5fa80a6efe59f",
+      "note": "5 regras Capture*: subset local implementavel, cobertura nativa parcial declarada",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\spec\\capture-v1.json",
+      "actual": "30e17a01ede91c08fa377b1f2590e6093868c9ee411bf01bb7b5fa80a6efe59f",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.remaining-contract",
+      "path": "RE_PKA/reconstruction/spec/remaining-rules-v1.json",
+      "expected": "0a79a9d4cb76484a57018ecb00869bea530106bf42228c07040c29e5c7cad3bc",
+      "note": "BestTile/NextTeam/ComboBuff/HealerDeploy; 4 parciais fechadas",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\spec\\remaining-rules-v1.json",
+      "actual": "0a79a9d4cb76484a57018ecb00869bea530106bf42228c07040c29e5c7cad3bc",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.contracts-checker",
+      "path": "RE_PKA/tools/check_contracts.cjs",
+      "expected": "068db8d9133b5daa82add609aba1ecb838452c4c1f6986fa3927ca5edb28144f",
+      "note": "Cobertura das 16 lacunas + politica de entradas",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\check_contracts.cjs",
+      "actual": "068db8d9133b5daa82add609aba1ecb838452c4c1f6986fa3927ca5edb28144f",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.contracts-test",
+      "path": "RE_PKA/tests/contracts.test.cjs",
+      "expected": "3196ac6f338bd67ea036f2abeabc1b2d913900758ca7af3c8ab8bb551c56420b",
+      "note": "Teste deterministico dos contratos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\contracts.test.cjs",
+      "actual": "3196ac6f338bd67ea036f2abeabc1b2d913900758ca7af3c8ab8bb551c56420b",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.audit-summary",
+      "path": "RE_PKA/tools/audit_summary.cjs",
+      "expected": "e0cd96cc31d084011eb386cf4834bce5460df3c5121c09fd37843cd7d4c9e04f",
+      "note": "Resumo derivado dos artefatos com cross-checks",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\audit_summary.cjs",
+      "actual": "e0cd96cc31d084011eb386cf4834bce5460df3c5121c09fd37843cd7d4c9e04f",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.audit-test",
+      "path": "RE_PKA/tests/audit_summary.test.cjs",
+      "expected": "d8dec1201181ddfaba0be2e38dc28499ade39c5ffc5a49d6de4d073319433551",
+      "note": "Teste deterministico do resumo",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\audit_summary.test.cjs",
+      "actual": "d8dec1201181ddfaba0be2e38dc28499ade39c5ffc5a49d6de4d073319433551",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alerts-engine",
+      "path": "RE_PKA/reconstruction/engines/alerts-engine.cjs",
+      "expected": "d96df0721588720970f59001227410afb04357cdfa75cfbce12f26786284b210",
+      "note": "Motor de alertas (6 tipos suportados, chat por alertEvents talk)",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\engines\\alerts-engine.cjs",
+      "actual": "d96df0721588720970f59001227410afb04357cdfa75cfbce12f26786284b210",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alerts-test",
+      "path": "RE_PKA/tests/alerts_engine.test.cjs",
+      "expected": "163159bda375ffefd8725a08ebe3fb1313b4c09ff0e4057454b00a794741df9a",
+      "note": "Testes deterministicos do motor de alertas",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\alerts_engine.test.cjs",
+      "actual": "163159bda375ffefd8725a08ebe3fb1313b4c09ff0e4057454b00a794741df9a",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-engine",
+      "path": "RE_PKA/reconstruction/engines/capture-engine.cjs",
+      "expected": "acf0354f9b9c132b55770268baf53bf6d123be2129e45d25cc0c3470b354cd9a",
+      "note": "elegibilidade/ball/delay, rank deterministico e planejamento useWith offline",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\engines\\capture-engine.cjs",
+      "actual": "acf0354f9b9c132b55770268baf53bf6d123be2129e45d25cc0c3470b354cd9a",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-test",
+      "path": "RE_PKA/tests/capture_engine.test.cjs",
+      "expected": "d3f4239b59da32576fb9f042e83257564808d2b65206c88491d975da06dae3de",
+      "note": "testes deterministicos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\capture_engine.test.cjs",
+      "actual": "d3f4239b59da32576fb9f042e83257564808d2b65206c88491d975da06dae3de",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.inspection-fixture",
+      "path": "RE_PKA/reconstruction/fixtures/telemetry-schema2-inspection-redacted.json",
+      "expected": "32b5baa061ab25a6379107f217b7136f39b7d1820bbfd17ccf7bf2989535805c",
+      "note": "snapshot com inspection real",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\fixtures\\telemetry-schema2-inspection-redacted.json",
+      "actual": "32b5baa061ab25a6379107f217b7136f39b7d1820bbfd17ccf7bf2989535805c",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.inspection-evidence",
+      "path": "RE_PKA/reconstruction/inspection-snapshot-evidence.json",
+      "expected": "3a99889c1b0c50e0e7226f95de9d31bda7406da45b740da6bf4e09f23c47b524",
+      "note": "hash/proveniencia do look",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\inspection-snapshot-evidence.json",
+      "actual": "3a99889c1b0c50e0e7226f95de9d31bda7406da45b740da6bf4e09f23c47b524",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-text-dump",
+      "path": "RE_PKA/dumps/msftedit_text_32336.bin",
+      "expected": "7c0fd219dc24f3fa273ded518eca8ea840d3395f00d14e78beacb4ffd7c50ea4",
+      "note": "Secao .text stomped com o payload nativo",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\msftedit_text_32336.bin",
+      "actual": "7c0fd219dc24f3fa273ded518eca8ea840d3395f00d14e78beacb4ffd7c50ea4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-memory-dump",
+      "path": "RE_PKA/dumps/pid32336_msftedit.dll.memory.bin",
+      "expected": "8fbd9d963ac5bb09030b8ae27c01b74c0888717fd9b282551ebe978bba28d648",
+      "note": "Imagem de memoria lida do PID 32336",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\pid32336_msftedit.dll.memory.bin",
+      "actual": "8fbd9d963ac5bb09030b8ae27c01b74c0888717fd9b282551ebe978bba28d648",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-dump-report",
+      "path": "RE_PKA/dumps/pid32336_msftedit.dll.json",
+      "expected": "aecb5cca6f4bdde7e81b131209a5e28eb2cadabf74f2049fc8785cb9fdf515f0",
+      "note": "Diff vs msftedit.dll em disco",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\pid32336_msftedit.dll.json",
+      "actual": "aecb5cca6f4bdde7e81b131209a5e28eb2cadabf74f2049fc8785cb9fdf515f0",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-dump-evidence",
+      "path": "RE_PKA/native_dump_evidence.json",
+      "expected": "a62ec4f28f498ff4700507ed8cd0acd7472fe94bbf7790237f8053c47efa5844",
+      "note": "RTTI/metodos/strings do payload",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_dump_evidence.json",
+      "actual": "a62ec4f28f498ff4700507ed8cd0acd7472fe94bbf7790237f8053c47efa5844",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-dump-tool",
+      "path": "RE_PKA/tools/dump_stomped_module.py",
+      "expected": "b4c825dc3503849310840523c42cd51a82be163ca94ea3982d16e16f9f25f60c",
+      "note": "Dumper read-only + diff rebaseado",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\dump_stomped_module.py",
+      "actual": "b4c825dc3503849310840523c42cd51a82be163ca94ea3982d16e16f9f25f60c",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-dump-test",
+      "path": "RE_PKA/tests/native_dump.test.cjs",
+      "expected": "54efe69f29b513b483520886ede26715d4be6690123c504ae843ab472e6da4b6",
+      "note": "Teste deterministico dos dumps",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\native_dump.test.cjs",
+      "actual": "54efe69f29b513b483520886ede26715d4be6690123c504ae843ab472e6da4b6",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-xrefs",
+      "path": "RE_PKA/native_xrefs.json",
+      "expected": "3cd959ac7f24a489f9bb8a508363b9d068e4d45580a40cec1d2aa021d0e775c3",
+      "note": "xrefs/RTTI",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_xrefs.json",
+      "actual": "3cd959ac7f24a489f9bb8a508363b9d068e4d45580a40cec1d2aa021d0e775c3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-static-evidence",
+      "path": "RE_PKA/native_static_evidence.json",
+      "expected": "a61337459e2c20fe13dae0c2f7e91118429d28dd82b0192a5dd31e4dc61282f3",
+      "note": "funcoes candidatas",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_static_evidence.json",
+      "actual": "a61337459e2c20fe13dae0c2f7e91118429d28dd82b0192a5dd31e4dc61282f3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-strings",
+      "path": "RE_PKA/native_strings_evidence.json",
+      "expected": "2b3542af7a2ae0e64c525f3f905713790cd58e5fd9544dc33b8039e082895912",
+      "note": "inventario de chaves",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_strings_evidence.json",
+      "actual": "2b3542af7a2ae0e64c525f3f905713790cd58e5fd9544dc33b8039e082895912",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-disasm",
+      "path": "RE_PKA/native_disasm.txt",
+      "expected": "4a6eafc2e3eadca95e195b3bdb9111f71f22a13599b1e95042a5ca47a02e2dfa",
+      "note": "disassembly anotado",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_disasm.txt",
+      "actual": "4a6eafc2e3eadca95e195b3bdb9111f71f22a13599b1e95042a5ca47a02e2dfa",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-static-test",
+      "path": "RE_PKA/tests/native_static.test.cjs",
+      "expected": "da4fe25e6d5ffd7cb57b2cc7f59031331652145cf89b4f7c45ed7d66d5a91f9c",
+      "note": "teste deterministico",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\native_static.test.cjs",
+      "actual": "da4fe25e6d5ffd7cb57b2cc7f59031331652145cf89b4f7c45ed7d66d5a91f9c",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.telemetry-snapshot",
+      "path": "RE_PKA/reconstruction/fixtures/telemetry-schema2-redacted.json",
+      "expected": "dc677659342e0ba80db1e675eda68bdc98fb248d0f7c6cb0919e03ecaa8d8bd7",
+      "note": "fixture schema2 redigida",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\fixtures\\telemetry-schema2-redacted.json",
+      "actual": "dc677659342e0ba80db1e675eda68bdc98fb248d0f7c6cb0919e03ecaa8d8bd7",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.telemetry-snapshot-evidence",
+      "path": "RE_PKA/reconstruction/telemetry-snapshot-evidence.json",
+      "expected": "84e38d0a27dac4517797edbd54f55e1b852af08b6c47a18e633d42502441c5d4",
+      "note": "hash/size/proveniencia",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\telemetry-snapshot-evidence.json",
+      "actual": "84e38d0a27dac4517797edbd54f55e1b852af08b6c47a18e633d42502441c5d4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.telemetry-snapshot-test",
+      "path": "RE_PKA/tests/telemetry_snapshot.test.cjs",
+      "expected": "ab57185561f7a6d6d3331dbbe227b105e77c1196d60d66e0f3074b0481d961f4",
+      "note": "teste deterministico",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\telemetry_snapshot.test.cjs",
+      "actual": "ab57185561f7a6d6d3331dbbe227b105e77c1196d60d66e0f3074b0481d961f4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.inspection-vectors",
+      "path": "RE_PKA/inspection_vectors.json",
+      "expected": "b57e023bb263a45643f86cd05c177dcb5aad19e4d025973f70513d78be5e8540",
+      "note": "48 casos observados no decoder original",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\inspection_vectors.json",
+      "actual": "b57e023bb263a45643f86cd05c177dcb5aad19e4d025973f70513d78be5e8540",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.inspection-differential-test",
+      "path": "RE_PKA/tests/inspection_decoder.test.cjs",
+      "expected": "5f2fd6518d4c85e816da7d26d4dbb820114beea4bbcc3c588d6c40528c2e9739",
+      "note": "Identidade, casos, diferencial vivo e integracao offline",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\inspection_decoder.test.cjs",
+      "actual": "5f2fd6518d4c85e816da7d26d4dbb820114beea4bbcc3c588d6c40528c2e9739",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-static",
+      "path": "RE_PKA/native_capture_static.json",
+      "expected": "b31e5af919ec1bbe8250fe7fb6dc41753bca29bd0987251cabd78056f2e568e7",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_static.json",
+      "actual": "b31e5af919ec1bbe8250fe7fb6dc41753bca29bd0987251cabd78056f2e568e7",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-assembly",
+      "path": "RE_PKA/native_capture_disasm.txt",
+      "expected": "8bc222cf2527f8ea2267b3ef07dabc684302ad191f525193cda817a0b073e472",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_disasm.txt",
+      "actual": "8bc222cf2527f8ea2267b3ef07dabc684302ad191f525193cda817a0b073e472",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-guard-static",
+      "path": "RE_PKA/native_capture_guard_static.json",
+      "expected": "8409d8e71393f88aec577072a9ab9598cb73c9d44c26225cd76e60e57226d8c3",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_guard_static.json",
+      "actual": "8409d8e71393f88aec577072a9ab9598cb73c9d44c26225cd76e60e57226d8c3",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-guard-assembly",
+      "path": "RE_PKA/native_capture_guard_disasm.txt",
+      "expected": "e146292db5d1d05147a663e206b5ed4bb02c0e3eaaf6802b239cf6cf97a81030",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_guard_disasm.txt",
+      "actual": "e146292db5d1d05147a663e206b5ed4bb02c0e3eaaf6802b239cf6cf97a81030",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-send-static",
+      "path": "RE_PKA/native_capture_send_static.json",
+      "expected": "749a87336c93f740816e952d9260c2bf2ba532f43ca0ae8bc739ee813148ace2",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_send_static.json",
+      "actual": "749a87336c93f740816e952d9260c2bf2ba532f43ca0ae8bc739ee813148ace2",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-send-assembly",
+      "path": "RE_PKA/native_capture_send_disasm.txt",
+      "expected": "9d49ad27dd3b93e19a56d439ff4a2961c7e6eed99cf7ba1b4e11e605476013f6",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_send_disasm.txt",
+      "actual": "9d49ad27dd3b93e19a56d439ff4a2961c7e6eed99cf7ba1b4e11e605476013f6",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-vm-static",
+      "path": "RE_PKA/native_capture_vm_static.json",
+      "expected": "5238710db9d3d7ac0bcdec7847b90b41cb3d888fc74ee523615bbbfeb0abe9a7",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_vm_static.json",
+      "actual": "5238710db9d3d7ac0bcdec7847b90b41cb3d888fc74ee523615bbbfeb0abe9a7",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-vm-assembly",
+      "path": "RE_PKA/native_capture_vm_disasm.txt",
+      "expected": "3a78a2917bc80a278b04b00741478f7eccca5d720dc96549f28754bea2b76b29",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_vm_disasm.txt",
+      "actual": "3a78a2917bc80a278b04b00741478f7eccca5d720dc96549f28754bea2b76b29",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-distance-static",
+      "path": "RE_PKA/native_capture_distance_static.json",
+      "expected": "d96903c4fb37d1b46f413128a175d5bd42ae3f1d5f71d0a831d82e871755f26e",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_distance_static.json",
+      "actual": "d96903c4fb37d1b46f413128a175d5bd42ae3f1d5f71d0a831d82e871755f26e",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-capture-distance-assembly",
+      "path": "RE_PKA/native_capture_distance_disasm.txt",
+      "expected": "3fc6311c036c688d3c62ff44aae94d8e5dd859c370f46b97921194ace5bf9347",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_distance_disasm.txt",
+      "actual": "3fc6311c036c688d3c62ff44aae94d8e5dd859c370f46b97921194ace5bf9347",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-native-evidence",
+      "path": "RE_PKA/native_capture_evidence.json",
+      "expected": "edfbd9589e9ffb2f61d5ae52606a453ef840f2a94845e67daad5819486ef8797",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_capture_evidence.json",
+      "actual": "edfbd9589e9ffb2f61d5ae52606a453ef840f2a94845e67daad5819486ef8797",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-native-extractor",
+      "path": "RE_PKA/tools/capture_native_evidence.py",
+      "expected": "c623b1952437ffbcd1fb3b2bcb5099506587e057a8b8211f508e0fe6b18ca31d",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\capture_native_evidence.py",
+      "actual": "c623b1952437ffbcd1fb3b2bcb5099506587e057a8b8211f508e0fe6b18ca31d",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-native-analyzer",
+      "path": "RE_PKA/tools/analyze_capture_native.py",
+      "expected": "64705a1b019d4c0bd83c70f144a80c6e8f9592289671789a761096e91dfbd92f",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\analyze_capture_native.py",
+      "actual": "64705a1b019d4c0bd83c70f144a80c6e8f9592289671789a761096e91dfbd92f",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-native-test",
+      "path": "RE_PKA/tests/capture_native.test.cjs",
+      "expected": "5d1691efa40a33ecdbe6de6d54f93075c020c84924988a5c61e6de10d1f076db",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\capture_native.test.cjs",
+      "actual": "5d1691efa40a33ecdbe6de6d54f93075c020c84924988a5c61e6de10d1f076db",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.capture-native-report",
+      "path": "RE_PKA/reconstruction/CAPTURE_NATIVE.md",
+      "expected": "08f1013a4f2d2c41eb0164fa6685eb7f9994ba089e32403fa299dbf0d5d1961b",
+      "note": "evidencia estatica de captura; limites no relatorio",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\CAPTURE_NATIVE.md",
+      "actual": "08f1013a4f2d2c41eb0164fa6685eb7f9994ba089e32403fa299dbf0d5d1961b",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-runtime-extractor",
+      "path": "RE_PKA/tools/native_runtime_evidence.py",
+      "expected": "43b5a220d47ed0f067c5c264d3a31b8637726b566697b4dc9c13cc974b6d4ae6",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\native_runtime_evidence.py",
+      "actual": "43b5a220d47ed0f067c5c264d3a31b8637726b566697b4dc9c13cc974b6d4ae6",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-lifecycle-research",
+      "path": "RE_PKA/tools/lifecycle_research.py",
+      "expected": "78807ceadfa8736f874a84bdee1f412e3d59364edcdbbdaa9e60494061178a49",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\lifecycle_research.py",
+      "actual": "78807ceadfa8736f874a84bdee1f412e3d59364edcdbbdaa9e60494061178a49",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-runtime-evidence",
+      "path": "RE_PKA/native_runtime_evidence.json",
+      "expected": "9ef32013c65ea61e034458a06ae5470a6f2a24c113c75b41a41154108e2c0aea",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_runtime_evidence.json",
+      "actual": "9ef32013c65ea61e034458a06ae5470a6f2a24c113c75b41a41154108e2c0aea",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-runtime-assembly",
+      "path": "RE_PKA/native_runtime_disasm.txt",
+      "expected": "285d63e4821bc55708875ec524a7146c511ecb38041877b3894dbf876e1a29c7",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_runtime_disasm.txt",
+      "actual": "285d63e4821bc55708875ec524a7146c511ecb38041877b3894dbf876e1a29c7",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-runtime-report",
+      "path": "RE_PKA/reconstruction/NATIVE_RUNTIME.md",
+      "expected": "864d8db4d760cc4814c04afb146803ff55b98dbfd030a22e8c31236f05e92a2f",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\NATIVE_RUNTIME.md",
+      "actual": "864d8db4d760cc4814c04afb146803ff55b98dbfd030a22e8c31236f05e92a2f",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-runtime-test",
+      "path": "RE_PKA/tests/native_runtime.test.cjs",
+      "expected": "fd63dd49a758509feab33ff98b4931a0873d4371f71a0d87c7065ff145bfd60a",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\native_runtime.test.cjs",
+      "actual": "fd63dd49a758509feab33ff98b4931a0873d4371f71a0d87c7065ff145bfd60a",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-random-engine",
+      "path": "RE_PKA/reconstruction/engines/native-random.cjs",
+      "expected": "a6176c5358cfdfee9b12ec6904c6cc377d0f1349e7ab83cfda985082d29505b4",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\engines\\native-random.cjs",
+      "actual": "a6176c5358cfdfee9b12ec6904c6cc377d0f1349e7ab83cfda985082d29505b4",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.native-lure-engine",
+      "path": "RE_PKA/reconstruction/engines/lure-engine.cjs",
+      "expected": "7d986f1102f03713eb8c76d1ca6da6b06820c362d44162c338e1e61db9df243b",
+      "note": "static runtime evidence or bounded local reconstruction; limitations in NATIVE_RUNTIME.md",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\engines\\lure-engine.cjs",
+      "actual": "7d986f1102f03713eb8c76d1ca6da6b06820c362d44162c338e1e61db9df243b",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alert-decoder-probe",
+      "path": "RE_PKA/tools/probe_alert_vectors.cjs",
+      "expected": "83cfcccf3436262a0a1fda077b8042a2854a756868e78cf015feda8e82b6089d",
+      "note": "diferencial finito de decoder; nao prova gatilhos nativos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\probe_alert_vectors.cjs",
+      "actual": "83cfcccf3436262a0a1fda077b8042a2854a756868e78cf015feda8e82b6089d",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alert-decoder-vectors",
+      "path": "RE_PKA/alert_vectors.json",
+      "expected": "0419f3cda15423cf9b29c935c456acf7765536b500e481b033867e5e20a0b9ef",
+      "note": "diferencial finito de decoder; nao prova gatilhos nativos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\alert_vectors.json",
+      "actual": "0419f3cda15423cf9b29c935c456acf7765536b500e481b033867e5e20a0b9ef",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alert-decoder-test",
+      "path": "RE_PKA/tests/alert_decoder.test.cjs",
+      "expected": "8b0ba03ae551b81797b4faaf44ce11f947ff1a4daef4825bb877417b433a4784",
+      "note": "diferencial finito de decoder; nao prova gatilhos nativos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\alert_decoder.test.cjs",
+      "actual": "8b0ba03ae551b81797b4faaf44ce11f947ff1a4daef4825bb877417b433a4784",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.alert-telemetry-report",
+      "path": "RE_PKA/reconstruction/ALERT_TELEMETRY.md",
+      "expected": "5cdbe7c0ee25776b167797290bc82b13696c1de761eb743122ef7f0b868c6f06",
+      "note": "diferencial finito de decoder; nao prova gatilhos nativos",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\reconstruction\\ALERT_TELEMETRY.md",
+      "actual": "5cdbe7c0ee25776b167797290bc82b13696c1de761eb743122ef7f0b868c6f06",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.remaining-evidence",
+      "path": "RE_PKA/native_remaining_rules_evidence.json",
+      "expected": "7b848c08356ba6ea1c8eda2d24cef51d1e517a7127721c0f5163e4b60e52cf3b",
+      "note": "constantes/ancoras byte-exatas das 4 regras restantes",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_remaining_rules_evidence.json",
+      "actual": "7b848c08356ba6ea1c8eda2d24cef51d1e517a7127721c0f5163e4b60e52cf3b",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.remaining-test",
+      "path": "RE_PKA/tests/remaining_rules_evidence.test.cjs",
+      "expected": "9a27125fb37bd32770b4bb7a4345a714e58db872ebf99c751d39a9fe19410091",
+      "note": "teste deterministico da evidencia das regras restantes",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\remaining_rules_evidence.test.cjs",
+      "actual": "9a27125fb37bd32770b4bb7a4345a714e58db872ebf99c751d39a9fe19410091",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-session-evidence",
+      "path": "RE_PKA/native_live_session_evidence.json",
+      "expected": "be91552e951accf56014bfba06e2599325d79ef0433142e22e5bcf7f1d6c70ae",
+      "note": "sessao viva, dumps, 2 builds, identidade shiba_bots.dll",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\native_live_session_evidence.json",
+      "actual": "be91552e951accf56014bfba06e2599325d79ef0433142e22e5bcf7f1d6c70ae",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-session-dump-image",
+      "path": "RE_PKA/dumps/pid37152_msftedit.memory.bin",
+      "expected": "91f6aaef8fcebd9097d1994c1a36b558aaeb890391e997b94cfd018eb9ca49e8",
+      "note": "imagem completa viva",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\pid37152_msftedit.memory.bin",
+      "actual": "91f6aaef8fcebd9097d1994c1a36b558aaeb890391e997b94cfd018eb9ca49e8",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-session-dump-text",
+      "path": "RE_PKA/dumps/msftedit_text_live_37152.bin",
+      "expected": "e44df8d64929672b20252f54b6a2221c7ae5a7082e11a832213f1d6f84062b3f",
+      "note": ".text vivo",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\msftedit_text_live_37152.bin",
+      "actual": "e44df8d64929672b20252f54b6a2221c7ae5a7082e11a832213f1d6f84062b3f",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-session-rebuilt-pe",
+      "path": "RE_PKA/dumps/payload_reconstructed_live37152.dll",
+      "expected": "36b3b165a62b5ec9c42c4089438649260b533a39a2e8c35faf6d1f1ee14ee2d5",
+      "note": "PE reconstruido da build viva",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\payload_reconstructed_live37152.dll",
+      "actual": "36b3b165a62b5ec9c42c4089438649260b533a39a2e8c35faf6d1f1ee14ee2d5",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-session-evidence-file",
+      "path": "RE_PKA/dumps/payload_reconstructed_live37152.dll.evidence.json",
+      "expected": "ddf9fccf83ce997529e952a8f34c826cf0dec5a068a75be1f7060c355539bc9a",
+      "note": "relatorio do rebuild vivo",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\dumps\\payload_reconstructed_live37152.dll.evidence.json",
+      "actual": "ddf9fccf83ce997529e952a8f34c826cf0dec5a068a75be1f7060c355539bc9a",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-session-test",
+      "path": "RE_PKA/tests/live_session_evidence.test.cjs",
+      "expected": "d4c8a8aec909fad6b2c5f321a17a39cc0303cf7677e73ecc0c9d07a034199986",
+      "note": "teste deterministico da sessao viva",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tests\\live_session_evidence.test.cjs",
+      "actual": "d4c8a8aec909fad6b2c5f321a17a39cc0303cf7677e73ecc0c9d07a034199986",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.live-scan-tool",
+      "path": "RE_PKA/tools/scan_payload_memory.py",
+      "expected": "6fd660c31b7fb14cb2cac86ad0d3ef689b3640e0e0cf2ca2230cb4dd65fb6606",
+      "note": "scan read-only de memoria por marcadores/PE intacto",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\scan_payload_memory.py",
+      "actual": "6fd660c31b7fb14cb2cac86ad0d3ef689b3640e0e0cf2ca2230cb4dd65fb6606",
+      "pass": true,
+      "error": null
+    },
+    {
+      "id": "claim.seize-payload-tool",
+      "path": "RE_PKA/tools/seize_payload_dll.py",
+      "expected": "aff0bc2dd9a780d82d1be6b7f082e2b01b8ef09a7586af6d8407656273070c5a",
+      "note": "captura do shiba_bots.dll via lock de delete no injetor",
+      "absolute": "C:\\Users\\yago\\Documents\\Clone\\RE_PKA\\tools\\seize_payload_dll.py",
+      "actual": "aff0bc2dd9a780d82d1be6b7f082e2b01b8ef09a7586af6d8407656273070c5a",
+      "pass": true,
+      "error": null
+    }
+  ]
+}

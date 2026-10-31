@@ -1,0 +1,917 @@
+{
+  "generatedAt": "2026-10-23T03:46:19.559Z",
+  "authority": "controlled-original-module-redacted-fixture",
+  "hashes": {
+    "telemetry": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+    "pipe-bridge": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4"
+  },
+  "fixtureSha256": "32b5baa061ab25a6379107f217b7136f39b7d1820bbfd17ccf7bf2989535805c",
+  "casesSha256": "c0a1139edb0fb711fc2728295e9b4e56a5237d79392f3e6fd93e5875a563c18a",
+  "cases": [
+    {
+      "id": "observed",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "ea0c6e48019e8fb7bc813e9d6d7d417de75d7570d71dcd1642401764b0716ec6"
+      }
+    },
+    {
+      "id": "shape/0",
+      "inspection": null,
+      "observed": {
+        "accepted": true,
+        "outputSha256": "2cfb3b09455185f3c27fddb55e81cea36fce6f931b3d8b356263160c9718c7b6"
+      }
+    },
+    {
+      "id": "shape/1",
+      "inspection": [],
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "shape/2",
+      "inspection": {},
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "shape/3",
+      "inspection": false,
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "shape/4",
+      "inspection": 0,
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "shape/5",
+      "inspection": "item",
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "kind/0",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": {
+          "$undefined": true
+        },
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "kind/1",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": null,
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "kind/2",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "ea0c6e48019e8fb7bc813e9d6d7d417de75d7570d71dcd1642401764b0716ec6"
+      }
+    },
+    {
+      "id": "kind/3",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "creature",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "5450d31add66c89096cdfd94d57efbdd92a284cd4aa1e18e4fd8690b74c7b9ac"
+      }
+    },
+    {
+      "id": "kind/4",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "unknown",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/0",
+      "inspection": {
+        "revision": {
+          "$undefined": true
+        },
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/1",
+      "inspection": {
+        "revision": null,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/2",
+      "inspection": {
+        "revision": -1,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/3",
+      "inspection": {
+        "revision": 0,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/4",
+      "inspection": {
+        "revision": 1,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "b63b0d80b5f193b5b3d41c753239d0fc2daa4db3046797ab67e495ab5dfbca2b"
+      }
+    },
+    {
+      "id": "revision/5",
+      "inspection": {
+        "revision": 1.5,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/6",
+      "inspection": {
+        "revision": 2147483647,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "b448bfc587ae4a5449b608a1c27725bd835b09e17247ea4abde2c96fcceb014f"
+      }
+    },
+    {
+      "id": "revision/7",
+      "inspection": {
+        "revision": 2147483648,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "6477b7bf3d1be3599ba1a5991959ddbe4799efcac4bd5c4e83764a2763554705"
+      }
+    },
+    {
+      "id": "revision/8",
+      "inspection": {
+        "revision": 4294967295,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "fb1e0a6a324154503ba172214d2849008c002eba1cc2cc4c25eb7f0c2377c56e"
+      }
+    },
+    {
+      "id": "revision/9",
+      "inspection": {
+        "revision": 4294967296,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/10",
+      "inspection": {
+        "revision": 9007199254740991,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "revision/11",
+      "inspection": {
+        "revision": 9007199254740992,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "id/0",
+      "inspection": {
+        "revision": 7,
+        "id": {
+          "$undefined": true
+        },
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "id/1",
+      "inspection": {
+        "revision": 7,
+        "id": null,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "id/2",
+      "inspection": {
+        "revision": 7,
+        "id": 0,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "id/3",
+      "inspection": {
+        "revision": 7,
+        "id": 1,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "c454ff87da9ce5f400ff5857bf27b2f64b0af19992a19adc9fb114edade8a850"
+      }
+    },
+    {
+      "id": "id/4",
+      "inspection": {
+        "revision": 7,
+        "id": 65535,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "d1ab5b1d2b20e6e74f6b375839f286677d4ed30a5ac63709fc32527fecc7802f"
+      }
+    },
+    {
+      "id": "id/5",
+      "inspection": {
+        "revision": 7,
+        "id": 65536,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "id/6",
+      "inspection": {
+        "revision": 7,
+        "id": "4029",
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "container/0",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": {
+          "$undefined": true
+        },
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "container/1",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": null,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "container/2",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "ea0c6e48019e8fb7bc813e9d6d7d417de75d7570d71dcd1642401764b0716ec6"
+      }
+    },
+    {
+      "id": "container/3",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": false,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "de7a81fd81c5ac012a86675bc3ca29ebacb956c03470fe438697bbde5dfbba8a"
+      }
+    },
+    {
+      "id": "container/4",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": 0,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "container/5",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": "true",
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/0",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "$undefined": true
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/1",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": null
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "4a61c0b47c4e49e3a0300f4db6a79f9a65fbe5942f14af4508b41bef6012448b"
+      }
+    },
+    {
+      "id": "pos/2",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": []
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/3",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {}
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/4",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 65534,
+          "z": 15
+        }
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "4f1beaabd4bdca61c2eb50268d7c1034e7cd2a5e07d23d3c497d737d775b71df"
+      }
+    },
+    {
+      "id": "pos/5",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": -1,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/6",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 65535,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/7",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 16
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "pos/8",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0.5,
+          "y": 0,
+          "z": 0
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "creature/missing-container",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "creature",
+        "container": {
+          "$undefined": true
+        },
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        }
+      },
+      "observed": {
+        "accepted": false,
+        "error": {
+          "name": "Error",
+          "message": "Inspeção de item inválida."
+        }
+      }
+    },
+    {
+      "id": "extra-field",
+      "inspection": {
+        "revision": 7,
+        "id": 4029,
+        "kind": "item",
+        "container": true,
+        "pos": {
+          "x": 0,
+          "y": 0,
+          "z": 8
+        },
+        "syntheticExtra": true
+      },
+      "observed": {
+        "accepted": true,
+        "outputSha256": "e186f6ad30552b9f6a608b92ae9089e5a4a03b25eeb406babc418d311c90c414"
+      }
+    }
+  ],
+  "limitations": [
+    "Finite mutations of an existing redacted fixture, not a new memory capture.",
+    "Decoder acceptance does not establish CaptureRank, CaptureApproach or native capture execution.",
+    "No original main, process-memory scan, live pipe or credential access in this probe."
+  ]
+}

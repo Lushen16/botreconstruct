@@ -1,0 +1,29 @@
+# Node / Binaries / Runtime
+node_modules/
+runtime/
+dist/
+*.exe
+*.dll
+*.zip
+*.7z
+
+# Electron User & Cache Data
+audit-data/
+local-data/
+smoke-data/
+
+# Logs and outputs
+*.log
+*.out
+*.tmp
+*.bak
+*.bak-*
+*.dmp
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local dumps / captures captures
+captures/
+dumps/

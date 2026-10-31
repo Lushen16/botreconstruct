@@ -1,0 +1,2469 @@
+{
+  "generatedAt": "2026-10-22T14:48:01.340Z",
+  "authority": "controlled-receiver-byte-consumption",
+  "hashes": {
+    "telemetry": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+    "pipe-bridge": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4"
+  },
+  "maximumFrame": 2105344,
+  "maximumBuffered": 2170888,
+  "casesSha256": "27e7937f41a8ebf224aeceb699c18e40cf0c07747d59de06b24e980aa5a70958",
+  "cases": [
+    {
+      "name": "empty",
+      "chunks": [
+        ""
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-0",
+      "chunks": [
+        "",
+        "",
+        "0f0000000400000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-1",
+      "chunks": [
+        "0f",
+        "",
+        "0000000400000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-2",
+      "chunks": [
+        "0f00",
+        "",
+        "00000400000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-3",
+      "chunks": [
+        "0f0000",
+        "",
+        "000400000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-4",
+      "chunks": [
+        "0f000000",
+        "",
+        "0400000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-5",
+      "chunks": [
+        "0f00000004",
+        "",
+        "00000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-6",
+      "chunks": [
+        "0f0000000400",
+        "",
+        "000073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-7",
+      "chunks": [
+        "0f000000040000",
+        "",
+        "0073796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-8",
+      "chunks": [
+        "0f00000004000000",
+        "",
+        "73796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-9",
+      "chunks": [
+        "0f0000000400000073",
+        "",
+        "796e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-10",
+      "chunks": [
+        "0f000000040000007379",
+        "",
+        "6e7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-11",
+      "chunks": [
+        "0f0000000400000073796e",
+        "",
+        "7468657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 11
+        },
+        {
+          "frames": [],
+          "pendingBytes": 11
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-12",
+      "chunks": [
+        "0f0000000400000073796e74",
+        "",
+        "68657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 12
+        },
+        {
+          "frames": [],
+          "pendingBytes": 12
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-13",
+      "chunks": [
+        "0f0000000400000073796e7468",
+        "",
+        "657469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-14",
+      "chunks": [
+        "0f0000000400000073796e746865",
+        "",
+        "7469632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-15",
+      "chunks": [
+        "0f0000000400000073796e74686574",
+        "",
+        "69632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 15
+        },
+        {
+          "frames": [],
+          "pendingBytes": 15
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-16",
+      "chunks": [
+        "0f0000000400000073796e7468657469",
+        "",
+        "632d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-17",
+      "chunks": [
+        "0f0000000400000073796e746865746963",
+        "",
+        "2d7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-18",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d",
+        "",
+        "7374617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-19",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d73",
+        "",
+        "74617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 19
+        },
+        {
+          "frames": [],
+          "pendingBytes": 19
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-20",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d7374",
+        "",
+        "617465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 20
+        },
+        {
+          "frames": [],
+          "pendingBytes": 20
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-21",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d737461",
+        "",
+        "7465"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 21
+        },
+        {
+          "frames": [],
+          "pendingBytes": 21
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-22",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d73746174",
+        "",
+        "65"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 22
+        },
+        {
+          "frames": [],
+          "pendingBytes": 22
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "every-split-23",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d7374617465",
+        "",
+        ""
+      ],
+      "observed": [
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 15,
+                "sha256": "b88066f8d3d5af004ad275383907fc900bdda75f6ef21e32864eddcc01c4dc18"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-1",
+      "chunks": [
+        "30",
+        "00",
+        "00",
+        "00",
+        "04",
+        "00",
+        "00",
+        "00",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "7f",
+        "03",
+        "00",
+        "00",
+        "00",
+        "0d",
+        "00",
+        "00",
+        "00",
+        "01",
+        "00",
+        "ff",
+        "0c",
+        "00",
+        "00",
+        "00",
+        "0a",
+        "00",
+        "00",
+        "00",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "a5",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00",
+        "00"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [],
+          "pendingBytes": 11
+        },
+        {
+          "frames": [],
+          "pendingBytes": 12
+        },
+        {
+          "frames": [],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [],
+          "pendingBytes": 15
+        },
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [],
+          "pendingBytes": 19
+        },
+        {
+          "frames": [],
+          "pendingBytes": 20
+        },
+        {
+          "frames": [],
+          "pendingBytes": 21
+        },
+        {
+          "frames": [],
+          "pendingBytes": 22
+        },
+        {
+          "frames": [],
+          "pendingBytes": 23
+        },
+        {
+          "frames": [],
+          "pendingBytes": 24
+        },
+        {
+          "frames": [],
+          "pendingBytes": 25
+        },
+        {
+          "frames": [],
+          "pendingBytes": 26
+        },
+        {
+          "frames": [],
+          "pendingBytes": 27
+        },
+        {
+          "frames": [],
+          "pendingBytes": 28
+        },
+        {
+          "frames": [],
+          "pendingBytes": 29
+        },
+        {
+          "frames": [],
+          "pendingBytes": 30
+        },
+        {
+          "frames": [],
+          "pendingBytes": 31
+        },
+        {
+          "frames": [],
+          "pendingBytes": 32
+        },
+        {
+          "frames": [],
+          "pendingBytes": 33
+        },
+        {
+          "frames": [],
+          "pendingBytes": 34
+        },
+        {
+          "frames": [],
+          "pendingBytes": 35
+        },
+        {
+          "frames": [],
+          "pendingBytes": 36
+        },
+        {
+          "frames": [],
+          "pendingBytes": 37
+        },
+        {
+          "frames": [],
+          "pendingBytes": 38
+        },
+        {
+          "frames": [],
+          "pendingBytes": 39
+        },
+        {
+          "frames": [],
+          "pendingBytes": 40
+        },
+        {
+          "frames": [],
+          "pendingBytes": 41
+        },
+        {
+          "frames": [],
+          "pendingBytes": 42
+        },
+        {
+          "frames": [],
+          "pendingBytes": 43
+        },
+        {
+          "frames": [],
+          "pendingBytes": 44
+        },
+        {
+          "frames": [],
+          "pendingBytes": 45
+        },
+        {
+          "frames": [],
+          "pendingBytes": 46
+        },
+        {
+          "frames": [],
+          "pendingBytes": 47
+        },
+        {
+          "frames": [],
+          "pendingBytes": 48
+        },
+        {
+          "frames": [],
+          "pendingBytes": 49
+        },
+        {
+          "frames": [],
+          "pendingBytes": 50
+        },
+        {
+          "frames": [],
+          "pendingBytes": 51
+        },
+        {
+          "frames": [],
+          "pendingBytes": 52
+        },
+        {
+          "frames": [],
+          "pendingBytes": 53
+        },
+        {
+          "frames": [],
+          "pendingBytes": 54
+        },
+        {
+          "frames": [],
+          "pendingBytes": 55
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [],
+          "pendingBytes": 11
+        },
+        {
+          "frames": [],
+          "pendingBytes": 12
+        },
+        {
+          "frames": [],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [],
+          "pendingBytes": 15
+        },
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [],
+          "pendingBytes": 19
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-2",
+      "chunks": [
+        "3000",
+        "0000",
+        "0400",
+        "0000",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "7f7f",
+        "0300",
+        "0000",
+        "0d00",
+        "0000",
+        "0100",
+        "ff0c",
+        "0000",
+        "000a",
+        "0000",
+        "00a5",
+        "a5a5",
+        "a5a5",
+        "a5a5",
+        "a5a5",
+        "a5a5",
+        "a500",
+        "0000",
+        "0000",
+        "0000",
+        "00"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [],
+          "pendingBytes": 12
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [],
+          "pendingBytes": 20
+        },
+        {
+          "frames": [],
+          "pendingBytes": 22
+        },
+        {
+          "frames": [],
+          "pendingBytes": 24
+        },
+        {
+          "frames": [],
+          "pendingBytes": 26
+        },
+        {
+          "frames": [],
+          "pendingBytes": 28
+        },
+        {
+          "frames": [],
+          "pendingBytes": 30
+        },
+        {
+          "frames": [],
+          "pendingBytes": 32
+        },
+        {
+          "frames": [],
+          "pendingBytes": 34
+        },
+        {
+          "frames": [],
+          "pendingBytes": 36
+        },
+        {
+          "frames": [],
+          "pendingBytes": 38
+        },
+        {
+          "frames": [],
+          "pendingBytes": 40
+        },
+        {
+          "frames": [],
+          "pendingBytes": 42
+        },
+        {
+          "frames": [],
+          "pendingBytes": 44
+        },
+        {
+          "frames": [],
+          "pendingBytes": 46
+        },
+        {
+          "frames": [],
+          "pendingBytes": 48
+        },
+        {
+          "frames": [],
+          "pendingBytes": 50
+        },
+        {
+          "frames": [],
+          "pendingBytes": 52
+        },
+        {
+          "frames": [],
+          "pendingBytes": 54
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 11
+        },
+        {
+          "frames": [],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [],
+          "pendingBytes": 15
+        },
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [],
+          "pendingBytes": 19
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-3",
+      "chunks": [
+        "300000",
+        "000400",
+        "00007f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f7f",
+        "7f7f03",
+        "000000",
+        "0d0000",
+        "000100",
+        "ff0c00",
+        "00000a",
+        "000000",
+        "a5a5a5",
+        "a5a5a5",
+        "a5a5a5",
+        "a5a5a5",
+        "000000",
+        "000000",
+        "0000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 12
+        },
+        {
+          "frames": [],
+          "pendingBytes": 15
+        },
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [],
+          "pendingBytes": 21
+        },
+        {
+          "frames": [],
+          "pendingBytes": 24
+        },
+        {
+          "frames": [],
+          "pendingBytes": 27
+        },
+        {
+          "frames": [],
+          "pendingBytes": 30
+        },
+        {
+          "frames": [],
+          "pendingBytes": 33
+        },
+        {
+          "frames": [],
+          "pendingBytes": 36
+        },
+        {
+          "frames": [],
+          "pendingBytes": 39
+        },
+        {
+          "frames": [],
+          "pendingBytes": 42
+        },
+        {
+          "frames": [],
+          "pendingBytes": 45
+        },
+        {
+          "frames": [],
+          "pendingBytes": 48
+        },
+        {
+          "frames": [],
+          "pendingBytes": 51
+        },
+        {
+          "frames": [],
+          "pendingBytes": 54
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 2
+        },
+        {
+          "frames": [],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 11
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-7",
+      "chunks": [
+        "30000000040000",
+        "007f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f",
+        "030000000d0000",
+        "000100ff0c0000",
+        "000a000000a5a5",
+        "a5a5a5a5a5a5a5",
+        "a5a5a500000000",
+        "00000000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [],
+          "pendingBytes": 21
+        },
+        {
+          "frames": [],
+          "pendingBytes": 28
+        },
+        {
+          "frames": [],
+          "pendingBytes": 35
+        },
+        {
+          "frames": [],
+          "pendingBytes": 42
+        },
+        {
+          "frames": [],
+          "pendingBytes": 49
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [],
+          "pendingBytes": 10
+        },
+        {
+          "frames": [],
+          "pendingBytes": 17
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 4
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-8",
+      "chunks": [
+        "3000000004000000",
+        "7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f",
+        "030000000d000000",
+        "0100ff0c0000000a",
+        "000000a5a5a5a5a5",
+        "a5a5a5a5a5a5a500",
+        "00000000000000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [],
+          "pendingBytes": 24
+        },
+        {
+          "frames": [],
+          "pendingBytes": 32
+        },
+        {
+          "frames": [],
+          "pendingBytes": 40
+        },
+        {
+          "frames": [],
+          "pendingBytes": 48
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        },
+        {
+          "frames": [],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-9",
+      "chunks": [
+        "30000000040000007f",
+        "7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f",
+        "7f7f030000000d0000",
+        "000100ff0c0000000a",
+        "000000a5a5a5a5a5a5",
+        "a5a5a5a5a5a5000000",
+        "0000000000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 9
+        },
+        {
+          "frames": [],
+          "pendingBytes": 18
+        },
+        {
+          "frames": [],
+          "pendingBytes": 27
+        },
+        {
+          "frames": [],
+          "pendingBytes": 36
+        },
+        {
+          "frames": [],
+          "pendingBytes": 45
+        },
+        {
+          "frames": [],
+          "pendingBytes": 54
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 7
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 5
+        },
+        {
+          "frames": [],
+          "pendingBytes": 14
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 3
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-16",
+      "chunks": [
+        "30000000040000007f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f030000000d000000",
+        "0100ff0c0000000a000000a5a5a5a5a5",
+        "a5a5a5a5a5a5a50000000000000000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 16
+        },
+        {
+          "frames": [],
+          "pendingBytes": 32
+        },
+        {
+          "frames": [],
+          "pendingBytes": 48
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 8
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            }
+          ],
+          "pendingBytes": 13
+        },
+        {
+          "frames": [
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            },
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-31",
+      "chunks": [
+        "30000000040000007f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f",
+        "7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f030000000d00",
+        "00000100ff0c0000000a000000a5a5a5a5a5a5a5a5a5a5a5a5000000000000",
+        "0000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 31
+        },
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            }
+          ],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            },
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            }
+          ],
+          "pendingBytes": 6
+        },
+        {
+          "frames": [
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "coalesced-and-fragmented-1024",
+      "chunks": [
+        "30000000040000007f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f7f030000000d0000000100ff0c0000000a000000a5a5a5a5a5a5a5a5a5a5a5a50000000000000000"
+      ],
+      "observed": [
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 48,
+                "sha256": "a1fa26e9a041c510e9f8412accef2e5e0cda5eddd97fa6db80b30400b7964d42"
+              }
+            },
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 3,
+                "sha256": "b7ae7729555ec6829c579c2602edc6cb94b4ed3d820ddda0a45ac54030f8a53d"
+              }
+            },
+            {
+              "kind": 10,
+              "payload": {
+                "bytes": 12,
+                "sha256": "1bbfcdb48f8ec9db2c673609239241e6b90813ef31ae06e0874161c71f596069"
+              }
+            },
+            {
+              "kind": 0,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-1",
+      "chunks": [
+        "0f"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 1
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-2",
+      "chunks": [
+        "0f00"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 2
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-3",
+      "chunks": [
+        "0f0000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 3
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-4",
+      "chunks": [
+        "0f000000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 4
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-5",
+      "chunks": [
+        "0f00000004"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 5
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-6",
+      "chunks": [
+        "0f0000000400"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 6
+        }
+      ]
+    },
+    {
+      "name": "incomplete-header-7",
+      "chunks": [
+        "0f000000040000"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 7
+        }
+      ]
+    },
+    {
+      "name": "incomplete-body",
+      "chunks": [
+        "0f0000000400000073796e7468657469632d73746174"
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 22
+        }
+      ]
+    },
+    {
+      "name": "zero-payload",
+      "chunks": [
+        "000000000d000000"
+      ],
+      "observed": [
+        {
+          "frames": [
+            {
+              "kind": 13,
+              "payload": {
+                "bytes": 0,
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "maximum-kind",
+      "chunks": [
+        "01000000ffffffffff"
+      ],
+      "observed": [
+        {
+          "frames": [
+            {
+              "kind": 4294967295,
+              "payload": {
+                "bytes": 1,
+                "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "maximum-declared-incomplete",
+      "chunks": [
+        {
+          "bytes": 8,
+          "header": {
+            "length": 2105344,
+            "kind": 4
+          }
+        }
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 8
+        }
+      ]
+    },
+    {
+      "name": "maximum-complete",
+      "chunks": [
+        {
+          "bytes": 2105352,
+          "header": {
+            "length": 2105344,
+            "kind": 4
+          }
+        }
+      ],
+      "observed": [
+        {
+          "frames": [
+            {
+              "kind": 4,
+              "payload": {
+                "bytes": 2105344,
+                "sha256": "5d28f45a9b501cda80b93c49155497f7c46cac44abc97585645258e2ef9ed5bf"
+              }
+            }
+          ],
+          "pendingBytes": 0
+        }
+      ]
+    },
+    {
+      "name": "payload-over-limit",
+      "chunks": [
+        {
+          "bytes": 8,
+          "header": {
+            "length": 2105345,
+            "kind": 4
+          }
+        }
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "error": "Frame inválido."
+        }
+      ]
+    },
+    {
+      "name": "maximum-buffer-header-invalid",
+      "chunks": [
+        {
+          "bytes": 2170888,
+          "header": {
+            "length": 2105345,
+            "kind": 4
+          }
+        }
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "error": "Frame inválido."
+        }
+      ]
+    },
+    {
+      "name": "buffer-over-limit",
+      "chunks": [
+        {
+          "bytes": 2170889,
+          "header": {
+            "length": 2105345,
+            "kind": 4
+          }
+        }
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "error": "Frame excedeu o limite."
+        }
+      ]
+    },
+    {
+      "name": "buffer-over-limit-across-chunks",
+      "chunks": [
+        "00",
+        {
+          "bytes": 2170888
+        }
+      ],
+      "observed": [
+        {
+          "frames": [],
+          "pendingBytes": 1
+        },
+        {
+          "frames": [],
+          "error": "Frame excedeu o limite."
+        }
+      ]
+    }
+  ],
+  "connectionsOpened": false,
+  "credentialsRead": false,
+  "proofFunctionInvoked": false,
+  "limitations": [
+    "Only framing consumption is projected; the original dispatcher rejects unauthenticated frames.",
+    "Synthetic unauthenticated receivers only; no challenge, authenticate or welcome kinds are submitted.",
+    "The independent decoder emits envelopes only, not authenticated application messages.",
+    "On invalid input the independent decoder discards partial data and requires explicit reset; original residual state is not reproduced.",
+    "end/truncation detection is a new local API, not observed original lifecycle behavior."
+  ]
+}

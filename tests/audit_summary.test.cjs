@@ -1,0 +1,20 @@
+﻿'use strict';
+const assert=require('node:assert/strict');
+const test=require('node:test');
+const { summarize }=require('../tools/audit_summary.cjs');
+test('audit summary is derived from artifacts and consistent',()=>{
+  const s=summarize();
+  assert.deepEqual(s.errors,[]);
+  assert.equal(s.ok,true);
+  assert.equal(s.claims.fail,0);
+  assert.equal(s.claims.pass,s.claims.total);
+  assert.equal(s.decisions.total,30);
+  assert.equal(s.decisions.implemented,13);
+  assert.equal(s.decisions.partial,17);
+  assert.equal(s.decisions.unsupported,0);
+  assert.equal(s.contracts.implementable,16);
+  assert.equal(s.contracts.blocked,0);
+  assert.equal(s.contracts.closed,16);
+  assert.equal(s.mock.canonical,true);
+  assert.equal(s.native.status,'MEMORY-DUMPED');
+});

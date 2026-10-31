@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="schema.js" defer></script>
+  <script src="messages.js" defer></script>
+  <script src="diagnostics.js" defer></script>
+  <script src="walker-model.js" defer></script>
+  <script src="hoenn-model.js" defer></script>
+  <script src="alerts-model.js" defer></script>
+  <script src="healer-model.js" defer></script>
+  <script src="ui.js" defer></script>
+  <script src="scripts.js" defer></script>
+  <script src="target.js" defer></script>
+  <script src="guild-daily.js" defer></script>
+  <script src="walker.js" defer></script>
+  <script src="looting.js" defer></script>
+  <script src="hoenn.js" defer></script>
+  <script src="alert-audio.js" defer></script>
+  <script src="alerts.js" defer></script>
+  <script src="healer.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="sim.js" defer></script>
+</head>
+<body>
+  <div class="window-bar">
+    <div class="brand">PKA <strong>TOOLS</strong></div>
+    <span id="character-name" class="character-name"></span>
+    <span id="menu-status" class="menu-status" role="status">AGUARDANDO</span>
+  </div>
+  <nav id="tabs" aria-label="Abas do bot"></nav>
+  <main>
+    <header class="sr-only"><h1 id="page-title">Scripts</h1><p id="page-subtitle"></p></header>
+    <div class="workspace-tools">
+      <details class="utility-panel profile-panel">
+        <summary>Perfil: <strong id="profile-current">Default</strong><span id="save-state" title="As alterações são salvas e aplicadas sozinhas">Salvo</span></summary>
+        <section class="profile-bar utility-content" aria-label="Perfis">
+          <label for="profile">Perfil em uso<select id="profile"></select></label>
+          <form id="profile-create" class="profile-new"><label for="profile-name">Novo perfil<input id="profile-name" maxlength="80" placeholder="Nome do novo perfil" required></label><button id="create-profile" type="submit" class="primary">Criar</button></form>
+          <p id="profile-owner" class="hint profile-note">Aguardando o nick para carregar os perfis do personagem.</p>
+          <div class="profile-actions"><button id="import" type="button" title="Carrega um perfil salvo (arquivo do PKA Tools ou tabela do bot Lua) no perfil atual.">Importar</button><button id="export" type="button" title="Salva o perfil atual num arquivo, para backup ou para passar a outra pessoa.">Exportar</button><button id="delete" type="button" class="subtle" title="Excluir perfil atual">Excluir</button></div>
+        </section>
+      </details>
+      <button id="pause-all" type="button" class="subtle" title="Pausa todos os módulos, igual à tecla de pausa. Clique em Continuar para voltar de onde parou.">Pausar tudo</button>
+      <button id="performance-mode" type="button" class="subtle" title="Minimiza o menu e suspende suas atualizações para economizar CPU. O bot e os alertas continuam ativos. Restaure a janela ou use a tecla do menu para voltar.">Modo desempenho</button>
+      <details class="utility-panel live-panel">
+        <summary><span class="connection-dot" id="connection-dot"></span><span id="sidebar-state">Aguardando cliente</span></summary>
+        <div class="utility-content connection-content">
+          <div class="connection-heading"><strong id="live-state">Aguardando cliente</strong><span class="muted" id="state-age">Sem atualização</span></div>
+          <div class="client-choice"><label for="client">Cliente conectado</label><select id="client"><option value="">Nenhum cliente detectado</option></select></div>
+          <button id="quit-app" type="button" class="subtle quit-app" title="O X da janela só esconde o menu enquanto o jogo está aberto">Encerrar o menu (pausa o bot)</button>
+          <div class="live-content">
+            <div class="telemetry">
+              <div class="metrics"><div><label>HP do player</label><strong id="hp">—</strong></div><div><label>Alvo atual · ID</label><strong id="target-id">—</strong></div></div>
+              <progress id="hp-bar" max="100" value="0" aria-label="HP do player"></progress>
+              <p id="connection-hint" class="hint">Abra o jogo e conecte pelo loader para usar os controles.</p>
+              <p id="pokemon-state" class="hint">Pokebar e mapa aguardando atualização.</p>
+            </div>
+            <div class="manual-controls">
+              <div class="direction-pad" aria-label="Andar uma posição">
+                <button data-direction="7" aria-label="Andar noroeste">↖</button><button data-direction="0" aria-label="Andar norte">↑</button><button data-direction="4" aria-label="Andar nordeste">↗</button>
+                <button data-direction="3" aria-label="Andar oeste">←</button><button id="focus" aria-label="Focar cliente" title="Focar janela do cliente">◎</button><button data-direction="1" aria-label="Andar leste">→</button>
+                <button data-direction="6" aria-label="Andar sudoeste">↙</button><button data-direction="2" aria-label="Andar sul">↓</button><button data-direction="5" aria-label="Andar sudeste">↘</button>
+              </div>
+              <div class="target-controls"><label for="creature-id">ID da criatura<input id="creature-id" type="number" min="0" max="4294967295" placeholder="Ex.: 12345"></label><div><button id="attack" title="Ataca a criatura com este ID (pausa os módulos).">Atacar</button><button id="follow" title="Segue a criatura com este ID (pausa os módulos).">Seguir</button></div><button id="stop" class="danger" title="Cancela ataque e follow; não interrompe um passo que já foi enviado.">Cancelar ataque / follow</button></div>
+            </div>
+          </div>
+        </div>
+      </details>
+    </div>
+    <div id="notice" class="notice hidden" role="status"><span id="notice-text"></span><button id="close-notice" aria-label="Fechar aviso">×</button></div>
+    <section id="alert-controls" class="alert-controls hidden"><button id="monitor" class="primary">Iniciar alertas</button><span id="monitor-state">Pausado · usa as regras da tela</span></section>
+    <section id="runtime-controls" class="alert-controls hidden"><button id="run-module" class="primary">Iniciar módulo</button><span id="runtime-state">Pausado · usa as opções da tela</span></section>
+    <form id="settings" autocomplete="off"></form>
+    <footer><span id="source-file">PKA Tools</span></footer>
+  </main>
+</body>
+</html>

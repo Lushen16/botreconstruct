@@ -1,0 +1,84 @@
+!(function (e) {
+  "use strict";
+  const n = (e) => ("3x2" === e.formation ? 2 : 3);
+  function t(e) {
+    e.roster.forEach((t, r) => {
+      t.role = r % n(e) ? "dps" : "tank";
+    });
+  }
+  function r(e, n, r) {
+    return (
+      !(
+        !Number.isInteger(n) ||
+        !Number.isInteger(r) ||
+        n === r ||
+        n < 0 ||
+        r < 0 ||
+        n >= e.roster.length ||
+        r >= e.roster.length
+      ) && (([e.roster[n], e.roster[r]] = [e.roster[r], e.roster[n]]), t(e), !0)
+    );
+  }
+  const o = {
+    mirrorSlots: function (e, n, t) {
+      if (
+        !Array.isArray(n) ||
+        !n.length ||
+        n.length > 6 ||
+        n.some(
+          (e) =>
+            "string" != typeof e.uuid ||
+            !e.uuid ||
+            !Number.isInteger(e.slot) ||
+            e.slot < 1 ||
+            e.slot > 6,
+        ) ||
+        new Set(n.map((e) => e.uuid)).size !== n.length ||
+        new Set(n.map((e) => e.slot)).size !== n.length
+      )
+        return !1;
+      const r = "3x2" === e.formation ? 2 : 3,
+        o = e.roster,
+        i = new Set(n.map((e) => e.uuid)),
+        u = o.map(
+          (e) =>
+            n.find((n) => n.uuid === e.uuid) ||
+            (i.has(e.uuid) ||
+            1 !== o.filter((n) => n.name === e.name).length ||
+            1 !== n.filter((n) => n.name === e.name).length
+              ? null
+              : n.find((n) => n.name === e.name)),
+        ),
+        s = (
+          o.length === n.length && u.every(Boolean)
+            ? u
+            : [...n].sort((e, n) => e.slot - n.slot)
+        ).map((e, n) => {
+          const u = o.filter((n) => !i.has(n.uuid) && n.name === e.name),
+            s =
+              o.find((n) => n.uuid === e.uuid) ||
+              (1 === u.length ? u[0] : o[n]);
+          return {
+            ...t,
+            ...s,
+            key: e.uuid,
+            uuid: e.uuid,
+            name: e.name,
+            role: n % r ? "dps" : "tank",
+          };
+        });
+      return JSON.stringify(o) !== JSON.stringify(s) && ((e.roster = s), !0);
+    },
+    normalizeRoles: t,
+    swapRoster: r,
+    setTank: function (e, t, o) {
+      if (!Number.isInteger(t) || t < 0) return !1;
+      const i = t * n(e),
+        u = e.roster.findIndex((e) => e.uuid === o);
+      return !(u < i || u >= i + n(e)) && r(e, i, u);
+    },
+  };
+  "undefined" != typeof module && module.exports
+    ? (module.exports = o)
+    : (e.PkaHoennModel = o);
+})("undefined" != typeof window ? window : globalThis);

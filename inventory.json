@@ -1,0 +1,798 @@
+{
+  "artifact": "C:\\Users\\yago\\Documents\\Clone\\Shiba_Bots_App\\dll\\resources\\app.asar",
+  "sha256": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+  "header_json_sha256": "4414d573e7f56bba4f5537726833440b66557027f5bd4d92561fd8bd8f8269d9",
+  "entries": [
+    {
+      "path": "BYTENODE-LICENSE.txt",
+      "bytes": 1068,
+      "sha256": "16d7ed7b8be9034217983ab33fda4efd22ed23962c4797699c94f159276d03f3",
+      "asar_file_offset": 20332,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/beep-default.wav",
+      "bytes": 98828,
+      "sha256": "0fbc5f423b1d1b402c8aa51a19f7879ae543f6df29deb30f1060317b372adc57",
+      "asar_file_offset": 21400,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/beep-happy.wav",
+      "bytes": 64430,
+      "sha256": "35f91ad60ec556fd5d7eebb07b7e623efcd415b7b31841a23e456070162dfd6e",
+      "asar_file_offset": 120228,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/beep-high.wav",
+      "bytes": 74132,
+      "sha256": "8979bc7e50c48ab6e142a99c504cb1ada403f75bd5e91b31565615db0d34d783",
+      "asar_file_offset": 184658,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/beep-low.wav",
+      "bytes": 60902,
+      "sha256": "18957746ed76e3a86c4120dae9c16f0b802c0c0a6cfaf386351e81ecfbdfc914",
+      "asar_file_offset": 258790,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/beep-pulse.wav",
+      "bytes": 72368,
+      "sha256": "36162638ceab1d67d3e8a648db1d6219f5ffe6291d0287feec9ed6cdd2dde7b9",
+      "asar_file_offset": 319692,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/beep-urgent.wav",
+      "bytes": 62666,
+      "sha256": "1b379f966325ca9aaaf264f56f80b456b317a938363d172893a8395cdc2514fa",
+      "asar_file_offset": 392060,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/camera_viewers.mp3",
+      "bytes": 56885,
+      "sha256": "5ff2bfeab1c3c92f69219ba68d0b6bcfaa4df538d3b2e0a44125c6294e3e5849",
+      "asar_file_offset": 454726,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/chat.mp3",
+      "bytes": 48526,
+      "sha256": "6e0c3099c79c3368d0b54a596cdab0fc06ca597961c80df2202ea0f83f7a6ee8",
+      "asar_file_offset": 511611,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/creature.mp3",
+      "bytes": 56885,
+      "sha256": "fa9e753d020d8f56c4c9db8035d42d6a9ac830b7fa2aa7fe4b83b3dc60375fce",
+      "asar_file_offset": 560137,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/disconnected.mp3",
+      "bytes": 44346,
+      "sha256": "580b77b6b7db4ab7b0c91139060e7a4b9a564244b01bd2cd64599d53f0d50fa8",
+      "asar_file_offset": 617022,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/gm_arrow.mp3",
+      "bytes": 53959,
+      "sha256": "55a686a1a0e5ce4dc9d1e6094e66c1c6b11039513b2c65cd245b3a26849dfb8c",
+      "asar_file_offset": 661368,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/gm_message.mp3",
+      "bytes": 51452,
+      "sha256": "356232dc9185d56f7af2ae2ef64ea104262058c34f4893bdf6c352776c213ad3",
+      "asar_file_offset": 715327,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/hp.mp3",
+      "bytes": 53959,
+      "sha256": "3012c23526fd1b17b7101524101bf66733e78e64ba0da97e6c118e2bf0736c0f",
+      "asar_file_offset": 766779,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/hunt_pokemon.mp3",
+      "bytes": 64408,
+      "sha256": "145dd3df1ee9088ed158a23c9c63f168066e5b41d9179d076f21eb1d19381325",
+      "asar_file_offset": 820738,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/manifest.json",
+      "bytes": 3015,
+      "sha256": "726b86783ba0f8393e40dda06cb87b9ec313bcaf641bedeba158b79e4a68922d",
+      "asar_file_offset": 885146,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/player.mp3",
+      "bytes": 43510,
+      "sha256": "1eb8fbe0efe3b90bfbe7065fd3b9007860bb0583d58acacc2b6dcce5651a9e68",
+      "asar_file_offset": 888161,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/pokemon_capture.mp3",
+      "bytes": 34315,
+      "sha256": "d79f6089914322a53dab5112f20b0e3bd1e1312bd2812dd1ba7ce830f6c72e10",
+      "asar_file_offset": 931671,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/alerts/teleport.mp3",
+      "bytes": 61901,
+      "sha256": "a5f8441907e81a1951ea5e082427a42459426805e97b36b9754121aae6a6f263",
+      "asar_file_offset": 965986,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/minimap.otmm",
+      "bytes": 7512704,
+      "sha256": "8eafa72f180f210b639f7e9c93dfc79a953fca6e977f2cf2f7e3fafe11dc746a",
+      "asar_file_offset": 1027887,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "assets/minimap.png",
+      "bytes": 751262,
+      "sha256": "cc854b795441ba64bc8bf35ab0295ddc14d41335626e1ab379438815df1030d2",
+      "asar_file_offset": 8540591,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "bytecode-runtime.cjs",
+      "bytes": 30026,
+      "sha256": "dadf0da93f3d317b6f70250a751231eb167146c2c3ff02ebd5101929cb7f4f28",
+      "asar_file_offset": 9291853,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\bytecode-runtime.cjs",
+        "sha256": "2edeaed2e5a14d243cc44e49c234bcd9cf22f26fa90d30cc45bdeb18cfe85f05",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "code-protection.json",
+      "bytes": 1036,
+      "sha256": "2b5e501a0003fab7ba1f8fab17c80416deb7b6c2ec5dd22d64a210da00a2b922",
+      "asar_file_offset": 9321879,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/alert-presenter.cjs",
+      "bytes": 49,
+      "sha256": "f06f8d70e52c2761d51e82861fd3b2482f6d434eec952551932decd62ce6eb74",
+      "asar_file_offset": 9322915,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\alert-presenter.cjs",
+        "sha256": "7e518e703b2111f212ac348d14e31e7520eab9d62fb9db0e954b7157f43f6313",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/alert-presenter.jsc",
+      "bytes": 4152,
+      "sha256": "e495085ded22a753a5b3bb698f1216c148fae2b2befa788908a28e4bbb7d7fc8",
+      "asar_file_offset": 9322964,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/hotkeys.cjs",
+      "bytes": 41,
+      "sha256": "01d45f06f5fe6cbac2fab7578fd6422a502e82fb1f3f9ad38f36da8ecc86de92",
+      "asar_file_offset": 9327116,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\hotkeys.cjs",
+        "sha256": "b4113e9062cabe2caca5f13fe608fc8b2eadbd38457268f1bb61bb8a33aa3664",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/hotkeys.jsc",
+      "bytes": 6080,
+      "sha256": "d5d8e2d120fc1e9cdfcbdc0b70096fee985e3303a98983ef3715101ec94efddf",
+      "asar_file_offset": 9327157,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/launch.cjs",
+      "bytes": 40,
+      "sha256": "5e4e25fd1d1c94d34456bb4d4e0f343c7564d07809101e451382d7ed78a25d39",
+      "asar_file_offset": 9333237,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\launch.cjs",
+        "sha256": "36b05a0b2845095f25cf8160bec60d9eb5d7b9bea20e71c50b92a918853cc2fb",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/launch.jsc",
+      "bytes": 2592,
+      "sha256": "cc92bfe8a7ff84553162667fdce2806149662690057caac3e143a7ad7ccee22e",
+      "asar_file_offset": 9333277,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/legacy.cjs",
+      "bytes": 40,
+      "sha256": "a0f7eacdcb25d83a19544597f902ca4891f7339e44ae08e9059510370e1ab616",
+      "asar_file_offset": 9335869,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\legacy.cjs",
+        "sha256": "7b8af15f0e30d54d5a22b63a2f1c23ed0f280956d60bd324c5dd31b094b88b38",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/legacy.jsc",
+      "bytes": 18608,
+      "sha256": "155d1aed676e0416c0feb352c789393702248e41e60594431ae47810c58150df",
+      "asar_file_offset": 9335909,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/map-view.cjs",
+      "bytes": 42,
+      "sha256": "0c46a961e880fb86dd848837d8b0decf4c6062c689a0aef38f0b9fdb73410040",
+      "asar_file_offset": 9354517,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\map-view.cjs",
+        "sha256": "2beb9c16d864432874f02f92d8b1d6a7af055e0c7dd7d725d2ae374d2cdbc147",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/map-view.jsc",
+      "bytes": 8896,
+      "sha256": "024347e226e582aee84cc4291050dd387e4df765a208f7e1cd31d38588a75fd7",
+      "asar_file_offset": 9354559,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/menu-view.cjs",
+      "bytes": 43,
+      "sha256": "5ce2acc7ab4ab1192bd6043df295ee1d79a785ad1e414b9a31b18747a6227175",
+      "asar_file_offset": 9363455,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\menu-view.cjs",
+        "sha256": "93ab0e9bc626aca78f73676cef076d5879634a3da82637cc9ff29f4343cb50c4",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/menu-view.jsc",
+      "bytes": 7176,
+      "sha256": "c5dd09d0d9d606693cf45289626e22abfbc58f59428ac530c509b9ff6f868de2",
+      "asar_file_offset": 9363498,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/native-runtime.cjs",
+      "bytes": 48,
+      "sha256": "db1e00dbb983694b46fad24d159b85117a440d9a0e290f372eb38c5d28040876",
+      "asar_file_offset": 9370674,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\native-runtime.cjs",
+        "sha256": "2abc350dff538021ce923906839c663c6cc400f478db49401485c41efd57bfc3",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/native-runtime.jsc",
+      "bytes": 17224,
+      "sha256": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+      "asar_file_offset": 9370722,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/otmm.cjs",
+      "bytes": 38,
+      "sha256": "3be4ed46655782f46d302a89477d24f1d95c6342ca6628a175e31d3e7b351b6c",
+      "asar_file_offset": 9387946,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\otmm.cjs",
+        "sha256": "593f84127c8838a5c6b47a22e20a3f526801de0de03254f1675051b23ee9790b",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/otmm.jsc",
+      "bytes": 5184,
+      "sha256": "64a1cabcb49bdb0a1756ff659919406aeebf7717b5d42aa0d6b0e3f4b4b55ce8",
+      "asar_file_offset": 9387984,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/pipe-bridge.cjs",
+      "bytes": 45,
+      "sha256": "018196042f0c8a75e2ed39fc2b250ed3c1929befeb8407fe5d4e3b7c7462f02c",
+      "asar_file_offset": 9393168,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\pipe-bridge.cjs",
+        "sha256": "00c3593eb7ef0377ef58fbbbe73505dbf2f265eeb414591669e4747142208235",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/pipe-bridge.jsc",
+      "bytes": 26488,
+      "sha256": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "asar_file_offset": 9393213,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/protocol.cjs",
+      "bytes": 42,
+      "sha256": "db877da577cedcc34ab453f91e1869b5fdfa2a2e9e25844b9055e8f1df2b6e89",
+      "asar_file_offset": 9419701,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\protocol.cjs",
+        "sha256": "8c46fbb0d780c4c330e8744f3d8e1e677e1efc16ddd6cd0e85a2f5724ca45d93",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/protocol.jsc",
+      "bytes": 9312,
+      "sha256": "56522f34578706292530ee7c05f8774b221b6d2e862a55f51e78700cfe10a48e",
+      "asar_file_offset": 9419743,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/security.cjs",
+      "bytes": 42,
+      "sha256": "121d68a2bb2fa134cc1b0df908abd886e1518b57fbd90bceb289fcef39927c3c",
+      "asar_file_offset": 9429055,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\security.cjs",
+        "sha256": "6895a4b44122d448b90be736992dd35614117343927134635515dc92c32268c0",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/security.jsc",
+      "bytes": 8608,
+      "sha256": "afc75885c9ad843beb72b9d4806322c18c2b23c801bb119ae16de39a5dbce823",
+      "asar_file_offset": 9429097,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/settings.cjs",
+      "bytes": 42,
+      "sha256": "5f37e4f7901ffbe04eb4af7fb0dfb65869f9109744767b79d04c7457757267ca",
+      "asar_file_offset": 9437705,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\settings.cjs",
+        "sha256": "1163040a53deadb2d1e10ed04a950d0327ade0cafee02686e4b5474798df8943",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/settings.jsc",
+      "bytes": 23672,
+      "sha256": "f521bf39c4a05dca206a0861c5d5b904870a57ca946f0e3cbbef849dbfdbd2aa",
+      "asar_file_offset": 9437747,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/telemetry.cjs",
+      "bytes": 43,
+      "sha256": "2d033b18d8108fbdb045bc9c71ba93f70a4c9c3b7be12e6e434a01d095b2a630",
+      "asar_file_offset": 9461419,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\telemetry.cjs",
+        "sha256": "185e057b7101c62b84b88c76db5b8a7a1ec3fc75e08c73266f316703ffde6841",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/telemetry.jsc",
+      "bytes": 13256,
+      "sha256": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+      "asar_file_offset": 9461462,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "lib/walker-profiles.cjs",
+      "bytes": 49,
+      "sha256": "d077d64a842da18d7fe985ab442cefc0e7a2b4184f6092e21d01f874f586c53c",
+      "asar_file_offset": 9474718,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\lib\\walker-profiles.cjs",
+        "sha256": "773b276da3842d946631a67e04a92fbb4dc2772e9fd61220b3431b9367024853",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "lib/walker-profiles.jsc",
+      "bytes": 13048,
+      "sha256": "c2176e31714360212cead743da27095d86e1847df4ba2452971b325a6cc1d455",
+      "asar_file_offset": 9474767,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "look-preload.cjs",
+      "bytes": 352,
+      "sha256": "ba82b05f28f63176997028840a3e551321f7f2206d3dd65138d6a156dc520c8d",
+      "asar_file_offset": 9487815,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\look-preload.cjs",
+        "sha256": "951fdf1d9658d6c9df87d472558c9a8a1e5cfee6fc4e1d46e07c38b9af8f7617",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "main.cjs",
+      "bytes": 72,
+      "sha256": "ee87a22cdf2cc7b6512601d456ab9c08a00d78bcf49f9465abd29002a5f7f65f",
+      "asar_file_offset": 9488167,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\main.cjs",
+        "sha256": "fc32ff349fe50b57721069eb246313734129f53ef9788a493fd968032ad06a64",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "main.jsc",
+      "bytes": 64888,
+      "sha256": "6fffeefd17a73bce9842ffa5be750b2507215798fbafb3f4f215864ce6f99d02",
+      "asar_file_offset": 9488239,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "package.json",
+      "bytes": 2213,
+      "sha256": "0667f5fc8a735972911e811f236713e7f4fd2bd5837d6426ebbeaeb0e410c3b4",
+      "asar_file_offset": 9553127,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "preload.cjs",
+      "bytes": 2842,
+      "sha256": "5f802bdc6db159f404bf2e9315ddb208d7479f127b502aa54baf6f752f6ea282",
+      "asar_file_offset": 9555340,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\preload.cjs",
+        "sha256": "c1123c7a9727a136f0c1cef6a573716c22e3e069c52d26ae8df34afc69da3619",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/alert-audio.js",
+      "bytes": 977,
+      "sha256": "78ec9d505606f829651f26a303f3c9ae081cbabdf98706ed73849f165fd075d7",
+      "asar_file_offset": 9558182,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\alert-audio.js",
+        "sha256": "2e5a51781e07372ea71597e389ca173cbc0c91c5b49918fa03c4bb608c4db6cf",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/alerts.js",
+      "bytes": 12339,
+      "sha256": "5cf4ed432f22ef1b8e769d84ef406e76f8a742de7a09ccd765c6b1c6e2ccd597",
+      "asar_file_offset": 9559159,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\alerts.js",
+        "sha256": "33507bbb683332d6b1031daff974381fb2d4c689e2f7a7fb6e6034f4db864b8c",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/app.js",
+      "bytes": 27549,
+      "sha256": "34a2ee7a0448a92de386d808e326bb02f6500c6b583903a8b6d5b7e9be4e679f",
+      "asar_file_offset": 9571498,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\app.js",
+        "sha256": "81008565bbffad33718b06969aaaa70da08b3f4569f6b116db540e5786fd8537",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/guild-daily.js",
+      "bytes": 4653,
+      "sha256": "28237d37adaa4beb7012cb9bc04718683feb03a4a2337091280f974f8dffa7af",
+      "asar_file_offset": 9599047,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\guild-daily.js",
+        "sha256": "ca341465d9b3ede67f5861427074b891eed77e3d424c8b63512d2d60955ba552",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/healer.js",
+      "bytes": 5621,
+      "sha256": "91c76afcfcf4cc8b50c845b80914835bbf65e5a75a237bfa099b4ef3b159e35f",
+      "asar_file_offset": 9603700,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\healer.js",
+        "sha256": "03455d994e9ae62edf9e14b7bf627c4d61e7819f41fc5e9e7c371df2f4ffc5a1",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/hoenn.js",
+      "bytes": 7966,
+      "sha256": "5e791b894fe3a529fd2052b604ae68e43e5fbc10bd9a25f7795c4c467f75532f",
+      "asar_file_offset": 9609321,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\hoenn.js",
+        "sha256": "4043fa46fb691cc5a75670fb478534af69509470f8abb716a9af4875a025c75d",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/index.html",
+      "bytes": 6828,
+      "sha256": "1b7f950af832d5ae2deb58b9e3ada2163877931c5afbf5cb57f7d02209701fcc",
+      "asar_file_offset": 9617287,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "renderer/look.css",
+      "bytes": 1793,
+      "sha256": "1e9291e87d303036e977a9b7f20ef56d57c107dd3e11e41afa3868abbb809967",
+      "asar_file_offset": 9624115,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "renderer/look.html",
+      "bytes": 1159,
+      "sha256": "bfd81e8e692c63a827b0716370205c8f1bf3d46e3be7cb1d260deb810578f6d4",
+      "asar_file_offset": 9625908,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "renderer/look.js",
+      "bytes": 735,
+      "sha256": "3aeeefce126cbe823ce6943f16a3092efc2df63182ca6a1a8621300f0ce59ee1",
+      "asar_file_offset": 9627067,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\look.js",
+        "sha256": "5e3ff5be61e22da0e8fc05efbcaa68eeb1800dca98742d96728fb4b3929b9f07",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/looting.js",
+      "bytes": 8557,
+      "sha256": "0ceee7c1c0d6da93330576fe536b525108029a9342e8447f00456ef1d2404f17",
+      "asar_file_offset": 9627802,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\looting.js",
+        "sha256": "dc23bbe29879bd3c939fa8a6f43141b4e390d169b67f7342bafb416ba8896f6c",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/scripts.js",
+      "bytes": 2167,
+      "sha256": "7094a39d98902caa452610d750234dea57ce95a74f161d297b3907bd446474ba",
+      "asar_file_offset": 9636359,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\scripts.js",
+        "sha256": "dd1856448250fed3b8ce9ec15c3de8a43a8d9b4c6f9301b54a5b100abf0f43ef",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/style.css",
+      "bytes": 28180,
+      "sha256": "7df0a9cf9b38062b15b1c99160439e2ac6bdc27d3de6ed87597c73f9375d55a3",
+      "asar_file_offset": 9638526,
+      "antigravity_matches": true,
+      "readable": null
+    },
+    {
+      "path": "renderer/target.js",
+      "bytes": 13504,
+      "sha256": "ffddfad98fbf469c340bd2480d572258560d3436ad1a136187dead8b462be629",
+      "asar_file_offset": 9666706,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\target.js",
+        "sha256": "32dbf5406a909b3a0bcc02166cc0e2f88801c91e7c3dd4519b4703a87f6a7209",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/ui.js",
+      "bytes": 6416,
+      "sha256": "dc2f13b7dd59c986b9fe635cca22651d287b7fb9b20de536db9200e84b3e608a",
+      "asar_file_offset": 9680210,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\ui.js",
+        "sha256": "e590491ee65925fafc6b1e5c3cbf7ed88ceaf7419b543932bc6494a9e79b0ea9",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "renderer/walker.js",
+      "bytes": 26610,
+      "sha256": "e31a24c15e31503a0291fdee8ed88b5b6e766c081f357b22436753453d030df2",
+      "asar_file_offset": 9686626,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\renderer\\walker.js",
+        "sha256": "0f3d96899dd1e2622e6d14d55f4870e1d19c5b7b77c40174541bb542712568ef",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/alerts.js",
+      "bytes": 4737,
+      "sha256": "424d3dbb18c27a693d681a0fffc21900c4122767d8bd049c07b2183bf9c462db",
+      "asar_file_offset": 9713236,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\alerts.js",
+        "sha256": "7ad9af5a5aab2bd55662fcabfa9bcadfc769d68ba581c9edb2c3d09225aeaeec",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/diagnostics.js",
+      "bytes": 3652,
+      "sha256": "55e6fecf001a9bbb0b4fda5fb239e876a070906a9c661accd7d3492248435f97",
+      "asar_file_offset": 9717973,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\diagnostics.js",
+        "sha256": "1a51750e7cf1573764b56d0230dc8c2f5fca150edb63188a60db9bf3663cc8df",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/healer.js",
+      "bytes": 1598,
+      "sha256": "e7b8d86f413956dd4472bc4895eedad53dc49d1873f269fbc2ac3262abcd7933",
+      "asar_file_offset": 9721625,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\healer.js",
+        "sha256": "7c4185055c42ac8f6905e98b36f192bf7ae25c9ef9fb1189d8adde7d7d839807",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/hoenn.js",
+      "bytes": 1471,
+      "sha256": "40dfdadd51be75a6447d07fa1ff68a2afc110b1baaa6006455692af818fd94d7",
+      "asar_file_offset": 9723223,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\hoenn.js",
+        "sha256": "188f895904b409fa1e2fb2ad5c2a466b9122978cec023fa1884d187b395eecd7",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/messages.js",
+      "bytes": 6597,
+      "sha256": "eeeb0ac1970bcc15432fe3ad69a35d15c8ac6d3f68315524bbe3e3deb844a0c7",
+      "asar_file_offset": 9724694,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\messages.js",
+        "sha256": "6e243eaccb6cfbe752cdb91fc0dfbb0008d200b5bb2ed6391fa223bd0cd63880",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/schema.js",
+      "bytes": 16092,
+      "sha256": "8aa0fe77cbb90fa27ef132b20abf0951de0ba3e08fe81dd0d9f6e74be439e915",
+      "asar_file_offset": 9731291,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\schema.js",
+        "sha256": "41319d00f506689a42b9a0d1fd838bcbe9ca1e145937a069af9fdb0b29b7ae44",
+        "ast_verified": true
+      }
+    },
+    {
+      "path": "shared/walker.js",
+      "bytes": 3520,
+      "sha256": "9b77f866763aa6239f6a233cb26cd171f54e866f0073d96a46cb1c3d49b5ea2a",
+      "asar_file_offset": 9747383,
+      "antigravity_matches": true,
+      "readable": {
+        "path": "readable\\shared\\walker.js",
+        "sha256": "ee934e636854f48a0dad8d9f240ae483d2cb2589fdbb572f550c462a670cebfb",
+        "ast_verified": true
+      }
+    }
+  ],
+  "counts": {
+    "files": 79,
+    "matching_extracted": 79,
+    "readable": 37,
+    "bytecodes": 15
+  },
+  "limits": [
+    "Static recovery only",
+    "No JSC module execution",
+    "No native automation implementation recovered"
+  ]
+}

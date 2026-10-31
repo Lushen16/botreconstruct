@@ -1,0 +1,239 @@
+{
+  "contract": "pka-alerts-v1",
+  "status": "specified",
+  "basis": [
+    "renderer/alerts.js (campos reais: hpThreshold, hpOnce, creatureName, creatureRange, playerRange, huntPokemonNames, teleportIntervalMs, soundRepeatEnabled, soundRepeatSeconds, pauseWk/pauseTarget/pauseLooting, talkCooldownSec, gmArrowMode)",
+    "shared/alerts.js (types, supportedTypes, typeReason, alertSignals)",
+    "release-manifest protection.rules Alert* (decisao nativa, nao observada)"
+  ],
+  "rules": [
+    {
+      "id": "AlertOnline",
+      "status": "implementable",
+      "coverage": "full",
+      "triggers": [
+        "sessao.online passa de true para false",
+        "sessao.stale/error/authExpired apos sessao online"
+      ],
+      "inputs": [
+        "session.online",
+        "session.stale",
+        "session.error",
+        "session.authExpired"
+      ],
+      "config": [
+        "alerts.rules",
+        "alerts.pauseWithHotkey"
+      ],
+      "outputs": [
+        "notify:disconnected",
+        "pauseModules(opcional)"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "UI: avisa depois de uma sessao online quando o cliente fica offline/para de atualizar. Implementado em alerts-engine.cjs."
+    },
+    {
+      "id": "AlertMatches",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "type=hp: telemetry.healthPercent <= hpThreshold (rearma ao voltar acima)",
+        "type=creature: creature viva com nome/range no mesmo andar",
+        "type=hunt_pokemon: creature fora da lista esperada",
+        "type=teleport: deslocamento >=3 tiles entre checagens"
+      ],
+      "inputs": [
+        "telemetry.healthPercent",
+        "telemetry.position",
+        "telemetry.creatures",
+        "telemetry.alertEvents"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "outputs": [
+        "notify:<type>"
+      ],
+      "supportedTypes": [
+        "hp",
+        "creature",
+        "hunt_pokemon",
+        "teleport",
+        "chat"
+      ],
+      "blockedTypes": [
+        "player",
+        "gm_arrow",
+        "gm_message",
+        "camera_viewers",
+        "pokemon_capture"
+      ],
+      "blockedBy": [
+        "telemetry sem lista de players",
+        "sem classificacao nativa e amostras reais de GM, setas, viewers ou confirmacao de captura"
+      ],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "../Extracted_Source/shared/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "chat local usa alertEvents kind=talk observados no snapshot real (id, mode, value, name, text, self, pos), sem provar filtros nativos self/mode. alertSignals true e capacidade, nao ocorrencia. Decoder validado por alert_vectors.json; ver reconstruction/ALERT_TELEMETRY.md. Player/GM/setas/viewers/captura seguem sem classificacao nativa verificada."
+    },
+    {
+      "id": "AlertRepeat",
+      "status": "implementable",
+      "coverage": "full",
+      "triggers": [
+        "condicao ainda verdadeira e soundRepeatEnabled",
+        "decorrido soundRepeatSeconds desde o ultimo aviso"
+      ],
+      "inputs": [
+        "estado do alerta",
+        "tempo"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "outputs": [
+        "notify:<type>"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "UI: repetir a cada intervalo enquanto a condicao continuar; vale para hp/creature/hunt_pokemon (player segue bloqueado). Implementado em alerts-engine.cjs."
+    },
+    {
+      "id": "AlertSuppressed",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "hpOnce: suprime ate rearmar",
+        "gm_arrow: agrupa mesma seta no mesmo lugar por 30s",
+        "talkCooldownSec: intervalo minimo entre mensagens"
+      ],
+      "inputs": [
+        "estado do alerta",
+        "tempo",
+        "telemetry.position"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "outputs": [
+        "suppress"
+      ],
+      "supportedTypes": [
+        "hp",
+        "gm_arrow",
+        "chat"
+      ],
+      "blockedTypes": [
+        "player",
+        "gm_message",
+        "camera_viewers",
+        "pokemon_capture"
+      ],
+      "blockedBy": [
+        "dependem de AlertMatches bloqueado"
+      ],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "Regras de supressao descritas na UI; gm_arrow usa posicao. Implementado em alerts-engine.cjs."
+    },
+    {
+      "id": "AlertNearby",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "type=creature: creatura viva no range creatureRange (1..30) e mesmo z"
+      ],
+      "inputs": [
+        "telemetry.creatures",
+        "telemetry.position"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "outputs": [
+        "notify:creature"
+      ],
+      "supportedTypes": [
+        "creature"
+      ],
+      "blockedTypes": [
+        "player"
+      ],
+      "blockedBy": [
+        "telemetry nao traz lista de jogadores"
+      ],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "playerRange existe na UI, mas falta a entrada. Implementado em alerts-engine.cjs."
+    },
+    {
+      "id": "AlertTeleport",
+      "status": "implementable",
+      "coverage": "full",
+      "triggers": [
+        "delta Chebyshev em x/y/z >= 3 entre checagens",
+        "intervalo teleportIntervalMs >= 50"
+      ],
+      "inputs": [
+        "telemetry.position",
+        "tempo"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "outputs": [
+        "notify:teleport"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "UI: deslocamento de 3+ tiles entre verificacoes; pode ocorrer em movimento rapido. Implementado em alerts-engine.cjs."
+    },
+    {
+      "id": "AlertDue",
+      "status": "implementable",
+      "coverage": "full",
+      "triggers": [
+        "agendamento de repeticao/intervalo vencido"
+      ],
+      "inputs": [
+        "tempo"
+      ],
+      "config": [
+        "alerts.rules"
+      ],
+      "outputs": [
+        "notify:<type>"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "../Extracted_Source/renderer/alerts.js",
+        "reconstruction/engines/alerts-engine.cjs",
+        "tests/alerts_engine.test.cjs"
+      ],
+      "notes": "Determina o instante do aviso; sem semantica nativa observada. Implementado em alerts-engine.cjs."
+    }
+  ]
+}

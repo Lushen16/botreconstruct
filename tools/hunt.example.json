@@ -1,0 +1,23 @@
+{
+  "target": {
+    "monsters": ["Wild"],
+    "maxDistance": 8,
+    "priorityMode": "nearest",
+    "globalCooldownMs": 250,
+    "skills": [
+      { "key": "f1", "cooldownMs": 1000, "maxDistance": 8 },
+      { "key": "f2", "cooldownMs": 2000, "maxDistance": 5 },
+      { "key": "f3", "cooldownMs": 3000, "maxDistance": 3 }
+    ]
+  },
+  "hoenn": { "potionHpPercent": 80, "potionHotkey": "f12", "potionCooldownMs": 1500 },
+  "healer": { "healHpPercent": 0 },
+  "walker": {
+    "loop": true,
+    "smartWalking": true,
+    "waypoints": [
+      { "action": "walk", "pos": { "x": 100, "y": 100, "z": 7 } },
+      { "action": "walk", "pos": { "x": 105, "y": 100, "z": 7 } }
+    ]
+  }
+}

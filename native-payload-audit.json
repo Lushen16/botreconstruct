@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-10-22T12:25:05.098Z",
+  "observations": [
+    {
+      "path": "C:\\Users\\yago\\Documents\\Clone\\Shiba_Bots_App\\libs\\d3d9.dll",
+      "size": 1866491,
+      "sha256": "f1dee24b04b915996f46c2a10f8f6bebee123451928fcebea056f08962e64223",
+      "firstBytes": "4d5a90200320202004202020ffff2020",
+      "peOffset": 538976496,
+      "peOffsetBytes": "f0202020",
+      "peOffsetInFile": false,
+      "peSignatures": 0,
+      "zeroBytes": 0,
+      "spaceBytes": 315832,
+      "utf8ReplacementSequences": 0,
+      "targetExecuted": false,
+      "sourceModified": false
+    },
+    {
+      "path": "C:\\Users\\yago\\Desktop\\Shiba Bots - Poke Alliance v2.6.3\\dll\\shiba_bots.dll",
+      "size": 59825933,
+      "sha256": "4ca95cd73802cde80488c57cdc56168268074c13d38b346179ddce64878ebb4d",
+      "firstBytes": "4d5aefbfbd20202004202020efbfbdef",
+      "peOffset": 538976288,
+      "peOffsetBytes": "20202020",
+      "peOffsetInFile": false,
+      "peSignatures": 0,
+      "zeroBytes": 16,
+      "spaceBytes": 273162,
+      "utf8ReplacementSequences": 13587112,
+      "targetExecuted": false,
+      "sourceModified": false
+    },
+    {
+      "path": "C:\\Users\\yago\\Desktop\\Shiba Bots - Poke Alliance v2.6.6\\dll\\shiba_bots.dll",
+      "size": 59827533,
+      "sha256": "e9a3dde66da4d8cacefd438d6d2b953ce9947c775873ec077905955f9d09825f",
+      "firstBytes": "4d5aefbfbd20202004202020efbfbdef",
+      "peOffset": 538976288,
+      "peOffsetBytes": "20202020",
+      "peOffsetInFile": false,
+      "peSignatures": 0,
+      "zeroBytes": 28,
+      "spaceBytes": 273171,
+      "utf8ReplacementSequences": 13587112,
+      "targetExecuted": false,
+      "sourceModified": false
+    }
+  ],
+  "limitations": [
+    "Byte patterns do not identify who transformed the files.",
+    "Replacement bytes do not preserve the discarded original values.",
+    "Do not replace spaces with zero bytes or substitute an older protocol."
+  ]
+}

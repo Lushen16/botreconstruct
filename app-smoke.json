@@ -1,0 +1,68 @@
+{
+  "state": {
+    "title": "Menu",
+    "tabs": [
+      "Scripts",
+      "Targeting",
+      "Healer",
+      "Walker",
+      "CAPTURE",
+      "Alertas",
+      "Hoenn",
+      "Tools"
+    ],
+    "profile": "Default",
+    "formFields": 3,
+    "body": "PKA TOOLS\nAGUARDANDO\nSCRIPTS\nTARGETING\nHEALER\nWALKER\nCAPTURE\nALERTAS\nHOENN\nTOOLS\nScripts\n\nBiblioteca de scripts e macros\n\nPerfil:\nDefault\nSalvo\nSimulação desligada\nContinuar\nModo desempenho\nAguardando cliente\nReconstrução parcial: perfis locais disponíveis. A automação no jogo está desativada nesta versão.\n×\nDetalhes do Script\nNome do Script\nIntervalo (ms)\nCódigo Lua\nSalvar\nLimpar\nScripts Salvos\n\nExecução Lua descontinuada. Sua biblioteca pode ser consultada, editada e exportada com o perfil.\n\nPKA Tools · 3.1.9 / reconstrucao local"
+  },
+  "checks": {
+    "tabs": [
+      {
+        "name": "Scripts",
+        "fields": 3,
+        "text": 179
+      },
+      {
+        "name": "Targeting",
+        "fields": 28,
+        "text": 1738
+      },
+      {
+        "name": "Healer",
+        "fields": 6,
+        "text": 727
+      },
+      {
+        "name": "Walker",
+        "fields": 17,
+        "text": 1395
+      },
+      {
+        "name": "CAPTURE",
+        "fields": 8,
+        "text": 680
+      },
+      {
+        "name": "Alertas",
+        "fields": 1,
+        "text": 420
+      },
+      {
+        "name": "Hoenn",
+        "fields": 36,
+        "text": 1982
+      },
+      {
+        "name": "Tools",
+        "fields": 14,
+        "text": 486
+      }
+    ],
+    "profileCreation": true,
+    "autosave": true,
+    "diskPersistence": true,
+    "rendererReload": true,
+    "profileSelectAndRemove": true
+  },
+  "failures": []
+}

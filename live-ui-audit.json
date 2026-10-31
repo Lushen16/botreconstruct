@@ -1,0 +1,2001 @@
+{
+  "startedAt": "2026-10-30T20:22:30.107Z",
+  "source": "live-rpm",
+  "simulation": false,
+  "tabs": [
+    {
+      "title": "Scripts",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-0.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Salvar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar scripts"
+    },
+    {
+      "title": "Targeting",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-1.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "+ Adicionar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        },
+        {
+          "text": "Desligado",
+          "disabled": false
+        },
+        {
+          "text": "Sequência (mX)",
+          "disabled": false
+        },
+        {
+          "text": "AutoCombo do cliente",
+          "disabled": false
+        },
+        {
+          "text": "Marcar alvo no combo: ON",
+          "disabled": false
+        },
+        {
+          "text": "PokeStop: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Medicine antes: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Medicine em debuff: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Postura automática: ON",
+          "disabled": false
+        },
+        {
+          "text": "Best Tile: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Perfect lure: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Rebox: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Usar desenho: OFF",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "P",
+          "disabled": true
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "Revive: ON",
+          "disabled": false
+        },
+        {
+          "text": "Revive seguro: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Deixar Shiny para trás: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Cura: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Buff: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Iniciar Target",
+          "disabled": true
+        },
+        {
+          "text": "Ver conexão",
+          "disabled": false
+        },
+        {
+          "text": "★ Atacar Shiny primeiro: ON",
+          "disabled": false
+        },
+        {
+          "text": "Rattata",
+          "disabled": false
+        },
+        {
+          "text": "Editar",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": false
+        },
+        {
+          "text": "↓",
+          "disabled": false
+        },
+        {
+          "text": "×",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar target"
+    },
+    {
+      "title": "Healer",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-2.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "‹",
+          "disabled": true
+        },
+        {
+          "text": "›",
+          "disabled": true
+        },
+        {
+          "text": "‹",
+          "disabled": true
+        },
+        {
+          "text": "›",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar healer"
+    },
+    {
+      "title": "Walker",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-3.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "+ Nova rota",
+          "disabled": false
+        },
+        {
+          "text": "Criar",
+          "disabled": false
+        },
+        {
+          "text": "Cancelar",
+          "disabled": false
+        },
+        {
+          "text": "▶ Iniciar",
+          "disabled": false
+        },
+        {
+          "text": "■ Parar",
+          "disabled": true
+        },
+        {
+          "text": "● Gravar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        },
+        {
+          "text": "001Walk3297, 2221, 8",
+          "disabled": false
+        },
+        {
+          "text": "002Walk3297, 2222, 8",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": true
+        },
+        {
+          "text": "↓",
+          "disabled": true
+        },
+        {
+          "text": "Minha posição",
+          "disabled": true
+        },
+        {
+          "text": "Excluir",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "Loop: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Ponto mais próximo: ON",
+          "disabled": false
+        },
+        {
+          "text": "Dynamic Lure: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Lure de Acompanhamento: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Pegar daily",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": false
+        },
+        {
+          "text": "↓",
+          "disabled": false
+        },
+        {
+          "text": "⌖",
+          "disabled": false
+        },
+        {
+          "text": "−",
+          "disabled": false
+        },
+        {
+          "text": "+",
+          "disabled": false
+        },
+        {
+          "text": "⛶",
+          "disabled": false
+        },
+        {
+          "text": "Abrir mapa",
+          "disabled": false
+        },
+        {
+          "text": "↺",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar walker"
+    },
+    {
+      "title": "CAPTURE",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-4.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Iniciar captura",
+          "disabled": true
+        },
+        {
+          "text": "Copiar ID",
+          "disabled": true
+        },
+        {
+          "text": "Usar como corpo",
+          "disabled": true
+        },
+        {
+          "text": "Cancelar seleção",
+          "disabled": false
+        },
+        {
+          "text": "Selecionar",
+          "disabled": true
+        },
+        {
+          "text": "Selecionar",
+          "disabled": true
+        },
+        {
+          "text": "Selecionar",
+          "disabled": true
+        },
+        {
+          "text": "+ Adicionar corpo",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar looting"
+    },
+    {
+      "title": "Alertas",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-5.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Iniciar monitor",
+          "disabled": true
+        },
+        {
+          "text": "+ Nova regra",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar alerts"
+    },
+    {
+      "title": "Hoenn",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-6.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Iniciar Hoenn",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar hoenn"
+    },
+    {
+      "title": "Tools",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-7.png",
+      "notice": "",
+      "buttons": [],
+      "run": "Iniciar tools"
+    }
+  ],
+  "walker": {
+    "status": "error",
+    "samples": [
+      {
+        "at": "2026-10-30T20:22:34.773Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:34.571839+00:00",
+        "ageMs": 202,
+        "online": true,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": null,
+        "runtime": {
+          "modules": [],
+          "pid": null,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Teclado/RPM pausado",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": null,
+          "walkerWaypoints": null,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:34.774Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:34.571839+00:00",
+        "ageMs": 203,
+        "online": true,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": null,
+        "runtime": {
+          "modules": [],
+          "pid": null,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Teclado/RPM pausado",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": null,
+          "walkerWaypoints": null,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:34.867Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:34.824632+00:00",
+        "ageMs": 43,
+        "online": true,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": null,
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 25492,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "walker: aguardando",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": 1,
+          "walkerWaypoints": 2,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:34.889Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:34.824632+00:00",
+        "ageMs": 65,
+        "online": true,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": null,
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 25492,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "walker: aguardando",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": 1,
+          "walkerWaypoints": 2,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:34.968Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:34.824632+00:00",
+        "ageMs": 144,
+        "online": true,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "action": "advance",
+          "emitted": [],
+          "index": 1,
+          "reason": "arrived",
+          "status": "walking",
+          "inputAccepted": false
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 25492,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "walker: advance",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 1,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": 2,
+          "walkerWaypoints": 2,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:34.998Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:34.824632+00:00",
+        "ageMs": 174,
+        "online": true,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "action": "advance",
+          "emitted": [],
+          "index": 1,
+          "reason": "arrived",
+          "status": "walking",
+          "inputAccepted": false
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 25492,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "walker: advance",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 1,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": 2,
+          "walkerWaypoints": 2,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:35.112Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:35.076867+00:00",
+        "ageMs": 36,
+        "online": false,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "action": "advance",
+          "emitted": [],
+          "index": 1,
+          "reason": "arrived",
+          "status": "walking",
+          "inputAccepted": false
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 25492,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "walker: advance",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 1,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": 2,
+          "walkerWaypoints": 2,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:35.186Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:35.076867+00:00",
+        "ageMs": 110,
+        "online": false,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "status": "error",
+          "error": "Posicao RPM desatualizada."
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 25492,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "error",
+          "error": "Posicao RPM desatualizada.",
+          "phase": "Posicao RPM desatualizada.",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": null,
+          "walkerWaypoints": null,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:35.216Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:35.076867+00:00",
+        "ageMs": 140,
+        "online": false,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "status": "error",
+          "error": "Posicao RPM desatualizada."
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 25492,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "error",
+          "error": "Posicao RPM desatualizada.",
+          "phase": "Posicao RPM desatualizada.",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": null,
+          "walkerWaypoints": null,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:35.528Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:35.330673+00:00",
+        "ageMs": 198,
+        "online": false,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "status": "error",
+          "error": "Posicao RPM desatualizada."
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 25492,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "error",
+          "error": "Posicao RPM desatualizada.",
+          "phase": "Posicao RPM desatualizada.",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": null,
+          "walkerWaypoints": null,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      },
+      {
+        "at": "2026-10-30T20:22:35.528Z",
+        "pid": 25492,
+        "generatedAt": "2026-10-30T20:22:35.330673+00:00",
+        "ageMs": 198,
+        "online": false,
+        "position": {
+          "x": 3297,
+          "y": 2221,
+          "z": 8
+        },
+        "action": {
+          "status": "error",
+          "error": "Posicao RPM desatualizada."
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 25492,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "error",
+          "error": "Posicao RPM desatualizada.",
+          "phase": "Posicao RPM desatualizada.",
+          "phases": {
+            "target": "off"
+          },
+          "walkerIndex": 0,
+          "pausedModules": [],
+          "selectedTargetId": null,
+          "target": null,
+          "targetName": null,
+          "targetDistance": null,
+          "targetHp": null,
+          "walkerWaypoint": null,
+          "walkerWaypoints": null,
+          "targetEffectVerified": false,
+          "lastCombatDispatch": null
+        }
+      }
+    ],
+    "start": {
+      "disabled": false,
+      "title": "Começa a andar a rota. Com “Ponto mais próximo: ON” começa pelo ponto mais perto de você."
+    },
+    "afterStart": {
+      "modules": [],
+      "pid": 25492,
+      "paused": true,
+      "backend": "keyboard-rpm",
+      "status": "error",
+      "error": "Posicao RPM desatualizada.",
+      "phase": "Posicao RPM desatualizada.",
+      "phases": {
+        "target": "off"
+      },
+      "walkerIndex": 0,
+      "pausedModules": [],
+      "selectedTargetId": null,
+      "target": null,
+      "targetName": null,
+      "targetDistance": null,
+      "targetHp": null,
+      "walkerWaypoint": null,
+      "walkerWaypoints": null,
+      "targetEffectVerified": false,
+      "lastCombatDispatch": null
+    },
+    "afterStop": {
+      "modules": [],
+      "pid": 25492,
+      "paused": true,
+      "backend": "keyboard-rpm",
+      "status": "error",
+      "error": "Posicao RPM desatualizada.",
+      "phase": "Posicao RPM desatualizada.",
+      "phases": {
+        "target": "off"
+      },
+      "walkerIndex": 0,
+      "pausedModules": [],
+      "selectedTargetId": null,
+      "target": null,
+      "targetName": null,
+      "targetDistance": null,
+      "targetHp": null,
+      "walkerWaypoint": null,
+      "walkerWaypoints": null,
+      "targetEffectVerified": false,
+      "lastCombatDispatch": null
+    },
+    "positionChanged": false,
+    "positionChangedAfterInput": false,
+    "inputAccepted": false,
+    "ui": {
+      "notice": "Não foi possível concluir. Tente novamente.",
+      "buttons": [
+        {
+          "text": "+ Nova rota",
+          "disabled": false
+        },
+        {
+          "text": "Criar",
+          "disabled": false
+        },
+        {
+          "text": "Cancelar",
+          "disabled": false
+        },
+        {
+          "text": "▶ Iniciar",
+          "disabled": true
+        },
+        {
+          "text": "■ Parar",
+          "disabled": true
+        },
+        {
+          "text": "● Gravar",
+          "disabled": true
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        },
+        {
+          "text": "001Walk3297, 2221, 8",
+          "disabled": false
+        },
+        {
+          "text": "002Walk3297, 2222, 8",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": true
+        },
+        {
+          "text": "↓",
+          "disabled": true
+        },
+        {
+          "text": "Minha posição",
+          "disabled": true
+        },
+        {
+          "text": "Excluir",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": true
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": true
+        },
+        {
+          "text": "BOX",
+          "disabled": true
+        },
+        {
+          "text": "Stair",
+          "disabled": true
+        },
+        {
+          "text": "Wait",
+          "disabled": true
+        },
+        {
+          "text": "Say",
+          "disabled": true
+        },
+        {
+          "text": "Loop: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Ponto mais próximo: ON",
+          "disabled": false
+        },
+        {
+          "text": "Dynamic Lure: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Lure de Acompanhamento: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Pegar daily",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": false
+        },
+        {
+          "text": "↓",
+          "disabled": false
+        },
+        {
+          "text": "⌖",
+          "disabled": false
+        },
+        {
+          "text": "−",
+          "disabled": false
+        },
+        {
+          "text": "+",
+          "disabled": false
+        },
+        {
+          "text": "⛶",
+          "disabled": false
+        },
+        {
+          "text": "Abrir mapa",
+          "disabled": false
+        },
+        {
+          "text": "↺",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar walker"
+    }
+  },
+  "pid": 25492,
+  "initial": {
+    "at": "2026-10-30T20:22:31.926Z",
+    "pid": 25492,
+    "generatedAt": "2026-10-30T20:22:31.750878+00:00",
+    "ageMs": 176,
+    "online": true,
+    "position": {
+      "x": 3297,
+      "y": 2221,
+      "z": 8
+    },
+    "action": null,
+    "runtime": {
+      "modules": [],
+      "pid": null,
+      "paused": true,
+      "backend": "keyboard-rpm",
+      "status": "idle",
+      "error": null,
+      "phase": "Teclado/RPM pausado",
+      "phases": {
+        "target": "off"
+      },
+      "walkerIndex": 0,
+      "pausedModules": [],
+      "selectedTargetId": null,
+      "target": null,
+      "targetName": null,
+      "targetDistance": null,
+      "targetHp": null,
+      "walkerWaypoint": null,
+      "walkerWaypoints": null,
+      "targetEffectVerified": false,
+      "lastCombatDispatch": null
+    }
+  },
+  "finishedAt": "2026-10-30T20:22:35.553Z",
+  "ipcErrors": [],
+  "failures": []
+}

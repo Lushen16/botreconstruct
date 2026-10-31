@@ -1,0 +1,9706 @@
+[
+  {
+    "file": "lib/alert-presenter.jsc",
+    "sha256": "e495085ded22a753a5b3bb698f1216c148fae2b2befa788908a28e4bbb7d7fc8",
+    "bytes": 4152,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 2194
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 4120
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 130,
+        "value": ";:@2<2C+"
+      },
+      {
+        "file_offset": 189,
+        "value": "supportReason"
+      },
+      {
+        "file_offset": 234,
+        "value": "../shared/alerts.js"
+      },
+      {
+        "file_offset": 508,
+        "value": "trigger"
+      },
+      {
+        "file_offset": 528,
+        "value": "armed"
+      },
+      {
+        "file_offset": 552,
+        "value": "previousOnline"
+      },
+      {
+        "file_offset": 580,
+        "value": "disconnectDelivered"
+      },
+      {
+        "file_offset": 684,
+        "value": "AlertPresenter"
+      },
+      {
+        "file_offset": 753,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 863,
+        "value": "kh*0#$*0#<"
+      },
+      {
+        "file_offset": 946,
+        "value": "runtime"
+      },
+      {
+        "file_offset": 1001,
+        "value": "alert"
+      },
+      {
+        "file_offset": 1048,
+        "value": "$24B,\""
+      },
+      {
+        "file_offset": 1065,
+        "value": "+H\"`#"
+      },
+      {
+        "file_offset": 1130,
+        "value": "disconnected"
+      },
+      {
+        "file_offset": 1368,
+        "value": ",:0K,\"(#"
+      },
+      {
+        "file_offset": 1377,
+        "value": "2D\"##4\"L3P"
+      },
+      {
+        "file_offset": 1396,
+        "value": "B4*3;H\"(+4\""
+      },
+      {
+        "file_offset": 1433,
+        "value": "monitorState"
+      },
+      {
+        "file_offset": 1470,
+        "value": "bridge"
+      },
+      {
+        "file_offset": 1490,
+        "value": "isAlive"
+      },
+      {
+        "file_offset": 2023,
+        "value": "monitor"
+      },
+      {
+        "file_offset": 2374,
+        "value": ",#83L* :"
+      },
+      {
+        "file_offset": 2732,
+        "value": "B4*33"
+      },
+      {
+        "file_offset": 2747,
+        "value": "8:42<3H:@JX3T\"`#|"
+      },
+      {
+        "file_offset": 2778,
+        "value": "RP3P\""
+      },
+      {
+        "file_offset": 2784,
+        "value": "zHB8R"
+      },
+      {
+        "file_offset": 2801,
+        "value": "#(\"(#4:D3<\"`#"
+      },
+      {
+        "file_offset": 2815,
+        "value": "*L+0\""
+      },
+      {
+        "file_offset": 3126,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 3136,
+        "value": "stale"
+      },
+      {
+        "file_offset": 3156,
+        "value": "online"
+      },
+      {
+        "file_offset": 3166,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 3176,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 3204,
+        "value": "rules"
+      },
+      {
+        "file_offset": 3263,
+        "value": "$Pgj4"
+      },
+      {
+        "file_offset": 3274,
+        "value": "Cliente desconectado."
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/hotkeys.jsc",
+    "sha256": "d5d8e2d120fc1e9cdfcbdc0b70096fee985e3303a98983ef3715101ec94efddf",
+    "bytes": 6080,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 2245
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 6048
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 128,
+        "value": "A:@2 2'+d"
+      },
+      {
+        "file_offset": 342,
+        "value": "^f([1-9]|1\\d|2[0-4])$"
+      },
+      {
+        "file_offset": 381,
+        "value": "^[a-z0-9]$"
+      },
+      {
+        "file_offset": 439,
+        "value": "home`H"
+      },
+      {
+        "file_offset": 490,
+        "value": "pageup"
+      },
+      {
+        "file_offset": 515,
+        "value": "pagedown`D"
+      },
+      {
+        "file_offset": 550,
+        "value": "down`P"
+      },
+      {
+        "file_offset": 571,
+        "value": "left`J"
+      },
+      {
+        "file_offset": 582,
+        "value": "Pc&a*"
+      },
+      {
+        "file_offset": 592,
+        "value": "right"
+      },
+      {
+        "file_offset": 617,
+        "value": "space"
+      },
+      {
+        "file_offset": 642,
+        "value": "enter"
+      },
+      {
+        "file_offset": 727,
+        "value": "backspace"
+      },
+      {
+        "file_offset": 766,
+        "value": "printscreen"
+      },
+      {
+        "file_offset": 795,
+        "value": "scrolllock"
+      },
+      {
+        "file_offset": 824,
+        "value": "numlock"
+      },
+      {
+        "file_offset": 865,
+        "value": "minus"
+      },
+      {
+        "file_offset": 1163,
+        "value": "virtualKey"
+      },
+      {
+        "file_offset": 1252,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1496,
+        "value": "^ctrl$"
+      },
+      {
+        "file_offset": 1516,
+        "value": "control"
+      },
+      {
+        "file_offset": 1525,
+        "value": ",Piz+*"
+      },
+      {
+        "file_offset": 1536,
+        "value": "^cmdorctrl$|^commandorcontrol$"
+      },
+      {
+        "file_offset": 2008,
+        "value": "shortcuts"
+      },
+      {
+        "file_offset": 2032,
+        "value": "actions"
+      },
+      {
+        "file_offset": 2055,
+        "value": "registered"
+      },
+      {
+        "file_offset": 2151,
+        "value": "Hotkeys"
+      },
+      {
+        "file_offset": 2371,
+        "value": "TR,2XB"
+      },
+      {
+        "file_offset": 2382,
+        "value": "#`3d2@2(2<b;Z?"
+      },
+      {
+        "file_offset": 2421,
+        "value": "2,2+:"
+      },
+      {
+        "file_offset": 2486,
+        "value": "2(2D2C*"
+      },
+      {
+        "file_offset": 2892,
+        "value": "menuHotkey"
+      },
+      {
+        "file_offset": 2955,
+        "value": "pauseHotkey"
+      },
+      {
+        "file_offset": 3012,
+        "value": "Atalhos do menu e da pausa precisam de teclas diferentes."
+      },
+      {
+        "file_offset": 3112,
+        "value": "action"
+      },
+      {
+        "file_offset": 3421,
+        "value": "Atalho "
+      },
+      {
+        "file_offset": 3446,
+        "value": "lido. Configure outra tecla."
+      },
+      {
+        "file_offset": 3489,
+        "value": " indispon"
+      },
+      {
+        "file_offset": 3499,
+        "value": "vel. Escolha outra tecla."
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/launch.jsc",
+    "sha256": "cc92bfe8a7ff84553162667fdce2806149662690057caac3e143a7ad7ccee22e",
+    "bytes": 2592,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 1234
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 2560
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 130,
+        "value": " :L2L2X2<2"
+      },
+      {
+        "file_offset": 201,
+        "value": "clientPidFromArgs"
+      },
+      {
+        "file_offset": 292,
+        "value": "Bd*c3"
+      },
+      {
+        "file_offset": 411,
+        "value": "--ipc-directory=g"
+      },
+      {
+        "file_offset": 539,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 662,
+        "value": "2$\"#;<"
+      },
+      {
+        "file_offset": 676,
+        "value": "BX*W2;+"
+      },
+      {
+        "file_offset": 779,
+        "value": "--client-pid="
+      },
+      {
+        "file_offset": 930,
+        "value": "^--client-pid=[1-9]\\d{0,9}$"
+      },
+      {
+        "file_offset": 1248,
+        "value": "+pJ<Z`RDkD"
+      },
+      {
+        "file_offset": 1311,
+        "value": "revision"
+      },
+      {
+        "file_offset": 1450,
+        "value": "launchRequest"
+      },
+      {
+        "file_offset": 1568,
+        "value": "+p: 24"
+      },
+      {
+        "file_offset": 1640,
+        "value": "userData"
+      },
+      {
+        "file_offset": 1698,
+        "value": "standalone"
+      },
+      {
+        "file_offset": 1826,
+        "value": "Pdr6W"
+      },
+      {
+        "file_offset": 1836,
+        "value": "menuInstance`"
+      },
+      {
+        "file_offset": 1954,
+        "value": "PdR ^Z"
+      },
+      {
+        "file_offset": 1964,
+        "value": "[\\x00-\\x1f\"]"
+      },
+      {
+        "file_offset": 2161,
+        "value": "ipcDirectoryFromArgs`"
+      },
+      {
+        "file_offset": 2273,
+        "value": "node:path"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/legacy.jsc",
+    "sha256": "155d1aed676e0416c0feb352c789393702248e41e60594431ae47810c58150df",
+    "bytes": 18608,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 11480
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 18576
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 138,
+        "value": "*w2@3"
+      },
+      {
+        "file_offset": 151,
+        "value": ":L28282"
+      },
+      {
+        "file_offset": 234,
+        "value": "migrateTools"
+      },
+      {
+        "file_offset": 258,
+        "value": "validateConfig"
+      },
+      {
+        "file_offset": 286,
+        "value": "MAX_BYTES"
+      },
+      {
+        "file_offset": 310,
+        "value": "parseLuaData"
+      },
+      {
+        "file_offset": 334,
+        "value": "LEGACY_NAME"
+      },
+      {
+        "file_offset": 469,
+        "value": "D2DB0B"
+      },
+      {
+        "file_offset": 495,
+        "value": "D*(2,+$\" "
+      },
+      {
+        "file_offset": 509,
+        "value": "D2`\"+{"
+      },
+      {
+        "file_offset": 577,
+        "value": "nodes"
+      },
+      {
+        "file_offset": 602,
+        "value": "whitespace"
+      },
+      {
+        "file_offset": 701,
+        "value": "hB$\"#+"
+      },
+      {
+        "file_offset": 709,
+        "value": "2pB0B"
+      },
+      {
+        "file_offset": 772,
+        "value": "^(?:\\s+|--[^\\n]*(?:\\n|$))"
+      },
+      {
+        "file_offset": 991,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1142,
+        "value": "Somente tabelas Lua de dados s"
+      },
+      {
+        "file_offset": 1173,
+        "value": "o aceitas (posi"
+      },
+      {
+        "file_offset": 1380,
+        "value": "`b<\"##"
+      },
+      {
+        "file_offset": 1389,
+        "value": "d2$\"#+"
+      },
+      {
+        "file_offset": 1397,
+        "value": "R<\"##T"
+      },
+      {
+        "file_offset": 1420,
+        "value": "L2\\\"'+H*"
+      },
+      {
+        "file_offset": 1430,
+        "value": "|R<\"##"
+      },
+      {
+        "file_offset": 1452,
+        "value": "0+0*(2,+(\" "
+      },
+      {
+        "file_offset": 1465,
+        "value": "[x2$*"
+      },
+      {
+        "file_offset": 1474,
+        "value": "2,B0B"
+      },
+      {
+        "file_offset": 1480,
+        "value": "2/:p#8"
+      },
+      {
+        "file_offset": 1493,
+        "value": "2<\";+"
+      },
+      {
+        "file_offset": 1677,
+        "value": "^\\d{0,2}"
+      },
+      {
+        "file_offset": 2274,
+        "value": "$:@+$"
+      },
+      {
+        "file_offset": 2286,
+        "value": "$cH2 #h\""
+      },
+      {
+        "file_offset": 2308,
+        "value": "\\J(2,+,2 #"
+      },
+      {
+        "file_offset": 2322,
+        "value": "8J(2,+X2 #<:H\"/+t*hR"
+      },
+      {
+        "file_offset": 2352,
+        "value": "drL2#24+$:"
+      },
+      {
+        "file_offset": 2368,
+        "value": "drL2#24+$:"
+      },
+      {
+        "file_offset": 2382,
+        "value": "2`R0R"
+      },
+      {
+        "file_offset": 2414,
+        "value": "J$*#;\\:"
+      },
+      {
+        "file_offset": 2433,
+        "value": "DRh\"/\""
+      },
+      {
+        "file_offset": 2445,
+        "value": "\\J(2,rD2,+$2 3HJ(2,+$:"
+      },
+      {
+        "file_offset": 2494,
+        "value": "t2XB0B"
+      },
+      {
+        "file_offset": 2548,
+        "value": "*8\"7+P\"0*"
+      },
+      {
+        "file_offset": 2705,
+        "value": "^([a-zA-Z_][\\w]*)\\s*="
+      },
+      {
+        "file_offset": 2826,
+        "value": "P2D\"3\""
+      },
+      {
+        "file_offset": 3168,
+        "value": "^(true|false|nil)\\b"
+      },
+      {
+        "file_offset": 3232,
+        "value": "8Pl:s"
+      },
+      {
+        "file_offset": 3243,
+        "value": "^-?(?:\\d+(?:\\.\\d*)?|\\.\\d+)(?:[eE][+-]?\\d+)?"
+      },
+      {
+        "file_offset": 4463,
+        "value": "SH\"$3<\""
+      },
+      {
+        "file_offset": 4472,
+        "value": "28JS#"
+      },
+      {
+        "file_offset": 4479,
+        "value": "\"$3(\""
+      },
+      {
+        "file_offset": 4486,
+        "value": "2$J?#"
+      },
+      {
+        "file_offset": 4493,
+        "value": "\"$30\"|2,\"G#"
+      },
+      {
+        "file_offset": 4549,
+        "value": "24R3B"
+      },
+      {
+        "file_offset": 4558,
+        "value": "24R3C"
+      },
+      {
+        "file_offset": 4570,
+        "value": "*;#xB"
+      },
+      {
+        "file_offset": 4588,
+        "value": "zp3<*,2"
+      },
+      {
+        "file_offset": 4616,
+        "value": "\"$3,\"02/3"
+      },
+      {
+        "file_offset": 4650,
+        "value": "ztb8+"
+      },
+      {
+        "file_offset": 4677,
+        "value": "*(2827;"
+      },
+      {
+        "file_offset": 4773,
+        "value": "*,b@R?["
+      },
+      {
+        "file_offset": 4822,
+        "value": "cH\" S`\"hB"
+      },
+      {
+        "file_offset": 4832,
+        "value": "C`\"(RH*"
+      },
+      {
+        "file_offset": 4840,
+        "value": "R4R3cd\"pR("
+      },
+      {
+        "file_offset": 4868,
+        "value": "cH*$R4R3cP\"DR"
+      },
+      {
+        "file_offset": 4917,
+        "value": "cH*0R"
+      },
+      {
+        "file_offset": 4933,
+        "value": "J#Ct#"
+      },
+      {
+        "file_offset": 4942,
+        "value": "S|jDB"
+      },
+      {
+        "file_offset": 5188,
+        "value": "warnings"
+      },
+      {
+        "file_offset": 5237,
+        "value": "importLegacy`"
+      },
+      {
+        "file_offset": 5323,
+        "value": "h*0RP2O[h#t\"0\""
+      },
+      {
+        "file_offset": 5338,
+        "value": "#P\"(B"
+      },
+      {
+        "file_offset": 5344,
+        "value": "+8RPRH\""
+      },
+      {
+        "file_offset": 5352,
+        "value": "J\\rDj"
+      },
+      {
+        "file_offset": 5366,
+        "value": "+\\*,2"
+      },
+      {
+        "file_offset": 5372,
+        "value": ";HB$R rD"
+      },
+      {
+        "file_offset": 5394,
+        "value": "\"(2tR<2;;X"
+      },
+      {
+        "file_offset": 5439,
+        "value": "B$R b,jK:"
+      },
+      {
+        "file_offset": 5694,
+        "value": ": formato antigo n"
+      },
+      {
+        "file_offset": 5713,
+        "value": "o reconhecido; valor preservado no arquivo original."
+      },
+      {
+        "file_offset": 5810,
+        "value": "$B0J 2<*;J"
+      },
+      {
+        "file_offset": 6321,
+        "value": ": sem campo equivalente; consulte o arquivo original."
+      },
+      {
+        "file_offset": 7224,
+        "value": "z`b8R_*"
+      },
+      {
+        "file_offset": 7799,
+        "value": "2(3x:"
+      },
+      {
+        "file_offset": 7897,
+        "value": "healingKeys"
+      },
+      {
+        "file_offset": 7921,
+        "value": "toolKeysa"
+      },
+      {
+        "file_offset": 7950,
+        "value": "healer"
+      },
+      {
+        "file_offset": 8425,
+        "value": "tools"
+      },
+      {
+        "file_offset": 9019,
+        "value": "dep+ "
+      },
+      {
+        "file_offset": 9391,
+        "value": "dep+ "
+      },
+      {
+        "file_offset": 9631,
+        "value": "foodEnabled"
+      },
+      {
+        "file_offset": 9655,
+        "value": "foodHotkey"
+      },
+      {
+        "file_offset": 9679,
+        "value": "foodIntervalSeconds"
+      },
+      {
+        "file_offset": 9864,
+        "value": "dep+ "
+      },
+      {
+        "file_offset": 9976,
+        "value": "consumable4"
+      },
+      {
+        "file_offset": 10005,
+        "value": "hotkey"
+      },
+      {
+        "file_offset": 10040,
+        "value": "Food antigo: o Consum"
+      },
+      {
+        "file_offset": 10062,
+        "value": "vel 4 j"
+      },
+      {
+        "file_offset": 10075,
+        "value": " configurado e foi preservado."
+      },
+      {
+        "file_offset": 10690,
+        "value": "[\\\\/]"
+      },
+      {
+        "file_offset": 10713,
+        "value": "Este arquivo n"
+      },
+      {
+        "file_offset": 10731,
+        "value": " um perfil conhecido do menu antigo."
+      },
+      {
+        "file_offset": 10786,
+        "value": "scripts_data.lua"
+      },
+      {
+        "file_offset": 10814,
+        "value": "scripts"
+      },
+      {
+        "file_offset": 10864,
+        "value": "healer_config.lua"
+      },
+      {
+        "file_offset": 10885,
+        "value": "$Pg2No"
+      },
+      {
+        "file_offset": 10896,
+        "value": "target_tab_config.lua"
+      },
+      {
+        "file_offset": 10932,
+        "value": "shinyPriority"
+      },
+      {
+        "file_offset": 10965,
+        "value": "shinyPriorityEnabled"
+      },
+      {
+        "file_offset": 11002,
+        "value": "instanceModeEnabled"
+      },
+      {
+        "file_offset": 11034,
+        "value": "lowHpCombo"
+      },
+      {
+        "file_offset": 11061,
+        "value": "lowHpComboPercent"
+      },
+      {
+        "file_offset": 11134,
+        "value": "combo"
+      },
+      {
+        "file_offset": 11154,
+        "value": "perfectingSkillMask"
+      },
+      {
+        "file_offset": 11223,
+        "value": "jpJ8k4\""
+      },
+      {
+        "file_offset": 11490,
+        "value": "targetCreaturesEnabled"
+      },
+      {
+        "file_offset": 11526,
+        "value": "noTarget"
+      },
+      {
+        "file_offset": 11559,
+        "value": "target_"
+      },
+      {
+        "file_offset": 11587,
+        "value": "monsters"
+      },
+      {
+        "file_offset": 11607,
+        "value": "Lista de criaturas n"
+      },
+      {
+        "file_offset": 11628,
+        "value": "o encontrada."
+      },
+      {
+        "file_offset": 11767,
+        "value": "movement"
+      },
+      {
+        "file_offset": 11787,
+        "value": "chase"
+      },
+      {
+        "file_offset": 11807,
+        "value": "stand"
+      },
+      {
+        "file_offset": 11827,
+        "value": "to_poke"
+      },
+      {
+        "file_offset": 11852,
+        "value": "random_move"
+      },
+      {
+        "file_offset": 12063,
+        "value": "myPokemon"
+      },
+      {
+        "file_offset": 12076,
+        "value": " Pfn_bq"
+      },
+      {
+        "file_offset": 12087,
+        "value": "wk_label_scripts.lua"
+      },
+      {
+        "file_offset": 12119,
+        "value": "walker"
+      },
+      {
+        "file_offset": 12157,
+        "value": "labelScripts"
+      },
+      {
+        "file_offset": 12218,
+        "value": "waypoints"
+      },
+      {
+        "file_offset": 12264,
+        "value": "comboLureDelay"
+      },
+      {
+        "file_offset": 12292,
+        "value": "luringEnabled"
+      },
+      {
+        "file_offset": 12320,
+        "value": "luringMaxDistance"
+      },
+      {
+        "file_offset": 12352,
+        "value": "frontLureEnabled"
+      },
+      {
+        "file_offset": 12380,
+        "value": "frontLureRegroupMargin"
+      },
+      {
+        "file_offset": 12416,
+        "value": "frontLureRegroupSteps"
+      },
+      {
+        "file_offset": 12452,
+        "value": "randomLureEnabled"
+      },
+      {
+        "file_offset": 12484,
+        "value": "randomLureMinSeconds"
+      },
+      {
+        "file_offset": 12516,
+        "value": "randomLureMaxSeconds"
+      },
+      {
+        "file_offset": 12548,
+        "value": "lureSkillEnabled"
+      },
+      {
+        "file_offset": 12576,
+        "value": "lureSkillMove"
+      },
+      {
+        "file_offset": 12604,
+        "value": "lureSkillHpPercent"
+      },
+      {
+        "file_offset": 12636,
+        "value": "healSkillEnabled"
+      },
+      {
+        "file_offset": 12664,
+        "value": "healSkillMove"
+      },
+      {
+        "file_offset": 12692,
+        "value": "healSkillHpPercent"
+      },
+      {
+        "file_offset": 12760,
+        "value": "*,*+;P"
+      },
+      {
+        "file_offset": 12771,
+        "value": "$B\\z[+"
+      },
+      {
+        "file_offset": 12831,
+        "value": "safespot"
+      },
+      {
+        "file_offset": 12867,
+        "value": "stairs"
+      },
+      {
+        "file_offset": 12913,
+        "value": "action"
+      },
+      {
+        "file_offset": 12938,
+        "value": "Walker: a"
+      },
+      {
+        "file_offset": 12966,
+        "value": " removida da interface simplificada; original preservado no arquivo Lua.q"
+      },
+      {
+        "file_offset": 13238,
+        "value": "lureDelay"
+      },
+      {
+        "file_offset": 13267,
+        "value": "luring"
+      },
+      {
+        "file_offset": 13314,
+        "value": "maxDistance"
+      },
+      {
+        "file_offset": 13341,
+        "value": "frontEnabled"
+      },
+      {
+        "file_offset": 13368,
+        "value": "frontRegroupMargin"
+      },
+      {
+        "file_offset": 13403,
+        "value": "frontRegroupSteps"
+      },
+      {
+        "file_offset": 13438,
+        "value": "randomEnabled"
+      },
+      {
+        "file_offset": 13469,
+        "value": "randomMinSeconds"
+      },
+      {
+        "file_offset": 13500,
+        "value": "randomMaxSeconds"
+      },
+      {
+        "file_offset": 13546,
+        "value": "lureSkill"
+      },
+      {
+        "file_offset": 13560,
+        "value": "Pd~C$"
+      },
+      {
+        "file_offset": 13570,
+        "value": "healSkill"
+      },
+      {
+        "file_offset": 13594,
+        "value": "Enabled"
+      },
+      {
+        "file_offset": 13656,
+        "value": "hpPercent"
+      },
+      {
+        "file_offset": 13719,
+        "value": "HpPercent"
+      },
+      {
+        "file_offset": 13751,
+        "value": "looting_"
+      },
+      {
+        "file_offset": 13771,
+        "value": "maxLootDist"
+      },
+      {
+        "file_offset": 13795,
+        "value": "maxCaptureDist"
+      },
+      {
+        "file_offset": 13823,
+        "value": "captureEntries"
+      },
+      {
+        "file_offset": 13851,
+        "value": "corpseIds"
+      },
+      {
+        "file_offset": 13958,
+        "value": "corpseId"
+      },
+      {
+        "file_offset": 13980,
+        "value": "ballId"
+      },
+      {
+        "file_offset": 14001,
+        "value": "fallbackBallId"
+      },
+      {
+        "file_offset": 14037,
+        "value": "pokeballId"
+      },
+      {
+        "file_offset": 14199,
+        "value": "looting"
+      },
+      {
+        "file_offset": 14219,
+        "value": "alerts_data.lua"
+      },
+      {
+        "file_offset": 14247,
+        "value": "rules"
+      },
+      {
+        "file_offset": 14344,
+        "value": "soundMode"
+      },
+      {
+        "file_offset": 14487,
+        "value": "gmMessageProfiles"
+      },
+      {
+        "file_offset": 14529,
+        "value": "gmMessageProfilesJson"
+      },
+      {
+        "file_offset": 14565,
+        "value": "alerts"
+      },
+      {
+        "file_offset": 14585,
+        "value": "hoenn_data.lua"
+      },
+      {
+        "file_offset": 14613,
+        "value": "targetShinyEnabled"
+      },
+      {
+        "file_offset": 14645,
+        "value": "noTargetShiny"
+      },
+      {
+        "file_offset": 14673,
+        "value": "hoenn"
+      },
+      {
+        "file_offset": 17549,
+        "value": "Arquivo Lua inv"
+      },
+      {
+        "file_offset": 17565,
+        "value": "lido ou maior que 2 MB."
+      },
+      {
+        "file_offset": 17606,
+        "value": "^\\uFEFF"
+      },
+      {
+        "file_offset": 17629,
+        "value": "^return\\b"
+      },
+      {
+        "file_offset": 18020,
+        "value": "../shared/schema.js"
+      },
+      {
+        "file_offset": 18061,
+        "value": "./settings.cjs"
+      },
+      {
+        "file_offset": 18094,
+        "value": "^(?:scripts_data|healer_config|target_tab_config|target_(?!index\\.lua$).+|wk_(?!index\\.lua$).+|looting_config|looting_(?!index\\.lua$).+|alerts_data|hoenn_data)\\.lua$"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/map-view.jsc",
+    "sha256": "024347e226e582aee84cc4291050dd387e4df765a208f7e1cd31d38588a75fd7",
+    "bytes": 8896,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 4617
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 8864
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 213,
+        "value": "PcnAH "
+      },
+      {
+        "file_offset": 223,
+        "value": "OtmmMap"
+      },
+      {
+        "file_offset": 243,
+        "value": "readMap"
+      },
+      {
+        "file_offset": 352,
+        "value": "202 2 Jo+|*(2"
+      },
+      {
+        "file_offset": 673,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 788,
+        "value": "* 2(\" *"
+      },
+      {
+        "file_offset": 796,
+        "value": "*$*4+X\""
+      },
+      {
+        "file_offset": 808,
+        "value": "2 20\""
+      },
+      {
+        "file_offset": 848,
+        "value": "assets"
+      },
+      {
+        "file_offset": 868,
+        "value": "roaming"
+      },
+      {
+        "file_offset": 897,
+        "value": "APPDATA"
+      },
+      {
+        "file_offset": 917,
+        "value": "nativeImage"
+      },
+      {
+        "file_offset": 941,
+        "value": "preferences"
+      },
+      {
+        "file_offset": 1010,
+        "value": "atlas"
+      },
+      {
+        "file_offset": 1177,
+        "value": "MapService"
+      },
+      {
+        "file_offset": 1300,
+        "value": "<24J$*4*"
+      },
+      {
+        "file_offset": 1314,
+        "value": "J4*(Z':"
+      },
+      {
+        "file_offset": 1380,
+        "value": "PokeAlliance"
+      },
+      {
+        "file_offset": 1404,
+        "value": "PokeAllianceV3"
+      },
+      {
+        "file_offset": 1554,
+        "value": "dialogDirectory"
+      },
+      {
+        "file_offset": 1690,
+        "value": "J<28R7z#"
+      },
+      {
+        "file_offset": 1704,
+        "value": "Zh*D2C;"
+      },
+      {
+        "file_offset": 1728,
+        "value": "Z82(R'j"
+      },
+      {
+        "file_offset": 1780,
+        "value": "{@\" :"
+      },
+      {
+        "file_offset": 1796,
+        "value": "8j@R("
+      },
+      {
+        "file_offset": 1818,
+        "value": "203x*0JP*(R':O3"
+      },
+      {
+        "file_offset": 1841,
+        "value": "+d*H*"
+      },
+      {
+        "file_offset": 2057,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 2068,
+        "value": "vel restaurar a escolha do mapa."
+      },
+      {
+        "file_offset": 2152,
+        "value": "minimap.otmm"
+      },
+      {
+        "file_offset": 2182,
+        "value": "minimap854.otmm"
+      },
+      {
+        "file_offset": 2281,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 2292,
+        "value": "vel restaurar o mapa escolhido; ele est"
+      },
+      {
+        "file_offset": 2332,
+        "value": " indispon"
+      },
+      {
+        "file_offset": 2342,
+        "value": "vel. Usando o mapa padr"
+      },
+      {
+        "file_offset": 2390,
+        "value": "createFromPath"
+      },
+      {
+        "file_offset": 2418,
+        "value": "minimap.png"
+      },
+      {
+        "file_offset": 2447,
+        "value": "getSize"
+      },
+      {
+        "file_offset": 2467,
+        "value": "toBitmap"
+      },
+      {
+        "file_offset": 2487,
+        "value": "bitmap"
+      },
+      {
+        "file_offset": 3436,
+        "value": "+p*@j"
+      },
+      {
+        "file_offset": 3458,
+        "value": "$B,*4*3Z+r#"
+      },
+      {
+        "file_offset": 3489,
+        "value": "b,\"+BTR"
+      },
+      {
+        "file_offset": 3505,
+        "value": "$*X*Wr#"
+      },
+      {
+        "file_offset": 3651,
+        "value": "\\.(?:otmm|otm)$"
+      },
+      {
+        "file_offset": 3687,
+        "value": "Escolha o minimap854.otmm ou outro mapa OTMM compat"
+      },
+      {
+        "file_offset": 3757,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 3768,
+        "value": "vel abrir esse mapa. Use um arquivo OTMM v"
+      },
+      {
+        "file_offset": 3811,
+        "value": "lido, como minimap854.otmm."
+      },
+      {
+        "file_offset": 5053,
+        "value": "zlBL:"
+      },
+      {
+        "file_offset": 5059,
+        "value": "* r`\"8:"
+      },
+      {
+        "file_offset": 5067,
+        "value": "Z :@24zK"
+      },
+      {
+        "file_offset": 5086,
+        "value": "Jt:<JD:"
+      },
+      {
+        "file_offset": 5171,
+        "value": "floors"
+      },
+      {
+        "file_offset": 5420,
+        "value": "firstPosition"
+      },
+      {
+        "file_offset": 5978,
+        "value": "23:d*"
+      },
+      {
+        "file_offset": 6000,
+        "value": ":(:(J$J0+"
+      },
+      {
+        "file_offset": 6026,
+        "value": ":P:O3"
+      },
+      {
+        "file_offset": 6089,
+        "value": "B,*+*<"
+      },
+      {
+        "file_offset": 6107,
+        "value": "B,*+*8"
+      },
+      {
+        "file_offset": 6132,
+        "value": "24B +L\""
+      },
+      {
+        "file_offset": 6154,
+        "value": "\"/*l2"
+      },
+      {
+        "file_offset": 6181,
+        "value": "+0j8J0BC#"
+      },
+      {
+        "file_offset": 6229,
+        "value": "#C2C#"
+      },
+      {
+        "file_offset": 6340,
+        "value": "height"
+      },
+      {
+        "file_offset": 6429,
+        "value": "o de mapa inv"
+      },
+      {
+        "file_offset": 6443,
+        "value": "lida."
+      },
+      {
+        "file_offset": 6583,
+        "value": "pixels"
+      },
+      {
+        "file_offset": 8227,
+        "value": "node:path"
+      },
+      {
+        "file_offset": 8251,
+        "value": "node:fs/promises"
+      },
+      {
+        "file_offset": 8279,
+        "value": "node:crypto"
+      },
+      {
+        "file_offset": 8308,
+        "value": "./otmm.cjs"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/menu-view.jsc",
+    "sha256": "c5dd09d0d9d606693cf45289626e22abfbc58f59428ac530c509b9ff6f868de2",
+    "bytes": 7176,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 3602
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 7144
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 138,
+        "value": "j:L2(27+"
+      },
+      {
+        "file_offset": 197,
+        "value": "SnapshotPublisher"
+      },
+      {
+        "file_offset": 245,
+        "value": "projectSnapshot"
+      },
+      {
+        "file_offset": 334,
+        "value": "B B0*<+p"
+      },
+      {
+        "file_offset": 359,
+        "value": "L#@:H2(3("
+      },
+      {
+        "file_offset": 442,
+        "value": "sessions"
+      },
+      {
+        "file_offset": 505,
+        "value": "*4*@*<+"
+      },
+      {
+        "file_offset": 524,
+        "value": "242@\""
+      },
+      {
+        "file_offset": 538,
+        "value": "d2(30"
+      },
+      {
+        "file_offset": 562,
+        "value": "*@*8*L*(*0*\\*@2`3|BT2@282L2(202\\2@2`B"
+      },
+      {
+        "file_offset": 601,
+        "value": "j@B$b"
+      },
+      {
+        "file_offset": 623,
+        "value": "2(3LR`B$b"
+      },
+      {
+        "file_offset": 646,
+        "value": "+XRd\""
+      },
+      {
+        "file_offset": 652,
+        "value": "#P2(B"
+      },
+      {
+        "file_offset": 658,
+        "value": "+TRl\""
+      },
+      {
+        "file_offset": 749,
+        "value": "online"
+      },
+      {
+        "file_offset": 759,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 769,
+        "value": "stale"
+      },
+      {
+        "file_offset": 782,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 792,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 816,
+        "value": "telemetryError"
+      },
+      {
+        "file_offset": 844,
+        "value": "healthPercent"
+      },
+      {
+        "file_offset": 872,
+        "value": "targetId"
+      },
+      {
+        "file_offset": 933,
+        "value": "ageMs"
+      },
+      {
+        "file_offset": 956,
+        "value": "connection"
+      },
+      {
+        "file_offset": 980,
+        "value": "telemetry"
+      },
+      {
+        "file_offset": 994,
+        "value": "Pe^>7"
+      },
+      {
+        "file_offset": 1004,
+        "value": "nativeVerified"
+      },
+      {
+        "file_offset": 1032,
+        "value": "pulseVersion"
+      },
+      {
+        "file_offset": 1056,
+        "value": "automationVersion"
+      },
+      {
+        "file_offset": 1091,
+        "value": "activeSlot"
+      },
+      {
+        "file_offset": 1115,
+        "value": "conditionEvents"
+      },
+      {
+        "file_offset": 1143,
+        "value": "captureVersion"
+      },
+      {
+        "file_offset": 1171,
+        "value": "itemInspectorAvailable"
+      },
+      {
+        "file_offset": 1207,
+        "value": "guildDailyAvailable"
+      },
+      {
+        "file_offset": 1284,
+        "value": "playerName"
+      },
+      {
+        "file_offset": 1309,
+        "value": "roster"
+      },
+      {
+        "file_offset": 1332,
+        "value": "creatures"
+      },
+      {
+        "file_offset": 1428,
+        "value": "playerId"
+      },
+      {
+        "file_offset": 1561,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1677,
+        "value": "*$B4B4BXj"
+      },
+      {
+        "file_offset": 1809,
+        "value": "hoenn"
+      },
+      {
+        "file_offset": 1845,
+        "value": "moves"
+      },
+      {
+        "file_offset": 1901,
+        "value": "*$BHBd20"
+      },
+      {
+        "file_offset": 1962,
+        "value": "spellword"
+      },
+      {
+        "file_offset": 1987,
+        "value": "remainingMs"
+      },
+      {
+        "file_offset": 2631,
+        "value": "Kh*8#0*4#<:,#"
+      },
+      {
+        "file_offset": 2719,
+        "value": "MenuView`"
+      },
+      {
+        "file_offset": 2752,
+        "value": "snapshot"
+      },
+      {
+        "file_offset": 2798,
+        "value": "scripts"
+      },
+      {
+        "file_offset": 2821,
+        "value": "recording"
+      },
+      {
+        "file_offset": 3032,
+        "value": "Pd*wIU"
+      },
+      {
+        "file_offset": 3042,
+        "value": "publisher"
+      },
+      {
+        "file_offset": 3428,
+        "value": "M[|*(2<*(3,"
+      },
+      {
+        "file_offset": 3517,
+        "value": "suspended"
+      },
+      {
+        "file_offset": 3559,
+        "value": "signature"
+      },
+      {
+        "file_offset": 3847,
+        "value": "k8JPB(*'b"
+      },
+      {
+        "file_offset": 3872,
+        "value": "B(*'2@R"
+      },
+      {
+        "file_offset": 3889,
+        "value": "ZdZXZpZ`R"
+      },
+      {
+        "file_offset": 3992,
+        "value": "configure"
+      },
+      {
+        "file_offset": 4240,
+        "value": "Estado de visualiza"
+      },
+      {
+        "file_offset": 4261,
+        "value": "o inv"
+      },
+      {
+        "file_offset": 4267,
+        "value": "lido."
+      },
+      {
+        "file_offset": 4547,
+        "value": "delayMs"
+      },
+      {
+        "file_offset": 4954,
+        "value": "+@#D:"
+      },
+      {
+        "file_offset": 4995,
+        "value": "suspend"
+      },
+      {
+        "file_offset": 5409,
+        "value": "wildCount"
+      },
+      {
+        "file_offset": 5436,
+        "value": "looting"
+      },
+      {
+        "file_offset": 5456,
+        "value": "inspection"
+      },
+      {
+        "file_offset": 5480,
+        "value": "alerts"
+      },
+      {
+        "file_offset": 5500,
+        "value": "alertSignals"
+      },
+      {
+        "file_offset": 6196,
+        "value": "runtime"
+      },
+      {
+        "file_offset": 6221,
+        "value": "luring"
+      },
+      {
+        "file_offset": 6241,
+        "value": "gmLearning"
+      },
+      {
+        "file_offset": 6265,
+        "value": "guildDaily"
+      },
+      {
+        "file_offset": 6293,
+        "value": "walker"
+      },
+      {
+        "file_offset": 6523,
+        "value": " Pf2x1"
+      },
+      {
+        "file_offset": 6534,
+        "value": "./pipe-bridge.cjs"
+      },
+      {
+        "file_offset": 6595,
+        "value": "healer"
+      },
+      {
+        "file_offset": 6627,
+        "value": "tools"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/native-runtime.jsc",
+    "sha256": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+    "bytes": 17224,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 10713
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 17192
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 234,
+        "value": "randomBytes"
+      },
+      {
+        "file_offset": 258,
+        "value": "delay"
+      },
+      {
+        "file_offset": 278,
+        "value": "uint32"
+      },
+      {
+        "file_offset": 298,
+        "value": "validateConfig"
+      },
+      {
+        "file_offset": 326,
+        "value": "userMessage"
+      },
+      {
+        "file_offset": 392,
+        "value": "node:crypto"
+      },
+      {
+        "file_offset": 418,
+        "value": "node:events"
+      },
+      {
+        "file_offset": 436,
+        "value": " Pf.i"
+      },
+      {
+        "file_offset": 447,
+        "value": "node:timers/promises"
+      },
+      {
+        "file_offset": 474,
+        "value": "PezIm$"
+      },
+      {
+        "file_offset": 484,
+        "value": "./protocol.cjs"
+      },
+      {
+        "file_offset": 514,
+        "value": "./settings.cjs"
+      },
+      {
+        "file_offset": 544,
+        "value": "../shared/messages.js"
+      },
+      {
+        "file_offset": 688,
+        "value": "phases"
+      },
+      {
+        "file_offset": 724,
+        "value": "busyD"
+      },
+      {
+        "file_offset": 741,
+        "value": "walkerIndex"
+      },
+      {
+        "file_offset": 800,
+        "value": "movementOwner"
+      },
+      {
+        "file_offset": 819,
+        "value": "Pc2:6"
+      },
+      {
+        "file_offset": 829,
+        "value": "Pausado"
+      },
+      {
+        "file_offset": 959,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1075,
+        "value": "k$*0#("
+      },
+      {
+        "file_offset": 1082,
+        "value": "`\"##P"
+      },
+      {
+        "file_offset": 1091,
+        "value": "#\\\"$# \"(#4*D#"
+      },
+      {
+        "file_offset": 1105,
+        "value": "\"@#(\"D#"
+      },
+      {
+        "file_offset": 1113,
+        "value": "\"@#$Z8*<B"
+      },
+      {
+        "file_offset": 1132,
+        "value": "\"4#(B0"
+      },
+      {
+        "file_offset": 1148,
+        "value": "\"'#T\"4#"
+      },
+      {
+        "file_offset": 1238,
+        "value": "NativeRuntime"
+      },
+      {
+        "file_offset": 1279,
+        "value": "bridge"
+      },
+      {
+        "file_offset": 1304,
+        "value": "boundPid"
+      },
+      {
+        "file_offset": 1328,
+        "value": "bootE"
+      },
+      {
+        "file_offset": 1345,
+        "value": "nativeError"
+      },
+      {
+        "file_offset": 1369,
+        "value": "pendingSeq"
+      },
+      {
+        "file_offset": 1393,
+        "value": "acceptedTick"
+      },
+      {
+        "file_offset": 1407,
+        "value": "PdvSR"
+      },
+      {
+        "file_offset": 1417,
+        "value": "acceptedAck"
+      },
+      {
+        "file_offset": 1449,
+        "value": "client"
+      },
+      {
+        "file_offset": 1469,
+        "value": "sequence"
+      },
+      {
+        "file_offset": 1489,
+        "value": "counter"
+      },
+      {
+        "file_offset": 1525,
+        "value": "eventId"
+      },
+      {
+        "file_offset": 1619,
+        "value": "lease"
+      },
+      {
+        "file_offset": 2347,
+        "value": "T\"T*S+"
+      },
+      {
+        "file_offset": 2370,
+        "value": "*4Z32`R"
+      },
+      {
+        "file_offset": 2785,
+        "value": "dep+ "
+      },
+      {
+        "file_offset": 3026,
+        "value": "snapshot`"
+      },
+      {
+        "file_offset": 3149,
+        "value": "1*0K0Z"
+      },
+      {
+        "file_offset": 3227,
+        "value": "Este menu pertence a outro cliente. Abra o menu dessa conta pelo loader.q("
+      },
+      {
+        "file_offset": 3415,
+        "value": "requirePid"
+      },
+      {
+        "file_offset": 3528,
+        "value": "zHKD*"
+      },
+      {
+        "file_offset": 3600,
+        "value": "readPublication"
+      },
+      {
+        "file_offset": 3912,
+        "value": "writePublication"
+      },
+      {
+        "file_offset": 4154,
+        "value": "CP24242<3$K"
+      },
+      {
+        "file_offset": 4175,
+        "value": "BLB`:"
+      },
+      {
+        "file_offset": 4276,
+        "value": "leasing"
+      },
+      {
+        "file_offset": 4301,
+        "value": "automation_lease"
+      },
+      {
+        "file_offset": 4719,
+        "value": "\\:$*8*8\"#*H*"
+      },
+      {
+        "file_offset": 4732,
+        "value": "*423;\\R"
+      },
+      {
+        "file_offset": 4745,
+        "value": ":@*,\""
+      },
+      {
+        "file_offset": 4760,
+        "value": "2<*@\"#+D"
+      },
+      {
+        "file_offset": 4771,
+        "value": "XBX*(\""
+      },
+      {
+        "file_offset": 4781,
+        "value": "BT*$\""
+      },
+      {
+        "file_offset": 4795,
+        "value": "2$2Hbk2"
+      },
+      {
+        "file_offset": 4808,
+        "value": "2$2Dbg2"
+      },
+      {
+        "file_offset": 4825,
+        "value": "p\"#*|2L*4\"#+l"
+      },
+      {
+        "file_offset": 4847,
+        "value": "D#X*$*"
+      },
+      {
+        "file_offset": 4858,
+        "value": "*4* * *<*8+h2`BLj42hb42"
+      },
+      {
+        "file_offset": 4892,
+        "value": "4RdR|J"
+      },
+      {
+        "file_offset": 4919,
+        "value": "*T2@:W#"
+      },
+      {
+        "file_offset": 4948,
+        "value": "#p3@RpbLB"
+      },
+      {
+        "file_offset": 4965,
+        "value": "\"H282"
+      },
+      {
+        "file_offset": 5097,
+        "value": "Motor C++ incompat"
+      },
+      {
+        "file_offset": 5116,
+        "value": "vel. Reinicie o cliente e reinjete."
+      },
+      {
+        "file_offset": 5169,
+        "value": "Os dados recebidos pertencem a outro cliente."
+      },
+      {
+        "file_offset": 5257,
+        "value": "authorized"
+      },
+      {
+        "file_offset": 5282,
+        "value": "A DLL negou a sess"
+      },
+      {
+        "file_offset": 5301,
+        "value": "o; todos os m"
+      },
+      {
+        "file_offset": 5315,
+        "value": "dulos foram pausados."
+      },
+      {
+        "file_offset": 5358,
+        "value": "notice"
+      },
+      {
+        "file_offset": 5391,
+        "value": "luring"
+      },
+      {
+        "file_offset": 5416,
+        "value": "pausedModules"
+      },
+      {
+        "file_offset": 5444,
+        "value": "pauseKeyDown"
+      },
+      {
+        "file_offset": 5468,
+        "value": "gmLearning"
+      },
+      {
+        "file_offset": 5547,
+        "value": "$Pg6}"
+      },
+      {
+        "file_offset": 5563,
+        "value": "o negada pela DLL"
+      },
+      {
+        "file_offset": 5599,
+        "value": "monitor"
+      },
+      {
+        "file_offset": 5646,
+        "value": "monitorState"
+      },
+      {
+        "file_offset": 5670,
+        "value": "guildDaily"
+      },
+      {
+        "file_offset": 5712,
+        "value": "gmMessage"
+      },
+      {
+        "file_offset": 5736,
+        "value": "gm-message"
+      },
+      {
+        "file_offset": 5767,
+        "value": "alert"
+      },
+      {
+        "file_offset": 6740,
+        "value": "accept"
+      },
+      {
+        "file_offset": 6981,
+        "value": "CP24242@3 K"
+      },
+      {
+        "file_offset": 7017,
+        "value": "B<\"#*d*"
+      },
+      {
+        "file_offset": 7083,
+        "value": "*4*3;x*"
+      },
+      {
+        "file_offset": 7122,
+        "value": "*8\"#+D2DR"
+      },
+      {
+        "file_offset": 7140,
+        "value": "(#4BP*"
+      },
+      {
+        "file_offset": 7152,
+        "value": ";X*8*7"
+      },
+      {
+        "file_offset": 7261,
+        "value": "polling"
+      },
+      {
+        "file_offset": 7289,
+        "value": "automation_revoked"
+      },
+      {
+        "file_offset": 7522,
+        "value": "o indispon"
+      },
+      {
+        "file_offset": 7533,
+        "value": "vel. Entre novamente e tente outra vez."
+      },
+      {
+        "file_offset": 7596,
+        "value": "automation"
+      },
+      {
+        "file_offset": 7610,
+        "value": "Pb>'C"
+      },
+      {
+        "file_offset": 7638,
+        "value": "isAlive"
+      },
+      {
+        "file_offset": 7685,
+        "value": "Motor nativo desconectado"
+      },
+      {
+        "file_offset": 7725,
+        "value": "Cliente reiniciado; inicie os m"
+      },
+      {
+        "file_offset": 7757,
+        "value": "dulos novamente"
+      },
+      {
+        "file_offset": 8663,
+        "value": "0:,# "
+      },
+      {
+        "file_offset": 8747,
+        "value": "beforePublish"
+      },
+      {
+        "file_offset": 8824,
+        "value": "Pd\"'%4"
+      },
+      {
+        "file_offset": 8834,
+        "value": "generation"
+      },
+      {
+        "file_offset": 9057,
+        "value": "CT:<3,BT*"
+      },
+      {
+        "file_offset": 9067,
+        "value": "\";+h:"
+      },
+      {
+        "file_offset": 9078,
+        "value": "*(Z43 :"
+      },
+      {
+        "file_offset": 9112,
+        "value": "\";+h:"
+      },
+      {
+        "file_offset": 9123,
+        "value": ":<3@b"
+      },
+      {
+        "file_offset": 9129,
+        "value": ";D:@c"
+      },
+      {
+        "file_offset": 9142,
+        "value": "jLR B"
+      },
+      {
+        "file_offset": 9205,
+        "value": "j<\"#*`*"
+      },
+      {
+        "file_offset": 9213,
+        "value": "R@\"#*h*"
+      },
+      {
+        "file_offset": 9227,
+        "value": "*8*7+"
+      },
+      {
+        "file_offset": 9379,
+        "value": "A conex"
+      },
+      {
+        "file_offset": 9387,
+        "value": "o foi reiniciada; confira o cliente antes de enviar outro pedido."
+      },
+      {
+        "file_offset": 9477,
+        "value": "Motor C++ indispon"
+      },
+      {
+        "file_offset": 9496,
+        "value": "vel. Reinicie e reinjete."
+      },
+      {
+        "file_offset": 9545,
+        "value": "automation_control"
+      },
+      {
+        "file_offset": 9673,
+        "value": "Comando > Enviar pedido: N"
+      },
+      {
+        "file_offset": 9700,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 9711,
+        "value": "vel enviar pelo canal local. Confira a conex"
+      },
+      {
+        "file_offset": 9756,
+        "value": "o com o cliente."
+      },
+      {
+        "file_offset": 9971,
+        "value": "Comando > Confirmar pedido: Cliente n"
+      },
+      {
+        "file_offset": 10009,
+        "value": "o confirmou o pedido em 4 segundos. Confira se o jogo est"
+      },
+      {
+        "file_offset": 10067,
+        "value": " respondendo; se persistir, reabra pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 11363,
+        "value": ":$Jp:$RP*D*(:4+"
+      },
+      {
+        "file_offset": 11388,
+        "value": "* 2<:0JL:"
+      },
+      {
+        "file_offset": 11449,
+        "value": "2TBH\""
+      },
+      {
+        "file_offset": 11455,
+        "value": "*<*;:x*"
+      },
+      {
+        "file_offset": 11463,
+        "value": ": Z`*0*"
+      },
+      {
+        "file_offset": 11471,
+        "value": "*G;`J"
+      },
+      {
+        "file_offset": 11512,
+        "value": "*@*@*"
+      },
+      {
+        "file_offset": 11621,
+        "value": "@Pn.1m"
+      },
+      {
+        "file_offset": 11632,
+        "value": "Selecione um cliente na conex"
+      },
+      {
+        "file_offset": 11662,
+        "value": "o, no topo do menu."
+      },
+      {
+        "file_offset": 11686,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 11696,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 11725,
+        "value": "o indispon"
+      },
+      {
+        "file_offset": 11736,
+        "value": "vel. Entre novamente pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 11792,
+        "value": "online"
+      },
+      {
+        "file_offset": 11812,
+        "value": "Cliente offline. Entre no personagem antes de iniciar."
+      },
+      {
+        "file_offset": 11870,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 11880,
+        "value": "stale"
+      },
+      {
+        "file_offset": 11900,
+        "value": "ageMs"
+      },
+      {
+        "file_offset": 11920,
+        "value": "Cliente sem atualiza"
+      },
+      {
+        "file_offset": 11942,
+        "value": "o recente. Confira se o jogo est"
+      },
+      {
+        "file_offset": 11975,
+        "value": " respondendo."
+      },
+      {
+        "file_offset": 12000,
+        "value": "telemetry"
+      },
+      {
+        "file_offset": 12014,
+        "value": "Pe^>7"
+      },
+      {
+        "file_offset": 12024,
+        "value": "nativeVerified"
+      },
+      {
+        "file_offset": 12052,
+        "value": "automationVersion"
+      },
+      {
+        "file_offset": 12084,
+        "value": "pulseVersion"
+      },
+      {
+        "file_offset": 12108,
+        "value": "Cliente sem os dados necess"
+      },
+      {
+        "file_offset": 12136,
+        "value": "rios para iniciar. Feche o jogo e abra novamente pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 12232,
+        "value": "DPorv"
+      },
+      {
+        "file_offset": 12243,
+        "value": "Pause os m"
+      },
+      {
+        "file_offset": 12254,
+        "value": "dulos e alertas antes de trocar de cliente."
+      },
+      {
+        "file_offset": 12361,
+        "value": "O canal ainda n"
+      },
+      {
+        "file_offset": 12377,
+        "value": "o publicou o estado do bot. Abra o jogo pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 12455,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 12466,
+        "value": "vel receber o estado do bot. Feche o jogo e abra novamente pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 12561,
+        "value": "Conex"
+      },
+      {
+        "file_offset": 12567,
+        "value": "o > Estado do bot: "
+      },
+      {
+        "file_offset": 12605,
+        "value": "Conex"
+      },
+      {
+        "file_offset": 12611,
+        "value": "o > Atualiza"
+      },
+      {
+        "file_offset": 12625,
+        "value": "o do bot: Cliente conectado, mas o bot parou de atualizar. Feche o jogo e abra novamente pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 12764,
+        "value": "^[a-f0-9]{32}$"
+      },
+      {
+        "file_offset": 12799,
+        "value": "Conex"
+      },
+      {
+        "file_offset": 12805,
+        "value": "o > Vers"
+      },
+      {
+        "file_offset": 12814,
+        "value": "o do bot: Cliente incompat"
+      },
+      {
+        "file_offset": 12841,
+        "value": "vel com este menu. Feche o jogo e abra novamente pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 12935,
+        "value": "o indispon"
+      },
+      {
+        "file_offset": 12946,
+        "value": "vel. A autoriza"
+      },
+      {
+        "file_offset": 12963,
+        "value": "o do bot foi negada. Entre novamente pelo PokeAlliance.exe."
+      },
+      {
+        "file_offset": 13961,
+        "value": "zL2@R"
+      },
+      {
+        "file_offset": 14354,
+        "value": "zTb4RP"
+      },
+      {
+        "file_offset": 14817,
+        "value": "configure"
+      },
+      {
+        "file_offset": 14854,
+        "value": " qXj("
+      },
+      {
+        "file_offset": 15039,
+        "value": "zX2 \"w3"
+      },
+      {
+        "file_offset": 15108,
+        "value": "ruleIndex"
+      },
+      {
+        "file_offset": 15307,
+        "value": "\\zH\"G3p\""
+      },
+      {
+        "file_offset": 15547,
+        "value": "zL\"K3t"
+      },
+      {
+        "file_offset": 15709,
+        "value": "pauseAll`"
+      },
+      {
+        "file_offset": 15821,
+        "value": "z\\24\""
+      },
+      {
+        "file_offset": 15865,
+        "value": "togglePause"
+      },
+      {
+        "file_offset": 15907,
+        "value": "pauseMonitor"
+      },
+      {
+        "file_offset": 16137,
+        "value": "0# \"L*K+l\""
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/otmm.jsc",
+    "sha256": "64a1cabcb49bdb0a1756ff659919406aeebf7717b5d42aa0d6b0e3f4b4b55ce8",
+    "bytes": 5184,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 2724
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 5152
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 214,
+        "value": "inflateSync"
+      },
+      {
+        "file_offset": 238,
+        "value": "validPosition"
+      },
+      {
+        "file_offset": 266,
+        "value": "blockKeyc"
+      },
+      {
+        "file_offset": 315,
+        "value": "node:fs/promises"
+      },
+      {
+        "file_offset": 343,
+        "value": "node:zlib"
+      },
+      {
+        "file_offset": 369,
+        "value": "../shared/walker.js"
+      },
+      {
+        "file_offset": 567,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 690,
+        "value": "B<+<J"
+      },
+      {
+        "file_offset": 708,
+        "value": "B<:4*P\""
+      },
+      {
+        "file_offset": 755,
+        "value": "\",\"#+"
+      },
+      {
+        "file_offset": 764,
+        "value": "3l:<\";3X"
+      },
+      {
+        "file_offset": 776,
+        "value": "# 382"
+      },
+      {
+        "file_offset": 782,
+        "value": "Z4:4+"
+      },
+      {
+        "file_offset": 803,
+        "value": ":L\",: +"
+      },
+      {
+        "file_offset": 915,
+        "value": "Assinatura ou tamanho OTMM inv"
+      },
+      {
+        "file_offset": 946,
+        "value": "lido."
+      },
+      {
+        "file_offset": 973,
+        "value": "o/cabe"
+      },
+      {
+        "file_offset": 980,
+        "value": "alho OTMM n"
+      },
+      {
+        "file_offset": 992,
+        "value": "o suportado."
+      },
+      {
+        "file_offset": 1039,
+        "value": "floors"
+      },
+      {
+        "file_offset": 1059,
+        "value": "Bloco OTMM inv"
+      },
+      {
+        "file_offset": 1074,
+        "value": "lido ou truncado."
+      },
+      {
+        "file_offset": 1153,
+        "value": "OTMM sem blocos de mapa."
+      },
+      {
+        "file_offset": 1705,
+        "value": "PcnAH "
+      },
+      {
+        "file_offset": 1715,
+        "value": "OtmmMap"
+      },
+      {
+        "file_offset": 1902,
+        "value": "CH*8*"
+      },
+      {
+        "file_offset": 2003,
+        "value": "OTMM excedeu 128 MB."
+      },
+      {
+        "file_offset": 2409,
+        "value": "*4*,*,\""
+      },
+      {
+        "file_offset": 2417,
+        "value": "\"wb_3"
+      },
+      {
+        "file_offset": 2549,
+        "value": "maxOutputLength"
+      },
+      {
+        "file_offset": 2585,
+        "value": "Bloco OTMM descompactado com tamanho inv"
+      },
+      {
+        "file_offset": 2626,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3170,
+        "value": "#,: 2L"
+      },
+      {
+        "file_offset": 3182,
+        "value": "JPRTB0S"
+      },
+      {
+        "file_offset": 3261,
+        "value": "speed"
+      },
+      {
+        "file_offset": 3288,
+        "value": "walkable"
+      },
+      {
+        "file_offset": 3539,
+        "value": "tile`"
+      },
+      {
+        "file_offset": 3834,
+        "value": "preferred"
+      },
+      {
+        "file_offset": 3863,
+        "value": "firstPosition"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/pipe-bridge.jsc",
+    "sha256": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+    "bytes": 26488,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 13535
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 26456
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 154,
+        "value": "*o2,3"
+      },
+      {
+        "file_offset": 172,
+        "value": "20283"
+      },
+      {
+        "file_offset": 223,
+        "value": ":@2,2H2"
+      },
+      {
+        "file_offset": 304,
+        "value": "createHmac"
+      },
+      {
+        "file_offset": 328,
+        "value": "timingSafeEqual"
+      },
+      {
+        "file_offset": 356,
+        "value": "COMMANDS"
+      },
+      {
+        "file_offset": 376,
+        "value": "STATUS"
+      },
+      {
+        "file_offset": 396,
+        "value": "uint32"
+      },
+      {
+        "file_offset": 416,
+        "value": "decodeState"
+      },
+      {
+        "file_offset": 440,
+        "value": "encodeCommand"
+      },
+      {
+        "file_offset": 468,
+        "value": "decodeAck"
+      },
+      {
+        "file_offset": 492,
+        "value": "decodeTelemetry"
+      },
+      {
+        "file_offset": 520,
+        "value": "MAX_FRAME"
+      },
+      {
+        "file_offset": 560,
+        "value": "LEGACY"
+      },
+      {
+        "file_offset": 580,
+        "value": "SESSION"
+      },
+      {
+        "file_offset": 600,
+        "value": "DIAGNOSTIC"
+      },
+      {
+        "file_offset": 624,
+        "value": "proof"
+      },
+      {
+        "file_offset": 772,
+        "value": "2`R@Z;2`*"
+      },
+      {
+        "file_offset": 834,
+        "value": "sha256"
+      },
+      {
+        "file_offset": 859,
+        "value": "PKA2/"
+      },
+      {
+        "file_offset": 882,
+        "value": "digest"
+      },
+      {
+        "file_offset": 1103,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1224,
+        "value": "*L*K+"
+      },
+      {
+        "file_offset": 1507,
+        "value": "b42 \"S;"
+      },
+      {
+        "file_offset": 1576,
+        "value": "delayMs"
+      },
+      {
+        "file_offset": 1702,
+        "value": "SnapshotPublisher"
+      },
+      {
+        "file_offset": 1825,
+        "value": " J0J43("
+      },
+      {
+        "file_offset": 1946,
+        "value": "suspended"
+      },
+      {
+        "file_offset": 2007,
+        "value": "$J83("
+      },
+      {
+        "file_offset": 2417,
+        "value": "#$\"H*G#d"
+      },
+      {
+        "file_offset": 2543,
+        "value": "suspend"
+      },
+      {
+        "file_offset": 2656,
+        "value": "\"H*G#d"
+      },
+      {
+        "file_offset": 2876,
+        "value": "20B$J"
+      },
+      {
+        "file_offset": 2882,
+        "value": "J(Z4ZXZ\\B "
+      },
+      {
+        "file_offset": 2932,
+        "value": "2 2D2D2 \""
+      },
+      {
+        "file_offset": 3024,
+        "value": "H#T2@3$*4*$B#K"
+      },
+      {
+        "file_offset": 3080,
+        "value": "pollMs"
+      },
+      {
+        "file_offset": 3100,
+        "value": "staleMs"
+      },
+      {
+        "file_offset": 3120,
+        "value": "commandTimeoutMs"
+      },
+      {
+        "file_offset": 3148,
+        "value": "startupTimeoutMs"
+      },
+      {
+        "file_offset": 3176,
+        "value": "isAlive"
+      },
+      {
+        "file_offset": 3196,
+        "value": "PipeBridge"
+      },
+      {
+        "file_offset": 3277,
+        "value": "createConnectionf"
+      },
+      {
+        "file_offset": 3480,
+        "value": "boundPid"
+      },
+      {
+        "file_offset": 3500,
+        "value": "^[a-f0-9]{32}$"
+      },
+      {
+        "file_offset": 3596,
+        "value": "startedAt"
+      },
+      {
+        "file_offset": 3620,
+        "value": "sessions"
+      },
+      {
+        "file_offset": 3643,
+        "value": "publications"
+      },
+      {
+        "file_offset": 3670,
+        "value": "connectedPids"
+      },
+      {
+        "file_offset": 3698,
+        "value": "startupCodes"
+      },
+      {
+        "file_offset": 3727,
+        "value": "queues"
+      },
+      {
+        "file_offset": 3755,
+        "value": "sequence"
+      },
+      {
+        "file_offset": 3765,
+        "value": "Pd\"'%4"
+      },
+      {
+        "file_offset": 3775,
+        "value": "generation"
+      },
+      {
+        "file_offset": 3799,
+        "value": "nextConnect"
+      },
+      {
+        "file_offset": 3823,
+        "value": "nextCleanup"
+      },
+      {
+        "file_offset": 3852,
+        "value": "authenticated"
+      },
+      {
+        "file_offset": 3883,
+        "value": "PKA-INIT-SESSION"
+      },
+      {
+        "file_offset": 4575,
+        "value": "W#(\" :"
+      },
+      {
+        "file_offset": 4935,
+        "value": "Este menu pertence a outro cliente. Abra o menu dessa conta pelo loader.m "
+      },
+      {
+        "file_offset": 5107,
+        "value": "requirePid"
+      },
+      {
+        "file_offset": 5259,
+        "value": "xP|br"
+      },
+      {
+        "file_offset": 5270,
+        "value": "Sem confirma"
+      },
+      {
+        "file_offset": 5284,
+        "value": "o da DLL. O comando n"
+      },
+      {
+        "file_offset": 5306,
+        "value": "o ser"
+      },
+      {
+        "file_offset": 5312,
+        "value": " reenviado automaticamente; confira a conex"
+      },
+      {
+        "file_offset": 5356,
+        "value": "o antes de continuar."
+      },
+      {
+        "file_offset": 5411,
+        "value": "IPC_UNCONFIRMED"
+      },
+      {
+        "file_offset": 5519,
+        "value": "unconfirmed"
+      },
+      {
+        "file_offset": 5631,
+        "value": "e*4K|\""
+      },
+      {
+        "file_offset": 5649,
+        "value": "H#0*4*"
+      },
+      {
+        "file_offset": 5668,
+        "value": "#D2<#"
+      },
+      {
+        "file_offset": 5690,
+        "value": "\"T*S#"
+      },
+      {
+        "file_offset": 5789,
+        "value": "socket"
+      },
+      {
+        "file_offset": 5820,
+        "value": "challenge"
+      },
+      {
+        "file_offset": 6376,
+        "value": " J4J8J@J,B4*3:`\"0*"
+      },
+      {
+        "file_offset": 6444,
+        "value": "#D\"8#Hr"
+      },
+      {
+        "file_offset": 6561,
+        "value": "ensure"
+      },
+      {
+        "file_offset": 6654,
+        "value": "\\\\.\\pipe\\pka-runtime-2-"
+      },
+      {
+        "file_offset": 7060,
+        "value": "receive"
+      },
+      {
+        "file_offset": 8130,
+        "value": "H:DJ4J"
+      },
+      {
+        "file_offset": 8142,
+        "value": "'+4\"<B0*"
+      },
+      {
+        "file_offset": 8249,
+        "value": "sendFrame"
+      },
+      {
+        "file_offset": 8294,
+        "value": "writableLength"
+      },
+      {
+        "file_offset": 9128,
+        "value": "R<\";;L*@*"
+      },
+      {
+        "file_offset": 9138,
+        "value": ":4\"3*/#"
+      },
+      {
+        "file_offset": 9147,
+        "value": "*$3dB<\""
+      },
+      {
+        "file_offset": 9155,
+        "value": ":\\R4k,*<\""
+      },
+      {
+        "file_offset": 9177,
+        "value": "0*(R<"
+      },
+      {
+        "file_offset": 9186,
+        "value": "Z$b<2"
+      },
+      {
+        "file_offset": 9200,
+        "value": "3x#PB<\""
+      },
+      {
+        "file_offset": 9208,
+        "value": ":TR42@*"
+      },
+      {
+        "file_offset": 9229,
+        "value": "R$R<*"
+      },
+      {
+        "file_offset": 9265,
+        "value": "3$#hB<\""
+      },
+      {
+        "file_offset": 9282,
+        "value": "* * *"
+      },
+      {
+        "file_offset": 9291,
+        "value": "0#x*,\""
+      },
+      {
+        "file_offset": 9309,
+        "value": "* *,*"
+      },
+      {
+        "file_offset": 9315,
+        "value": "+@\"T*S#"
+      },
+      {
+        "file_offset": 9355,
+        "value": "*0ZH:w+"
+      },
+      {
+        "file_offset": 9388,
+        "value": ";|B<\""
+      },
+      {
+        "file_offset": 9409,
+        "value": "+|RD\""
+      },
+      {
+        "file_offset": 9446,
+        "value": "\",*,B"
+      },
+      {
+        "file_offset": 9457,
+        "value": ":DR,\""
+      },
+      {
+        "file_offset": 9498,
+        "value": "*4R$J#s"
+      },
+      {
+        "file_offset": 9651,
+        "value": "$PgjY"
+      },
+      {
+        "file_offset": 9662,
+        "value": "Frame excedeu o limite."
+      },
+      {
+        "file_offset": 9739,
+        "value": "Frame inv"
+      },
+      {
+        "file_offset": 9749,
+        "value": "lido."
+      },
+      {
+        "file_offset": 9822,
+        "value": "authenticate"
+      },
+      {
+        "file_offset": 9846,
+        "value": "client"
+      },
+      {
+        "file_offset": 10068,
+        "value": "welcome"
+      },
+      {
+        "file_offset": 10088,
+        "value": "server"
+      },
+      {
+        "file_offset": 10108,
+        "value": "Canal n"
+      },
+      {
+        "file_offset": 10116,
+        "value": "o autenticado."
+      },
+      {
+        "file_offset": 10144,
+        "value": "cleanupArtifacts"
+      },
+      {
+        "file_offset": 10332,
+        "value": "commandId"
+      },
+      {
+        "file_offset": 10348,
+        "value": ",Pi*."
+      },
+      {
+        "file_offset": 10359,
+        "value": "Confirma"
+      },
+      {
+        "file_offset": 10369,
+        "value": "o de outro comando."
+      },
+      {
+        "file_offset": 10434,
+        "value": "Status IPC desconhecido: "
+      },
+      {
+        "file_offset": 10492,
+        "value": "ipcStatus"
+      },
+      {
+        "file_offset": 10720,
+        "value": "telemetry"
+      },
+      {
+        "file_offset": 10744,
+        "value": "Telemetria excedeu o limite."
+      },
+      {
+        "file_offset": 10784,
+        "value": "clientPid"
+      },
+      {
+        "file_offset": 10808,
+        "value": "Telemetria de outro PID."
+      },
+      {
+        "file_offset": 10870,
+        "value": "automation"
+      },
+      {
+        "file_offset": 10894,
+        "value": "automation_revoked"
+      },
+      {
+        "file_offset": 10931,
+        "value": "Estado excedeu o limite."
+      },
+      {
+        "file_offset": 10989,
+        "value": "Estado de outro PID."
+      },
+      {
+        "file_offset": 11021,
+        "value": "startup"
+      },
+      {
+        "file_offset": 11057,
+        "value": "starting"
+      },
+      {
+        "file_offset": 11077,
+        "value": "ready"
+      },
+      {
+        "file_offset": 11100,
+        "value": "PKA-INIT-NATIVE"
+      },
+      {
+        "file_offset": 11130,
+        "value": "digo de in"
+      },
+      {
+        "file_offset": 11141,
+        "value": "cio inv"
+      },
+      {
+        "file_offset": 11149,
+        "value": "lido."
+      },
+      {
+        "file_offset": 11174,
+        "value": "Mensagem inesperada.a"
+      },
+      {
+        "file_offset": 13028,
+        "value": "RH*(\"0*"
+      },
+      {
+        "file_offset": 13060,
+        "value": "J82pK0"
+      },
+      {
+        "file_offset": 13126,
+        "value": "Cliente sem sess"
+      },
+      {
+        "file_offset": 13147,
+        "value": "lida. Feche o jogo e abra novamente pelo PokeAlliance.exe atualizado. C"
+      },
+      {
+        "file_offset": 13219,
+        "value": "digo: PKA-INIT-SESSION."
+      },
+      {
+        "file_offset": 13257,
+        "value": "Cliente sem integra"
+      },
+      {
+        "file_offset": 13278,
+        "value": "o dispon"
+      },
+      {
+        "file_offset": 13287,
+        "value": "vel. Feche o jogo e atualize o bot e o cliente. C"
+      },
+      {
+        "file_offset": 13337,
+        "value": "digo: PKA-INIT-NATIVE."
+      },
+      {
+        "file_offset": 13395,
+        "value": "Cliente parou de atualizar a conex"
+      },
+      {
+        "file_offset": 13430,
+        "value": "o. Feche o jogo e abra novamente pelo PokeAlliance.exe. C"
+      },
+      {
+        "file_offset": 13488,
+        "value": "digo: PKA-CONNECT-LOST."
+      },
+      {
+        "file_offset": 13527,
+        "value": "Cliente iniciou o bot, mas n"
+      },
+      {
+        "file_offset": 13556,
+        "value": "o publicou o estado. Feche o jogo e abra novamente pelo PokeAlliance.exe. C"
+      },
+      {
+        "file_offset": 13632,
+        "value": "digo: PKA-CONNECT-STATE."
+      },
+      {
+        "file_offset": 13675,
+        "value": "Cliente interrompeu a inicializa"
+      },
+      {
+        "file_offset": 13709,
+        "value": "o do bot. Feche o jogo e abra novamente pelo PokeAlliance.exe. C"
+      },
+      {
+        "file_offset": 13774,
+        "value": "digo: PKA-INIT-STOPPED."
+      },
+      {
+        "file_offset": 13811,
+        "value": "Cliente n"
+      },
+      {
+        "file_offset": 13821,
+        "value": "o confirmou a conex"
+      },
+      {
+        "file_offset": 13841,
+        "value": "o. Feche o jogo e abra novamente pelo PokeAlliance.exe. C"
+      },
+      {
+        "file_offset": 13899,
+        "value": "digo: PKA-CONNECT-TIMEOUT."
+      },
+      {
+        "file_offset": 13953,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 13963,
+        "value": "stale"
+      },
+      {
+        "file_offset": 13984,
+        "value": "online"
+      },
+      {
+        "file_offset": 14227,
+        "value": "missingState`"
+      },
+      {
+        "file_offset": 14369,
+        "value": "2(R';"
+      },
+      {
+        "file_offset": 14443,
+        "value": "3D2$2"
+      },
+      {
+        "file_offset": 14463,
+        "value": "2$24b3B"
+      },
+      {
+        "file_offset": 14499,
+        "value": "2,2,2+3`2"
+      },
+      {
+        "file_offset": 14509,
+        "value": "2,2+jh2,2+3"
+      },
+      {
+        "file_offset": 14540,
+        "value": "BP2h\""
+      },
+      {
+        "file_offset": 14546,
+        "value": "#l2pbX*CBT:@"
+      },
+      {
+        "file_offset": 14560,
+        "value": "2$b02(2@2gB/:"
+      },
+      {
+        "file_offset": 14912,
+        "value": "runtime.jsonl"
+      },
+      {
+        "file_offset": 14940,
+        "value": "runtime.jsonl.previous"
+      },
+      {
+        "file_offset": 17007,
+        "value": "CD283"
+      },
+      {
+        "file_offset": 17018,
+        "value": "0c`*<*"
+      },
+      {
+        "file_offset": 17053,
+        "value": "#`+T24J"
+      },
+      {
+        "file_offset": 17087,
+        "value": "+|28*"
+      },
+      {
+        "file_offset": 17093,
+        "value": "+824*"
+      },
+      {
+        "file_offset": 17118,
+        "value": "*@\"+B4+L*"
+      },
+      {
+        "file_offset": 17158,
+        "value": "\" +h+D#8"
+      },
+      {
+        "file_offset": 17177,
+        "value": "cx:$\"8"
+      },
+      {
+        "file_offset": 17188,
+        "value": "B$Rl2"
+      },
+      {
+        "file_offset": 17194,
+        "value": "B4Z Z(JT*"
+      },
+      {
+        "file_offset": 17210,
+        "value": "jDR0cP#P*"
+      },
+      {
+        "file_offset": 17220,
+        "value": "3h*8j$R'#lJT2S"
+      },
+      {
+        "file_offset": 17337,
+        "value": "polling"
+      },
+      {
+        "file_offset": 17450,
+        "value": "Aguardando telemetria nativa atualizada."
+      },
+      {
+        "file_offset": 17505,
+        "value": "authorized"
+      },
+      {
+        "file_offset": 17550,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 17560,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 17584,
+        "value": "telemetryError"
+      },
+      {
+        "file_offset": 17612,
+        "value": "ageMs"
+      },
+      {
+        "file_offset": 17691,
+        "value": "snapshot"
+      },
+      {
+        "file_offset": 18578,
+        "value": "poll`"
+      },
+      {
+        "file_offset": 19283,
+        "value": "\"L*K#h"
+      },
+      {
+        "file_offset": 19565,
+        "value": "*PB(\""
+      },
+      {
+        "file_offset": 19654,
+        "value": "O canal nativo ainda n"
+      },
+      {
+        "file_offset": 19677,
+        "value": "o publicou este estado."
+      },
+      {
+        "file_offset": 19751,
+        "value": "Pb>'C"
+      },
+      {
+        "file_offset": 19984,
+        "value": "readPublication"
+      },
+      {
+        "file_offset": 20155,
+        "value": "J':os"
+      },
+      {
+        "file_offset": 20237,
+        "value": "automation_control"
+      },
+      {
+        "file_offset": 20269,
+        "value": "automation_lease"
+      },
+      {
+        "file_offset": 20512,
+        "value": "writePublication`"
+      },
+      {
+        "file_offset": 20715,
+        "value": ":(\" *"
+      },
+      {
+        "file_offset": 20819,
+        "value": "param1"
+      },
+      {
+        "file_offset": 20946,
+        "value": "Fila de comandos cheia."
+      },
+      {
+        "file_offset": 21174,
+        "value": "[4RT\""
+      },
+      {
+        "file_offset": 21180,
+        "value": "RdZ838*,*"
+      },
+      {
+        "file_offset": 21205,
+        "value": "D24R,\""
+      },
+      {
+        "file_offset": 21225,
+        "value": "2Tj0+0:"
+      },
+      {
+        "file_offset": 21238,
+        "value": "*,ZP*"
+      },
+      {
+        "file_offset": 21598,
+        "value": "O cliente parou de atualizar o estado."
+      },
+      {
+        "file_offset": 21656,
+        "value": "focus"
+      },
+      {
+        "file_offset": 21676,
+        "value": "O cliente est"
+      },
+      {
+        "file_offset": 21690,
+        "value": " offline ou a sess"
+      },
+      {
+        "file_offset": 21709,
+        "value": "o expirou."
+      },
+      {
+        "file_offset": 21732,
+        "value": "isCurrent"
+      },
+      {
+        "file_offset": 21756,
+        "value": "Automa"
+      },
+      {
+        "file_offset": 21764,
+        "value": "o pausada antes do envio."
+      },
+      {
+        "file_offset": 21859,
+        "value": ":,2 2"
+      },
+      {
+        "file_offset": 21873,
+        "value": "* :<;"
+      },
+      {
+        "file_offset": 21879,
+        "value": "*(R<R;:pR"
+      },
+      {
+        "file_offset": 22252,
+        "value": "beforePublish"
+      },
+      {
+        "file_offset": 22283,
+        "value": "manual"
+      },
+      {
+        "file_offset": 22356,
+        "value": "#PB0*"
+      },
+      {
+        "file_offset": 22362,
+        "value": "*/+p\""
+      },
+      {
+        "file_offset": 23494,
+        "value": "B + *"
+      },
+      {
+        "file_offset": 24534,
+        "value": "node:net"
+      },
+      {
+        "file_offset": 24554,
+        "value": "node:fs/promises"
+      },
+      {
+        "file_offset": 24582,
+        "value": "node:path"
+      },
+      {
+        "file_offset": 24606,
+        "value": "node:events"
+      },
+      {
+        "file_offset": 24635,
+        "value": "node:crypto"
+      },
+      {
+        "file_offset": 24653,
+        "value": "PezIm$"
+      },
+      {
+        "file_offset": 24663,
+        "value": "./protocol.cjs"
+      },
+      {
+        "file_offset": 24703,
+        "value": "./telemetry.cjs"
+      },
+      {
+        "file_offset": 24860,
+        "value": "^(?:(?:state|cmd|ack)_([1-9]\\d{0,9})\\.bin|(?:telemetry|automation|automation_control|automation_lease|automation_revoked|startup)_([1-9]\\d{0,9})\\.json)(?:\\.(?:transport\\.tmp|native\\.tmp|tmp|[1-9]\\d*\\.[1-9]\\d*\\.tmp|[a-f0-9]{32}\\.[1-9]\\d*\\.tmp))?$"
+      },
+      {
+        "file_offset": 25109,
+        "value": "(Ph*H"
+      },
+      {
+        "file_offset": 25120,
+        "value": "^\\.session\\.([1-9]\\d{0,9})$"
+      },
+      {
+        "file_offset": 25160,
+        "value": "^(?:(?:diagnostic|native_fault)_([1-9]\\d{0,9})\\.log|dll_log\\.txt)$"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/protocol.jsc",
+    "sha256": "56522f34578706292530ee7c05f8774b221b6d2e862a55f51e78700cfe10a48e",
+    "bytes": 9312,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 6852
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 9280
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 171,
+        "value": ":L20282(2(202 2 2(242<2"
+      },
+      {
+        "file_offset": 250,
+        "value": "guildDailyTiers"
+      },
+      {
+        "file_offset": 278,
+        "value": "guildDailyElements"
+      },
+      {
+        "file_offset": 310,
+        "value": "STATE_SIZE"
+      },
+      {
+        "file_offset": 334,
+        "value": "COMMAND_SIZE"
+      },
+      {
+        "file_offset": 358,
+        "value": "ACK_SIZE"
+      },
+      {
+        "file_offset": 378,
+        "value": "COMMANDS"
+      },
+      {
+        "file_offset": 398,
+        "value": "uint32"
+      },
+      {
+        "file_offset": 418,
+        "value": "uuidHashg"
+      },
+      {
+        "file_offset": 514,
+        "value": ":|+L2LR3*"
+      },
+      {
+        "file_offset": 577,
+        "value": ": inteiro de 32 bits inv"
+      },
+      {
+        "file_offset": 602,
+        "value": "lido."
+      },
+      {
+        "file_offset": 790,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 965,
+        "value": ":8bDZ(Z0B"
+      },
+      {
+        "file_offset": 979,
+        "value": "*3;tJ"
+      },
+      {
+        "file_offset": 997,
+        "value": "2$J@*"
+      },
+      {
+        "file_offset": 1055,
+        "value": "Estado IPC deve ter exatamente 48 bytes."
+      },
+      {
+        "file_offset": 1131,
+        "value": "isOnline"
+      },
+      {
+        "file_offset": 1152,
+        "value": "healthPercent"
+      },
+      {
+        "file_offset": 1232,
+        "value": "targetId"
+      },
+      {
+        "file_offset": 1253,
+        "value": "attackSeqNum"
+      },
+      {
+        "file_offset": 1278,
+        "value": "protoVersion"
+      },
+      {
+        "file_offset": 1376,
+        "value": "Estado IPC cont"
+      },
+      {
+        "file_offset": 1392,
+        "value": "m valores inv"
+      },
+      {
+        "file_offset": 1406,
+        "value": "lidos. Confira os offsets da DLL."
+      },
+      {
+        "file_offset": 1442,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 1452,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 1476,
+        "value": "online"
+      },
+      {
+        "file_offset": 1878,
+        "value": "decodeState"
+      },
+      {
+        "file_offset": 2056,
+        "value": "\"0:(Z'2p:"
+      },
+      {
+        "file_offset": 2516,
+        "value": "*8*@*@c\\"
+      },
+      {
+        "file_offset": 2530,
+        "value": "R #d*"
+      },
+      {
+        "file_offset": 2538,
+        "value": "3h+D2"
+      },
+      {
+        "file_offset": 2547,
+        "value": ";\\2H:"
+      },
+      {
+        "file_offset": 2580,
+        "value": "JD+0Z"
+      },
+      {
+        "file_offset": 2635,
+        "value": "ZL\"L2"
+      },
+      {
+        "file_offset": 2652,
+        "value": "P\"'3p"
+      },
+      {
+        "file_offset": 2658,
+        "value": "$+L\"@*"
+      },
+      {
+        "file_offset": 2665,
+        "value": "2D2C:"
+      },
+      {
+        "file_offset": 2672,
+        "value": ":(*8B(*TC\\Z"
+      },
+      {
+        "file_offset": 2700,
+        "value": "$:X:P+"
+      },
+      {
+        "file_offset": 2728,
+        "value": "23BtZ$28Z$28:$+"
+      },
+      {
+        "file_offset": 2760,
+        "value": "$:P+LZ(R"
+      },
+      {
+        "file_offset": 2780,
+        "value": "* *(3dZ"
+      },
+      {
+        "file_offset": 2788,
+        "value": "R R(\""
+      },
+      {
+        "file_offset": 2803,
+        "value": "Z8:PZ@2DJ4+"
+      },
+      {
+        "file_offset": 2822,
+        "value": "Z(R R<"
+      },
+      {
+        "file_offset": 2837,
+        "value": "+h*(#H2L:TZ"
+      },
+      {
+        "file_offset": 2852,
+        "value": "Bd:\\:`:8:@:\\:8:X:X:T:`Z8:LZ"
+      },
+      {
+        "file_offset": 2950,
+        "value": "2(#hC"
+      },
+      {
+        "file_offset": 2961,
+        "value": "JL\"X:X:"
+      },
+      {
+        "file_offset": 3015,
+        "value": "\"\\\"'*K*"
+      },
+      {
+        "file_offset": 3120,
+        "value": "expectedUuid"
+      },
+      {
+        "file_offset": 3144,
+        "value": "expectedAction"
+      },
+      {
+        "file_offset": 3172,
+        "value": "attackTargetId"
+      },
+      {
+        "file_offset": 3200,
+        "value": "fightMode"
+      },
+      {
+        "file_offset": 3260,
+        "value": "commandId"
+      },
+      {
+        "file_offset": 3362,
+        "value": "combo"
+      },
+      {
+        "file_offset": 3382,
+        "value": "switchPokemon"
+      },
+      {
+        "file_offset": 3400,
+        "value": "Pe*_)"
+      },
+      {
+        "file_offset": 3410,
+        "value": "recallPokemon"
+      },
+      {
+        "file_offset": 3438,
+        "value": "hotkey"
+      },
+      {
+        "file_offset": 3458,
+        "value": "guildDaily"
+      },
+      {
+        "file_offset": 3487,
+        "value": "[\\x00-\\x1f\\x7f]"
+      },
+      {
+        "file_offset": 3523,
+        "value": "Texto do comando inv"
+      },
+      {
+        "file_offset": 3544,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3575,
+        "value": "Texto deve ter entre 1 e 255 bytes UTF-8."
+      },
+      {
+        "file_offset": 3634,
+        "value": "!autocombo"
+      },
+      {
+        "file_offset": 3658,
+        "value": "^!autocombo [^,]+(?:, [^,]+)*$"
+      },
+      {
+        "file_offset": 3702,
+        "value": "Combo deve usar !autocombo ou uma lista de spellwords separadas por v"
+      },
+      {
+        "file_offset": 3772,
+        "value": "rgula e espa"
+      },
+      {
+        "file_offset": 3829,
+        "value": "Escolha um tier e elemento v"
+      },
+      {
+        "file_offset": 3858,
+        "value": "lidos para a daily guild."
+      },
+      {
+        "file_offset": 3896,
+        "value": "PbFuJ"
+      },
+      {
+        "file_offset": 3933,
+        "value": "pokemon"
+      },
+      {
+        "file_offset": 3959,
+        "value": "o/ator do turn inv"
+      },
+      {
+        "file_offset": 3978,
+        "value": "lido."
+      },
+      {
+        "file_offset": 4031,
+        "value": "useWith"
+      },
+      {
+        "file_offset": 4056,
+        "value": "orderGround"
+      },
+      {
+        "file_offset": 4128,
+        "value": "o inv"
+      },
+      {
+        "file_offset": 4134,
+        "value": "lida."
+      },
+      {
+        "file_offset": 4186,
+        "value": "summonId"
+      },
+      {
+        "file_offset": 4206,
+        "value": "itemId"
+      },
+      {
+        "file_offset": 4259,
+        "value": "Item ou stack inv"
+      },
+      {
+        "file_offset": 4277,
+        "value": "lido."
+      },
+      {
+        "file_offset": 4332,
+        "value": "param1"
+      },
+      {
+        "file_offset": 4387,
+        "value": "focus"
+      },
+      {
+        "file_offset": 4407,
+        "value": "refreshCombo"
+      },
+      {
+        "file_offset": 4431,
+        "value": "action"
+      },
+      {
+        "file_offset": 4451,
+        "value": "fight"
+      },
+      {
+        "file_offset": 4471,
+        "value": "chase"
+      },
+      {
+        "file_offset": 4491,
+        "value": "potion"
+      },
+      {
+        "file_offset": 4511,
+        "value": "revive"
+      },
+      {
+        "file_offset": 4559,
+        "value": "Comando ou par"
+      },
+      {
+        "file_offset": 4574,
+        "value": "metros n"
+      },
+      {
+        "file_offset": 4583,
+        "value": "o suportados pelo IPC."
+      },
+      {
+        "file_offset": 4671,
+        "value": "Prote"
+      },
+      {
+        "file_offset": 4678,
+        "value": "o de identidade inv"
+      },
+      {
+        "file_offset": 4698,
+        "value": "lida."
+      },
+      {
+        "file_offset": 4731,
+        "value": ",Pir`"
+      },
+      {
+        "file_offset": 4742,
+        "value": "Tipo de a"
+      },
+      {
+        "file_offset": 4753,
+        "value": "o da hotkey inv"
+      },
+      {
+        "file_offset": 4769,
+        "value": "lido."
+      },
+      {
+        "file_offset": 4809,
+        "value": "^m[1-9]\\d*$"
+      },
+      {
+        "file_offset": 4833,
+        "value": "Alvo/postura devem acompanhar uma skill de combo com UUID."
+      },
+      {
+        "file_offset": 4933,
+        "value": "Postura do combo inv"
+      },
+      {
+        "file_offset": 4954,
+        "value": "lida."
+      },
+      {
+        "file_offset": 7139,
+        "value": "encodeCommand"
+      },
+      {
+        "file_offset": 7485,
+        "value": "ACK IPC deve ter exatamente 12 bytes."
+      },
+      {
+        "file_offset": 7730,
+        "value": "decodeAck"
+      },
+      {
+        "file_offset": 7871,
+        "value": "../shared/schema.js"
+      },
+      {
+        "file_offset": 7943,
+        "value": "attack"
+      },
+      {
+        "file_offset": 7958,
+        "value": "PcN-n"
+      },
+      {
+        "file_offset": 7968,
+        "value": "follow"
+      },
+      {
+        "file_offset": 8159,
+        "value": "north"
+      },
+      {
+        "file_offset": 8184,
+        "value": "east`"
+      },
+      {
+        "file_offset": 8205,
+        "value": "south"
+      },
+      {
+        "file_offset": 8230,
+        "value": "west`"
+      },
+      {
+        "file_offset": 8251,
+        "value": "northeast"
+      },
+      {
+        "file_offset": 8280,
+        "value": "southeast"
+      },
+      {
+        "file_offset": 8309,
+        "value": "southwest"
+      },
+      {
+        "file_offset": 8338,
+        "value": "northwest"
+      },
+      {
+        "file_offset": 8387,
+        "value": "Comando enviado.`"
+      },
+      {
+        "file_offset": 8420,
+        "value": "Comando inv"
+      },
+      {
+        "file_offset": 8432,
+        "value": "lido`"
+      },
+      {
+        "file_offset": 8453,
+        "value": "Cliente offline"
+      },
+      {
+        "file_offset": 8491,
+        "value": "es do jogo indispon"
+      },
+      {
+        "file_offset": 8535,
+        "value": "A identidade do Pok"
+      },
+      {
+        "file_offset": 8555,
+        "value": "mon mudou; aguardando atualiza"
+      },
+      {
+        "file_offset": 8608,
+        "value": "Cliente ou action bar aguardando cooldown; comando n"
+      },
+      {
+        "file_offset": 8661,
+        "value": "o executado."
+      },
+      {
+        "file_offset": 8693,
+        "value": "Hotkey/slot sem a a"
+      },
+      {
+        "file_offset": 8714,
+        "value": "o de item esperada na action bar."
+      },
+      {
+        "file_offset": 8790,
+        "value": "DIRECTIONS"
+      },
+      {
+        "file_offset": 8815,
+        "value": "STATUS"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/security.jsc",
+    "sha256": "afc75885c9ad843beb72b9d4806322c18c2b23c801bb119ae16de39a5dbce823",
+    "bytes": 8608,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 4154
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 8576
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 211,
+        "value": "delay"
+      },
+      {
+        "file_offset": 256,
+        "value": "node:net"
+      },
+      {
+        "file_offset": 276,
+        "value": "node:inspector"
+      },
+      {
+        "file_offset": 293,
+        "value": " Pf.i"
+      },
+      {
+        "file_offset": 304,
+        "value": "node:timers/promises"
+      },
+      {
+        "file_offset": 450,
+        "value": "attach"
+      },
+      {
+        "file_offset": 479,
+        "value": "incidenta"
+      },
+      {
+        "file_offset": 536,
+        "value": "requireConnecteda"
+      },
+      {
+        "file_offset": 573,
+        "value": "verify"
+      },
+      {
+        "file_offset": 824,
+        "value": "createConnectionf"
+      },
+      {
+        "file_offset": 954,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1165,
+        "value": "inspectorUrl`"
+      },
+      {
+        "file_offset": 1344,
+        "value": "detected`"
+      },
+      {
+        "file_offset": 1505,
+        "value": "reported`"
+      },
+      {
+        "file_offset": 1939,
+        "value": "devtools-opened"
+      },
+      {
+        "file_offset": 2036,
+        "value": "closeDevTools"
+      },
+      {
+        "file_offset": 2066,
+        "value": "devtoolsj"
+      },
+      {
+        "file_offset": 2730,
+        "value": "L2D242<3d*"
+      },
+      {
+        "file_offset": 2741,
+        "value": "*,: \"K+p"
+      },
+      {
+        "file_offset": 2802,
+        "value": "socket"
+      },
+      {
+        "file_offset": 2822,
+        "value": "lastReply"
+      },
+      {
+        "file_offset": 3063,
+        "value": "(J@3 "
+      },
+      {
+        "file_offset": 3104,
+        "value": "2|*$*"
+      },
+      {
+        "file_offset": 3153,
+        "value": "$*<\"++H"
+      },
+      {
+        "file_offset": 3167,
+        "value": "H\"##T"
+      },
+      {
+        "file_offset": 3173,
+        "value": "$J<JH*"
+      },
+      {
+        "file_offset": 3223,
+        "value": "*0#(*,#"
+      },
+      {
+        "file_offset": 3350,
+        "value": "preferredPid"
+      },
+      {
+        "file_offset": 3446,
+        "value": "isDevToolsOpened"
+      },
+      {
+        "file_offset": 3474,
+        "value": "debugger"
+      },
+      {
+        "file_offset": 3494,
+        "value": "isAttached"
+      },
+      {
+        "file_offset": 3555,
+        "value": " :0:D:$RP"
+      },
+      {
+        "file_offset": 3584,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 3594,
+        "value": "stale"
+      },
+      {
+        "file_offset": 3604,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 3614,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 3638,
+        "value": "telemetry"
+      },
+      {
+        "file_offset": 3662,
+        "value": "automationVersion"
+      },
+      {
+        "file_offset": 3907,
+        "value": "requestedPidg"
+      },
+      {
+        "file_offset": 4276,
+        "value": "$Pg6)"
+      },
+      {
+        "file_offset": 4287,
+        "value": "\\\\.\\pipe\\pka-security-"
+      },
+      {
+        "file_offset": 4328,
+        "value": "reply"
+      },
+      {
+        "file_offset": 4452,
+        "value": ":(\"'*3#"
+      },
+      {
+        "file_offset": 4480,
+        "value": "0+tZ4#d"
+      },
+      {
+        "file_offset": 4572,
+        "value": "ready"
+      },
+      {
+        "file_offset": 6479,
+        "value": "X2D2@:"
+      },
+      {
+        "file_offset": 6486,
+        "value": "*D2H*"
+      },
+      {
+        "file_offset": 6496,
+        "value": "BD+@\"Tz;*"
+      },
+      {
+        "file_offset": 6568,
+        "value": "o indispon"
+      },
+      {
+        "file_offset": 6579,
+        "value": "vel. Entre novamente e tente outra vez."
+      },
+      {
+        "file_offset": 6631,
+        "value": "Aguarde a verifica"
+      },
+      {
+        "file_offset": 6651,
+        "value": "o de conex"
+      },
+      {
+        "file_offset": 6662,
+        "value": "o e tente novamente."
+      },
+      {
+        "file_offset": 6944,
+        "value": "*82@2D3|2"
+      },
+      {
+        "file_offset": 7629,
+        "value": "#L*$*"
+      },
+      {
+        "file_offset": 8117,
+        "value": "ElectronSecurity`"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/settings.jsc",
+    "sha256": "f521bf39c4a05dca206a0861c5d5b904870a57ca946f0e3cbbef849dbfdbd2aa",
+    "bytes": 23672,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 13611
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 23640
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 141,
+        "value": "*k203"
+      },
+      {
+        "file_offset": 181,
+        "value": ":L2<2@2@242<282P2"
+      },
+      {
+        "file_offset": 263,
+        "value": "createHash"
+      },
+      {
+        "file_offset": 292,
+        "value": "delay"
+      },
+      {
+        "file_offset": 328,
+        "value": "createConfig"
+      },
+      {
+        "file_offset": 352,
+        "value": "migrateTools"
+      },
+      {
+        "file_offset": 376,
+        "value": "normalizeLuring"
+      },
+      {
+        "file_offset": 404,
+        "value": "MAX_BYTES"
+      },
+      {
+        "file_offset": 428,
+        "value": "validateFields"
+      },
+      {
+        "file_offset": 456,
+        "value": "validateConfig"
+      },
+      {
+        "file_offset": 484,
+        "value": "profileName"
+      },
+      {
+        "file_offset": 508,
+        "value": "characterKey"
+      },
+      {
+        "file_offset": 532,
+        "value": "characterDirectory"
+      },
+      {
+        "file_offset": 669,
+        "value": "2LR3*"
+      },
+      {
+        "file_offset": 697,
+        "value": "#|zHBG"
+      },
+      {
+        "file_offset": 727,
+        "value": "+T\",*"
+      },
+      {
+        "file_offset": 737,
+        "value": "+ 2LR3*"
+      },
+      {
+        "file_offset": 748,
+        "value": "*4*4b"
+      },
+      {
+        "file_offset": 766,
+        "value": "2LR3*"
+      },
+      {
+        "file_offset": 794,
+        "value": "+82Lr"
+      },
+      {
+        "file_offset": 817,
+        "value": "R\\* *"
+      },
+      {
+        "file_offset": 823,
+        "value": ";D2LR3*"
+      },
+      {
+        "file_offset": 834,
+        "value": "*TZ<2;j"
+      },
+      {
+        "file_offset": 845,
+        "value": "+,2LR3*"
+      },
+      {
+        "file_offset": 872,
+        "value": ";L2LR3*"
+      },
+      {
+        "file_offset": 972,
+        "value": ": objeto inv"
+      },
+      {
+        "file_offset": 985,
+        "value": "lido."
+      },
+      {
+        "file_offset": 1102,
+        "value": ": lista inv"
+      },
+      {
+        "file_offset": 1114,
+        "value": "lida ou muito grande."
+      },
+      {
+        "file_offset": 1180,
+        "value": "HRT:HR8"
+      },
+      {
+        "file_offset": 1364,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1505,
+        "value": "r`#$\"(J<B"
+      },
+      {
+        "file_offset": 1559,
+        "value": "J8:\\2"
+      },
+      {
+        "file_offset": 1666,
+        "value": "* RG#"
+      },
+      {
+        "file_offset": 1673,
+        "value": "\"$J<B"
+      },
+      {
+        "file_offset": 1719,
+        "value": "\"$J<B"
+      },
+      {
+        "file_offset": 1825,
+        "value": "zx#0\"(J<2"
+      },
+      {
+        "file_offset": 1855,
+        "value": ":4:P2O\""
+      },
+      {
+        "file_offset": 1916,
+        "value": "* 3h2l#"
+      },
+      {
+        "file_offset": 1953,
+        "value": "J8B#+DJ"
+      },
+      {
+        "file_offset": 1971,
+        "value": "l+LB8J"
+      },
+      {
+        "file_offset": 2007,
+        "value": ":,J,B"
+      },
+      {
+        "file_offset": 2234,
+        "value": "Configura"
+      },
+      {
+        "file_offset": 2245,
+        "value": "o inv"
+      },
+      {
+        "file_offset": 2251,
+        "value": "lida."
+      },
+      {
+        "file_offset": 2275,
+        "value": "alerts"
+      },
+      {
+        "file_offset": 2295,
+        "value": "gmMessageRevision"
+      },
+      {
+        "file_offset": 2338,
+        "value": "monsters"
+      },
+      {
+        "file_offset": 2367,
+        "value": "creatureType"
+      },
+      {
+        "file_offset": 2396,
+        "value": "luring"
+      },
+      {
+        "file_offset": 2416,
+        "value": "randomEnabled"
+      },
+      {
+        "file_offset": 2444,
+        "value": "combo"
+      },
+      {
+        "file_offset": 2453,
+        "value": " PfbM1o"
+      },
+      {
+        "file_offset": 2464,
+        "value": "medicineActionBar"
+      },
+      {
+        "file_offset": 2496,
+        "value": "autoRevive"
+      },
+      {
+        "file_offset": 2520,
+        "value": "hotkey"
+      },
+      {
+        "file_offset": 2541,
+        "value": "hoenn"
+      },
+      {
+        "file_offset": 2561,
+        "value": "potionHotkey"
+      },
+      {
+        "file_offset": 2585,
+        "value": "looting"
+      },
+      {
+        "file_offset": 2605,
+        "value": "maxCaptureDist"
+      },
+      {
+        "file_offset": 2633,
+        "value": "maxLootDist"
+      },
+      {
+        "file_offset": 2657,
+        "value": "captureEntries"
+      },
+      {
+        "file_offset": 2686,
+        "value": "rules"
+      },
+      {
+        "file_offset": 2706,
+        "value": "soundMode"
+      },
+      {
+        "file_offset": 2730,
+        "value": "voice"
+      },
+      {
+        "file_offset": 2750,
+        "value": "walker"
+      },
+      {
+        "file_offset": 2786,
+        "value": "mapPath"
+      },
+      {
+        "file_offset": 2806,
+        "value": "luaProfile"
+      },
+      {
+        "file_offset": 2830,
+        "value": "luaRevision"
+      },
+      {
+        "file_offset": 2854,
+        "value": "guildDailyTier"
+      },
+      {
+        "file_offset": 2885,
+        "value": "guildDailyElement"
+      },
+      {
+        "file_offset": 2917,
+        "value": "guildDailyAutoEnabled"
+      },
+      {
+        "file_offset": 2953,
+        "value": "guildDailyUseTicket"
+      },
+      {
+        "file_offset": 2985,
+        "value": "guildDailyTicketHotkey"
+      },
+      {
+        "file_offset": 3021,
+        "value": "guildDailyTicketAmount"
+      },
+      {
+        "file_offset": 3057,
+        "value": "waypoints"
+      },
+      {
+        "file_offset": 3117,
+        "value": "*,*++H"
+      },
+      {
+        "file_offset": 3174,
+        "value": "safespot"
+      },
+      {
+        "file_offset": 3210,
+        "value": "stairs"
+      },
+      {
+        "file_offset": 3256,
+        "value": "action"
+      },
+      {
+        "file_offset": 3413,
+        "value": "tools"
+      },
+      {
+        "file_offset": 3726,
+        "value": "randomMinSeconds"
+      },
+      {
+        "file_offset": 3754,
+        "value": "randomMaxSeconds"
+      },
+      {
+        "file_offset": 3786,
+        "value": "nimo do lure aleat"
+      },
+      {
+        "file_offset": 3805,
+        "value": "rio deve ser menor ou igual ao m"
+      },
+      {
+        "file_offset": 3838,
+        "value": "ximo."
+      },
+      {
+        "file_offset": 3858,
+        "value": "roster"
+      },
+      {
+        "file_offset": 3879,
+        "value": "O roster Hoenn aceita at"
+      },
+      {
+        "file_offset": 3904,
+        "value": " seis Pok"
+      },
+      {
+        "file_offset": 3931,
+        "value": "captureRandomMode"
+      },
+      {
+        "file_offset": 3963,
+        "value": "captureAfterCombat"
+      },
+      {
+        "file_offset": 3995,
+        "value": "perfectingSkillMask"
+      },
+      {
+        "file_offset": 4258,
+        "value": "rea da skill n"
+      },
+      {
+        "file_offset": 4273,
+        "value": "o pode incluir o centro (0, 0)."
+      },
+      {
+        "file_offset": 4524,
+        "value": "rea da skill cont"
+      },
+      {
+        "file_offset": 4542,
+        "value": "m tiles repetidos."
+      },
+      {
+        "file_offset": 4573,
+        "value": "gmMessageProfilesJson"
+      },
+      {
+        "file_offset": 4619,
+        "value": "Os perfis de mensagens GM devem ser JSON v"
+      },
+      {
+        "file_offset": 4662,
+        "value": "lido."
+      },
+      {
+        "file_offset": 4679,
+        "value": "Os perfis de mensagens GM devem ser um objeto JSON."
+      },
+      {
+        "file_offset": 4758,
+        "value": "Configura"
+      },
+      {
+        "file_offset": 4769,
+        "value": "o excede 2 MB."
+      },
+      {
+        "file_offset": 7086,
+        "value": "[\\x00-\\x1f]"
+      },
+      {
+        "file_offset": 7118,
+        "value": "Nome do perfil inv"
+      },
+      {
+        "file_offset": 7137,
+        "value": "lido (m"
+      },
+      {
+        "file_offset": 7145,
+        "value": "ximo 80 caracteres)."
+      },
+      {
+        "file_offset": 7390,
+        "value": "C<:0JP2D2\\3"
+      },
+      {
+        "file_offset": 7413,
+        "value": "rD:,R"
+      },
+      {
+        "file_offset": 7501,
+        "value": "characterName"
+      },
+      {
+        "file_offset": 7542,
+        "value": "online"
+      },
+      {
+        "file_offset": 7552,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 7562,
+        "value": "stale"
+      },
+      {
+        "file_offset": 7572,
+        "value": "PdnjU="
+      },
+      {
+        "file_offset": 7582,
+        "value": "authExpired"
+      },
+      {
+        "file_offset": 7610,
+        "value": "telemetry"
+      },
+      {
+        "file_offset": 7634,
+        "value": "playerName"
+      },
+      {
+        "file_offset": 7658,
+        "value": "creatures"
+      },
+      {
+        "file_offset": 7755,
+        "value": "playerId"
+      },
+      {
+        "file_offset": 7915,
+        "value": "[\\x00-\\x1f\\x7f]"
+      },
+      {
+        "file_offset": 8309,
+        "value": "Nick do personagem inv"
+      },
+      {
+        "file_offset": 8332,
+        "value": "lido."
+      },
+      {
+        "file_offset": 8362,
+        "value": "pt-BR"
+      },
+      {
+        "file_offset": 8662,
+        "value": ";@*0j"
+      },
+      {
+        "file_offset": 8712,
+        "value": "[\\\\/:*?\"<>|.]"
+      },
+      {
+        "file_offset": 8753,
+        "value": "personagem"
+      },
+      {
+        "file_offset": 8779,
+        "value": "sha256"
+      },
+      {
+        "file_offset": 8804,
+        "value": "digest"
+      },
+      {
+        "file_offset": 8843,
+        "value": "characters"
+      },
+      {
+        "file_offset": 9189,
+        "value": "8#D*@:DR"
+      },
+      {
+        "file_offset": 9270,
+        "value": "settings.json"
+      },
+      {
+        "file_offset": 9339,
+        "value": "activeProfile"
+      },
+      {
+        "file_offset": 9367,
+        "value": "Default"
+      },
+      {
+        "file_offset": 9387,
+        "value": "profiles"
+      },
+      {
+        "file_offset": 9660,
+        "value": "SettingsStore"
+      },
+      {
+        "file_offset": 9826,
+        "value": "8+@*<*8*7j#"
+      },
+      {
+        "file_offset": 9883,
+        "value": ": *(\""
+      },
+      {
+        "file_offset": 9889,
+        "value": "*4*3:"
+      },
+      {
+        "file_offset": 9896,
+        "value": "*$2<*$:"
+      },
+      {
+        "file_offset": 9930,
+        "value": ",*$*#;dJ"
+      },
+      {
+        "file_offset": 10141,
+        "value": "snapshotH"
+      },
+      {
+        "file_offset": 10165,
+        "value": "Arquivo de configura"
+      },
+      {
+        "file_offset": 10187,
+        "value": "es muito grande."
+      },
+      {
+        "file_offset": 10250,
+        "value": "Formato de configura"
+      },
+      {
+        "file_offset": 10277,
+        "value": "o suportado."
+      },
+      {
+        "file_offset": 10339,
+        "value": "*P*O+"
+      },
+      {
+        "file_offset": 10363,
+        "value": "+H:$J"
+      },
+      {
+        "file_offset": 10410,
+        "value": "Nome de perfil duplicado."
+      },
+      {
+        "file_offset": 10468,
+        "value": " qXy "
+      },
+      {
+        "file_offset": 10700,
+        "value": "Perfil ativo n"
+      },
+      {
+        "file_offset": 10715,
+        "value": "o encontrado."
+      },
+      {
+        "file_offset": 11332,
+        "value": "\"p*S#l\""
+      },
+      {
+        "file_offset": 11830,
+        "value": " qXo("
+      },
+      {
+        "file_offset": 12030,
+        "value": "Pcr? "
+      },
+      {
+        "file_offset": 12040,
+        "value": "persist"
+      },
+      {
+        "file_offset": 12239,
+        "value": "+H*D2$b"
+      },
+      {
+        "file_offset": 12270,
+        "value": "2$b,2423j+z#"
+      },
+      {
+        "file_offset": 12286,
+        "value": "B #H*"
+      },
+      {
+        "file_offset": 12299,
+        "value": "D;L28"
+      },
+      {
+        "file_offset": 12353,
+        "value": "B\\C * J"
+      },
+      {
+        "file_offset": 12368,
+        "value": "Sx*,2"
+      },
+      {
+        "file_offset": 12378,
+        "value": "J4+L#,2$2"
+      },
+      {
+        "file_offset": 12400,
+        "value": "+03P* 2"
+      },
+      {
+        "file_offset": 12441,
+        "value": "ZD* 2;2'r+"
+      },
+      {
+        "file_offset": 12455,
+        "value": "B\\2<B"
+      },
+      {
+        "file_offset": 12471,
+        "value": "p\"`3d2"
+      },
+      {
+        "file_offset": 12578,
+        "value": "2DB *c:"
+      },
+      {
+        "file_offset": 12589,
+        "value": "bDR02/:C*"
+      },
+      {
+        "file_offset": 12604,
+        "value": "2DB *c:"
+      },
+      {
+        "file_offset": 12630,
+        "value": " +(2$R"
+      },
+      {
+        "file_offset": 12637,
+        "value": ";hB<2"
+      },
+      {
+        "file_offset": 12648,
+        "value": "2$2<2$B"
+      },
+      {
+        "file_offset": 12673,
+        "value": "2T: *"
+      },
+      {
+        "file_offset": 12690,
+        "value": "J`#8*(2"
+      },
+      {
+        "file_offset": 12711,
+        "value": "2$2<b;r#"
+      },
+      {
+        "file_offset": 12723,
+        "value": "2$2828B *"
+      },
+      {
+        "file_offset": 12748,
+        "value": "+p2$RDRC"
+      },
+      {
+        "file_offset": 12763,
+        "value": "{xJ|r<2;rt+"
+      },
+      {
+        "file_offset": 13464,
+        "value": "BD*0*/2C*"
+      },
+      {
+        "file_offset": 13840,
+        "value": "4B<\"+"
+      },
+      {
+        "file_offset": 14131,
+        "value": ".lock"
+      },
+      {
+        "file_offset": 14332,
+        "value": "Outro menu est"
+      },
+      {
+        "file_offset": 14347,
+        "value": " salvando os perfis. Aguarde e tente novamente."
+      },
+      {
+        "file_offset": 14553,
+        "value": "4B<\"+"
+      },
+      {
+        "file_offset": 14715,
+        "value": "Esse perfil foi alterado em outro menu. Reabra a lista antes de excluir."
+      },
+      {
+        "file_offset": 14826,
+        "value": "4B<\"+#<\""
+      },
+      {
+        "file_offset": 15056,
+        "value": "4B<\"+"
+      },
+      {
+        "file_offset": 15214,
+        "value": "Esse perfil foi alterado em outro menu. Salve as op"
+      },
+      {
+        "file_offset": 15267,
+        "value": "es com outro nome ou recarregue o perfil."
+      },
+      {
+        "file_offset": 15333,
+        "value": "Mantenha entre 1 e 100 perfis."
+      },
+      {
+        "file_offset": 15582,
+        "value": "Limite total de perfis excedido."
+      },
+      {
+        "file_offset": 19260,
+        "value": "(+\\*$:"
+      },
+      {
+        "file_offset": 19356,
+        "value": "save`"
+      },
+      {
+        "file_offset": 19609,
+        "value": "Limite de 100 perfis atingido."
+      },
+      {
+        "file_offset": 20251,
+        "value": "Perfil n"
+      },
+      {
+        "file_offset": 20260,
+        "value": "o encontrado."
+      },
+      {
+        "file_offset": 20509,
+        "value": "+l*$R"
+      },
+      {
+        "file_offset": 20630,
+        "value": ",Pi^i_"
+      },
+      {
+        "file_offset": 20641,
+        "value": "Mantenha pelo menos um perfil."
+      },
+      {
+        "file_offset": 21347,
+        "value": "(Ph&g"
+      },
+      {
+        "file_offset": 21358,
+        "value": ": use verdadeiro ou falso."
+      },
+      {
+        "file_offset": 21419,
+        "value": ": use um inteiro entre "
+      },
+      {
+        "file_offset": 21492,
+        "value": "o inv"
+      },
+      {
+        "file_offset": 21498,
+        "value": "lida."
+      },
+      {
+        "file_offset": 21544,
+        "value": ": texto inv"
+      },
+      {
+        "file_offset": 21556,
+        "value": "lido ou muito grande."
+      },
+      {
+        "file_offset": 21582,
+        "value": "PdJ5V"
+      },
+      {
+        "file_offset": 21592,
+        "value": "parameter"
+      },
+      {
+        "file_offset": 21621,
+        "value": ": use texto ou n"
+      },
+      {
+        "file_offset": 21638,
+        "value": "mero."
+      },
+      {
+        "file_offset": 22652,
+        "value": "node:fs/promises"
+      },
+      {
+        "file_offset": 22680,
+        "value": "node:path"
+      },
+      {
+        "file_offset": 22704,
+        "value": "node:crypto"
+      },
+      {
+        "file_offset": 22724,
+        "value": " Pf.i"
+      },
+      {
+        "file_offset": 22735,
+        "value": "node:timers/promises"
+      },
+      {
+        "file_offset": 22772,
+        "value": "../shared/schema.js"
+      },
+      {
+        "file_offset": 22810,
+        "value": "../shared/walker.js"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/telemetry.jsc",
+    "sha256": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+    "bytes": 13256,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 7710
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 13224
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 209,
+        "value": "uint32"
+      },
+      {
+        "file_offset": 240,
+        "value": "MAX_MAP_TILES"
+      },
+      {
+        "file_offset": 268,
+        "value": "moves"
+      },
+      {
+        "file_offset": 431,
+        "value": "4*(*'B`"
+      },
+      {
+        "file_offset": 479,
+        "value": "spellword"
+      },
+      {
+        "file_offset": 506,
+        "value": "remainingMs"
+      },
+      {
+        "file_offset": 542,
+        "value": "totalMs"
+      },
+      {
+        "file_offset": 708,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1026,
+        "value": "*<r'R"
+      },
+      {
+        "file_offset": 1550,
+        "value": "BTCxJ"
+      },
+      {
+        "file_offset": 1609,
+        "value": " 2T*TB8*7;"
+      },
+      {
+        "file_offset": 1629,
+        "value": " R`2(*'3T:"
+      },
+      {
+        "file_offset": 1654,
+        "value": "+L:8B,\""
+      },
+      {
+        "file_offset": 1672,
+        "value": ":8*_b"
+      },
+      {
+        "file_offset": 1684,
+        "value": ":4*[;"
+      },
+      {
+        "file_offset": 1699,
+        "value": "$J\\:4+"
+      },
+      {
+        "file_offset": 1713,
+        "value": "R0B/+lB0B/+"
+      },
+      {
+        "file_offset": 1727,
+        "value": " 3XB0R/+"
+      },
+      {
+        "file_offset": 1738,
+        "value": " Rd2(*'3X:"
+      },
+      {
+        "file_offset": 1755,
+        "value": " 3`B0B/+"
+      },
+      {
+        "file_offset": 1765,
+        "value": "RHR3z"
+      },
+      {
+        "file_offset": 1792,
+        "value": "BH:0\""
+      },
+      {
+        "file_offset": 1803,
+        "value": "28*7r"
+      },
+      {
+        "file_offset": 1815,
+        "value": "*+3LJ"
+      },
+      {
+        "file_offset": 1826,
+        "value": "\",B4*3R"
+      },
+      {
+        "file_offset": 1839,
+        "value": "B<*<J"
+      },
+      {
+        "file_offset": 1856,
+        "value": "R<*'r"
+      },
+      {
+        "file_offset": 1863,
+        "value": "*'3tJ"
+      },
+      {
+        "file_offset": 1884,
+        "value": "B4*3R"
+      },
+      {
+        "file_offset": 1895,
+        "value": "B<*,R"
+      },
+      {
+        "file_offset": 1911,
+        "value": "\",B4*3Rt*"
+      },
+      {
+        "file_offset": 1954,
+        "value": "\"?B|*"
+      },
+      {
+        "file_offset": 1971,
+        "value": "\",B4*3R"
+      },
+      {
+        "file_offset": 1984,
+        "value": "B<*(R"
+      },
+      {
+        "file_offset": 2000,
+        "value": "\",B4*3Rp*"
+      },
+      {
+        "file_offset": 2034,
+        "value": "$:<BTZ"
+      },
+      {
+        "file_offset": 2062,
+        "value": "B4*3R"
+      },
+      {
+        "file_offset": 2073,
+        "value": "B@*,R"
+      },
+      {
+        "file_offset": 2082,
+        "value": ":$*,R"
+      },
+      {
+        "file_offset": 2093,
+        "value": "b8*,BO+tJ"
+      },
+      {
+        "file_offset": 2110,
+        "value": "KD\"\\:Xz3"
+      },
+      {
+        "file_offset": 2133,
+        "value": "J8J7b"
+      },
+      {
+        "file_offset": 2144,
+        "value": "8J7STJ"
+      },
+      {
+        "file_offset": 2156,
+        "value": "\",B4J3zpJ"
+      },
+      {
+        "file_offset": 2196,
+        "value": "B4J3z"
+      },
+      {
+        "file_offset": 2207,
+        "value": "B<J0r"
+      },
+      {
+        "file_offset": 2216,
+        "value": ":$J0r"
+      },
+      {
+        "file_offset": 2227,
+        "value": "b8J0BS+x:"
+      },
+      {
+        "file_offset": 2333,
+        "value": "Rhb,Z R"
+      },
+      {
+        "file_offset": 2380,
+        "value": "t*HbDB"
+      },
+      {
+        "file_offset": 2396,
+        "value": "\"<R;SPJ"
+      },
+      {
+        "file_offset": 2519,
+        "value": "decodeTelemetry"
+      },
+      {
+        "file_offset": 2564,
+        "value": "Telemetria excedeu 1 MB."
+      },
+      {
+        "file_offset": 2613,
+        "value": "Pe^>7"
+      },
+      {
+        "file_offset": 2623,
+        "value": "nativeVerified"
+      },
+      {
+        "file_offset": 2651,
+        "value": "Telemetria nativa incompat"
+      },
+      {
+        "file_offset": 2695,
+        "value": "combatDispatchVersion"
+      },
+      {
+        "file_offset": 2720,
+        "value": "0PjBrL"
+      },
+      {
+        "file_offset": 2731,
+        "value": "Dispatcher de combo incompat"
+      },
+      {
+        "file_offset": 2768,
+        "value": " Pf*#"
+      },
+      {
+        "file_offset": 2779,
+        "value": "dynamicLureVersion"
+      },
+      {
+        "file_offset": 2800,
+        "value": "(Ph^u"
+      },
+      {
+        "file_offset": 2811,
+        "value": "Dynamic Lure incompat"
+      },
+      {
+        "file_offset": 2851,
+        "value": "guildDailyAvailable"
+      },
+      {
+        "file_offset": 2883,
+        "value": "Disponibilidade da daily guild inv"
+      },
+      {
+        "file_offset": 2918,
+        "value": "lida."
+      },
+      {
+        "file_offset": 2935,
+        "value": "guildDailyAutoVersion"
+      },
+      {
+        "file_offset": 2991,
+        "value": "4PkFA"
+      },
+      {
+        "file_offset": 3002,
+        "value": "Autom"
+      },
+      {
+        "file_offset": 3008,
+        "value": "tico da daily guild incompat"
+      },
+      {
+        "file_offset": 3054,
+        "value": "guildName"
+      },
+      {
+        "file_offset": 3083,
+        "value": "Nome da guild inv"
+      },
+      {
+        "file_offset": 3101,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3119,
+        "value": "guildDailies"
+      },
+      {
+        "file_offset": 3146,
+        "value": "revision"
+      },
+      {
+        "file_offset": 3174,
+        "value": "missions"
+      },
+      {
+        "file_offset": 3194,
+        "value": "completed"
+      },
+      {
+        "file_offset": 3227,
+        "value": "Progresso da daily guild inv"
+      },
+      {
+        "file_offset": 3256,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3275,
+        "value": "pulseVersion"
+      },
+      {
+        "file_offset": 3300,
+        "value": "Reinicie o cliente e injete a DLL atualizada: o ciclo cont"
+      },
+      {
+        "file_offset": 3359,
+        "value": "nuo exige as corre"
+      },
+      {
+        "file_offset": 3379,
+        "value": "es de leitura de mem"
+      },
+      {
+        "file_offset": 3400,
+        "value": "ria, combo e hotkeys do Target."
+      },
+      {
+        "file_offset": 3451,
+        "value": "playerId"
+      },
+      {
+        "file_offset": 3471,
+        "value": "clientPid"
+      },
+      {
+        "file_offset": 3495,
+        "value": "playerName"
+      },
+      {
+        "file_offset": 3519,
+        "value": "Nome do personagem inv"
+      },
+      {
+        "file_offset": 3542,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3559,
+        "value": "ownSummonId"
+      },
+      {
+        "file_offset": 3583,
+        "value": "fightMode"
+      },
+      {
+        "file_offset": 3607,
+        "value": "chaseMode"
+      },
+      {
+        "file_offset": 3640,
+        "value": "o ou modo de combate inv"
+      },
+      {
+        "file_offset": 3665,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3682,
+        "value": "clockMs"
+      },
+      {
+        "file_offset": 3705,
+        "value": "activeSlot"
+      },
+      {
+        "file_offset": 3720,
+        "value": "$PgfnFm"
+      },
+      {
+        "file_offset": 3731,
+        "value": "Estado nativo inv"
+      },
+      {
+        "file_offset": 3749,
+        "value": "lido."
+      },
+      {
+        "file_offset": 3775,
+        "value": "nativeSequence"
+      },
+      {
+        "file_offset": 3813,
+        "value": "ncia nativa inv"
+      },
+      {
+        "file_offset": 3829,
+        "value": "lida."
+      },
+      {
+        "file_offset": 3848,
+        "value": "pokemonName"
+      },
+      {
+        "file_offset": 3872,
+        "value": "comboPokemonName"
+      },
+      {
+        "file_offset": 3900,
+        "value": "Identidade da movebar inv"
+      },
+      {
+        "file_offset": 3926,
+        "value": "lida."
+      },
+      {
+        "file_offset": 3944,
+        "value": "conditionEvents"
+      },
+      {
+        "file_offset": 3972,
+        "value": "conditionsKnown"
+      },
+      {
+        "file_offset": 4040,
+        "value": "Zd*#:<Jh"
+      },
+      {
+        "file_offset": 4049,
+        "value": "(R'+|"
+      },
+      {
+        "file_offset": 4085,
+        "value": "^\\d{1,20}$"
+      },
+      {
+        "file_offset": 4137,
+        "value": "subId"
+      },
+      {
+        "file_offset": 4355,
+        "value": "Condi"
+      },
+      {
+        "file_offset": 4362,
+        "value": "es inv"
+      },
+      {
+        "file_offset": 4369,
+        "value": "lidas."
+      },
+      {
+        "file_offset": 4387,
+        "value": "roster"
+      },
+      {
+        "file_offset": 4433,
+        "value": "(:(Z'Zd"
+      },
+      {
+        "file_offset": 4448,
+        "value": "ZhR'b"
+      },
+      {
+        "file_offset": 4512,
+        "value": "uuidG"
+      },
+      {
+        "file_offset": 4529,
+        "value": "healthPercent"
+      },
+      {
+        "file_offset": 4769,
+        "value": "Pokebar inv"
+      },
+      {
+        "file_offset": 4781,
+        "value": "lida."
+      },
+      {
+        "file_offset": 5157,
+        "value": "Pokebar sem UUIDs "
+      },
+      {
+        "file_offset": 5176,
+        "value": "nicos."
+      },
+      {
+        "file_offset": 5197,
+        "value": "creatures"
+      },
+      {
+        "file_offset": 5249,
+        "value": "K(R(Z'Z"
+      },
+      {
+        "file_offset": 5262,
+        "value": "rhb'z"
+      },
+      {
+        "file_offset": 5291,
+        "value": "2,*+#<"
+      },
+      {
+        "file_offset": 5404,
+        "value": "shinyIcon"
+      },
+      {
+        "file_offset": 5446,
+        "value": "lookType"
+      },
+      {
+        "file_offset": 5466,
+        "value": "normalLookType"
+      },
+      {
+        "file_offset": 5484,
+        "value": "Pe.X{"
+      },
+      {
+        "file_offset": 5494,
+        "value": "shinyLookType"
+      },
+      {
+        "file_offset": 5554,
+        "value": "p*OR\\B$j#+d\""
+      },
+      {
+        "file_offset": 5742,
+        "value": "canAttack"
+      },
+      {
+        "file_offset": 6072,
+        "value": "Criaturas inv"
+      },
+      {
+        "file_offset": 6086,
+        "value": "lidas."
+      },
+      {
+        "file_offset": 6136,
+        "value": "4:4z3b"
+      },
+      {
+        "file_offset": 6155,
+        "value": "8*7#H"
+      },
+      {
+        "file_offset": 6199,
+        "value": "container"
+      },
+      {
+        "file_offset": 6425,
+        "value": "Itens inv"
+      },
+      {
+        "file_offset": 6435,
+        "value": "lidos."
+      },
+      {
+        "file_offset": 6453,
+        "value": "captureVersion"
+      },
+      {
+        "file_offset": 6481,
+        "value": "itemInspectorAvailable"
+      },
+      {
+        "file_offset": 6544,
+        "value": " :4Z3+"
+      },
+      {
+        "file_offset": 6728,
+        "value": "Identifica"
+      },
+      {
+        "file_offset": 6740,
+        "value": "o de corpos inv"
+      },
+      {
+        "file_offset": 6756,
+        "value": "lida."
+      },
+      {
+        "file_offset": 6776,
+        "value": "itemCounts"
+      },
+      {
+        "file_offset": 6829,
+        "value": ":7z3b"
+      },
+      {
+        "file_offset": 7220,
+        "value": "Contagem de itens inv"
+      },
+      {
+        "file_offset": 7242,
+        "value": "lida."
+      },
+      {
+        "file_offset": 7260,
+        "value": "inspection"
+      },
+      {
+        "file_offset": 7329,
+        "value": "creature"
+      },
+      {
+        "file_offset": 7357,
+        "value": "Inspe"
+      },
+      {
+        "file_offset": 7364,
+        "value": "o de item inv"
+      },
+      {
+        "file_offset": 7378,
+        "value": "lida."
+      },
+      {
+        "file_offset": 7402,
+        "value": "tiles"
+      },
+      {
+        "file_offset": 7455,
+        "value": "8*72p:"
+      },
+      {
+        "file_offset": 7501,
+        "value": "walkablel"
+      },
+      {
+        "file_offset": 7663,
+        "value": "Mapa inv"
+      },
+      {
+        "file_offset": 7672,
+        "value": "lido."
+      },
+      {
+        "file_offset": 7691,
+        "value": "pinnedTexts"
+      },
+      {
+        "file_offset": 7750,
+        "value": "*,*+:"
+      },
+      {
+        "file_offset": 7761,
+        "value": "*DBCZ|*@R"
+      },
+      {
+        "file_offset": 7772,
+        "value": "<*;#L\""
+      },
+      {
+        "file_offset": 7807,
+        "value": "^[0-9a-f]{1,16}(?::[0-9a-f]{1,16}){3}$"
+      },
+      {
+        "file_offset": 8274,
+        "value": "Caixas de texto do mapa inv"
+      },
+      {
+        "file_offset": 8302,
+        "value": "lidas."
+      },
+      {
+        "file_offset": 8340,
+        "value": "alertSignals"
+      },
+      {
+        "file_offset": 8364,
+        "value": "alertEvents"
+      },
+      {
+        "file_offset": 8388,
+        "value": "alertEventRevision"
+      },
+      {
+        "file_offset": 8420,
+        "value": "alertEventsDropped"
+      },
+      {
+        "file_offset": 8692,
+        "value": "gm_message"
+      },
+      {
+        "file_offset": 8716,
+        "value": "pokemon_capture"
+      },
+      {
+        "file_offset": 8744,
+        "value": "gm_arrow"
+      },
+      {
+        "file_offset": 8764,
+        "value": "camera_viewers"
+      },
+      {
+        "file_offset": 8970,
+        "value": "Sinais de alerta inv"
+      },
+      {
+        "file_offset": 8991,
+        "value": "lidos."
+      },
+      {
+        "file_offset": 9058,
+        "value": "pinned"
+      },
+      {
+        "file_offset": 9068,
+        "value": "PcF*Q"
+      },
+      {
+        "file_offset": 9078,
+        "value": "effect"
+      },
+      {
+        "file_offset": 9098,
+        "value": "viewers"
+      },
+      {
+        "file_offset": 9135,
+        "value": "(Phjj"
+      },
+      {
+        "file_offset": 9146,
+        "value": "Evento de alerta inv"
+      },
+      {
+        "file_offset": 9167,
+        "value": "lido."
+      },
+      {
+        "file_offset": 12922,
+        "value": "PezIm$"
+      },
+      {
+        "file_offset": 12932,
+        "value": "./protocol.cjs"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "lib/walker-profiles.jsc",
+    "sha256": "c2176e31714360212cead743da27095d86e1847df4ba2452971b325a6cc1d455",
+    "bytes": 13048,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 6545
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 13016
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 141,
+        "value": "*k203"
+      },
+      {
+        "file_offset": 157,
+        "value": "*{283"
+      },
+      {
+        "file_offset": 166,
+        "value": "*w2@3"
+      },
+      {
+        "file_offset": 251,
+        "value": "createHash"
+      },
+      {
+        "file_offset": 280,
+        "value": "delay"
+      },
+      {
+        "file_offset": 300,
+        "value": "importLegacy"
+      },
+      {
+        "file_offset": 324,
+        "value": "parseLuaData"
+      },
+      {
+        "file_offset": 348,
+        "value": "validateConfig"
+      },
+      {
+        "file_offset": 376,
+        "value": "MAX_BYTES"
+      },
+      {
+        "file_offset": 400,
+        "value": "isRoute"
+      },
+      {
+        "file_offset": 420,
+        "value": "revision"
+      },
+      {
+        "file_offset": 456,
+        "value": "atomicWrite"
+      },
+      {
+        "file_offset": 705,
+        "value": "[\"\\\\\\x00-\\x1f\\x7f]"
+      },
+      {
+        "file_offset": 765,
+        "value": "Z8bX:"
+      },
+      {
+        "file_offset": 1001,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 1154,
+        "value": "^wk_.+\\.lua$"
+      },
+      {
+        "file_offset": 1183,
+        "value": "[\\\\/<>:\"|?*\\x00-\\x1f]"
+      },
+      {
+        "file_offset": 1219,
+        "value": "^wk_(?:index|label_scripts)\\.lua$"
+      },
+      {
+        "file_offset": 1511,
+        "value": "sha256"
+      },
+      {
+        "file_offset": 1536,
+        "value": "digest"
+      },
+      {
+        "file_offset": 2055,
+        "value": "dep+`"
+      },
+      {
+        "file_offset": 2199,
+        "value": "2<K`*$*TZSj#"
+      },
+      {
+        "file_offset": 2256,
+        "value": "*|B<*;Jt+"
+      },
+      {
+        "file_offset": 3451,
+        "value": ">s|*X*"
+      },
+      {
+        "file_offset": 3460,
+        "value": "#l*8\"<*"
+      },
+      {
+        "file_offset": 3498,
+        "value": "PeZ161"
+      },
+      {
+        "file_offset": 3508,
+        "value": "WalkerProfiles"
+      },
+      {
+        "file_offset": 3768,
+        "value": "h*$*4R3:"
+      },
+      {
+        "file_offset": 3800,
+        "value": "2X*$*"
+      },
+      {
+        "file_offset": 3911,
+        "value": "local"
+      },
+      {
+        "file_offset": 4221,
+        "value": "Zh*7#L"
+      },
+      {
+        "file_offset": 4429,
+        "value": "(*0BH*"
+      },
+      {
+        "file_offset": 4800,
+        "value": "$B,\"#"
+      },
+      {
+        "file_offset": 5091,
+        "value": "*@j?+"
+      },
+      {
+        "file_offset": 5133,
+        "value": "pt-BR"
+      },
+      {
+        "file_offset": 5803,
+        "value": "*P3T*$*"
+      },
+      {
+        "file_offset": 5891,
+        "value": "Perfil do Walker inv"
+      },
+      {
+        "file_offset": 5912,
+        "value": "lido."
+      },
+      {
+        "file_offset": 5931,
+        "value": "readLocal"
+      },
+      {
+        "file_offset": 6324,
+        "value": "*(*';"
+      },
+      {
+        "file_offset": 6335,
+        "value": " *827"
+      },
+      {
+        "file_offset": 6389,
+        "value": "\"#+`J"
+      },
+      {
+        "file_offset": 6445,
+        "value": "R@+4R"
+      },
+      {
+        "file_offset": 6464,
+        "value": "Zp+H*,*"
+      },
+      {
+        "file_offset": 6472,
+        "value": ";D2Lb3*"
+      },
+      {
+        "file_offset": 6705,
+        "value": "O perfil precisa ser um arquivo da pasta OTPbot."
+      },
+      {
+        "file_offset": 6779,
+        "value": "O perfil do Walker excedeu 2 MB."
+      },
+      {
+        "file_offset": 6849,
+        "value": "waypoints"
+      },
+      {
+        "file_offset": 6873,
+        "value": ": lista de waypoints n"
+      },
+      {
+        "file_offset": 6896,
+        "value": "o encontrada. A rota atual foi preservada."
+      },
+      {
+        "file_offset": 8099,
+        "value": "2LR@*(*'2"
+      },
+      {
+        "file_offset": 8112,
+        "value": "*$*,R+r#"
+      },
+      {
+        "file_offset": 8124,
+        "value": "R\\*(*':|:"
+      },
+      {
+        "file_offset": 8149,
+        "value": "*\\Z[3"
+      },
+      {
+        "file_offset": 8158,
+        "value": ":D#,*"
+      },
+      {
+        "file_offset": 8171,
+        "value": "#p:ts"
+      },
+      {
+        "file_offset": 8300,
+        "value": "walker"
+      },
+      {
+        "file_offset": 8320,
+        "value": "luaProfile"
+      },
+      {
+        "file_offset": 8344,
+        "value": "luaRevision"
+      },
+      {
+        "file_offset": 8931,
+        "value": "2H*0*"
+      },
+      {
+        "file_offset": 9027,
+        "value": "warnings"
+      },
+      {
+        "file_offset": 9047,
+        "value": " qXy0"
+      },
+      {
+        "file_offset": 9306,
+        "value": "+l\"8*"
+      },
+      {
+        "file_offset": 9316,
+        "value": "ZD[D*"
+      },
+      {
+        "file_offset": 9331,
+        "value": "*$*,b+r#"
+      },
+      {
+        "file_offset": 9370,
+        "value": ":(*8*"
+      },
+      {
+        "file_offset": 9376,
+        "value": "Zt*?*x*"
+      },
+      {
+        "file_offset": 9389,
+        "value": "2LR3*"
+      },
+      {
+        "file_offset": 9402,
+        "value": "*<2;:p2"
+      },
+      {
+        "file_offset": 9480,
+        "value": "2(#0\"(*"
+      },
+      {
+        "file_offset": 9488,
+        "value": "R<+,J"
+      },
+      {
+        "file_offset": 9506,
+        "value": "*(2';x#(:h\"<2"
+      },
+      {
+        "file_offset": 9535,
+        "value": ":D#,RL\""
+      },
+      {
+        "file_offset": 9703,
+        "value": "Use um nome de perfil sem caracteres de caminho."
+      },
+      {
+        "file_offset": 9850,
+        "value": " foi alterado fora do bot. Recarregue a rota antes de salvar para preservar as altera"
+      },
+      {
+        "file_offset": 9995,
+        "value": "startNearestWaypoint"
+      },
+      {
+        "file_offset": 10027,
+        "value": "recordStepDistance"
+      },
+      {
+        "file_offset": 10075,
+        "value": "guildDailyTier"
+      },
+      {
+        "file_offset": 10103,
+        "value": "guildDailyElement"
+      },
+      {
+        "file_offset": 10135,
+        "value": "guildDailyAutoEnabled"
+      },
+      {
+        "file_offset": 10171,
+        "value": "guildDailyUseTicket"
+      },
+      {
+        "file_offset": 10203,
+        "value": "guildDailyTicketHotkey"
+      },
+      {
+        "file_offset": 10239,
+        "value": "guildDailyTicketAmount"
+      },
+      {
+        "file_offset": 10310,
+        "value": "frontLureEnabled"
+      },
+      {
+        "file_offset": 10340,
+        "value": "frontLureRegroupMargin"
+      },
+      {
+        "file_offset": 10377,
+        "value": "frontLureRegroupSteps"
+      },
+      {
+        "file_offset": 10417,
+        "value": "luring"
+      },
+      {
+        "file_offset": 10437,
+        "value": "frontEnabled"
+      },
+      {
+        "file_offset": 10464,
+        "value": "frontRegroupMargin"
+      },
+      {
+        "file_offset": 10499,
+        "value": "frontRegroupSteps"
+      },
+      {
+        "file_offset": 10534,
+        "value": "return "
+      },
+      {
+        "file_offset": 11519,
+        "value": "save`"
+      },
+      {
+        "file_offset": 11756,
+        "value": "4PkR~+.%"
+      },
+      {
+        "file_offset": 11767,
+        "value": "Valor incompat"
+      },
+      {
+        "file_offset": 11782,
+        "value": "vel com um perfil Lua."
+      },
+      {
+        "file_offset": 12182,
+        "value": "node:fs/promises"
+      },
+      {
+        "file_offset": 12210,
+        "value": "node:path"
+      },
+      {
+        "file_offset": 12234,
+        "value": "node:crypto"
+      },
+      {
+        "file_offset": 12254,
+        "value": " Pf.i"
+      },
+      {
+        "file_offset": 12265,
+        "value": "node:timers/promises"
+      },
+      {
+        "file_offset": 12302,
+        "value": "./legacy.cjs"
+      },
+      {
+        "file_offset": 12330,
+        "value": "./settings.cjs"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  },
+  {
+    "file": "main.jsc",
+    "sha256": "6fffeefd17a73bce9842ffa5be750b2507215798fbafb3f4f215864ce6f99d02",
+    "bytes": 64888,
+    "header": [
+      {
+        "offset": 0,
+        "uint32_le": 3235776207
+      },
+      {
+        "offset": 4,
+        "uint32_le": 2417348686
+      },
+      {
+        "offset": 8,
+        "uint32_le": 36733
+      },
+      {
+        "offset": 12,
+        "uint32_le": 3672566251
+      },
+      {
+        "offset": 16,
+        "uint32_le": 48185449
+      },
+      {
+        "offset": 20,
+        "uint32_le": 64856
+      },
+      {
+        "offset": 24,
+        "uint32_le": 0
+      }
+    ],
+    "string_extraction": "ASCII byte runs; not a decoded V8 string table",
+    "strings": [
+      {
+        "file_offset": 135,
+        "value": "2<2$2(2"
+      },
+      {
+        "file_offset": 147,
+        "value": "2@28*42,3"
+      },
+      {
+        "file_offset": 212,
+        "value": "2<2@242<282P3"
+      },
+      {
+        "file_offset": 249,
+        "value": "20242(3"
+      },
+      {
+        "file_offset": 284,
+        "value": "2<*8+"
+      },
+      {
+        "file_offset": 314,
+        "value": "2[* 3"
+      },
+      {
+        "file_offset": 330,
+        "value": "2$* 2C:h"
+      },
+      {
+        "file_offset": 348,
+        "value": "zx2<R"
+      },
+      {
+        "file_offset": 364,
+        "value": "+`\" 3"
+      },
+      {
+        "file_offset": 395,
+        "value": "* 2s2"
+      },
+      {
+        "file_offset": 406,
+        "value": "2@* 2"
+      },
+      {
+        "file_offset": 442,
+        "value": "* RS*"
+      },
+      {
+        "file_offset": 451,
+        "value": "\"LbK+"
+      },
+      {
+        "file_offset": 460,
+        "value": "rp2o3"
+      },
+      {
+        "file_offset": 469,
+        "value": "r|2{3"
+      },
+      {
+        "file_offset": 581,
+        "value": "\"8* 2W\""
+      },
+      {
+        "file_offset": 754,
+        "value": "\"0Jdb"
+      },
+      {
+        "file_offset": 972,
+        "value": "everAttached`"
+      },
+      {
+        "file_offset": 1003,
+        "value": "quitting`"
+      },
+      {
+        "file_offset": 1030,
+        "value": "changed"
+      },
+      {
+        "file_offset": 1057,
+        "value": "maps`h"
+      },
+      {
+        "file_offset": 1080,
+        "value": "uint32"
+      },
+      {
+        "file_offset": 1105,
+        "value": "security`f"
+      },
+      {
+        "file_offset": 1120,
+        "value": "PdNx_~"
+      },
+      {
+        "file_offset": 1130,
+        "value": "FileBridge"
+      },
+      {
+        "file_offset": 1161,
+        "value": "showLook`"
+      },
+      {
+        "file_offset": 1176,
+        "value": "PdZ,$"
+      },
+      {
+        "file_offset": 1186,
+        "value": "checkProfile`"
+      },
+      {
+        "file_offset": 1206,
+        "value": " Pfbl"
+      },
+      {
+        "file_offset": 1217,
+        "value": "pauseAudioPending"
+      },
+      {
+        "file_offset": 1256,
+        "value": "closeHintShown"
+      },
+      {
+        "file_offset": 1281,
+        "value": "Pcr@o["
+      },
+      {
+        "file_offset": 1291,
+        "value": "gmMerge"
+      },
+      {
+        "file_offset": 1318,
+        "value": "SettingsStore"
+      },
+      {
+        "file_offset": 1351,
+        "value": "characterDirectory"
+      },
+      {
+        "file_offset": 1390,
+        "value": "MAX_BYTES"
+      },
+      {
+        "file_offset": 1419,
+        "value": "shortcutProblem"
+      },
+      {
+        "file_offset": 1454,
+        "value": "shortcutTools"
+      },
+      {
+        "file_offset": 1487,
+        "value": "presentLook"
+      },
+      {
+        "file_offset": 1526,
+        "value": "bridge"
+      },
+      {
+        "file_offset": 1551,
+        "value": "walkerProfiles"
+      },
+      {
+        "file_offset": 1599,
+        "value": "clipboard"
+      },
+      {
+        "file_offset": 1630,
+        "value": "channelKey"
+      },
+      {
+        "file_offset": 1661,
+        "value": "runtimeRevision"
+      },
+      {
+        "file_offset": 1696,
+        "value": "profileName"
+      },
+      {
+        "file_offset": 1727,
+        "value": "clientRunning"
+      },
+      {
+        "file_offset": 1760,
+        "value": "dialog"
+      },
+      {
+        "file_offset": 1787,
+        "value": "routeProblem`"
+      },
+      {
+        "file_offset": 1816,
+        "value": "nativeStoppedForQuit`"
+      },
+      {
+        "file_offset": 1845,
+        "value": "PdB!>"
+      },
+      {
+        "file_offset": 1855,
+        "value": "applyRetryAt`"
+      },
+      {
+        "file_offset": 1884,
+        "value": "routeSignatures"
+      },
+      {
+        "file_offset": 1919,
+        "value": "togglePause"
+      },
+      {
+        "file_offset": 1940,
+        "value": "PeZ161"
+      },
+      {
+        "file_offset": 1950,
+        "value": "WalkerProfiles"
+      },
+      {
+        "file_offset": 1983,
+        "value": "window"
+      },
+      {
+        "file_offset": 2000,
+        "value": "PdjU]"
+      },
+      {
+        "file_offset": 2010,
+        "value": "lookReady"
+      },
+      {
+        "file_offset": 2051,
+        "value": "requestedCharacter"
+      },
+      {
+        "file_offset": 2088,
+        "value": "shortcutActive"
+      },
+      {
+        "file_offset": 2121,
+        "value": "syncAudioState"
+      },
+      {
+        "file_offset": 2156,
+        "value": "queueApply"
+      },
+      {
+        "file_offset": 2188,
+        "value": "menuKey"
+      },
+      {
+        "file_offset": 2215,
+        "value": "lookWindow"
+      },
+      {
+        "file_offset": 2246,
+        "value": "profileContext"
+      },
+      {
+        "file_offset": 2279,
+        "value": "screen"
+      },
+      {
+        "file_offset": 2306,
+        "value": "refreshScopedShortcuts"
+      },
+      {
+        "file_offset": 2359,
+        "value": "pausePending`v"
+      },
+      {
+        "file_offset": 2398,
+        "value": "withRoutes"
+      },
+      {
+        "file_offset": 2427,
+        "value": "profileError`\\"
+      },
+      {
+        "file_offset": 2468,
+        "value": "importLegacy`."
+      },
+      {
+        "file_offset": 2497,
+        "value": "attachedPids`"
+      },
+      {
+        "file_offset": 2526,
+        "value": "profileActions"
+      },
+      {
+        "file_offset": 2559,
+        "value": "pendingApply`"
+      },
+      {
+        "file_offset": 2599,
+        "value": "snapshot`"
+      },
+      {
+        "file_offset": 2626,
+        "value": "soundAssets"
+      },
+      {
+        "file_offset": 2657,
+        "value": "resumeMenu"
+      },
+      {
+        "file_offset": 2686,
+        "value": "characterKey`("
+      },
+      {
+        "file_offset": 2715,
+        "value": "currentConfig"
+      },
+      {
+        "file_offset": 2740,
+        "value": "PdVR+"
+      },
+      {
+        "file_offset": 2750,
+        "value": "showWindow"
+      },
+      {
+        "file_offset": 2769,
+        "value": "PeZb,"
+      },
+      {
+        "file_offset": 2779,
+        "value": "profileCharacter`T"
+      },
+      {
+        "file_offset": 2814,
+        "value": "snapshotPublisher"
+      },
+      {
+        "file_offset": 2851,
+        "value": "NativeRuntime"
+      },
+      {
+        "file_offset": 2886,
+        "value": "launchRequest"
+      },
+      {
+        "file_offset": 2921,
+        "value": "identifyCharacter"
+      },
+      {
+        "file_offset": 2960,
+        "value": "clientWatch"
+      },
+      {
+        "file_offset": 2991,
+        "value": "MenuView`"
+      },
+      {
+        "file_offset": 3016,
+        "value": "publishSnapshot"
+      },
+      {
+        "file_offset": 3049,
+        "value": "hiddenByClose"
+      },
+      {
+        "file_offset": 3082,
+        "value": "startupError`l"
+      },
+      {
+        "file_offset": 3111,
+        "value": "updateShortcuts"
+      },
+      {
+        "file_offset": 3146,
+        "value": "globalShortcut"
+      },
+      {
+        "file_offset": 3179,
+        "value": "launchClient`j"
+      },
+      {
+        "file_offset": 3210,
+        "value": "runtime"
+      },
+      {
+        "file_offset": 3237,
+        "value": "BrowserWindow"
+      },
+      {
+        "file_offset": 3270,
+        "value": "windowName"
+      },
+      {
+        "file_offset": 3301,
+        "value": "characterName"
+      },
+      {
+        "file_offset": 3334,
+        "value": "serialize"
+      },
+      {
+        "file_offset": 3365,
+        "value": "lookData`"
+      },
+      {
+        "file_offset": 3390,
+        "value": "flushApply"
+      },
+      {
+        "file_offset": 3419,
+        "value": "hotkeys"
+      },
+      {
+        "file_offset": 3434,
+        "value": "Pd&W;k"
+      },
+      {
+        "file_offset": 3444,
+        "value": "applyProblem`"
+      },
+      {
+        "file_offset": 3473,
+        "value": "attachClient`"
+      },
+      {
+        "file_offset": 3504,
+        "value": "closingForClients"
+      },
+      {
+        "file_offset": 3533,
+        "value": "Pd>Cx+"
+      },
+      {
+        "file_offset": 3543,
+        "value": "profileReady`Z"
+      },
+      {
+        "file_offset": 3572,
+        "value": "applying`"
+      },
+      {
+        "file_offset": 3607,
+        "value": "ipcMain"
+      },
+      {
+        "file_offset": 3634,
+        "value": "routeSignature"
+      },
+      {
+        "file_offset": 3667,
+        "value": "validateConfig"
+      },
+      {
+        "file_offset": 3702,
+        "value": "alerts"
+      },
+      {
+        "file_offset": 3747,
+        "value": "supportReason"
+      },
+      {
+        "file_offset": 3782,
+        "value": "audioStateSignature"
+      },
+      {
+        "file_offset": 3821,
+        "value": "clientsGoneSince`"
+      },
+      {
+        "file_offset": 3863,
+        "value": "notice"
+      },
+      {
+        "file_offset": 3890,
+        "value": "Notification`"
+      },
+      {
+        "file_offset": 3919,
+        "value": "virtualKey"
+      },
+      {
+        "file_offset": 3948,
+        "value": "performanceMode"
+      },
+      {
+        "file_offset": 3983,
+        "value": "gmRecord`6"
+      },
+      {
+        "file_offset": 4008,
+        "value": "executionConfig"
+      },
+      {
+        "file_offset": 4053,
+        "value": "userMessage"
+      },
+      {
+        "file_offset": 4082,
+        "value": "soundAsset"
+      },
+      {
+        "file_offset": 4111,
+        "value": "settingsQueue"
+      },
+      {
+        "file_offset": 4144,
+        "value": "watchClients`"
+      },
+      {
+        "file_offset": 4173,
+        "value": "shortcutPolling"
+      },
+      {
+        "file_offset": 4702,
+        "value": " *<JP\"/*H\""
+      },
+      {
+        "file_offset": 4729,
+        "value": ";@*4*"
+      },
+      {
+        "file_offset": 4735,
+        "value": "+(\"4;(\""
+      },
+      {
+        "file_offset": 4792,
+        "value": "isAlive"
+      },
+      {
+        "file_offset": 5021,
+        "value": "evalmachine.<anonymous>"
+      },
+      {
+        "file_offset": 5168,
+        "value": "pauseAll"
+      },
+      {
+        "file_offset": 5193,
+        "value": "o indispon"
+      },
+      {
+        "file_offset": 5443,
+        "value": "detected`"
+      },
+      {
+        "file_offset": 5592,
+        "value": "quitf"
+      },
+      {
+        "file_offset": 5668,
+        "value": "reported`"
+      },
+      {
+        "file_offset": 6344,
+        "value": "\"<* CX\""
+      },
+      {
+        "file_offset": 6377,
+        "value": "tools"
+      },
+      {
+        "file_offset": 6397,
+        "value": "menuHotkey"
+      },
+      {
+        "file_offset": 6421,
+        "value": "Insert"
+      },
+      {
+        "file_offset": 6681,
+        "value": "isMinimized"
+      },
+      {
+        "file_offset": 6705,
+        "value": "restore"
+      },
+      {
+        "file_offset": 6741,
+        "value": "focus"
+      },
+      {
+        "file_offset": 6998,
+        "value": " Bd:D*"
+      },
+      {
+        "file_offset": 7068,
+        "value": "suspend"
+      },
+      {
+        "file_offset": 7331,
+        "value": "B #0\"D3"
+      },
+      {
+        "file_offset": 7499,
+        "value": "pka:closing"
+      },
+      {
+        "file_offset": 8163,
+        "value": "BH24#,"
+      },
+      {
+        "file_offset": 8174,
+        "value": ",*0RX"
+      },
+      {
+        "file_offset": 8236,
+        "value": "webContents"
+      },
+      {
+        "file_offset": 8265,
+        "value": "pka-look:show"
+      },
+      {
+        "file_offset": 8293,
+        "value": "showInactive"
+      },
+      {
+        "file_offset": 8317,
+        "value": "moveTop"
+      },
+      {
+        "file_offset": 8567,
+        "value": "h+8+4*"
+      },
+      {
+        "file_offset": 8582,
+        "value": "2t+t:"
+      },
+      {
+        "file_offset": 8602,
+        "value": "*$*$\""
+      },
+      {
+        "file_offset": 8637,
+        "value": "*$*$\""
+      },
+      {
+        "file_offset": 8663,
+        "value": "$3,Jx*"
+      },
+      {
+        "file_offset": 8675,
+        "value": "28*8*H*P*P*x*P*L2\\2H\""
+      },
+      {
+        "file_offset": 8743,
+        "value": "*$BH*G+"
+      },
+      {
+        "file_offset": 8827,
+        "value": "getCursorScreenPoint"
+      },
+      {
+        "file_offset": 8859,
+        "value": "getDisplayNearestPoint"
+      },
+      {
+        "file_offset": 8895,
+        "value": "workArea"
+      },
+      {
+        "file_offset": 8940,
+        "value": "height"
+      },
+      {
+        "file_offset": 9023,
+        "value": "minimizable"
+      },
+      {
+        "file_offset": 9047,
+        "value": "maximizable"
+      },
+      {
+        "file_offset": 9071,
+        "value": "fullscreenable"
+      },
+      {
+        "file_offset": 9099,
+        "value": "skipTaskbar"
+      },
+      {
+        "file_offset": 9123,
+        "value": "alwaysOnTop"
+      },
+      {
+        "file_offset": 9147,
+        "value": "#1c1e22"
+      },
+      {
+        "file_offset": 9167,
+        "value": "backgroundColor"
+      },
+      {
+        "file_offset": 9195,
+        "value": "ID do item"
+      },
+      {
+        "file_offset": 9219,
+        "value": "title"
+      },
+      {
+        "file_offset": 9257,
+        "value": "preload"
+      },
+      {
+        "file_offset": 9279,
+        "value": "nodeIntegration"
+      },
+      {
+        "file_offset": 9298,
+        "value": "PeNV^P"
+      },
+      {
+        "file_offset": 9308,
+        "value": "contextIsolationC"
+      },
+      {
+        "file_offset": 9337,
+        "value": "sandbox"
+      },
+      {
+        "file_offset": 9358,
+        "value": "devTools"
+      },
+      {
+        "file_offset": 9368,
+        "value": " PfRL"
+      },
+      {
+        "file_offset": 9379,
+        "value": "backgroundThrottlingD"
+      },
+      {
+        "file_offset": 9421,
+        "value": "look-preload.cjs"
+      },
+      {
+        "file_offset": 9454,
+        "value": "isPackaged"
+      },
+      {
+        "file_offset": 9481,
+        "value": "webPreferences"
+      },
+      {
+        "file_offset": 9509,
+        "value": "setAlwaysOnTop"
+      },
+      {
+        "file_offset": 9537,
+        "value": "screen-saver"
+      },
+      {
+        "file_offset": 9564,
+        "value": "setWindowOpenHandler"
+      },
+      {
+        "file_offset": 9671,
+        "value": "action"
+      },
+      {
+        "file_offset": 9691,
+        "value": "denyd"
+      },
+      {
+        "file_offset": 9823,
+        "value": "will-navigate"
+      },
+      {
+        "file_offset": 10034,
+        "value": "attach"
+      },
+      {
+        "file_offset": 10088,
+        "value": " \",3 \"(;$"
+      },
+      {
+        "file_offset": 10242,
+        "value": "did-finish-load"
+      },
+      {
+        "file_offset": 10297,
+        "value": " \"(3 "
+      },
+      {
+        "file_offset": 10460,
+        "value": "loadURL"
+      },
+      {
+        "file_offset": 10469,
+        "value": " Pf2&%"
+      },
+      {
+        "file_offset": 10480,
+        "value": "pka://app/look.html"
+      },
+      {
+        "file_offset": 10665,
+        "value": "setBounds"
+      },
+      {
+        "file_offset": 11521,
+        "value": "b\\bTj4*"
+      },
+      {
+        "file_offset": 11620,
+        "value": "walker"
+      },
+      {
+        "file_offset": 11641,
+        "value": "luaRevision"
+      },
+      {
+        "file_offset": 11668,
+        "value": "luring"
+      },
+      {
+        "file_offset": 11688,
+        "value": "frontEnabled"
+      },
+      {
+        "file_offset": 11712,
+        "value": "frontRegroupMargin"
+      },
+      {
+        "file_offset": 11744,
+        "value": "frontRegroupSteps"
+      },
+      {
+        "file_offset": 12266,
+        "value": "{prxZl\"0\""
+      },
+      {
+        "file_offset": 12318,
+        "value": "pka:notice"
+      },
+      {
+        "file_offset": 12473,
+        "value": "dep+ "
+      },
+      {
+        "file_offset": 12608,
+        "value": "@b<b{+"
+      },
+      {
+        "file_offset": 12627,
+        "value": "*(K028"
+      },
+      {
+        "file_offset": 12634,
+        "value": "4jh\"g+"
+      },
+      {
+        "file_offset": 12668,
+        "value": "4*,R+j3"
+      },
+      {
+        "file_offset": 12764,
+        "value": "alert"
+      },
+      {
+        "file_offset": 12808,
+        "value": "pka:alert-sound"
+      },
+      {
+        "file_offset": 12854,
+        "value": "asset"
+      },
+      {
+        "file_offset": 12879,
+        "value": "isSupported"
+      },
+      {
+        "file_offset": 12929,
+        "value": "silent"
+      },
+      {
+        "file_offset": 13951,
+        "value": "isVisible"
+      },
+      {
+        "file_offset": 13975,
+        "value": "isFocused"
+      },
+      {
+        "file_offset": 13999,
+        "value": "hidep"
+      },
+      {
+        "file_offset": 14248,
+        "value": "menu`"
+      },
+      {
+        "file_offset": 14359,
+        "value": "*<\"<* *"
+      },
+      {
+        "file_offset": 14411,
+        "value": "pauseHotkey"
+      },
+      {
+        "file_offset": 14496,
+        "value": "Comando > Pausar/retomar: "
+      },
+      {
+        "file_offset": 14869,
+        "value": "#D3H* :"
+      },
+      {
+        "file_offset": 14901,
+        "value": "2LB,*+;P"
+      },
+      {
+        "file_offset": 14913,
+        "value": "Rl\"#+DR4B3+x"
+      },
+      {
+        "file_offset": 15041,
+        "value": "indispon"
+      },
+      {
+        "file_offset": 15400,
+        "value": "B<#$K4"
+      },
+      {
+        "file_offset": 15415,
+        "value": "<;x*$B"
+      },
+      {
+        "file_offset": 15472,
+        "value": "Kd:L3"
+      },
+      {
+        "file_offset": 15479,
+        "value": "H30;L283("
+      },
+      {
+        "file_offset": 15599,
+        "value": "sessions"
+      },
+      {
+        "file_offset": 15625,
+        "value": "automation"
+      },
+      {
+        "file_offset": 15787,
+        "value": "Pb>'C"
+      },
+      {
+        "file_offset": 15816,
+        "value": "foreground"
+      },
+      {
+        "file_offset": 16380,
+        "value": "0;P2 "
+      },
+      {
+        "file_offset": 16386,
+        "value": " 3h*8B"
+      },
+      {
+        "file_offset": 16425,
+        "value": "z\\:@*"
+      },
+      {
+        "file_offset": 16444,
+        "value": "$\"D3l* *"
+      },
+      {
+        "file_offset": 16471,
+        "value": "0k\\J0j"
+      },
+      {
+        "file_offset": 16515,
+        "value": "*8jL*$Z"
+      },
+      {
+        "file_offset": 16545,
+        "value": "*(3 B"
+      },
+      {
+        "file_offset": 16819,
+        "value": "pauseKeyDown"
+      },
+      {
+        "file_offset": 16860,
+        "value": "$PgFA"
+      },
+      {
+        "file_offset": 16873,
+        "value": "dulos do bot pausados."
+      },
+      {
+        "file_offset": 17018,
+        "value": "online"
+      },
+      {
+        "file_offset": 17028,
+        "value": "Pc~.xT"
+      },
+      {
+        "file_offset": 17038,
+        "value": "stale"
+      },
+      {
+        "file_offset": 17177,
+        "value": "Selecione um cliente conectado."
+      },
+      {
+        "file_offset": 17223,
+        "value": "verify"
+      },
+      {
+        "file_offset": 17433,
+        "value": "dulos do bot retomados."
+      },
+      {
+        "file_offset": 18430,
+        "value": "$B8:,"
+      },
+      {
+        "file_offset": 18441,
+        "value": "@2H\"hZ4B<B4Bx28C<"
+      },
+      {
+        "file_offset": 18525,
+        "value": "Pc2:6"
+      },
+      {
+        "file_offset": 18535,
+        "value": "Pausado"
+      },
+      {
+        "file_offset": 18580,
+        "value": "clientPid"
+      },
+      {
+        "file_offset": 18605,
+        "value": "monitor"
+      },
+      {
+        "file_offset": 18628,
+        "value": "audioPaused"
+      },
+      {
+        "file_offset": 18716,
+        "value": "armed"
+      },
+      {
+        "file_offset": 19102,
+        "value": "cp: Zd"
+      },
+      {
+        "file_offset": 19202,
+        "value": "runtimePaused"
+      },
+      {
+        "file_offset": 19231,
+        "value": "monitorEnabled"
+      },
+      {
+        "file_offset": 19297,
+        "value": "pka:alert-state"
+      },
+      {
+        "file_offset": 19872,
+        "value": "Aguarde o perfil do nick atual: o personagem mudou."
+      },
+      {
+        "file_offset": 20101,
+        "value": "kP: R8R7;"
+      },
+      {
+        "file_offset": 20254,
+        "value": "BTRH\"+*"
+      },
+      {
+        "file_offset": 20312,
+        "value": "XcpB@2HBGB'*"
+      },
+      {
+        "file_offset": 20393,
+        "value": "dep, "
+      },
+      {
+        "file_offset": 20452,
+        "value": "sender"
+      },
+      {
+        "file_offset": 20475,
+        "value": "senderFrame"
+      },
+      {
+        "file_offset": 20492,
+        "value": " PfbQ"
+      },
+      {
+        "file_offset": 20503,
+        "value": "pka://app/index.html"
+      },
+      {
+        "file_offset": 20538,
+        "value": "Origem IPC inv"
+      },
+      {
+        "file_offset": 20553,
+        "value": "lida."
+      },
+      {
+        "file_offset": 20664,
+        "value": "\"4b8B7:"
+      },
+      {
+        "file_offset": 20673,
+        "value": "JDBDB "
+      },
+      {
+        "file_offset": 20747,
+        "value": "profiles"
+      },
+      {
+        "file_offset": 21694,
+        "value": " BD#4J"
+      },
+      {
+        "file_offset": 21758,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 21769,
+        "value": "vel carregar os perfis: "
+      },
+      {
+        "file_offset": 21811,
+        "value": "Aguarde a identifica"
+      },
+      {
+        "file_offset": 21833,
+        "value": "o do personagem para carregar e salvar os perfis."
+      },
+      {
+        "file_offset": 22090,
+        "value": "[l:\\R"
+      },
+      {
+        "file_offset": 22103,
+        "value": "B4BX2"
+      },
+      {
+        "file_offset": 22128,
+        "value": ":0CXB"
+      },
+      {
+        "file_offset": 22535,
+        "value": "ZHBG3"
+      },
+      {
+        "file_offset": 22577,
+        "value": ":(+HK"
+      },
+      {
+        "file_offset": 22637,
+        "value": ":(+HK"
+      },
+      {
+        "file_offset": 22652,
+        "value": "`R`:L2"
+      },
+      {
+        "file_offset": 22753,
+        "value": "Personagem alterado"
+      },
+      {
+        "file_offset": 22851,
+        "value": "routes"
+      },
+      {
+        "file_offset": 22881,
+        "value": "pka:settings"
+      },
+      {
+        "file_offset": 23769,
+        "value": ":|BGR"
+      },
+      {
+        "file_offset": 23778,
+        "value": "20C4b"
+      },
+      {
+        "file_offset": 23845,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 23856,
+        "value": "vel carregar os perfis de "
+      },
+      {
+        "file_offset": 24481,
+        "value": "\"@3,\"83,:4B"
+      },
+      {
+        "file_offset": 24590,
+        "value": "Perfil alterado"
+      },
+      {
+        "file_offset": 24961,
+        "value": "*x*<*;;T"
+      },
+      {
+        "file_offset": 24974,
+        "value": "*dBG+"
+      },
+      {
+        "file_offset": 25006,
+        "value": "dPw&fp"
+      },
+      {
+        "file_offset": 25019,
+        "value": "o existe o arquivo da rota selecionada. Abra Walker e carregue uma rota dispon"
+      },
+      {
+        "file_offset": 25157,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 25168,
+        "value": "vel ler a rota porque o arquivo est"
+      },
+      {
+        "file_offset": 25204,
+        "value": " bloqueado. Aguarde e carregue novamente no Walker."
+      },
+      {
+        "file_offset": 25501,
+        "value": "X\"<*@2?"
+      },
+      {
+        "file_offset": 25521,
+        "value": "*@*0B"
+      },
+      {
+        "file_offset": 25527,
+        "value": "\"\\2[2C"
+      },
+      {
+        "file_offset": 25660,
+        "value": "routeWarnings"
+      },
+      {
+        "file_offset": 25707,
+        "value": "luaProfile"
+      },
+      {
+        "file_offset": 26416,
+        "value": "03 \"03"
+      },
+      {
+        "file_offset": 26623,
+        "value": "C BL28\"(\""
+      },
+      {
+        "file_offset": 26649,
+        "value": "C<:,J8* 28B$"
+      },
+      {
+        "file_offset": 26663,
+        "value": "3 \"03"
+      },
+      {
+        "file_offset": 26672,
+        "value": "H+4\" sT*8*"
+      },
+      {
+        "file_offset": 26705,
+        "value": "#|*03"
+      },
+      {
+        "file_offset": 26723,
+        "value": "R+C\\R`\"#+H"
+      },
+      {
+        "file_offset": 26742,
+        "value": "2HBGj"
+      },
+      {
+        "file_offset": 26890,
+        "value": "configure"
+      },
+      {
+        "file_offset": 26969,
+        "value": "Configura"
+      },
+      {
+        "file_offset": 26980,
+        "value": "o salva; ela ser"
+      },
+      {
+        "file_offset": 26997,
+        "value": " aplicada assim que o cliente responder. "
+      },
+      {
+        "file_offset": 27676,
+        "value": "0j0ZD\"/+@"
+      },
+      {
+        "file_offset": 27700,
+        "value": "RT\" *"
+      },
+      {
+        "file_offset": 27746,
+        "value": "H:\\*@\"/+D"
+      },
+      {
+        "file_offset": 27768,
+        "value": ",J@*@\"/+D"
+      },
+      {
+        "file_offset": 27830,
+        "value": "relaunch"
+      },
+      {
+        "file_offset": 27950,
+        "value": "--client-pid="
+      },
+      {
+        "file_offset": 28108,
+        "value": "Cliente selecionado pelo loader"
+      },
+      {
+        "file_offset": 28186,
+        "value": "4B3+x\""
+      },
+      {
+        "file_offset": 28384,
+        "value": "4B3+x\""
+      },
+      {
+        "file_offset": 29305,
+        "value": "`R`R`b 2"
+      },
+      {
+        "file_offset": 29483,
+        "value": "*$R8*7+"
+      },
+      {
+        "file_offset": 29504,
+        "value": "*0J r"
+      },
+      {
+        "file_offset": 29662,
+        "value": "3`bdbcC"
+      },
+      {
+        "file_offset": 29827,
+        "value": "rendererFailures"
+      },
+      {
+        "file_offset": 29855,
+        "value": "rendererFailureAt"
+      },
+      {
+        "file_offset": 30043,
+        "value": "/index.html"
+      },
+      {
+        "file_offset": 30077,
+        "value": "renderer"
+      },
+      {
+        "file_offset": 30097,
+        "value": "index.html"
+      },
+      {
+        "file_offset": 30137,
+        "value": "/app.js"
+      },
+      {
+        "file_offset": 30162,
+        "value": "app.js"
+      },
+      {
+        "file_offset": 30198,
+        "value": "/style.css"
+      },
+      {
+        "file_offset": 30227,
+        "value": "style.css"
+      },
+      {
+        "file_offset": 30267,
+        "value": "/schema.js"
+      },
+      {
+        "file_offset": 30299,
+        "value": "schema.js"
+      },
+      {
+        "file_offset": 30339,
+        "value": "/messages.js`"
+      },
+      {
+        "file_offset": 30368,
+        "value": "messages.js"
+      },
+      {
+        "file_offset": 30408,
+        "value": "/diagnostics.js"
+      },
+      {
+        "file_offset": 30441,
+        "value": "diagnostics.js"
+      },
+      {
+        "file_offset": 30485,
+        "value": "/target.js"
+      },
+      {
+        "file_offset": 30514,
+        "value": "target.js"
+      },
+      {
+        "file_offset": 30554,
+        "value": "/walker.js"
+      },
+      {
+        "file_offset": 30583,
+        "value": "walker.js"
+      },
+      {
+        "file_offset": 30623,
+        "value": "/guild-daily.js"
+      },
+      {
+        "file_offset": 30656,
+        "value": "guild-daily.js"
+      },
+      {
+        "file_offset": 30700,
+        "value": "/looting.js"
+      },
+      {
+        "file_offset": 30729,
+        "value": "looting.js"
+      },
+      {
+        "file_offset": 30759,
+        "value": "Per,5J"
+      },
+      {
+        "file_offset": 30769,
+        "value": "/walker-model.js`"
+      },
+      {
+        "file_offset": 30818,
+        "value": "/hoenn-model.js"
+      },
+      {
+        "file_offset": 30851,
+        "value": "hoenn.js"
+      },
+      {
+        "file_offset": 30887,
+        "value": "/alerts-model.js`"
+      },
+      {
+        "file_offset": 30910,
+        "value": "PdZ'+"
+      },
+      {
+        "file_offset": 30920,
+        "value": "alerts.js"
+      },
+      {
+        "file_offset": 30960,
+        "value": "/healer-model.js`"
+      },
+      {
+        "file_offset": 30993,
+        "value": "healer.js"
+      },
+      {
+        "file_offset": 31033,
+        "value": "/ui.js"
+      },
+      {
+        "file_offset": 31058,
+        "value": "ui.js"
+      },
+      {
+        "file_offset": 31094,
+        "value": "/scripts.js"
+      },
+      {
+        "file_offset": 31123,
+        "value": "scripts.js"
+      },
+      {
+        "file_offset": 31163,
+        "value": "/hoenn.js"
+      },
+      {
+        "file_offset": 31208,
+        "value": "/alerts.js"
+      },
+      {
+        "file_offset": 31253,
+        "value": "/alert-audio.js"
+      },
+      {
+        "file_offset": 31286,
+        "value": "alert-audio.js"
+      },
+      {
+        "file_offset": 31330,
+        "value": "/healer.js"
+      },
+      {
+        "file_offset": 31375,
+        "value": "/look.html"
+      },
+      {
+        "file_offset": 31404,
+        "value": "look.html"
+      },
+      {
+        "file_offset": 31444,
+        "value": "/look.js`"
+      },
+      {
+        "file_offset": 31469,
+        "value": "look.js"
+      },
+      {
+        "file_offset": 31505,
+        "value": "/look.css"
+      },
+      {
+        "file_offset": 31524,
+        "value": "Pc^R,?"
+      },
+      {
+        "file_offset": 31534,
+        "value": "look.css"
+      },
+      {
+        "file_offset": 31566,
+        "value": "/alerts-audio/"
+      },
+      {
+        "file_offset": 31594,
+        "value": "assets"
+      },
+      {
+        "file_offset": 31672,
+        "value": "\"@:?3"
+      },
+      {
+        "file_offset": 31681,
+        "value": "BL* *"
+      },
+      {
+        "file_offset": 31702,
+        "value": "*\\*sj'"
+      },
+      {
+        "file_offset": 31712,
+        "value": "\"T:S3"
+      },
+      {
+        "file_offset": 31741,
+        "value": "\"tRXR"
+      },
+      {
+        "file_offset": 31834,
+        "value": "Not found"
+      },
+      {
+        "file_offset": 31901,
+        "value": "headers"
+      },
+      {
+        "file_offset": 31932,
+        "value": "Content-Type"
+      },
+      {
+        "file_offset": 31977,
+        "value": "audio/wav"
+      },
+      {
+        "file_offset": 32001,
+        "value": "audio/mpeg"
+      },
+      {
+        "file_offset": 32025,
+        "value": "Cache-Control"
+      },
+      {
+        "file_offset": 32053,
+        "value": "no-store"
+      },
+      {
+        "file_offset": 32590,
+        "value": "lPyRw"
+      },
+      {
+        "file_offset": 32601,
+        "value": "Arquivo de perfis cont"
+      },
+      {
+        "file_offset": 32624,
+        "value": "m JSON inv"
+      },
+      {
+        "file_offset": 32635,
+        "value": "lido. Corrija o arquivo ou restaure sua c"
+      },
+      {
+        "file_offset": 32677,
+        "value": "pia de seguran"
+      },
+      {
+        "file_offset": 32816,
+        "value": "pka:snapshotf"
+      },
+      {
+        "file_offset": 33000,
+        "value": "#T*H*"
+      },
+      {
+        "file_offset": 33172,
+        "value": "gm-message"
+      },
+      {
+        "file_offset": 33240,
+        "value": "\\ZhJ4R4\"'+8"
+      },
+      {
+        "file_offset": 33361,
+        "value": "activeProfile"
+      },
+      {
+        "file_offset": 33425,
+        "value": "CPjdRd*"
+      },
+      {
+        "file_offset": 33433,
+        "value": "*(:8+ K"
+      },
+      {
+        "file_offset": 33442,
+        "value": "\\J@\"?+"
+      },
+      {
+        "file_offset": 33450,
+        "value": "*PB?;xK"
+      },
+      {
+        "file_offset": 33463,
+        "value": ",*0j(*'r/"
+      },
+      {
+        "file_offset": 33477,
+        "value": "<#H*(3"
+      },
+      {
+        "file_offset": 33596,
+        "value": "pka:gm-profiles"
+      },
+      {
+        "file_offset": 34126,
+        "value": "*(:,K$*4J"
+      },
+      {
+        "file_offset": 34182,
+        "value": "gmLearning"
+      },
+      {
+        "file_offset": 34342,
+        "value": " PfnB>;"
+      },
+      {
+        "file_offset": 34353,
+        "value": "Mensagens de GM: "
+      },
+      {
+        "file_offset": 35009,
+        "value": "*T*S\""
+      },
+      {
+        "file_offset": 35044,
+        "value": "r0\"<*"
+      },
+      {
+        "file_offset": 35836,
+        "value": "minWidth`"
+      },
+      {
+        "file_offset": 35861,
+        "value": "minHeight"
+      },
+      {
+        "file_offset": 35891,
+        "value": "PeBT\"d"
+      },
+      {
+        "file_offset": 35901,
+        "value": "titleBarStyle"
+      },
+      {
+        "file_offset": 35934,
+        "value": "titleBarOverlay"
+      },
+      {
+        "file_offset": 35983,
+        "value": "#0e1016"
+      },
+      {
+        "file_offset": 36003,
+        "value": "symbolColor"
+      },
+      {
+        "file_offset": 36027,
+        "value": "#929ba8"
+      },
+      {
+        "file_offset": 36057,
+        "value": "autoHideMenuBar"
+      },
+      {
+        "file_offset": 36105,
+        "value": "--hidden"
+      },
+      {
+        "file_offset": 36162,
+        "value": "autoplayPolicy"
+      },
+      {
+        "file_offset": 36179,
+        "value": "$Pg25X"
+      },
+      {
+        "file_offset": 36190,
+        "value": "no-user-gesture-required"
+      },
+      {
+        "file_offset": 36230,
+        "value": "preload.cjs"
+      },
+      {
+        "file_offset": 36260,
+        "value": "page-title-updated"
+      },
+      {
+        "file_offset": 36477,
+        "value": "render-process-gone"
+      },
+      {
+        "file_offset": 36537,
+        "value": "ClZP*"
+      },
+      {
+        "file_offset": 36691,
+        "value": "clean-exit"
+      },
+      {
+        "file_offset": 36723,
+        "value": "showErrorBox"
+      },
+      {
+        "file_offset": 36749,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 36760,
+        "value": "vel recuperar a interface. Feche o menu e abra novamente pelo launcher."
+      },
+      {
+        "file_offset": 36925,
+        "value": "reload"
+      },
+      {
+        "file_offset": 37362,
+        "value": "HZD+D"
+      },
+      {
+        "file_offset": 37472,
+        "value": "Menu continua aberto"
+      },
+      {
+        "file_offset": 37511,
+        "value": "O bot continua rodando. Aperte "
+      },
+      {
+        "file_offset": 37555,
+        "value": " para abrir o menu; ele fecha sozinho quando o jogo fechar."
+      },
+      {
+        "file_offset": 37921,
+        "value": "3<*,*"
+      },
+      {
+        "file_offset": 38915,
+        "value": "(PhJcV"
+      },
+      {
+        "file_offset": 38926,
+        "value": "setPermissionRequestHandler"
+      },
+      {
+        "file_offset": 39132,
+        "value": "bootstrap"
+      },
+      {
+        "file_offset": 39240,
+        "value": "Cl+`R\\*"
+      },
+      {
+        "file_offset": 39256,
+        "value": "*,r\\*"
+      },
+      {
+        "file_offset": 39262,
+        "value": "BhJL2Dr$JtbX28s8\""
+      },
+      {
+        "file_offset": 39331,
+        "value": "getVersion"
+      },
+      {
+        "file_offset": 39367,
+        "value": "settings"
+      },
+      {
+        "file_offset": 39386,
+        "value": "Pd2-H"
+      },
+      {
+        "file_offset": 39396,
+        "value": "settingsFile"
+      },
+      {
+        "file_offset": 40392,
+        "value": "PcfO`"
+      },
+      {
+        "file_offset": 40402,
+        "value": "mapInfo"
+      },
+      {
+        "file_offset": 40608,
+        "value": "openMap"
+      },
+      {
+        "file_offset": 40659,
+        "value": "*4R<R"
+      },
+      {
+        "file_offset": 40677,
+        "value": "2TB,C"
+      },
+      {
+        "file_offset": 40686,
+        "value": " *0*D2$\"gk|"
+      },
+      {
+        "file_offset": 40750,
+        "value": "showOpenDialog"
+      },
+      {
+        "file_offset": 40799,
+        "value": "Carregar mapa pr"
+      },
+      {
+        "file_offset": 40835,
+        "value": "defaultPath"
+      },
+      {
+        "file_offset": 40884,
+        "value": "openFile"
+      },
+      {
+        "file_offset": 40904,
+        "value": "filters"
+      },
+      {
+        "file_offset": 40957,
+        "value": "Mapa do cliente (OTMM)"
+      },
+      {
+        "file_offset": 41046,
+        "value": "dialogDirectory"
+      },
+      {
+        "file_offset": 41077,
+        "value": "canceled"
+      },
+      {
+        "file_offset": 41087,
+        "value": "Pdzdx"
+      },
+      {
+        "file_offset": 41097,
+        "value": "filePaths"
+      },
+      {
+        "file_offset": 41419,
+        "value": "resetMap"
+      },
+      {
+        "file_offset": 41625,
+        "value": "mapRegion"
+      },
+      {
+        "file_offset": 42019,
+        "value": "loadWalkerProfile"
+      },
+      {
+        "file_offset": 42093,
+        "value": "*@R(*"
+      },
+      {
+        "file_offset": 42221,
+        "value": "hoenn"
+      },
+      {
+        "file_offset": 42614,
+        "value": "command"
+      },
+      {
+        "file_offset": 42665,
+        "value": "*<RL*Kr;"
+      },
+      {
+        "file_offset": 42682,
+        "value": ";D2<#"
+      },
+      {
+        "file_offset": 42789,
+        "value": "attack"
+      },
+      {
+        "file_offset": 42799,
+        "value": "PcN-n"
+      },
+      {
+        "file_offset": 42809,
+        "value": "follow"
+      },
+      {
+        "file_offset": 42834,
+        "value": "switchPokemon"
+      },
+      {
+        "file_offset": 42852,
+        "value": "Pe*_)"
+      },
+      {
+        "file_offset": 42862,
+        "value": "recallPokemon"
+      },
+      {
+        "file_offset": 42898,
+        "value": "Controle manual"
+      },
+      {
+        "file_offset": 43315,
+        "value": "#D2P:@+42<#h\""
+      },
+      {
+        "file_offset": 43349,
+        "value": "*<jL*Kr;"
+      },
+      {
+        "file_offset": 43394,
+        "value": "d*8r|2$Z"
+      },
+      {
+        "file_offset": 43423,
+        "value": ",+,*8*"
+      },
+      {
+        "file_offset": 43465,
+        "value": "2LR,j$:"
+      },
+      {
+        "file_offset": 43593,
+        "value": "revisiona"
+      },
+      {
+        "file_offset": 43640,
+        "value": "Estado do m"
+      },
+      {
+        "file_offset": 43652,
+        "value": "dulo inv"
+      },
+      {
+        "file_offset": 43661,
+        "value": "lido."
+      },
+      {
+        "file_offset": 43701,
+        "value": "Target"
+      },
+      {
+        "file_offset": 43721,
+        "value": "healer"
+      },
+      {
+        "file_offset": 43741,
+        "value": "Healer"
+      },
+      {
+        "file_offset": 43764,
+        "value": "Walker"
+      },
+      {
+        "file_offset": 43787,
+        "value": "Hoenn"
+      },
+      {
+        "file_offset": 43807,
+        "value": "looting"
+      },
+      {
+        "file_offset": 43827,
+        "value": "Captura"
+      },
+      {
+        "file_offset": 43852,
+        "value": "Comando"
+      },
+      {
+        "file_offset": 43869,
+        "value": "(Ph~q7"
+      },
+      {
+        "file_offset": 43880,
+        "value": "Selecione um m"
+      },
+      {
+        "file_offset": 43895,
+        "value": "dulo v"
+      },
+      {
+        "file_offset": 43902,
+        "value": "lido."
+      },
+      {
+        "file_offset": 43928,
+        "value": "Verificar perfil"
+      },
+      {
+        "file_offset": 43956,
+        "value": "Pausar"
+      },
+      {
+        "file_offset": 43992,
+        "value": "Verificar sess"
+      },
+      {
+        "file_offset": 44026,
+        "value": "Carregar rota"
+      },
+      {
+        "file_offset": 44092,
+        "value": "Iniciar"
+      },
+      {
+        "file_offset": 44329,
+        "value": "D:,+LJ"
+      },
+      {
+        "file_offset": 44376,
+        "value": "o foi poss"
+      },
+      {
+        "file_offset": 44387,
+        "value": "vel iniciar: a pausa foi acionada durante a conex"
+      },
+      {
+        "file_offset": 45505,
+        "value": "3|*@*"
+      },
+      {
+        "file_offset": 45511,
+        "value": "*(\"K+"
+      },
+      {
+        "file_offset": 45518,
+        "value": "RX\"<*<*"
+      },
+      {
+        "file_offset": 45542,
+        "value": "*pRx*"
+      },
+      {
+        "file_offset": 45548,
+        "value": "*(\"KZSjS"
+      },
+      {
+        "file_offset": 45649,
+        "value": "waypoints"
+      },
+      {
+        "file_offset": 46111,
+        "value": "autosave"
+      },
+      {
+        "file_offset": 46170,
+        "value": "3h*@*"
+      },
+      {
+        "file_offset": 46176,
+        "value": "*(\"K+"
+      },
+      {
+        "file_offset": 46192,
+        "value": "+XRX\"<*<*"
+      },
+      {
+        "file_offset": 46219,
+        "value": "*(Zd*"
+      },
+      {
+        "file_offset": 46225,
+        "value": "B$+`*pj"
+      },
+      {
+        "file_offset": 46265,
+        "value": "#l*h*"
+      },
+      {
+        "file_offset": 46348,
+        "value": "O perfil ativo mudou. Selecione o perfil de novo para continuar editando."
+      },
+      {
+        "file_offset": 46483,
+        "value": "gmAlerts"
+      },
+      {
+        "file_offset": 47405,
+        "value": "copyText"
+      },
+      {
+        "file_offset": 47510,
+        "value": "Texto inv"
+      },
+      {
+        "file_offset": 47520,
+        "value": "lido para copiar."
+      },
+      {
+        "file_offset": 47550,
+        "value": "writeText"
+      },
+      {
+        "file_offset": 47769,
+        "value": "Z,B++d+"
+      },
+      {
+        "file_offset": 47782,
+        "value": "BP:(+8J"
+      },
+      {
+        "file_offset": 47795,
+        "value": "B<:d*"
+      },
+      {
+        "file_offset": 47810,
+        "value": " b,\"T*'b"
+      },
+      {
+        "file_offset": 48089,
+        "value": "ID inv"
+      },
+      {
+        "file_offset": 48096,
+        "value": "lido."
+      },
+      {
+        "file_offset": 48502,
+        "value": "pka-look:copy"
+      },
+      {
+        "file_offset": 48557,
+        "value": "h2dRX\";+pJ"
+      },
+      {
+        "file_offset": 48573,
+        "value": "2@2|*"
+      },
+      {
+        "file_offset": 48635,
+        "value": "^\\d{1,10}$"
+      },
+      {
+        "file_offset": 48882,
+        "value": "pka-look:close"
+      },
+      {
+        "file_offset": 48937,
+        "value": ",2`RX\";+p*,*"
+      },
+      {
+        "file_offset": 49315,
+        "value": "shortcuts"
+      },
+      {
+        "file_offset": 49366,
+        "value": "`RLZ@\""
+      },
+      {
+        "file_offset": 49377,
+        "value": "\"+#D*"
+      },
+      {
+        "file_offset": 50262,
+        "value": "[`*<zL*Kr;"
+      },
+      {
+        "file_offset": 50292,
+        "value": ":PJ@3 J"
+      },
+      {
+        "file_offset": 50507,
+        "value": "Estado do monitor inv"
+      },
+      {
+        "file_offset": 50529,
+        "value": "lido."
+      },
+      {
+        "file_offset": 50788,
+        "value": "Selecione um cliente online e com estado recente."
+      },
+      {
+        "file_offset": 50858,
+        "value": "rules"
+      },
+      {
+        "file_offset": 51058,
+        "value": "Adicione e ative pelo menos uma regra de alerta."
+      },
+      {
+        "file_offset": 51220,
+        "value": "telemetry"
+      },
+      {
+        "file_offset": 52323,
+        "value": "B|R<\"<*"
+      },
+      {
+        "file_offset": 52347,
+        "value": "+0*<RH*Gr;"
+      },
+      {
+        "file_offset": 52453,
+        "value": "Selecione uma regra de mensagem de GM."
+      },
+      {
+        "file_offset": 52922,
+        "value": "*4R<*;r3"
+      },
+      {
+        "file_offset": 52941,
+        "value": "2$#0*8*"
+      },
+      {
+        "file_offset": 52983,
+        "value": ":8+0Rx*"
+      },
+      {
+        "file_offset": 53124,
+        "value": "Importar perfil JSON ou tabela Lua salva"
+      },
+      {
+        "file_offset": 53238,
+        "value": "Perfis PKA"
+      },
+      {
+        "file_offset": 53320,
+        "value": "Arquivo maior que 2 MB."
+      },
+      {
+        "file_offset": 53414,
+        "value": "pka-tools-profile"
+      },
+      {
+        "file_offset": 53450,
+        "value": "Formato de perfil JSON n"
+      },
+      {
+        "file_offset": 53475,
+        "value": "o suportado."
+      },
+      {
+        "file_offset": 53526,
+        "value": "warnings"
+      },
+      {
+        "file_offset": 54180,
+        "value": "export"
+      },
+      {
+        "file_offset": 54229,
+        "value": "Cd*$3"
+      },
+      {
+        "file_offset": 54236,
+        "value": "*4R<*;r3"
+      },
+      {
+        "file_offset": 54253,
+        "value": " *$*P*(\""
+      },
+      {
+        "file_offset": 54339,
+        "value": "showSaveDialog"
+      },
+      {
+        "file_offset": 54388,
+        "value": "Exportar perfil"
+      },
+      {
+        "file_offset": 54419,
+        "value": "pka-profile.json"
+      },
+      {
+        "file_offset": 58548,
+        "value": "B|*{3"
+      },
+      {
+        "file_offset": 58984,
+        "value": "2(R 3"
+      },
+      {
+        "file_offset": 59018,
+        "value": " Pf:#t"
+      },
+      {
+        "file_offset": 59029,
+        "value": "Interface encerrada"
+      },
+      {
+        "file_offset": 59642,
+        "value": "#p*D*"
+      },
+      {
+        "file_offset": 59710,
+        "value": "unregisterAll"
+      },
+      {
+        "file_offset": 60073,
+        "value": "nativeImage"
+      },
+      {
+        "file_offset": 60101,
+        "value": "node:fs/promises"
+      },
+      {
+        "file_offset": 60129,
+        "value": "node:fs"
+      },
+      {
+        "file_offset": 60154,
+        "value": "node:path"
+      },
+      {
+        "file_offset": 60178,
+        "value": "node:crypto"
+      },
+      {
+        "file_offset": 60202,
+        "value": "randomBytes"
+      },
+      {
+        "file_offset": 60226,
+        "value": "node:url"
+      },
+      {
+        "file_offset": 60240,
+        "value": "$Pg:!"
+      },
+      {
+        "file_offset": 60251,
+        "value": "./lib/pipe-bridge.cjs"
+      },
+      {
+        "file_offset": 60287,
+        "value": "PipeBridge"
+      },
+      {
+        "file_offset": 60311,
+        "value": "./lib/menu-view.cjs"
+      },
+      {
+        "file_offset": 60346,
+        "value": "./lib/settings.cjs"
+      },
+      {
+        "file_offset": 60395,
+        "value": "./lib/legacy.cjs"
+      },
+      {
+        "file_offset": 60414,
+        "value": "(PhJ}"
+      },
+      {
+        "file_offset": 60425,
+        "value": "./lib/alert-presenter.cjs"
+      },
+      {
+        "file_offset": 60465,
+        "value": "AlertPresenter"
+      },
+      {
+        "file_offset": 60496,
+        "value": "./shared/alerts.js"
+      },
+      {
+        "file_offset": 60539,
+        "value": "./lib/native-runtime.cjs"
+      },
+      {
+        "file_offset": 60578,
+        "value": "./lib/security.cjs"
+      },
+      {
+        "file_offset": 60610,
+        "value": "ElectronSecurity"
+      },
+      {
+        "file_offset": 60638,
+        "value": "./lib/protocol.cjs"
+      },
+      {
+        "file_offset": 60672,
+        "value": "./lib/launch.cjs"
+      },
+      {
+        "file_offset": 60693,
+        "value": "Pdr6W"
+      },
+      {
+        "file_offset": 60703,
+        "value": "menuInstance"
+      },
+      {
+        "file_offset": 60727,
+        "value": "ipcDirectoryFromArgs"
+      },
+      {
+        "file_offset": 60748,
+        "value": " Pf\";"
+      },
+      {
+        "file_offset": 60759,
+        "value": "./lib/map-view.cjs"
+      },
+      {
+        "file_offset": 60791,
+        "value": "MapService"
+      },
+      {
+        "file_offset": 60815,
+        "value": "./lib/walker-profiles.cjs"
+      },
+      {
+        "file_offset": 60846,
+        "value": " Pf^Q"
+      },
+      {
+        "file_offset": 60857,
+        "value": "./shared/messages.js"
+      },
+      {
+        "file_offset": 60892,
+        "value": "./lib/hotkeys.cjs"
+      },
+      {
+        "file_offset": 60924,
+        "value": "Hotkeys"
+      },
+      {
+        "file_offset": 60947,
+        "value": "disableHardwareAcceleration"
+      },
+      {
+        "file_offset": 60996,
+        "value": "Pe*HyB"
+      },
+      {
+        "file_offset": 61006,
+        "value": "\\.exe(?:\\.tmp)?$E"
+      },
+      {
+        "file_offset": 61035,
+        "value": "^[a-f0-9]{32}$"
+      },
+      {
+        "file_offset": 61076,
+        "value": "setName"
+      },
+      {
+        "file_offset": 61106,
+        "value": "$Pgf\""
+      },
+      {
+        "file_offset": 61117,
+        "value": "remote-debugging-port"
+      },
+      {
+        "file_offset": 61153,
+        "value": "remote-debugging-pipe"
+      },
+      {
+        "file_offset": 61194,
+        "value": "inspect-brk"
+      },
+      {
+        "file_offset": 61227,
+        "value": "commandLine"
+      },
+      {
+        "file_offset": 61251,
+        "value": "removeSwitch"
+      },
+      {
+        "file_offset": 61278,
+        "value": "PdjY)"
+      },
+      {
+        "file_offset": 61288,
+        "value": "PKA_IPC_DIR"
+      },
+      {
+        "file_offset": 61302,
+        "value": "Pd:m\\"
+      },
+      {
+        "file_offset": 61312,
+        "value": "LOCALAPPDATA"
+      },
+      {
+        "file_offset": 61341,
+        "value": "OTPbot"
+      },
+      {
+        "file_offset": 61361,
+        "value": "C:\\OTPbot"
+      },
+      {
+        "file_offset": 61385,
+        "value": "PKA_CHANNEL_KEY"
+      },
+      {
+        "file_offset": 61413,
+        "value": "userData"
+      },
+      {
+        "file_offset": 61457,
+        "value": "setPath"
+      },
+      {
+        "file_offset": 61477,
+        "value": "sessionData"
+      },
+      {
+        "file_offset": 61501,
+        "value": "registerSchemesAsPrivileged"
+      },
+      {
+        "file_offset": 61573,
+        "value": "scheme"
+      },
+      {
+        "file_offset": 61596,
+        "value": "privileges"
+      },
+      {
+        "file_offset": 61640,
+        "value": "secure"
+      },
+      {
+        "file_offset": 61651,
+        "value": "Pe*+=J"
+      },
+      {
+        "file_offset": 61661,
+        "value": "supportFetchAPI"
+      },
+      {
+        "file_offset": 61696,
+        "value": "requestSingleInstanceLock"
+      },
+      {
+        "file_offset": 61809,
+        "value": "preferences"
+      },
+      {
+        "file_offset": 61835,
+        "value": "map-source.json"
+      },
+      {
+        "file_offset": 61870,
+        "value": "Cliente sem sess"
+      },
+      {
+        "file_offset": 61891,
+        "value": "lida. Abra pelo PokeAlliance.exe atualizado. C"
+      },
+      {
+        "file_offset": 61938,
+        "value": "digo: PKA-INIT-SESSION."
+      },
+      {
+        "file_offset": 62112,
+        "value": "second-instance"
+      },
+      {
+        "file_offset": 62143,
+        "value": "whenReady"
+      },
+      {
+        "file_offset": 62181,
+        "value": "window-all-closed"
+      },
+      {
+        "file_offset": 62216,
+        "value": "before-quit"
+      },
+      {
+        "file_offset": 62243,
+        "value": "will-quit"
+      },
+      {
+        "file_offset": 63044,
+        "value": "Id'!3"
+      },
+      {
+        "file_offset": 63523,
+        "value": "o'&#W"
+      },
+      {
+        "file_offset": 63544,
+        "value": "[''#W"
+      }
+    ],
+    "source_recovered": false,
+    "control_flow_recovered": false
+  }
+]

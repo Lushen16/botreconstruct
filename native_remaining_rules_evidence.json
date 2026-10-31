@@ -1,0 +1,135 @@
+{
+  "name": "remaining-rules-evidence",
+  "source": "dumps/msftedit_text_32336.bin",
+  "source_sha256": "7c0fd219dc24f3fa273ded518eca8ea840d3395f00d14e78beacb4ffd7c50ea4",
+  "base_va": "0x7ff85c470000",
+  "method": "static-only; RIP-relative constants decoded from .text of the stomped payload; anchors verified byte-exact against the source hash",
+  "rules": {
+    "BestTileScore": {
+      "status": "partial",
+      "function": "tickBestTile",
+      "range": "RVA 0x92730..0x93c63",
+      "context": "RVA 0x9d9ef..0x9dd7d reads config keys bestTileMaxWaitMs/bestTileRetryMs/bestTileRange/perfectLureTimeoutMs via json lookups into doubles",
+      "config_mapping": {
+        "hoenn.bestTileMaxWaitMs": 2500,
+        "hoenn.bestTileRetryMs": 700,
+        "hoenn.bestTileRange": 4,
+        "hoenn.perfectLureTimeoutMs": 10000
+      },
+      "constants": [
+        {"rva": "0x92e98", "bytes": "f20f1035e09f0500", "op": "movsd xmm6,[rip+0x59fe0]", "rdata": "0xece80", "value": 2.0, "unit": "ms-derived or tile scale, context-dependent"},
+        {"rva": "0x930e2", "bytes": "660f2f0d1e9e0500", "op": "comisd xmm1,[rip+0x59e1e]", "rdata": "0xecf08", "value": 200.0},
+        {"rva": "0x933aa", "bytes": "f20f108d60030000", "op": "movsd xmm1,[rbp+0x360]", "rdata": "stack", "value": "local"},
+        {"rva": "0x933b2", "bytes": "f20f5d0d069c0500", "op": "mulsd xmm1,[rip+0x59c06]", "rdata": "0xecfc0", "value": 4000.0},
+        {"rva": "0x936ae", "bytes": "660f2f0dfa980500", "op": "comisd xmm1,[rip+0x598fa]", "rdata": "0xecfb0", "value": 2500.0},
+        {"rva": "0x936d9", "bytes": "f20f5f0db7980500", "op": "maxsd xmm1,[rip+0x598b7]", "rdata": "0xecf98", "value": 1400.0},
+        {"rva": "0x93a24", "bytes": "f20f100d64940500", "op": "movsd xmm1,[rip+0x59464]", "rdata": "0xece90", "value": 4.0},
+        {"rva": "0x93a60", "bytes": "f20f5f3590940500", "op": "maxsd xmm6,[rip+0x59490]", "rdata": "0xecef8", "value": 100.0},
+        {"rva": "0x93a8e", "bytes": "f20f5805da930500", "op": "addsd xmm0,[rip+0x593da]", "rdata": "0xece70", "value": 1.0}
+      ],
+      "observed_strings": [
+        "Best Tile: limite de ajuste atingido; seguindo o fluxo de segurança do Lua.",
+        "Best Tile: confirmando centro com 8 espaços",
+        "Best Tile: procurando centro com 8 espaços livres",
+        "Best Tile: posicionando Pokémon no centro da box 8/8"
+      ],
+      "blocked": "score ranking/desempate formula not fully recovered; constants and config bindings observed",
+      "resolved_at": "2026-10-23"
+    },
+    "NextTeam": {
+      "status": "partial",
+      "function": "tickHoenn",
+      "context": "RVA 0x9b683..0x9b6f9 reads roster key, converts health double (cvttsd2si), compares against size 6 (0x9b6a9 cmp rax,6) and uses idiv by slot count (0x9b6c8..0x9b6ce cdq/idiv/cmp)",
+      "config_mapping": {
+        "hoenn.roster": "formation 3x2"
+      },
+      "constants": [
+        {"rva": "0x9b683", "bytes": "488d15dea50400", "op": "lea rdx,[rip+0x4a5de]", "rdata": "0xe5c68", "value": "roster"},
+        {"rva": "0x9b6a9", "bytes": "4883f806", "op": "cmp rax,6", "value": 6},
+        {"rva": "0x9b6b3", "bytes": "f2440f2cee", "op": "cvttsd2si r13d,xmm6", "value": "double->int slot"},
+        {"rva": "0x9b6c8", "bytes": "99", "op": "cdq", "value": "idiv dividend sign"},
+        {"rva": "0x9b6c9", "bytes": "8b4db4", "op": "mov ecx,[rbp-0x4c]", "value": "slot count"},
+        {"rva": "0x9b6cc", "bytes": "f7f9", "op": "idiv ecx", "value": "index % slot count"},
+        {"rva": "0x9b6ce", "bytes": "443be8", "op": "cmp r13d,eax", "value": "modulo compare"}
+      ],
+      "blocked": "exact switch predicate (hp threshold per slot) not observed; modulo rotation and 6-slot structure confirmed",
+      "resolved_at": "2026-10-23"
+    },
+    "ComboBuffDone": {
+      "status": "partial",
+      "function": "medicine gate pre-combo",
+      "context": "RVA 0x57df5..0x57f8d: lê useMedicine (bool), useMedicineBeforeCombo (bool), medicineHotkey (string), medicineActionBar (string); se useMedicine ativo sem hotkey/actionbar configurados, retorna erro inline 'Configure a hotkey de Medicine ou desative Medicine.' RVA 0x57f90..0x5818d: gate do combo compara elapsed contra 1000.0 (comisd 0x57fe8 -> rdata 0xecf80) e contagem 3.0 (ucomisd 0x58097 -> rdata 0xece88); erros 'DLL incompatível ou telemetria indisponível. Reinicie e reinjete.' (0xe7260) e 'Cliente offline ou sem atualização recente.' (0xe6af8)",
+      "config_mapping": {
+        "target.combo.useMedicine": false,
+        "target.combo.useMedicineBeforeCombo": false,
+        "target.combo.medicineHotkey": "",
+        "target.combo.medicineActionBar": ""
+      },
+      "constants": [
+        {"rva": "0x57e13", "bytes": "488d158ef40800", "op": "lea rdx,[rip+0x8f48e]", "rdata": "0xe72a8", "value": "useMedicine"},
+        {"rva": "0x57e2d", "bytes": "488d1584f40800", "op": "lea rdx,[rip+0x8f484]", "rdata": "0xe72b8", "value": "useMedicineBeforeCombo"},
+        {"rva": "0x57e47", "bytes": "488d1582f40800", "op": "lea rdx,[rip+0x8f482]", "rdata": "0xe72d0", "value": "medicineHotkey"},
+        {"rva": "0x57e83", "bytes": "488d1556f40800", "op": "lea rdx,[rip+0x8f456]", "rdata": "0xe72e0", "value": "medicineActionBar"},
+        {"rva": "0x57f30", "bytes": "0f1005c1f30800", "op": "movups xmm0,[rip+0x8f3c1]", "rdata": "0xe72f8", "value": "Configure a hotkey de Medicine ou desative Medicine."},
+        {"rva": "0x57fe8", "bytes": "660f2f05904f0900", "op": "comisd xmm0,[rip+0x94f90]", "rdata": "0xecf80", "value": 1000.0, "unit": "ms gate"},
+        {"rva": "0x58097", "bytes": "660f2e05e94d0900", "op": "ucomisd xmm0,[rip+0x94de9]", "rdata": "0xece88", "value": 3.0, "unit": "count/state"}
+      ],
+      "observed_strings": [
+        "Configure a hotkey de Medicine ou desative Medicine.",
+        "DLL incompatível ou telemetria indisponível. Reinicie e reinjete.",
+        "Cliente offline ou sem atualização recente."
+      ],
+      "dispatch_gate": {
+        "rva": "0xa1633..0xa1800",
+        "sequence": [
+          {"rva": "0xa1633", "key": "pokestopToComboMs", "bytes": "488d15be880400", "op": "lea rdx,[rip+0x488be] -> double via 0x4db360"},
+          {"rva": "0xa1716", "key": "gateStopped", "bytes": "488d158b6c0400"},
+          {"rva": "0xa1755", "key": "useReadyGate", "bytes": "488d15b48b0400"},
+          {"rva": "0xa1773", "key": "cycleAtSafeSpot", "bytes": "488d15768c0400"},
+          {"rva": "0xa178d", "key": "gateReadyPct", "bytes": "488d154c8b0400"},
+          {"rva": "0xa17aa", "key": "readyPct", "bytes": "488d153f8b0400"},
+          {"rva": "0xa17f8", "key": "gateDpsMinHp", "bytes": "488d15596b0400"}
+        ],
+        "note": "Dispatch do combo monta pedido com gateStopped/useReadyGate/cycleAtSafeSpot/gateReadyPct/readyPct/healthPercent/gateDpsMinHp: a ordem buff->combo respeita o gate de medicine (0x57df0) e o gate de ready (useReadyGate/gateReadyPct). pokestopToComboMs atrasa o combo."
+      },
+      "blocked": "ACK do ComboStep e a contagem exata de buffs antes de cada step nao observados; gate de config, dispatch de combo e ordem de gate confirmados",
+      "resolved_at": "2026-10-23"
+    },
+    "HealerDeployReady": {
+      "status": "partial",
+      "function": "tickHoenn deploy gate",
+      "context": "RVA 0x9d240..0x9d2c7: reads deployStableSince (0xe9c28), pokeReadyTimeoutMs (0xe9c60), since (0xe7078); computes elapsed = since - deployStableSince (subsd 0x9d2b3), clamps timeout to >=1000 (maxsd 0x9d2bf with const 1000.0), compares elapsed vs clamp (comisd 0x9d2c3, jbe 0x9d2c7)",
+      "predicate": "ready = (now - deployStableSince) > max(pokeReadyTimeoutMs, 1000)",
+      "config_mapping": {
+        "hoenn.useReadyGate": "gate enable",
+        "hoenn.gateReadyPct": "roster ready percentage",
+        "hoenn.gateMinHp": "minimum hp gate",
+        "hoenn.pokeReadyTimeoutMs": "timeout clamp base"
+      },
+      "constants": [
+        {"rva": "0x9d240", "bytes": "8d15e2c90400", "op": "lea edx,[rip+0x4c9e2]", "rdata": "0xe9c28", "value": "deployStableSince"},
+        {"rva": "0x9d271", "bytes": "488d15e8c90400", "op": "lea rdx,[rip+0x4c9e8]", "rdata": "0xe9c60", "value": "pokeReadyTimeoutMs"},
+        {"rva": "0x9d290", "bytes": "488d15e19d0400", "op": "lea rdx,[rip+0x49de1]", "rdata": "0xe7078", "value": "since"},
+        {"rva": "0x9d2ab", "bytes": "f20f108d90150000", "op": "movsd xmm1,[rbp+0x1590]", "rdata": "stack", "value": "elapsed local"},
+        {"rva": "0x9d2b3", "bytes": "f20f5cc8", "op": "subsd xmm1,xmm0", "value": "elapsed = since - deployStableSince"},
+        {"rva": "0x9d2b7", "bytes": "f20f103dc1fc0400", "op": "movsd xmm7,[rip+0x4fcc1]", "rdata": "0xecf80", "value": 1000.0, "unit": "ms"},
+        {"rva": "0x9d2bf", "bytes": "f20f5ff7", "op": "maxsd xmm6,xmm7", "value": "timeout = max(pokeReadyTimeoutMs, 1000)"},
+        {"rva": "0x9d2c3", "bytes": "660f2fce", "op": "comisd xmm1,xmm6", "value": "elapsed vs timeout"},
+        {"rva": "0x9d2c7", "bytes": "0f86a2000000", "op": "jbe +0xa2", "value": "not ready if elapsed <= timeout"}
+      ],
+      "blocked": "gateReadyPct/gateMinHp roster-wide aggregation not observed; per-timeout predicate resolved",
+      "resolved_at": "2026-10-23"
+    }
+  },
+  "verification": {
+    "all_anchors_byte_exact": true,
+    "source_sha256_match": true,
+    "note": "Anchors are instruction bytes at the given RVA in the .text dump; rdata values are little-endian doubles decoded from the same dump"
+  },
+  "limitations": [
+    "Static-only: no execution, no process, no pipe, no credential access.",
+    "Constants are load-site values; control-flow meaning inferred from surrounding instructions, not proven at runtime.",
+    "Score/desempate ranking for BestTileScore remains unresolved.",
+    "Roster-wide readiness aggregation for HealerDeployReady remains unresolved."
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "scripts": {
+    "entries": []
+  },
+  "target": {
+    "ignoredCreaturesText": "",
+    "shinyPriorityEnabled": false,
+    "instanceModeEnabled": false,
+    "lowHpComboPercent": 0,
+    "monsters": [],
+    "combo": {
+      "enabled": false,
+      "sequenceText": "m5",
+      "stepDelay": 250,
+      "lureDelay": 1000,
+      "finishRemainingCount": 0,
+      "finishIgnoreShiny": false,
+      "useNativeSequence": false,
+      "usePokeStop": false,
+      "useMedicine": false,
+      "useMedicineBeforeCombo": false,
+      "medicineHotkey": "",
+      "medicineDelayMs": 50,
+      "perfectingLureEnabled": false,
+      "perfectingLureHpPercent": 30,
+      "medicineActionBar": 0,
+      "perfectingLureRange": 1,
+      "perfectingSkillMaskEnabled": false,
+      "perfectingSkillMask": [],
+      "perfectingReboxEnabled": false,
+      "bestTileEnabled": false,
+      "targetCreaturesEnabled": true
+    },
+    "autoRevive": {
+      "enabled": false,
+      "hotkey": "",
+      "interval": 1500,
+      "waitForPokemon": false
+    },
+    "luring": {
+      "enabled": false,
+      "maxDistance": 3,
+      "frontEnabled": false,
+      "frontRegroupMargin": 5,
+      "frontRegroupSteps": 3,
+      "randomEnabled": false,
+      "randomMinSeconds": 45,
+      "randomMaxSeconds": 100
+    },
+    "lureSkill": {
+      "enabled": false,
+      "move": "m1",
+      "hpPercent": 50
+    },
+    "healSkill": {
+      "enabled": false,
+      "move": "m1",
+      "hpPercent": 50
+    },
+    "combatStanceAuto": {
+      "enabled": false
+    }
+  },
+  "healer": {
+    "healHpPercent": 0,
+    "healPokemonName": "",
+    "healMoveSlot": 1,
+    "healResetSlot": 1,
+    "returnPokemonName": ""
+  },
+  "walker": {
+    "smartWalking": false,
+    "startNearestWaypoint": false,
+    "recordStepDistance": 5,
+    "loop": true,
+    "mapPath": "",
+    "luaProfile": "",
+    "luaRevision": "",
+    "guildDailyTier": "normal",
+    "guildDailyElement": "normal",
+    "guildDailyAutoEnabled": false,
+    "guildDailyUseTicket": false,
+    "guildDailyTicketHotkey": "",
+    "guildDailyTicketAmount": 1,
+    "waypoints": []
+  },
+  "looting": {
+    "maxCaptureDist": 3,
+    "captureEnabled": false,
+    "captureAfterCombat": false,
+    "captureRandomMode": false,
+    "captureDelay": 1000,
+    "captureEntries": []
+  },
+  "alerts": {
+    "pauseWithHotkey": true,
+    "rules": [],
+    "gmMessageActiveProfile": "default",
+    "gmMessageProfilesJson": "",
+    "gmMessageRevision": 0
+  },
+  "hoenn": {
+    "formation": "2x3",
+    "minWildsToEngage": 8,
+    "ignoredCreaturesText": "",
+    "targetShinyEnabled": true,
+    "forceBox": false,
+    "perfectLure": true,
+    "perfectLureTimeoutMs": 10000,
+    "perfectLureMinHp": 60,
+    "bestTile": true,
+    "bestTileRange": 4,
+    "bestTileMaxWaitMs": 2500,
+    "bestTileRetryMs": 700,
+    "deployToPokestopMs": 200,
+    "pokestopToComboMs": 400,
+    "pokeReadyTimeoutMs": 3000,
+    "comboFallbackMs": 3000,
+    "potionHotkey": "",
+    "potionActionBar": 3,
+    "potionHpPercent": 60,
+    "potionCooldownMs": 1500,
+    "useMedicine": true,
+    "medicineHotkey": "",
+    "positionAround": true,
+    "positionTiles": 2,
+    "medicineActionBar": 0,
+    "useSafeSpot": true,
+    "forceSafeSpotRecovery": false,
+    "safeSpotTimeoutMs": 15000,
+    "shinyRetreatDelayMs": 0,
+    "useReadyGate": true,
+    "gateReadyPct": 80,
+    "gateMinHp": 90,
+    "gateDpsMinHp": 90,
+    "gateMaxWaitMs": 60000,
+    "cycleAtSafeSpot": false,
+    "autoStance": true,
+    "roster": []
+  },
+  "tools": {
+    "menuHotkey": "Insert",
+    "pauseHotkey": "Home",
+    "consumable1": {
+      "enabled": false,
+      "hotkey": "",
+      "intervalMinutes": 60
+    },
+    "consumable2": {
+      "enabled": false,
+      "hotkey": "",
+      "intervalMinutes": 60
+    },
+    "consumable3": {
+      "enabled": false,
+      "hotkey": "",
+      "intervalMinutes": 60
+    },
+    "consumable4": {
+      "enabled": false,
+      "hotkey": "",
+      "intervalMinutes": 60
+    }
+  }
+}

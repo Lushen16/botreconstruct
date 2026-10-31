@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-10-22T13:27:11.323Z",
+  "authority": "controlled-module-initialization",
+  "hashes": {
+    "telemetry": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+    "pipe-bridge": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4"
+  },
+  "imports": [
+    {
+      "module": "telemetry",
+      "dependency": "./protocol.cjs"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "node:net"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "node:fs/promises"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "node:path"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "node:events"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "node:crypto"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "./protocol.cjs"
+    },
+    {
+      "module": "pipe-bridge",
+      "dependency": "./telemetry.cjs"
+    }
+  ],
+  "exports": {
+    "telemetry": {
+      "decodeTelemetry": {
+        "type": "function",
+        "arity": 1,
+        "prototype": {}
+      }
+    },
+    "bridge": {
+      "PipeBridge": {
+        "type": "function",
+        "arity": 1,
+        "prototype": {
+          "requirePid": {
+            "type": "function",
+            "arity": 1
+          },
+          "unconfirmed": {
+            "type": "function",
+            "arity": 0
+          },
+          "disconnect": {
+            "type": "function",
+            "arity": 0
+          },
+          "ensure": {
+            "type": "function",
+            "arity": 0
+          },
+          "sendFrame": {
+            "type": "function",
+            "arity": 2
+          },
+          "receive": {
+            "type": "function",
+            "arity": 1
+          },
+          "missingState": {
+            "type": "function",
+            "arity": 1
+          },
+          "cleanupArtifacts": {
+            "type": "function",
+            "arity": 0
+          },
+          "poll": {
+            "type": "function",
+            "arity": 0
+          },
+          "start": {
+            "type": "function",
+            "arity": 0
+          },
+          "close": {
+            "type": "function",
+            "arity": 0
+          },
+          "readPublication": {
+            "type": "function",
+            "arity": 2
+          },
+          "writePublication": {
+            "type": "function",
+            "arity": 3
+          },
+          "send": {
+            "type": "function",
+            "arity": 2
+          }
+        }
+      },
+      "SnapshotPublisher": {
+        "type": "function",
+        "arity": 1,
+        "prototype": {
+          "request": {
+            "type": "function",
+            "arity": 0
+          },
+          "suspend": {
+            "type": "function",
+            "arity": 1
+          },
+          "close": {
+            "type": "function",
+            "arity": 0
+          }
+        }
+      },
+      "KIND": {
+        "type": "object"
+      },
+      "MAX_FRAME": {
+        "type": "number"
+      },
+      "proof": {
+        "type": "function",
+        "arity": 4,
+        "prototype": {}
+      },
+      "frame": {
+        "type": "function",
+        "arity": 2,
+        "prototype": {}
+      }
+    }
+  },
+  "constants": {
+    "KIND": {
+      "challenge": 1,
+      "authenticate": 2,
+      "welcome": 3,
+      "state": 4,
+      "telemetry": 5,
+      "automation": 6,
+      "startup": 7,
+      "automation_revoked": 8,
+      "manual": 9,
+      "ack": 10,
+      "automation_control": 11,
+      "automation_lease": 12
+    },
+    "MAX_FRAME": 2105344
+  },
+  "blockedCalls": [],
+  "operationalMethodsInvoked": false,
+  "connectionsOpened": false,
+  "originalMainExecuted": false,
+  "credentialsRead": false,
+  "limitations": [
+    "Export names are observed; operational behavior is not inferred from names.",
+    "Only selected original modules initialized, with filesystem and network imports replaced.",
+    "This import harness is not an operating-system security sandbox."
+  ]
+}

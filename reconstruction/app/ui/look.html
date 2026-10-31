@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>ID do item</title>
+  <link rel="stylesheet" href="look.css">
+  <script src="look.js" defer></script>
+</head>
+<body>
+  <main class="look-card" role="dialog" aria-labelledby="look-title" aria-describedby="look-detail">
+    <header class="look-bar"><span id="look-title">ID do item</span><button id="look-close" type="button" aria-label="Fechar" title="Fechar (Esc)">×</button></header>
+    <div class="look-value"><span class="look-caption">ID</span><strong id="look-id">—</strong></div>
+    <p id="look-detail"></p>
+    <p id="look-note" hidden></p>
+    <div class="look-buttons"><button id="look-copy" type="button" title="Copia o número para colar em outro lugar">Copiar ID</button><button id="look-ok" type="button" class="primary">OK</button></div>
+  </main>
+</body>
+</html>

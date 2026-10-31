@@ -1,0 +1,178 @@
+{
+  "contract": "pka-capture-v1",
+  "status": "specified-local-partial",
+  "basis": [
+    "default_config.json looting.* (captureEnabled, maxCaptureDist, captureAfterCombat, captureDelay, captureEntries)",
+    "renderer/looting.js:1 (captureEntries = {name, corpseId, ballId, fallbackBallId}; UI exige captureVersion=1 + itemInspectorAvailable e le telemetry.inspection)",
+    "package-integrity.json automation=native-dll; runtime module \"looting\" executa no lado nativo",
+    "reconstruction/telemetry.cjs inspectionBlock + inspection_vectors.json (48 casos contra telemetry.jsc original)",
+    "reconstruction/protocol.cjs:6 (COMMANDS sem opcode de captura)",
+    "native_capture_evidence.json: RTTI tickLoot/send, comparador e despacho useWith; reconstruction/CAPTURE_NATIVE.md delimita o subset"
+  ],
+  "rules": [
+    {
+      "id": "CaptureEligible",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "corpo configurado em captureEntries.corpseId visivel e dentro de looting.maxCaptureDist apos combate"
+      ],
+      "inputs": [
+        "telemetry.inspection",
+        "telemetry.captureVersion",
+        "telemetry.itemInspectorAvailable",
+        "telemetry.position"
+      ],
+      "config": [
+        "looting.captureEnabled",
+        "looting.maxCaptureDist",
+        "looting.captureAfterCombat"
+      ],
+      "outputs": [
+        "captureCandidate"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "../Extracted_Source/renderer/looting.js",
+        "reconstruction/telemetry.cjs",
+        "default_config.json",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "reconstruction/fixtures/telemetry-schema2-inspection-redacted.json"
+      ],
+      "notes": "Snapshot schema2 com inspection {revision,id,kind:item,container,pos} observado; capture-engine implementa id configurado, andar e distancia. Selecao/visibilidade nativa ainda nao observada."
+    },
+    {
+      "id": "CaptureBall",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "corpo em captureEntries.corpseId -> usar captureEntries.ballId; fallback em captureEntries.fallbackBallId"
+      ],
+      "inputs": [
+        "telemetry.inspection",
+        "telemetry.itemCounts"
+      ],
+      "config": [
+        "looting.captureEntries"
+      ],
+      "outputs": [
+        "ballChoice"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "../Extracted_Source/renderer/looting.js",
+        "default_config.json",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "reconstruction/fixtures/telemetry-schema2-inspection-redacted.json"
+      ],
+      "notes": "itemCounts {id,count} observado; capture-engine escolhe ballId primaria/fallback. Ordem nativa de consumo nao observada."
+    },
+    {
+      "id": "CaptureRank",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "priorizar corpos quando houver mais de um candidato"
+      ],
+      "inputs": [
+        "telemetry.items",
+        "telemetry.position",
+        "internal.captureHistory",
+        "internal.eligibleCandidates"
+      ],
+      "config": [
+        "looting.captureEntries"
+      ],
+      "outputs": [
+        "melhor candidato no ramo deterministico"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "native_capture_evidence.json",
+        "native_capture_static.json",
+        "native_capture_disasm.txt",
+        "reconstruction/CAPTURE_NATIVE.md",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "tests/capture_native.test.cjs"
+      ],
+      "notes": "Comparador recuperado: attempts==0 && failures<3 primeiro; menor lastAttemptAt; menor Chebyshev; maior stack; empate preserva ordem de items. API local exige candidatos previamente elegiveis e historico interno explicito, nao campos novos na telemetria. Modo aleatorio e ciclo completo do historico permanecem desconhecidos.",
+      "residualUnknowns": [
+        "captureRandomMode e filtros anteriores ao comparador",
+        "inicializacao, retencao e descarte completos do historico nativo"
+      ]
+    },
+    {
+      "id": "CaptureApproach",
+      "status": "implementable",
+      "coverage": "partial",
+      "triggers": [
+        "modulo looting aproxima/executa captura apos combate"
+      ],
+      "inputs": [
+        "telemetry.items",
+        "telemetry.position",
+        "internal.selectedCandidate",
+        "internal.itemKeyResolver",
+        "internal.effectiveDelay"
+      ],
+      "config": [
+        "looting.captureAfterCombat",
+        "looting.maxCaptureDist"
+      ],
+      "outputs": [
+        "plano offline useWith {x,y,z,itemId,targetId,stack}",
+        "revalidacao antes do despacho e atualizacao local do historico"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "native_capture_evidence.json",
+        "native_capture_static.json",
+        "native_capture_disasm.txt",
+        "reconstruction/CAPTURE_NATIVE.md",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "tests/capture_native.test.cjs",
+        "native_capture_guard_static.json",
+        "native_capture_send_static.json",
+        "native_runtime_evidence.json",
+        "reconstruction/NATIVE_RUNTIME.md",
+        "reconstruction/protocol.cjs"
+      ],
+      "notes": "Subset local implementado: gate sameFloor/dist<=maxCaptureDist, revalidacao id/stack/XY/chave e plano useWith; tickLoot chama send em RVA 0xa57ad, servico virtual em 0x8461a. Nao ha estado APPROACHING ou rota inventados; API nao conectada ao jogo. Cobertura partial nao fecha navegacao, hook final, fila ou ACK nativo.",
+      "residualUnknowns": [
+        "consumidor/hook do registro pendente apos worker-bound callback 0xcfe40; despacho em sessao real nao observado",
+        "eventual navegacao do cliente, raio efetivo e hook final",
+        "hash da chave de corpo sem instance; API exige resolvedor explicito",
+        "atraso nativo efetivo, fila e ciclo de ACK/resultado no jogo"
+      ]
+    },
+    {
+      "id": "CaptureDelay",
+      "status": "implementable",
+      "coverage": "full",
+      "triggers": [
+        "aguardar looting.captureDelay antes de nova tentativa"
+      ],
+      "inputs": [
+        "tempo"
+      ],
+      "config": [
+        "looting.captureDelay"
+      ],
+      "outputs": [
+        "delay"
+      ],
+      "blockedBy": [],
+      "evidence": [
+        "default_config.json",
+        "reconstruction/engines/capture-engine.cjs",
+        "tests/capture_engine.test.cjs",
+        "reconstruction/fixtures/telemetry-schema2-inspection-redacted.json"
+      ],
+      "notes": "Cobertura full apenas do temporizador local especificado (clamp 1..60000 ms), nao de equivalencia temporal com o motor nativo. Depende de CaptureEligible, que agora tem inspection real."
+    }
+  ]
+}

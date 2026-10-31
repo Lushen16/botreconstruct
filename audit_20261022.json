@@ -1,0 +1,273 @@
+{
+  "generated_at": "2026-10-22T03:33:54.865Z",
+  "archive": {
+    "path": "C:\\Users\\yago\\Documents\\Clone\\Shiba_Bots_App\\dll\\resources\\app.asar",
+    "sha256": "0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24",
+    "files": 79,
+    "manifest_matches": true,
+    "extracted_matches": 79
+  },
+  "native_candidates": [
+    {
+      "path": "Shiba_Bots_App/libs/d3d9.dll",
+      "bytes": 1866491,
+      "sha256": "f1dee24b04b915996f46c2a10f8f6bebee123451928fcebea056f08962e64223",
+      "valid_headers": false,
+      "e_lfanew": 538976496,
+      "e_lfanew_raw_hex": "f0202020",
+      "error": "pe-header-out-of-file"
+    },
+    {
+      "path": "Shiba_Bots_App/libs/lpeg.dll",
+      "bytes": 4608,
+      "sha256": "3d3244a8b5d71a40522cb7e314ce481e8068ea1703b9ecdfe4e5760c1157f2cb",
+      "valid_headers": true,
+      "e_lfanew": 128,
+      "e_lfanew_raw_hex": "80000000",
+      "machine": 332,
+      "sections": 3
+    },
+    {
+      "path": "Shiba_Bots_App/a497a7a52bf97c5bcc5fad69c7958ce6.exe",
+      "bytes": 13398358,
+      "sha256": "20d0167024d0ef9ab68e36e1a6bbc12afbdd1d05e7f586373cd99f69bf24a94d",
+      "valid_headers": true,
+      "e_lfanew": 272,
+      "e_lfanew_raw_hex": "10010000",
+      "machine": 34404,
+      "sections": 10
+    },
+    {
+      "path": "Shiba_Bots_App/dll/PKA Tools.exe",
+      "bytes": 245590016,
+      "sha256": "1b80dc101d2518eb9f5f8952c6f18d735850fb366ce410a771e3259d6f0ca0a7",
+      "valid_headers": true,
+      "e_lfanew": 120,
+      "e_lfanew_raw_hex": "78000000",
+      "machine": 34404,
+      "sections": 15
+    },
+    {
+      "path": "C:\\Users\\yago\\Desktop\\Shiba Bots - Poke Alliance v2.6.6\\libs\\d3d9.dll",
+      "bytes": 1866491,
+      "sha256": "f1dee24b04b915996f46c2a10f8f6bebee123451928fcebea056f08962e64223",
+      "valid_headers": false,
+      "e_lfanew": 538976496,
+      "e_lfanew_raw_hex": "f0202020",
+      "error": "pe-header-out-of-file"
+    }
+  ],
+  "bytecode_markers": [
+    {
+      "file": "lib/menu-view.jsc",
+      "sha256": "c5dd09d0d9d606693cf45289626e22abfbc58f59428ac530c509b9ff6f868de2",
+      "marker": "nativeVerified",
+      "bytecode_file_offset": 1004,
+      "asar_file_offset": 9364502,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/native-runtime.jsc",
+      "sha256": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+      "marker": "automation_control",
+      "bytecode_file_offset": 9545,
+      "asar_file_offset": 9380267,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/native-runtime.jsc",
+      "sha256": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+      "marker": "automation_lease",
+      "bytecode_file_offset": 4301,
+      "asar_file_offset": 9375023,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/native-runtime.jsc",
+      "sha256": "20bdcad4912965a6526d7f43fdf9806d309e347854e181ec69f7542aefb4d58b",
+      "marker": "nativeVerified",
+      "bytecode_file_offset": 12024,
+      "asar_file_offset": 9382746,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/pipe-bridge.jsc",
+      "sha256": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "marker": "PKA2/",
+      "bytecode_file_offset": 859,
+      "asar_file_offset": 9394072,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/pipe-bridge.jsc",
+      "sha256": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "marker": "\\\\.\\pipe\\pka-runtime-2-",
+      "bytecode_file_offset": 6654,
+      "asar_file_offset": 9399867,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/pipe-bridge.jsc",
+      "sha256": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "marker": "automation_control",
+      "bytecode_file_offset": 20237,
+      "asar_file_offset": 9413450,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/pipe-bridge.jsc",
+      "sha256": "f2047593c12388a5bb09286d010fa7422b7e626fb8ea60c0268023be310114b4",
+      "marker": "automation_lease",
+      "bytecode_file_offset": 20269,
+      "asar_file_offset": 9413482,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/protocol.jsc",
+      "sha256": "56522f34578706292530ee7c05f8774b221b6d2e862a55f51e78700cfe10a48e",
+      "marker": "Estado IPC deve ter exatamente 48 bytes.",
+      "bytecode_file_offset": 1055,
+      "asar_file_offset": 9420798,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/protocol.jsc",
+      "sha256": "56522f34578706292530ee7c05f8774b221b6d2e862a55f51e78700cfe10a48e",
+      "marker": "ACK IPC deve ter exatamente 12 bytes.",
+      "bytecode_file_offset": 7485,
+      "asar_file_offset": 9427228,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    },
+    {
+      "file": "lib/telemetry.jsc",
+      "sha256": "0f308a9d7fd4a89f537a61a076dd68aae5ef8b3fdf668f128152c3d6475456c8",
+      "marker": "nativeVerified",
+      "bytecode_file_offset": 2623,
+      "asar_file_offset": 9464085,
+      "authority": "literal-bytes-only",
+      "control_flow_recovered": false
+    }
+  ],
+  "preload_probe": {
+    "authority": "isolated-preload-probe",
+    "original_main_executed": false,
+    "native_commands_sent": false,
+    "preloads": [
+      {
+        "path": "look-preload.cjs",
+        "sha256": "ba82b05f28f63176997028840a3e551321f7f2206d3dd65138d6a156dc520c8d",
+        "namespace": "pkaLook",
+        "members": [
+          "onShow",
+          "copy",
+          "close"
+        ],
+        "calls": [
+          {
+            "operation": "invoke",
+            "channel": "pka-look:copy",
+            "args": [
+              "probe"
+            ]
+          },
+          {
+            "operation": "send",
+            "channel": "pka-look:close",
+            "args": []
+          }
+        ]
+      },
+      {
+        "path": "preload.cjs",
+        "sha256": "5f802bdc6db159f404bf2e9315ddb208d7479f127b502aa54baf6f752f6ea282",
+        "namespace": "pka",
+        "members": [
+          "bootstrap",
+          "pause",
+          "view",
+          "performance",
+          "shortcuts",
+          "mapInfo",
+          "openMap",
+          "resetMap",
+          "walkerProfiles",
+          "loadWalkerProfile",
+          "mapRegion",
+          "command",
+          "save",
+          "autosave",
+          "copyText",
+          "showLook",
+          "quit",
+          "onClosing",
+          "select",
+          "remove",
+          "importProfile",
+          "exportProfile",
+          "monitor",
+          "gmLearning",
+          "onSettings",
+          "onGmProfiles",
+          "runtime",
+          "onAlertSound",
+          "onAlertState",
+          "onSnapshot",
+          "onNotice"
+        ],
+        "calls": [
+          {
+            "operation": "invoke",
+            "channel": "pka:bootstrap",
+            "args": []
+          },
+          {
+            "operation": "invoke",
+            "channel": "pka:save",
+            "args": [
+              "probe",
+              {},
+              7
+            ]
+          },
+          {
+            "operation": "invoke",
+            "channel": "pka:command",
+            "args": [
+              "probe",
+              0,
+              0
+            ]
+          },
+          {
+            "operation": "invoke",
+            "channel": "pka:autosave",
+            "args": [
+              "probe",
+              {},
+              7
+            ]
+          }
+        ]
+      }
+    ],
+    "limitations": [
+      "IPC is an in-memory recorder; main and native behavior remain unverified."
+    ]
+  },
+  "limitations": [
+    "PE header validation is not disassembly or an identification of the native automation module.",
+    "An invalid header does not establish how the file became invalid.",
+    "Bytecode literals do not establish field offsets, command IDs, frame encoding or authentication semantics.",
+    "No PokeBot modules were imported. No client commands or process writes were performed."
+  ]
+}

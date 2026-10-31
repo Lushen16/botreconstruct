@@ -1,0 +1,621 @@
+!(function (e) {
+  "use strict";
+  const o = (e, o, a = "") => ({ key: e, label: o, type: "text", default: a }),
+    a = (e, o, a, t = 0, r = 36e5) => ({
+      key: e,
+      label: o,
+      type: "number",
+      default: a,
+      min: t,
+      max: r,
+    }),
+    t = (e, o, t) => a(e, o, t, 0, 100),
+    r = (e, o, a = !1) => ({ key: e, label: o, type: "boolean", default: a }),
+    i = (e, o, a, t = a[0]) => ({
+      key: e,
+      label: o,
+      type: "select",
+      options: a,
+      default: t,
+    }),
+    n = (e, o, a) => ({ key: e, label: o, type: "object", fields: a }),
+    s = (e, o, a) => ({ key: e, label: o, type: "list", fields: a }),
+    l = (e, o) => ({ key: e, label: o, type: "code", default: "" }),
+    d = (e, o, a) => ({ ...e, help: o, ...(a ? { labels: a } : {}) }),
+    m = (e) =>
+      n(e, "healSkill" === e ? "Cura do Pokémon" : "Buff ao lurar", [
+        r("enabled", "Ativado no perfil"),
+        o("move", "Skill (mX)", "m1"),
+        t("hpPercent", "HP %", 50),
+      ]),
+    c = (e) =>
+      d(
+        n(`consumable${e}`, `Consumível ${e}`, [
+          r("enabled", "Ativar este slot"),
+          d(
+            o("hotkey", "Hotkey do item"),
+            "Hotkey na action bar com Usar, Usar em si ou Usar no Pokémon.",
+          ),
+          d(
+            a("intervalMinutes", "Usar a cada (min)", 60, 1, 10080),
+            "Usa ao ativar e repete a sequência neste intervalo. Cada sequência faz quatro tentativas, com dez segundos entre elas.",
+          ),
+        ]),
+        "Ao ativar com o bot em execução, usa na hora e repete após 10, 20 e 30 segundos. Respeita a pausa geral.",
+      ),
+    p = ["normal", "wildscape", "primal"],
+    u = [
+      "normal",
+      "fire",
+      "fighting",
+      "water",
+      "flying",
+      "grass",
+      "poison",
+      "electric",
+      "ground",
+      "psychic",
+      "rock",
+      "ice",
+      "bug",
+      "dragon",
+      "ghost",
+      "dark",
+      "steel",
+      "fairy",
+    ],
+    b = [
+      {
+        key: "scripts",
+        label: "Scripts",
+        subtitle: "Biblioteca de scripts e macros",
+        capability: "lua",
+        source: "09_ui_scripts.lua",
+        fields: [
+          s("entries", "Scripts", [
+            o("name", "Nome", "Novo script"),
+            a("interval", "Intervalo (ms)", 500, 1),
+            l("code", "Código Lua"),
+          ]),
+        ],
+      },
+      {
+        key: "target",
+        label: "Target",
+        subtitle: "Seleção de alvos, combo e posicionamento",
+        capability: "creatures",
+        source: "05_target.lua / 11_ui_target.lua",
+        fields: [
+          o("ignoredCreaturesText", "Ignorar criaturas (vírgulas)"),
+          r("shinyPriorityEnabled", "Prioridade para Shiny"),
+          r("instanceModeEnabled", "Modo instância"),
+          t("lowHpComboPercent", "HP de emergência do combo %", 0),
+          s("monsters", "Criaturas configuradas", [
+            d(
+              o("name", "Nome do monstro (* = qualquer)", "*"),
+              "Nome como aparece no jogo. Use * como curinga: “*” pega todos, “Shiny *” pega todos os Shiny.",
+            ),
+            d(
+              o("spell", "Skill sem combo (mX)"),
+              "Só com o combo Desligado: a skill (m1, m2…) que o bot usa no alvo. Vazio: só ataca.",
+            ),
+            d(
+              t("hp", "Usar a skill com o alvo até HP %", 100),
+              "Só com o combo Desligado: a skill acima sai quando o HP do monstro estiver neste valor ou menos. 100 = sempre.",
+            ),
+            d(
+              a("range", "Alcance (SQM)", 7, 1, 30),
+              "Distância máxima do monstro para ele contar no Min Count e poder ser atacado.",
+            ),
+            d(
+              a("priority", "Prioridade", 1, 1, 1e3),
+              "Com vários tipos na tela, o bot ataca primeiro o de MENOR número (1 vem antes de 2).",
+            ),
+            d(
+              a("minCount", "Min Count (parar com)", 1, 1, 100),
+              "O bot só para e luta quando houver pelo menos esta quantidade deste monstro perto do seu Pokémon. Abaixo disso ele continua andando e lurando.",
+            ),
+            i("creatureType", "Tipo", [1]),
+            d(
+              i("movement", "Movimento", [
+                "chase",
+                "stand",
+                "kite",
+                "random_move",
+              ]),
+              "Só com o combo Desligado: como o treinador se move enquanto ataca.",
+              {
+                chase: "Chase · segue o monstro",
+                stand: "Stand · fica parado",
+                kite: "Kite · mantém distância",
+                random_move: "Random · alterna os de baixo",
+              },
+            ),
+            d(
+              a("kiteRange", "Distância do Kite (SQM)", 2, 1, 30),
+              "Com o movimento Kite: distância que o treinador tenta manter do monstro.",
+            ),
+            d(
+              n("randomMoves", "Movimentos do Random", [
+                r("stand", "Stand", !0),
+                r("chase", "Chase", !0),
+                r("kite", "Kite", !0),
+              ]),
+              "Com o movimento Random: quais movimentos o bot sorteia.",
+            ),
+          ]),
+          n("combo", "Combo", [
+            r("enabled", "Ativado no perfil"),
+            o("sequenceText", "Sequência de skills", "m5"),
+            a("stepDelay", "Intervalo entre skills (ms)", 250),
+            a("lureDelay", "Espera antes do 1º combo (ms)", 1e3),
+            a(
+              "finishRemainingCount",
+              "Seguir a rota se sobrarem até",
+              0,
+              0,
+              100,
+            ),
+            r("finishIgnoreShiny", "Deixar Shiny para trás"),
+            r("useNativeSequence", "Sequência nativa"),
+            r("usePokeStop", "PokeStop"),
+            r("useMedicine", "Medicine para debuff"),
+            r("useMedicineBeforeCombo", "Medicine antes do combo"),
+            o("medicineHotkey", "Hotkey Medicine"),
+            a("medicineDelayMs", "Delay Medicine (ms)", 50),
+            r("perfectingLureEnabled", "Perfect lure"),
+            t("perfectingLureHpPercent", "HP de segurança do Perfect %", 30),
+            a(
+              "medicineActionBar",
+              "Slot de Medicine na action bar (0 desliga)",
+              0,
+              0,
+              50,
+            ),
+            a("perfectingLureRange", "Alcance do Perfect", 1, 1, 7),
+            r("perfectingSkillMaskEnabled", "Usar área desenhada"),
+            s("perfectingSkillMask", "Área da skill (offsets)", [
+              a("dx", "X", 1, -7, 7),
+              a("dy", "Y", 0, -7, 7),
+            ]),
+            r("perfectingReboxEnabled", "Rebox"),
+            r("bestTileEnabled", "Best Tile"),
+            r("targetCreaturesEnabled", "Marcar alvo no combo", !0),
+          ]),
+          n("autoRevive", "Revive automático", [
+            r("enabled", "Ativado no perfil"),
+            o("hotkey", "Hotkey Revive"),
+            a("interval", "Espera após última skill (ms)", 1500, 1),
+            r("waitForPokemon", "Esperar Pokémon"),
+          ]),
+          n("luring", "Luring", [
+            r("enabled", "Lure de Acompanhamento"),
+            a("maxDistance", "Distância máxima (SQM)", 3, 1, 30),
+            r("frontEnabled", "Dynamic Lure"),
+            a("frontRegroupMargin", "Recuperar (SQM)", 5, 4, 8),
+            a("frontRegroupSteps", "Liberar (SQM)", 3, 1, 4),
+            r("randomEnabled", "Lure aleatório"),
+            a("randomMinSeconds", "Mínimo (s)", 45, 1),
+            a("randomMaxSeconds", "Máximo (s)", 100, 1),
+          ]),
+          m("lureSkill"),
+          m("healSkill"),
+          n("combatStanceAuto", "Postura", [
+            r("enabled", "Alternar ofensivo / defensivo"),
+          ]),
+        ],
+      },
+      {
+        key: "healer",
+        label: "Healer",
+        subtitle: "Cura após combate e retorno ao Pokémon inicial",
+        capability: "pokemon",
+        source: "11_ui_target.lua:6239",
+        fields: [
+          t("healHpPercent", "Curar player abaixo de HP % (0 desliga)", 0),
+          o("healPokemonName", "Pokémon de cura"),
+          a("healMoveSlot", "Skill M", 1, 1, 100),
+          a("healResetSlot", "Reset slot da action bar", 1, 0, 50),
+          o("returnPokemonName", "Pokémon de retorno"),
+        ],
+      },
+      {
+        key: "walker",
+        label: "Walker",
+        subtitle: "Rotas, waypoints e ações",
+        capability: "map",
+        source: "07_wk.lua / 12_ui_wk.lua",
+        fields: [
+          r("smartWalking", "Smart walking"),
+          r("startNearestWaypoint", "Iniciar no waypoint mais próximo"),
+          a("recordStepDistance", "Gravar a cada N tiles", 5, 1, 100),
+          r("loop", "Repetir rota", !0),
+          o("mapPath", "Arquivo OTMM"),
+          o("luaProfile", "Perfil Lua da rota"),
+          o("luaRevision", "Revisão do arquivo Lua"),
+          i("guildDailyTier", "Tier da daily guild", p),
+          i("guildDailyElement", "Elemento da daily guild", u),
+          r("guildDailyAutoEnabled", "Pegar daily ao iniciar o bot"),
+          r("guildDailyUseTicket", "Resetar com ticket ao concluir"),
+          o("guildDailyTicketHotkey", "Hotkey do ticket de reset"),
+          a(
+            "guildDailyTicketAmount",
+            "Limite de tickets por 24 horas",
+            1,
+            1,
+            1e3,
+          ),
+          s("waypoints", "Waypoints", [
+            i("action", "Ação", [
+              "walk",
+              "safespot",
+              "box",
+              "stairs",
+              "wait",
+              "say",
+            ]),
+            n("pos", "Posição", [
+              a("x", "X", 0, 0, 65534),
+              a("y", "Y", 0, 0, 65534),
+              a("z", "Z", 7, 0, 15),
+            ]),
+            {
+              key: "param",
+              label: "Parâmetro / texto / código",
+              type: "parameter",
+              default: "",
+            },
+            r("stairCheckMonsters", "Verificar target na escada"),
+          ]),
+        ],
+      },
+      {
+        key: "looting",
+        label: "CAPTURE",
+        subtitle: "Captura de Pokémon",
+        capability: "items",
+        source: "13_ui_looting.lua",
+        fields: [
+          a("maxCaptureDist", "Alcance da captura (SQM)", 3, 1, 30),
+          r("captureEnabled", "Captura ativada no perfil"),
+          r("captureAfterCombat", "Capturar após combate"),
+          r("captureRandomMode", "Captura aleatória"),
+          a("captureDelay", "Intervalo de captura (ms)", 1e3, 1),
+          s("captureEntries", "Corpos para capturar", [
+            o("name", "Nome do corpo"),
+            a("corpseId", "ID do corpo", 1, 1, 65535),
+            a("ballId", "ID da ball", 0, 0, 65535),
+            a("fallbackBallId", "Ball alternativa", 0, 0, 65535),
+          ]),
+        ],
+      },
+      {
+        key: "alerts",
+        label: "Alerts",
+        subtitle: "Regras, ações e monitoramento",
+        capability: "alerts",
+        source: "17_ui_alerts.lua / 18_alerts_module.lua",
+        fields: [
+          r("pauseWithHotkey", "Respeitar pausa global", !0),
+          s("rules", "Regras de alerta", [
+            o("name", "Nome", "Nova regra"),
+            r("enabled", "Ativada", !0),
+            i("type", "Tipo", [
+              "hp",
+              "disconnected",
+              "chat",
+              "creature",
+              "player",
+              "gm_arrow",
+              "gm_message",
+              "hunt_pokemon",
+              "teleport",
+              "camera_viewers",
+              "pokemon_capture",
+            ]),
+            t("hpThreshold", "HP abaixo de %", 30),
+            r("hpOnce", "HP: uma vez por queda", !0),
+            i("chatMode", "Canal", [
+              "private",
+              "local",
+              "party",
+              "channel",
+              "all",
+            ]),
+            o("creatureName", "Nome / curinga", "*"),
+            a("creatureRange", "Alcance de criatura", 7, 1, 30),
+            a("playerRange", "Alcance de player", 5, 1, 30),
+            o("huntPokemonNames", "Pokémons da hunt"),
+            a("teleportIntervalMs", "Verificar teleporte (ms)", 500, 50),
+            i("soundMode", "Tipo de áudio", ["voice", "beep"]),
+            i("soundKind", "Beep clássico", [
+              "default",
+              "low",
+              "high",
+              "pulse",
+              "urgent",
+              "happy",
+              "off",
+            ]),
+            r("soundEnabled", "Som", !0),
+            r("soundRepeatEnabled", "Repetir som"),
+            a("soundRepeatSeconds", "Repetição (s)", 10, 1),
+            r("frontEnabled", "Focar cliente"),
+            r("logoutEnabled", "Logout"),
+            r("talkEnabled", "Enviar mensagem"),
+            o("talkMsg", "Mensagens (vírgulas)"),
+            a("talkCooldownSec", "Intervalo de mensagem (s)", 10, 1),
+            r("pauseWk", "Pausar walker"),
+            r("pauseTarget", "Pausar target"),
+            r("pauseLooting", "Pausar loot"),
+            i("gmArrowMode", "Seta GM", ["stop", "walk"]),
+            o("gmArrowMsg", "Mensagem ao chegar"),
+            a("gmArrowMsgDelaySec", "Delay da mensagem (s)", 2),
+            r("gmArrowSpinEnabled", "Girar"),
+            a("gmArrowSpinSeconds", "Girar por (s)", 4),
+          ]),
+          o("gmMessageActiveProfile", "Perfil de mensagens GM", "default"),
+          l(
+            "gmMessageProfilesJson",
+            "Blacklist e pendências por perfil (JSON)",
+          ),
+          a("gmMessageRevision", "Revisão das mensagens GM", 0, 0, 2147483647),
+        ],
+      },
+      {
+        key: "hoenn",
+        label: "Hoenn",
+        subtitle: "Rotação de times e recuperação",
+        capability: "pokemon",
+        source: "15_hoenn_module.lua / 16_ui_hoenn.lua",
+        fields: [
+          i("formation", "Formação", ["2x3", "3x2"]),
+          d(
+            a("minWildsToEngage", "Parar com (selvagens na tela)", 8, 1, 100),
+            "O Hoenn para a rota e começa a lure com esta quantidade de selvagens na tela. No Perfect lure é também quantos precisam colar no tank. Máximo útil: 8.",
+          ),
+          d(
+            o("ignoredCreaturesText", "Ignorar criaturas"),
+            "Nomes que o Hoenn não conta nem ataca, separados por vírgula. * vale como curinga.",
+          ),
+          d(
+            r("targetShinyEnabled", "Mirar no Shiny", !0),
+            "Com Shiny na box, o combo depois do !pokestop marca o Shiny como alvo.",
+          ),
+          d(
+            r("forceBox", "Forçar BOX"),
+            "Ao atingir Parar com, segue direto ao próximo waypoint BOX da rota. Se estiver bloqueado, tenta outra BOX; sem alternativa, combate no local. Desmarcado: combate por quantidade de selvagens na tela.",
+          ),
+          d(
+            r("perfectLure", "Perfect lure", !0),
+            "O tank só solta o combo com os selvagens colados nele (a box fechada).",
+          ),
+          d(
+            a("perfectLureTimeoutMs", "Perfect: soltar após (ms)", 1e4),
+            "Numa lure comum, o combo sai depois deste tempo mesmo sem a box fechar. Numa BOX ele espera fechar.",
+          ),
+          d(
+            t("perfectLureMinHp", "Perfect: soltar com HP do tank até %", 60),
+            "Se o HP do tank cair para este valor, o combo sai na hora, com a box fechada ou não. 0 desliga.",
+          ),
+          d(
+            r("bestTile", "Best Tile", !0),
+            "Antes do !pokestop, leva o tank para o tile que pega mais selvagens.",
+          ),
+          d(
+            a("bestTileRange", "Best Tile: raio (SQM)", 4, 1, 6),
+            "Até que distância do tank o Best Tile procura o tile melhor.",
+          ),
+          d(
+            a("bestTileMaxWaitMs", "Best Tile: espera máxima (ms)", 2500),
+            "Tempo máximo esperando o tank chegar no tile escolhido.",
+          ),
+          d(
+            a("bestTileRetryMs", "Best Tile: repetir ordem (ms)", 700, 1),
+            "De quanto em quanto tempo a ordem de ir ao tile é repetida.",
+          ),
+          d(
+            a("deployToPokestopMs", "Troca → PokeStop (ms)", 200),
+            "Espera entre o Pokémon sair da ball e o !pokestop.",
+          ),
+          d(
+            a("pokestopToComboMs", "PokeStop → combo (ms)", 400),
+            "Espera entre o !pokestop e o combo, para o Pokémon parar.",
+          ),
+          d(
+            a("pokeReadyTimeoutMs", "Espera pelo Pokémon (ms)", 3e3),
+            "Se um DPS não aparecer no mapa neste tempo, o Hoenn pula para o próximo.",
+          ),
+          d(
+            a("comboFallbackMs", "Fim do combo sem resposta (ms)", 3e3),
+            "Sem cooldown novo das skills por este tempo, o combo é dado como terminado.",
+          ),
+          d(
+            o("potionHotkey", "Hotkey Potion"),
+            "Tecla da action bar com a potion em “Usar no Pokémon”.",
+          ),
+          d(
+            a("potionActionBar", "Slot antigo de potion (0 desliga)", 3, 0, 50),
+            "Só para perfis antigos sem hotkey: o slot da action bar com a potion.",
+          ),
+          d(
+            t("potionHpPercent", "Potion abaixo de HP %", 60),
+            "Usa potion no Pokémon fora da ball quando o HP dele ficar abaixo deste valor.",
+          ),
+          d(
+            a("potionCooldownMs", "Intervalo de potion (ms)", 1500, 1),
+            "Tempo mínimo entre duas potions.",
+          ),
+          d(
+            r("useMedicine", "Medicine", !0),
+            "Usa Medicine quando o Pokémon fica com efeito negativo (paralisia, veneno…).",
+          ),
+          d(
+            o("medicineHotkey", "Hotkey Medicine"),
+            "Tecla da action bar com a Medicine em “Usar no Pokémon”.",
+          ),
+          d(
+            r("positionAround", "Posicionar treinador ao tank", !0),
+            "Depois do !pokestop, o treinador anda para um tile em cruz a N SQM do tank e vira para a box.",
+          ),
+          d(
+            a("positionTiles", "Distância do tank (SQM)", 2, 1, 5),
+            "Quantos SQM o treinador fica do tank quando “Posicionar treinador ao tank” está ligado.",
+          ),
+          d(
+            a(
+              "medicineActionBar",
+              "Slot de Medicine na action bar (0 desliga)",
+              0,
+              0,
+              50,
+            ),
+            "Só para perfis antigos sem hotkey: o slot da action bar com a Medicine.",
+          ),
+          d(
+            r("useSafeSpot", "Recuperar no Safe Spot", !0),
+            "Se sobrar selvagem vivo depois do time, o treinador corre para o próximo Safe Spot da rota para recuperar o time.",
+          ),
+          d(
+            r("forceSafeSpotRecovery", "Sempre recuperar no Safe Spot"),
+            "Vai para o Safe Spot depois de toda lure, mesmo sem selvagem vivo.",
+          ),
+          d(
+            a("safeSpotTimeoutMs", "Tempo máximo até o Safe Spot (ms)", 15e3),
+            "Se não chegar ao Safe Spot neste tempo, recupera o time onde estiver.",
+          ),
+          d(
+            a(
+              "shinyRetreatDelayMs",
+              "Shiny: sair após o combo (ms)",
+              0,
+              0,
+              1e4,
+            ),
+            "Com Shiny vivo no último combo do time, o treinador sai para o Safe Spot este tempo depois de soltar o combo. 0 = na hora.",
+          ),
+          d(
+            r("useReadyGate", "Esperar skills prontas", !0),
+            "Antes da próxima lure, espera as skills do time que vai entrar chegarem ao % abaixo.",
+          ),
+          d(
+            t("gateReadyPct", "Skills prontas %", 80),
+            "Quanto da barra azul (skills prontas) cada Pokémon do próximo time precisa ter.",
+          ),
+          d(
+            t("gateMinHp", "HP mínimo do tank %", 90),
+            "O próximo time só sai com o tank com pelo menos este HP.",
+          ),
+          d(
+            t("gateDpsMinHp", "HP mínimo dos DPS %", 90),
+            "O próximo time só sai com cada DPS com pelo menos este HP.",
+          ),
+          d(
+            a("gateMaxWaitMs", "Aviso de espera longa (ms)", 6e4),
+            "Se a recuperação passar deste tempo, aparece um aviso dizendo quem está segurando. O bot continua esperando.",
+          ),
+          d(
+            r("cycleAtSafeSpot", "Alternar Pokémon na recuperação"),
+            "Na recuperação, coloca os Pokémon do próximo time para fora um de cada vez (a barra carrega mais rápido fora da ball). O tank sai por último.",
+          ),
+          d(
+            r("autoStance", "Postura automática", !0),
+            "Troca a postura (ofensiva/defensiva) sozinho: defensiva andando e na recuperação.",
+          ),
+          s("roster", "Roster (identidade por UUID)", [
+            o("key", "Chave"),
+            o("uuid", "UUID"),
+            o("name", "Nome"),
+            i("role", "Função", ["tank", "dps"], "dps"),
+            a("dwellMs", "Espera antes de trocar (ms)", 1500),
+            r("usePokestop", "PokeStop", !0),
+            r("toPoke", "To Poke", !0),
+            t("readyPct", "Skills prontas %", 80),
+            r("buffOn", "Buff"),
+            a("buffMove", "Skill do buff", 1, 1, 100),
+            t("buffHp", "HP do buff %", 60),
+            r("healOn", "Cura"),
+            a("healMove", "Skill de cura", 1, 1, 100),
+            t("healHp", "HP da cura %", 50),
+          ]),
+        ],
+      },
+      {
+        key: "tools",
+        label: "Tools",
+        subtitle: "Atalhos e consumíveis",
+        capability: "hotkeys",
+        source: "19_tools_module.lua / 20_ui_tools.lua",
+        fields: [
+          d(
+            o("menuHotkey", "Tecla do menu", "Insert"),
+            "Mostra ou esconde este menu, com o jogo ou o menu em foco.",
+          ),
+          d(
+            o("pauseHotkey", "Tecla de pausa", "Home"),
+            "Pausa todos os módulos; aperte de novo para continuar de onde parou. Só vale com o jogo ou o menu em foco.",
+          ),
+          c(1),
+          c(2),
+          c(3),
+          c(4),
+        ],
+      },
+    ],
+    k = (e) =>
+      Object.fromEntries(
+        e.map((e) => [
+          e.key,
+          "object" === e.type
+            ? k(e.fields)
+            : "list" === e.type
+              ? []
+              : e.default,
+        ]),
+      );
+  const f = {
+    tabs: b,
+    defaults: k,
+    createConfig: () => Object.fromEntries(b.map((e) => [e.key, k(e.fields)])),
+    migrateTools: function (e) {
+      if (!e || "object" != typeof e || Array.isArray(e)) return e;
+      const o = { ...e },
+        a = k(b.find((e) => "tools" === e.key).fields);
+      for (const e of ["consumable1", "consumable2", "consumable3"])
+        void 0 === o[e] && (o[e] = a[e]);
+      if (
+        void 0 === o.consumable4 &&
+        ((o.consumable4 = a.consumable4),
+        ["foodEnabled", "foodHotkey", "foodIntervalSeconds"].some((e) =>
+          Object.hasOwn(o, e),
+        ))
+      ) {
+        const e = void 0 !== o.foodEnabled && o.foodEnabled,
+          a = void 0 === o.foodHotkey ? "" : o.foodHotkey,
+          t = void 0 === o.foodIntervalSeconds ? 60 : o.foodIntervalSeconds;
+        if (
+          "boolean" != typeof e ||
+          "string" != typeof a ||
+          a.length > 2e5 ||
+          !Number.isInteger(t) ||
+          t < 1 ||
+          t > 36e5
+        )
+          throw Error("Configuração antiga de food inválida.");
+        o.consumable4 = {
+          enabled: e,
+          hotkey: a,
+          intervalMinutes: Math.min(10080, Math.max(1, Math.ceil(t / 60))),
+        };
+      }
+      for (const e of ["foodEnabled", "foodHotkey", "foodIntervalSeconds"])
+        delete o[e];
+      return o;
+    },
+    guildDailyTiers: p,
+    guildDailyElements: u,
+  };
+  "undefined" != typeof module && module.exports
+    ? (module.exports = f)
+    : (e.PkaSchema = f);
+})("undefined" != typeof window ? window : globalThis);

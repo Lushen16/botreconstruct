@@ -1,0 +1,2450 @@
+{
+  "startedAt": "2026-10-29T00:23:17.493Z",
+  "source": "live-rpm",
+  "simulation": false,
+  "tabs": [
+    {
+      "title": "Scripts",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-0.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Salvar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar scripts"
+    },
+    {
+      "title": "Targeting",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-1.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "+ Adicionar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        },
+        {
+          "text": "Desligado",
+          "disabled": false
+        },
+        {
+          "text": "Sequência (mX)",
+          "disabled": false
+        },
+        {
+          "text": "AutoCombo do cliente",
+          "disabled": false
+        },
+        {
+          "text": "Marcar alvo no combo: ON",
+          "disabled": false
+        },
+        {
+          "text": "PokeStop: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Medicine antes: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Medicine em debuff: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Postura automática: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Best Tile: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Perfect lure: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Rebox: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Usar desenho: OFF",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "P",
+          "disabled": true
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "",
+          "disabled": false
+        },
+        {
+          "text": "Revive: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Revive seguro: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Deixar Shiny para trás: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Cura: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Buff: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Iniciar Target",
+          "disabled": true
+        },
+        {
+          "text": "Ver conexão",
+          "disabled": false
+        },
+        {
+          "text": "Ir ao ajuste",
+          "disabled": false
+        },
+        {
+          "text": "★ Atacar Shiny primeiro: OFF",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar target"
+    },
+    {
+      "title": "Healer",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-2.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "‹",
+          "disabled": true
+        },
+        {
+          "text": "›",
+          "disabled": true
+        },
+        {
+          "text": "‹",
+          "disabled": true
+        },
+        {
+          "text": "›",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar healer"
+    },
+    {
+      "title": "Walker",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-3.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "+ Nova rota",
+          "disabled": false
+        },
+        {
+          "text": "Criar",
+          "disabled": false
+        },
+        {
+          "text": "Cancelar",
+          "disabled": false
+        },
+        {
+          "text": "▶ Iniciar",
+          "disabled": false
+        },
+        {
+          "text": "■ Parar",
+          "disabled": true
+        },
+        {
+          "text": "● Gravar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        },
+        {
+          "text": "001Walk3321, 2261, 9",
+          "disabled": false
+        },
+        {
+          "text": "002Walk3322, 2268, 9",
+          "disabled": false
+        },
+        {
+          "text": "003Walk3322, 2274, 9",
+          "disabled": false
+        },
+        {
+          "text": "004Walk3320, 2280, 9",
+          "disabled": false
+        },
+        {
+          "text": "005Walk3315, 2280, 9",
+          "disabled": false
+        },
+        {
+          "text": "006Walk3310, 2281, 9",
+          "disabled": false
+        },
+        {
+          "text": "007Walk3301, 2281, 9",
+          "disabled": false
+        },
+        {
+          "text": "008Walk3293, 2280, 9",
+          "disabled": false
+        },
+        {
+          "text": "009Walk3292, 2277, 9",
+          "disabled": false
+        },
+        {
+          "text": "010Walk3291, 2274, 9",
+          "disabled": false
+        },
+        {
+          "text": "011Walk3291, 2265, 9",
+          "disabled": false
+        },
+        {
+          "text": "012Walk3291, 2262, 9",
+          "disabled": false
+        },
+        {
+          "text": "013Walk3294, 2258, 9",
+          "disabled": false
+        },
+        {
+          "text": "014Walk3298, 2257, 9",
+          "disabled": false
+        },
+        {
+          "text": "015Walk3307, 2257, 9",
+          "disabled": false
+        },
+        {
+          "text": "016Walk3314, 2259, 9",
+          "disabled": false
+        },
+        {
+          "text": "017Walk3320, 2259, 9",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": true
+        },
+        {
+          "text": "↓",
+          "disabled": true
+        },
+        {
+          "text": "Minha posição",
+          "disabled": true
+        },
+        {
+          "text": "Excluir",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "Loop: ON",
+          "disabled": false
+        },
+        {
+          "text": "Ponto mais próximo: ON",
+          "disabled": false
+        },
+        {
+          "text": "Dynamic Lure: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Lure de Acompanhamento: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Pegar daily",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": false
+        },
+        {
+          "text": "↓",
+          "disabled": false
+        },
+        {
+          "text": "⌖",
+          "disabled": false
+        },
+        {
+          "text": "−",
+          "disabled": false
+        },
+        {
+          "text": "+",
+          "disabled": false
+        },
+        {
+          "text": "⛶",
+          "disabled": false
+        },
+        {
+          "text": "Abrir mapa",
+          "disabled": false
+        },
+        {
+          "text": "↺",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar walker"
+    },
+    {
+      "title": "CAPTURE",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-4.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Iniciar captura",
+          "disabled": true
+        },
+        {
+          "text": "Copiar ID",
+          "disabled": true
+        },
+        {
+          "text": "Usar como corpo",
+          "disabled": true
+        },
+        {
+          "text": "Cancelar seleção",
+          "disabled": false
+        },
+        {
+          "text": "Selecionar",
+          "disabled": true
+        },
+        {
+          "text": "Selecionar",
+          "disabled": true
+        },
+        {
+          "text": "Selecionar",
+          "disabled": true
+        },
+        {
+          "text": "+ Adicionar corpo",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar looting"
+    },
+    {
+      "title": "Alertas",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-5.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Iniciar monitor",
+          "disabled": true
+        },
+        {
+          "text": "+ Nova regra",
+          "disabled": false
+        }
+      ],
+      "run": "Iniciar alerts"
+    },
+    {
+      "title": "Hoenn",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-6.png",
+      "notice": "",
+      "buttons": [
+        {
+          "text": "Iniciar Hoenn",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar hoenn"
+    },
+    {
+      "title": "Tools",
+      "status": "ui-rendered-only",
+      "screenshot": "live-ui-tab-7.png",
+      "notice": "",
+      "buttons": [],
+      "run": "Iniciar tools"
+    }
+  ],
+  "walker": {
+    "status": "movement-not-confirmed",
+    "samples": [
+      {
+        "at": "2026-10-29T00:23:22.154Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.082250+00:00",
+        "ageMs": 72,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [],
+          "pid": null,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 0,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.155Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.082250+00:00",
+        "ageMs": 73,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [],
+          "pid": null,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 0,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.235Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.207402+00:00",
+        "ageMs": 28,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Walker teclado: aguardando",
+          "phases": {},
+          "walkerIndex": 0,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.263Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.207402+00:00",
+        "ageMs": 56,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Walker teclado: aguardando",
+          "phases": {},
+          "walkerIndex": 0,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.374Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.250671+00:00",
+        "ageMs": 123,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "idle",
+          "error": null,
+          "phase": "Walker teclado: aguardando",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.472Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.352342+00:00",
+        "ageMs": 120,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.481Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.352342+00:00",
+        "ageMs": 129,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.590Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.484996+00:00",
+        "ageMs": 106,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.699Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.627839+00:00",
+        "ageMs": 72,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.812Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.780038+00:00",
+        "ageMs": 32,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.895Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.780038+00:00",
+        "ageMs": 115,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:22.919Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.780038+00:00",
+        "ageMs": 139,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.029Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:22.780038+00:00",
+        "ageMs": 249,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.139Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.055407+00:00",
+        "ageMs": 84,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.249Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.164048+00:00",
+        "ageMs": 85,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.329Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.164048+00:00",
+        "ageMs": 165,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.361Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.343880+00:00",
+        "ageMs": 18,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.471Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.449970+00:00",
+        "ageMs": 22,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.590Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.473484+00:00",
+        "ageMs": 117,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.701Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.625556+00:00",
+        "ageMs": 76,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.766Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.742208+00:00",
+        "ageMs": 24,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.815Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.764772+00:00",
+        "ageMs": 51,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:23.925Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.877866+00:00",
+        "ageMs": 48,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.029Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:23.877866+00:00",
+        "ageMs": 152,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.139Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.035729+00:00",
+        "ageMs": 104,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.210Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.136832+00:00",
+        "ageMs": 74,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.246Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.136832+00:00",
+        "ageMs": 110,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.353Z",
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": false,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado: move",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.355Z",
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": [
+            "walker"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.669Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.637755+00:00",
+        "ageMs": 32,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [
+            "walker"
+          ],
+          "pid": 26100,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": [
+            "walker"
+          ]
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.670Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.637755+00:00",
+        "ageMs": 33,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 26100,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.981Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.935794+00:00",
+        "ageMs": 46,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 26100,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      },
+      {
+        "at": "2026-10-29T00:23:24.981Z",
+        "pid": 26100,
+        "generatedAt": "2026-10-29T00:23:24.935794+00:00",
+        "ageMs": 46,
+        "position": {
+          "x": 3319,
+          "y": 2277,
+          "z": 9
+        },
+        "runtime": {
+          "modules": [],
+          "pid": 26100,
+          "paused": true,
+          "backend": "keyboard-rpm",
+          "status": "walking",
+          "error": null,
+          "phase": "Walker teclado pausado",
+          "phases": {},
+          "walkerIndex": 2,
+          "pausedModules": []
+        }
+      }
+    ],
+    "start": {
+      "disabled": false,
+      "title": "Começa a andar a rota. Com “Ponto mais próximo: ON” começa pelo ponto mais perto de você."
+    },
+    "afterStart": {
+      "modules": [
+        "walker"
+      ],
+      "pid": 26100,
+      "paused": false,
+      "backend": "keyboard-rpm",
+      "status": "walking",
+      "error": null,
+      "phase": "Walker teclado: move",
+      "phases": {},
+      "walkerIndex": 2,
+      "pausedModules": []
+    },
+    "afterPause": {
+      "modules": [
+        "walker"
+      ],
+      "pid": 26100,
+      "paused": true,
+      "backend": "keyboard-rpm",
+      "status": "walking",
+      "error": null,
+      "phase": "Walker teclado pausado",
+      "phases": {},
+      "walkerIndex": 2,
+      "pausedModules": [
+        "walker"
+      ]
+    },
+    "afterStop": {
+      "modules": [],
+      "pid": 26100,
+      "paused": true,
+      "backend": "keyboard-rpm",
+      "status": "walking",
+      "error": null,
+      "phase": "Walker teclado pausado",
+      "phases": {},
+      "walkerIndex": 2,
+      "pausedModules": []
+    },
+    "positionChanged": false,
+    "ui": {
+      "notice": "",
+      "buttons": [
+        {
+          "text": "+ Nova rota",
+          "disabled": false
+        },
+        {
+          "text": "Criar",
+          "disabled": false
+        },
+        {
+          "text": "Cancelar",
+          "disabled": false
+        },
+        {
+          "text": "▶ Iniciar",
+          "disabled": false
+        },
+        {
+          "text": "■ Parar",
+          "disabled": true
+        },
+        {
+          "text": "● Gravar",
+          "disabled": false
+        },
+        {
+          "text": "Limpar",
+          "disabled": false
+        },
+        {
+          "text": "001Walk3321, 2261, 9",
+          "disabled": false
+        },
+        {
+          "text": "002Walk3322, 2268, 9",
+          "disabled": false
+        },
+        {
+          "text": "003Walk3322, 2274, 9",
+          "disabled": false
+        },
+        {
+          "text": "004Walk3320, 2280, 9",
+          "disabled": false
+        },
+        {
+          "text": "005Walk3315, 2280, 9",
+          "disabled": false
+        },
+        {
+          "text": "006Walk3310, 2281, 9",
+          "disabled": false
+        },
+        {
+          "text": "007Walk3301, 2281, 9",
+          "disabled": false
+        },
+        {
+          "text": "008Walk3293, 2280, 9",
+          "disabled": false
+        },
+        {
+          "text": "009Walk3292, 2277, 9",
+          "disabled": false
+        },
+        {
+          "text": "010Walk3291, 2274, 9",
+          "disabled": false
+        },
+        {
+          "text": "011Walk3291, 2265, 9",
+          "disabled": false
+        },
+        {
+          "text": "012Walk3291, 2262, 9",
+          "disabled": false
+        },
+        {
+          "text": "013Walk3294, 2258, 9",
+          "disabled": false
+        },
+        {
+          "text": "014Walk3298, 2257, 9",
+          "disabled": false
+        },
+        {
+          "text": "015Walk3307, 2257, 9",
+          "disabled": false
+        },
+        {
+          "text": "016Walk3314, 2259, 9",
+          "disabled": false
+        },
+        {
+          "text": "017Walk3320, 2259, 9",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": true
+        },
+        {
+          "text": "↓",
+          "disabled": true
+        },
+        {
+          "text": "Minha posição",
+          "disabled": true
+        },
+        {
+          "text": "Excluir",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "Loop: ON",
+          "disabled": false
+        },
+        {
+          "text": "Ponto mais próximo: ON",
+          "disabled": false
+        },
+        {
+          "text": "Dynamic Lure: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Lure de Acompanhamento: OFF",
+          "disabled": false
+        },
+        {
+          "text": "Pegar daily",
+          "disabled": true
+        },
+        {
+          "text": "Walk",
+          "disabled": false
+        },
+        {
+          "text": "Safe Spot",
+          "disabled": false
+        },
+        {
+          "text": "BOX",
+          "disabled": false
+        },
+        {
+          "text": "Stair",
+          "disabled": false
+        },
+        {
+          "text": "Wait",
+          "disabled": false
+        },
+        {
+          "text": "Say",
+          "disabled": false
+        },
+        {
+          "text": "↑",
+          "disabled": false
+        },
+        {
+          "text": "↓",
+          "disabled": false
+        },
+        {
+          "text": "⌖",
+          "disabled": false
+        },
+        {
+          "text": "−",
+          "disabled": false
+        },
+        {
+          "text": "+",
+          "disabled": false
+        },
+        {
+          "text": "⛶",
+          "disabled": false
+        },
+        {
+          "text": "Abrir mapa",
+          "disabled": false
+        },
+        {
+          "text": "↺",
+          "disabled": true
+        }
+      ],
+      "run": "Iniciar walker"
+    }
+  },
+  "pid": 26100,
+  "initial": {
+    "at": "2026-10-29T00:23:19.314Z",
+    "pid": 26100,
+    "generatedAt": "2026-10-29T00:23:19.264525+00:00",
+    "ageMs": 50,
+    "position": {
+      "x": 3319,
+      "y": 2277,
+      "z": 9
+    },
+    "runtime": {
+      "modules": [],
+      "pid": null,
+      "paused": true,
+      "backend": "keyboard-rpm",
+      "status": "idle",
+      "error": null,
+      "phase": "Walker teclado pausado",
+      "phases": {},
+      "walkerIndex": 0,
+      "pausedModules": []
+    }
+  },
+  "finishedAt": "2026-10-29T00:23:25.039Z",
+  "ipcErrors": [],
+  "failures": []
+}

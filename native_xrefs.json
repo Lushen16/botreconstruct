@@ -1,0 +1,165 @@
+{
+  "text_sha256": "7c0fd219dc24f3fa273ded518eca8ea840d3395f00d14e78beacb4ffd7c50ea4",
+  "base": "0x7ff85c470000",
+  "rtti_names": [
+    ".?AU?$output_adapter_protocol@D@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AV<lambda_1>@?0??tickBestTile@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@",
+    ".?AV<lambda_1>@?0??tickHoenn@Runtime@bot@pka@@QEAAXAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@",
+    ".?AV<lambda_1>@?0??tickRevive@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@",
+    ".?AV<lambda_1>@?1???R0?1??comboTick@Runtime@bot@pka@@QEAA?AW4ComboStep@34@AEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@E",
+    ".?AV<lambda_1>@?1???R0?1??leadTarget@bot@pka@@YA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@js",
+    ".?AV<lambda_1>@?1???R<lambda_2>@?1??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$",
+    ".?AV<lambda_1>@?1???R<lambda_3>@?1??tickGuildDaily@Runtime@bot@pka@@QEAAXN@Z@QEBA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_",
+    ".?AV<lambda_1>@?1???R<lambda_3>@?1??tickLureSkills@Runtime@bot@pka@@QEAAXAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV",
+    ".?AV<lambda_1>@?1??clearTrainer@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@",
+    ".?AV<lambda_1>@?1??plan@TravelLure@bot@pka@@QEAA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@js",
+    ".?AV<lambda_1>@?1??route@Runtime@bot@pka@@QEAA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@json",
+    ".?AV<lambda_1>@?1??send@Runtime@bot@pka@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_a",
+    ".?AV<lambda_1>@?4??worker@native@pka@@YAKPEAX@Z@",
+    ".?AV<lambda_2>@?1???R0?1??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@",
+    ".?AV<lambda_2>@?1??tickLoot@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@",
+    ".?AV<lambda_2>@?4??worker@native@pka@@YAKPEAX@Z@",
+    ".?AV<lambda_2>@?BO@??tick@Runtime@bot@pka@@QEAAXXZ@",
+    ".?AV<lambda_3>@?0??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@",
+    ".?AV<lambda_3>@?1???R<lambda_2>@?1??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$",
+    ".?AV<lambda_3>@?1??tickHoennLure@Runtime@bot@pka@@QEAAXAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@",
+    ".?AV<lambda_3>@?4??worker@native@pka@@YAKPEAX@Z@",
+    ".?AV<lambda_3>@?CJ@??tick@Runtime@bot@pka@@QEAAXXZ@",
+    ".?AV<lambda_4>@?0??tick@Runtime@bot@pka@@QEAAXXZ@",
+    ".?AV<lambda_5>@?1??tick@Runtime@bot@pka@@QEAAXXZ@",
+    ".?AV<lambda_6>@?0??tick@Runtime@bot@pka@@QEAAXXZ@",
+    ".?AV?$_Func_base@N$$V@std@@",
+    ".?AV?$_Func_base@UFailure@bot@pka@@$$V@std@@",
+    ".?AV?$_Func_base@UFailure@bot@pka@@AEBUCommand@23@AEBV?$function@$$A6A?AUFailure@bot@pka@@XZ@std@@@std@@",
+    ".?AV?$_Func_base@UFailure@bot@pka@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV45@HAEAV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json",
+    ".?AV?$_Func_base@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@json_abi_v3_12_0@nlohmann@@$$V@std@",
+    ".?AV?$_Func_base@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@json_abi_v3_12_0@nlohmann@@AEBV123@",
+    ".?AV?$_Func_base@_N$$V@std@@",
+    ".?AV?$_Func_base@_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@json_abi_v3_12_0@nlohmann@@@st",
+    ".?AV?$_Func_impl_no_alloc@P6A?AUFailure@bot@pka@@AEBUCommand@23@AEBV?$function@$$A6A?AUFailure@bot@pka@@XZ@std@@@ZU123@AEBU423@AEBV56@@std@@",
+    ".?AV?$_Func_impl_no_alloc@P6A?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@json_abi_v3_12_0@nloh",
+    ".?AV?$_Func_impl_no_alloc@P6A_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$allocator@E@std@@@2@X@json_abi_v3_12_0@n",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?0??tickBestTile@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vect",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?0??tickHoenn@Runtime@bot@pka@@QEAAXAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@E",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?0??tickRevive@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1???R1?1??comboTick@Runtime@bot@pka@@QEAA?AW4ComboStep@45@AEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1???R1?1??leadTarget@bot@pka@@YA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$a",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1???R<lambda_2>@?1??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@n",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1???R<lambda_3>@?1??tickGuildDaily@Runtime@bot@pka@@QEAAXN@Z@QEBA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1???R<lambda_3>@?1??tickLureSkills@Runtime@bot@pka@@QEAAXAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1??clearTrainer@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vect",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1??plan@TravelLure@bot@pka@@QEAA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$a",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1??route@Runtime@bot@pka@@QEAA?AV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@EV?$all",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?1??send@Runtime@bot@pka@@QEAA_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@V?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_1>@?4??worker@native@pka@@YAKPEAX@Z@N$$V@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_2>@?1???R1?1??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_2>@?1??tickLoot@Runtime@bot@pka@@QEAA_NAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vector@E",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_2>@?4??worker@native@pka@@YAKPEAX@Z@N$$V@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_2>@?BO@??tick@Runtime@bot@pka@@QEAAXXZ@_N$$V@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_3>@?0??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vecto",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_3>@?1???R<lambda_2>@?1??tickTravelLure@Runtime@bot@pka@@QEAA_NV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@n",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_3>@?1??tickHoennLure@Runtime@bot@pka@@QEAAXAEBV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@2@_N_J_KNVallocator@2@Uadl_serializer@json_abi_v3_12_0@nlohmann@@V?$vect",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_3>@?4??worker@native@pka@@YAKPEAX@Z@UFailure@bot@4@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV78@HAEAV?$basic_json@Vmap@std@@Vvector@2@V?$basic_string@DU?$char_traits@D@std@@V?$alloca",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_3>@?CJ@??tick@Runtime@bot@pka@@QEAAXXZ@_N$$V@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_4>@?0??tick@Runtime@bot@pka@@QEAAXXZ@_N$$V@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_5>@?1??tick@Runtime@bot@pka@@QEAAXXZ@_N$$V@std@@",
+    ".?AV?$_Func_impl_no_alloc@V<lambda_6>@?0??tick@Runtime@bot@pka@@QEAAXXZ@_N$$V@std@@",
+    ".?AV?$_Ref_count_obj2@$$CBUPublishedSnapshot@otpbot@@@std@@",
+    ".?AV?$_Ref_count_obj2@$$CBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@std@@",
+    ".?AV?$_Ref_count_obj2@V?$output_string_adapter@DV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@detail@json_abi_v3_12_0@nlohmann@@@std@@",
+    ".?AV?$output_string_adapter@DV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AV_Generic_error_category@std@@",
+    ".?AV_Ref_count_base@std@@",
+    ".?AV_System_error@std@@",
+    ".?AV_System_error_category@std@@",
+    ".?AVbad_alloc@std@@",
+    ".?AVbad_array_new_length@std@@",
+    ".?AVerror_category@std@@",
+    ".?AVexception@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AVexception@std@@",
+    ".?AVfilesystem_error@filesystem@std@@",
+    ".?AVinvalid_iterator@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AVother_error@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AVout_of_range@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AVout_of_range@std@@",
+    ".?AVparse_error@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AVruntime_error@std@@",
+    ".?AVsystem_error@std@@",
+    ".?AVtype_error@detail@json_abi_v3_12_0@nlohmann@@",
+    ".?AVtype_info@@"
+  ],
+  "xrefs": {
+    "resolve": [
+      {
+        "string_off": 931312,
+        "string_va": "0x7ff85c5545f0",
+        "insn_va": "0x7ff85c482ca5",
+        "insn": "lea ecx, [rip + 0xd1945]",
+        "func_candidate": "0x7ff85c482c40"
+      },
+      {
+        "string_off": 931312,
+        "string_va": "0x7ff85c5545f0",
+        "insn_va": "0x7ff85c482cf4",
+        "insn": "lea ecx, [rip + 0xd18f6]",
+        "func_candidate": "0x7ff85c482c40"
+      }
+    ],
+    "dispatch": [
+      {
+        "string_off": 931352,
+        "string_va": "0x7ff85c554618",
+        "insn_va": "0x7ff85c482d82",
+        "insn": "lea ecx, [rip + 0xd1890]",
+        "func_candidate": "0x7ff85c482c40"
+      }
+    ],
+    "init_native": [
+      {
+        "string_off": 933264,
+        "string_va": "0x7ff85c554d90",
+        "insn_va": "0x7ff85c4857a7",
+        "insn": "lea ecx, [rip + 0xcf5e3]",
+        "func_candidate": "0x7ff85c485590"
+      }
+    ],
+    "init_session": [
+      {
+        "string_off": 933208,
+        "string_va": "0x7ff85c554d58",
+        "insn_va": "0x7ff85c4859a5",
+        "insn": "lea ecx, [rip + 0xcf3ad]",
+        "func_candidate": "0x7ff85c485590"
+      }
+    ],
+    "versions": [],
+    "no_target": [
+      {
+        "string_off": 943064,
+        "string_va": "0x7ff85c5573d8",
+        "insn_va": "0x7ff85c4fa815",
+        "insn": "lea edx, [rip + 0x5cbbd]",
+        "func_candidate": "0x7ff85c4fa756"
+      }
+    ],
+    "no_waypoints": [
+      {
+        "string_off": 943032,
+        "string_va": "0x7ff85c5573b8",
+        "insn_va": "0x7ff85c4fa7d3",
+        "insn": "lea edx, [rip + 0x5cbdf]",
+        "func_candidate": "0x7ff85c4fa756"
+      }
+    ],
+    "no_revive": [
+      {
+        "string_off": 943216,
+        "string_va": "0x7ff85c557470",
+        "insn_va": "0x7ff85c4fa936",
+        "insn": "lea edx, [rip + 0x5cb34]",
+        "func_candidate": "0x7ff85c4fa756"
+      }
+    ],
+    "pipe": []
+  }
+}

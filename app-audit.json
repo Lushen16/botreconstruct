@@ -1,0 +1,186 @@
+{
+  "report": {
+    "ok": true,
+    "required": [
+      "surface.separation",
+      "simulate",
+      "session",
+      "manual.move",
+      "walker.move",
+      "target.select",
+      "target.comboUiContract",
+      "healer.healCommand",
+      "healer.switchConfirm",
+      "monitor.state",
+      "performance",
+      "errors"
+    ],
+    "pending": [
+      {
+        "name": "healer.healthRecovery",
+        "reason": "o simulador registra a skill; nao modela recuperacao de HP nem confirma efeito no jogo"
+      },
+      {
+        "name": "monitor.notification",
+        "reason": "nao disparado na UI; coberto no motor por tests/monitor_runtime.test.cjs (hp e disconnected)"
+      },
+      {
+        "name": "target.kill",
+        "reason": "nao exercitado na UI; coberto por tests/local_runtime.test.cjs (kill loop com creatureDamage)"
+      },
+      {
+        "name": "combat.revive",
+        "reason": "nao exercitado na UI; coberto por tests/local_runtime.test.cjs (combo -> hotkey Revive)"
+      },
+      {
+        "name": "game.realChannel",
+        "reason": "sem canal pka-runtime-2-<pid>; apenas simulacao nesta execucao"
+      }
+    ],
+    "missing": [],
+    "checks": [
+      {
+        "name": "surface.separation",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "pkaHasSim": false,
+          "diag": "object",
+          "diagSim": "function"
+        }
+      },
+      {
+        "name": "simulate",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "enabled": true
+        }
+      },
+      {
+        "name": "session",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "clientValue": "777"
+        }
+      },
+      {
+        "name": "manual.move",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "from": {
+            "x": 3320,
+            "y": 2264,
+            "z": 9
+          },
+          "to": {
+            "x": 3321,
+            "y": 2264,
+            "z": 9
+          }
+        }
+      },
+      {
+        "name": "walker.move",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "away": {
+            "x": 3325,
+            "y": 2264,
+            "z": 9
+          },
+          "end": {
+            "x": 3320,
+            "y": 2264,
+            "z": 9
+          },
+          "walkerEnabled": true
+        }
+      },
+      {
+        "name": "target.comboUiContract",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "nativeSelected": true,
+          "unsupportedHotkey": false,
+          "undefinedInputs": 0
+        }
+      },
+      {
+        "name": "target.select",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "targetReady": true,
+          "targetId": 9006,
+          "dom": "—"
+        }
+      },
+      {
+        "name": "healer.healCommand",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "healReady": true,
+          "healConfigured": true,
+          "resetConfigured": true,
+          "expectedCommand": "m1",
+          "healCast": {
+            "name": "talk",
+            "parameter": "m1"
+          }
+        }
+      },
+      {
+        "name": "healer.switchConfirm",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "switchedOut": true,
+          "switchBack": true,
+          "end": "Charizard"
+        }
+      },
+      {
+        "name": "monitor.state",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "monitorReady": true,
+          "states": [
+            {
+              "paused": false,
+              "runtimePaused": false,
+              "monitorEnabled": true
+            },
+            {
+              "paused": false,
+              "runtimePaused": false,
+              "monitorEnabled": false
+            }
+          ]
+        }
+      },
+      {
+        "name": "performance",
+        "required": true,
+        "passed": true,
+        "detail": {
+          "accepted": true
+        }
+      },
+      {
+        "name": "errors",
+        "required": true,
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "note": "Auditoria da INTERFACE sobre a simulacao local; nao prova funcionamento no jogo."
+  },
+  "failures": []
+}
