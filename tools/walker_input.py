@@ -1,4 +1,4 @@
-"""PID-bound keyboard input for the independent RPM Walker backend."""
+"""PID-bound background transport; queued messages never verify game effects."""
 
 import argparse
 import ctypes
@@ -8,89 +8,42 @@ import time
 from ctypes import wintypes
 
 
-class FocusLostError(ValueError):
-    pass
+class DispatchError(ValueError):
+    def __init__(self, message, result):
+        super().__init__(message)
+        self.result = result
 
 
-def focus_window(user, hwnd, timeout=0.5):
-    if user.GetForegroundWindow() == hwnd:
-        return True, True
-    user.keybd_event(0x12, 0, 0, 0)
-    user.keybd_event(0x12, 0, 2, 0)
-    user.ShowWindow(hwnd, 5) # SW_SHOW (preserve maximized state)
-    accepted = bool(user.SetForegroundWindow(hwnd))
-    deadline = time.monotonic() + timeout
-    # Give the window manager a beat to apply the activation before polling.
-    time.sleep(0.01)
-    while user.GetForegroundWindow() != hwnd:
-        if time.monotonic() >= deadline:
-            return False, accepted
-        time.sleep(0.01)
-    return True, accepted
-
-
-def send_tap(user, events, release, input_size):
-    sent = user.SendInput(1, events, input_size)
-    try:
-        if sent != 1:
-            raise ValueError('Keydown rejeitado; execucao interrompida.')
-        time.sleep(0.04)
-    finally:
-        sent += user.SendInput(1, release, input_size)
-    if sent != 2:
-        raise ValueError('Envio de teclado incompleto; execucao interrompida.')
-    return sent
-
-
-def movement_scan(direction):
-    if type(direction) is not int or direction not in range(4):
-        raise ValueError('Walker teclado aceita somente setas cardinais.')
-    return (0x48, 0x4D, 0x50, 0x4B)[direction], True
-
-
-def main():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--pid', type=int, required=True)
-    operation = parser.add_mutually_exclusive_group(required=True)
-    operation.add_argument('--direction', type=int, choices=range(4))
-    operation.add_argument('--probe', action='store_true')
-    operation.add_argument('--focus', action='store_true')
-    args = parser.parse_args()
-    if args.pid <= 0 or os.name != 'nt':
-        raise ValueError('Windows e PID positivo sao obrigatorios.')
-    user = ctypes.WinDLL('user32', use_last_error=True)
-    kernel = ctypes.WinDLL('kernel32', use_last_error=True)
-
-    try:
-        hDesk = user.OpenDesktopW('Default', 0, False, 0x1FF)
-        if hDesk:
-            user.SetThreadDesktop(hDesk)
-    except Exception:
-        pass
-
+def configure_user(user):
     callback_type = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
-    user.EnumWindows.argtypes = [callback_type, wintypes.LPARAM]
-    user.EnumWindows.restype = wintypes.BOOL
-    user.GetWindowThreadProcessId.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.DWORD)]
-    user.GetWindowThreadProcessId.restype = wintypes.DWORD
-    user.IsWindowVisible.argtypes = [wintypes.HWND]
-    user.IsWindowVisible.restype = wintypes.BOOL
-    user.GetWindow.argtypes = [wintypes.HWND, wintypes.UINT]
-    user.GetWindow.restype = wintypes.HWND
-    user.GetForegroundWindow.restype = wintypes.HWND
-    user.SetForegroundWindow.argtypes = [wintypes.HWND]
-    user.SetForegroundWindow.restype = wintypes.BOOL
-    user.GetClientRect.argtypes = [wintypes.HWND, ctypes.POINTER(wintypes.RECT)]
-    user.GetClientRect.restype = wintypes.BOOL
-    user.GetAsyncKeyState.argtypes = [ctypes.c_int]
-    user.GetAsyncKeyState.restype = ctypes.c_short
+    signatures = {
+        'EnumWindows': ([callback_type, wintypes.LPARAM], wintypes.BOOL),
+        'GetWindowThreadProcessId': ([wintypes.HWND, ctypes.POINTER(wintypes.DWORD)], wintypes.DWORD),
+        'IsWindowVisible': ([wintypes.HWND], wintypes.BOOL),
+        'GetWindow': ([wintypes.HWND, wintypes.UINT], wintypes.HWND),
+        'GetForegroundWindow': ([], wintypes.HWND),
+        'GetClientRect': ([wintypes.HWND, ctypes.POINTER(wintypes.RECT)], wintypes.BOOL),
+        'GetWindowTextW': ([wintypes.HWND, wintypes.LPWSTR, ctypes.c_int], ctypes.c_int),
+        'MapVirtualKeyW': ([wintypes.UINT, wintypes.UINT], wintypes.UINT),
+        'PostMessageW': ([wintypes.HWND, wintypes.UINT, wintypes.WPARAM, wintypes.LPARAM], wintypes.BOOL),
+    }
+    for name, (arguments, result) in signatures.items():
+        function = getattr(user, name)
+        function.argtypes = arguments
+        function.restype = result
+    return callback_type
+
+
+def validate_process(kernel, pid):
+    kernel.ReadProcessMemory.argtypes = [wintypes.HANDLE, ctypes.c_void_p, ctypes.c_void_p, ctypes.c_size_t, ctypes.POINTER(ctypes.c_size_t)]
+    kernel.ReadProcessMemory.restype = wintypes.BOOL
     kernel.OpenProcess.argtypes = [wintypes.DWORD, wintypes.BOOL, wintypes.DWORD]
     kernel.OpenProcess.restype = wintypes.HANDLE
     kernel.QueryFullProcessImageNameW.argtypes = [wintypes.HANDLE, wintypes.DWORD, wintypes.LPWSTR, ctypes.POINTER(wintypes.DWORD)]
     kernel.QueryFullProcessImageNameW.restype = wintypes.BOOL
     kernel.CloseHandle.argtypes = [wintypes.HANDLE]
     kernel.CloseHandle.restype = wintypes.BOOL
-    handle = kernel.OpenProcess(0x1000, False, args.pid)
+    handle = kernel.OpenProcess(0x1000, False, pid)
     if not handle:
         raise ValueError('Processo do cliente indisponivel.')
     try:
@@ -102,74 +55,126 @@ def main():
             raise ValueError('PID nao pertence ao cliente PokeAlliance_dx.exe.')
     finally:
         kernel.CloseHandle(handle)
+
+
+def window_details(user, hwnd, pid):
+    owner = wintypes.DWORD()
+    if not user.GetWindowThreadProcessId(hwnd, ctypes.byref(owner)) or owner.value != pid:
+        raise ValueError('Identidade HWND/PID mudou antes do envio.')
+    title = ctypes.create_unicode_buffer(1024)
+    if not user.GetWindowTextW(hwnd, title, len(title)) or 'pokealliance' not in title.value.lower():
+        raise ValueError('Titulo da janela do cliente invalido.')
+    rect = wintypes.RECT()
+    if not user.GetClientRect(hwnd, ctypes.byref(rect)):
+        raise ValueError('Dimensoes do cliente indisponiveis.')
+    width, height = rect.right - rect.left, rect.bottom - rect.top
+    if width <= 0 or height <= 0 or width > 32767 or height > 32767:
+        raise ValueError('Dimensoes do cliente invalidas.')
+    return title.value, width, height
+
+
+def find_window(user, pid, callback_type):
     windows = []
 
     @callback_type
     def visit(hwnd, _parameter):
         owner = wintypes.DWORD()
         user.GetWindowThreadProcessId(hwnd, ctypes.byref(owner))
-        if owner.value == args.pid and user.IsWindowVisible(hwnd) and not user.GetWindow(hwnd, 4):
-            windows.append(hwnd)
+        if owner.value == pid and user.IsWindowVisible(hwnd) and not user.GetWindow(hwnd, 4):
+            try:
+                title, width, height = window_details(user, hwnd, pid)
+                windows.append((width * height, hwnd, title))
+            except ValueError:
+                pass
         return True
 
     if not user.EnumWindows(visit, 0) or not windows:
         raise ValueError('Falha ao enumerar janelas do cliente.')
-    if len(windows) > 1:
-        def client_area(h):
-            r = wintypes.RECT()
-            user.GetClientRect(h, ctypes.byref(r))
-            return (r.right - r.left) * (r.bottom - r.top)
-        windows.sort(key=client_area, reverse=True)
-    hwnd = windows[0]
-    activation_accepted = None
-    if args.focus or args.direction is not None:
-        foreground, activation_accepted = focus_window(user, hwnd)
-    else:
-        foreground = user.GetForegroundWindow() == hwnd
-    if not args.probe and not foreground:
-        raise FocusLostError('Cliente sem foco; Walker pausado. Use Continuar para retomar a rota. '
-                         + 'activation=' + str(activation_accepted) + ', foreground=' + hex(user.GetForegroundWindow() or 0))
-    sent = 0
-    if args.direction is not None:
-        if any(user.GetAsyncKeyState(key) & 0x8000 for key in (0x10, 0x11, 0x12, 0x5B, 0x5C)):
-            raise ValueError('Solte Shift, Ctrl, Alt e Windows antes de andar.')
+    windows.sort(reverse=True)
+    return windows[0][1]
 
-        class MouseInput(ctypes.Structure):
-            _fields_ = [('dx', wintypes.LONG), ('dy', wintypes.LONG), ('mouseData', wintypes.DWORD),
-                        ('dwFlags', wintypes.DWORD), ('time', wintypes.DWORD), ('dwExtraInfo', ctypes.c_size_t)]
 
-        class KeyboardInput(ctypes.Structure):
-            _fields_ = [('wVk', wintypes.WORD), ('wScan', wintypes.WORD), ('dwFlags', wintypes.DWORD),
-                        ('time', wintypes.DWORD), ('dwExtraInfo', ctypes.c_size_t)]
+def movement_scan(direction):
+    if type(direction) is not int or direction not in range(4):
+        raise ValueError('Walker teclado aceita somente setas cardinais.')
+    return (0x48, 0x4D, 0x50, 0x4B)[direction], True
 
-        class InputData(ctypes.Union):
-            _fields_ = [('mi', MouseInput), ('ki', KeyboardInput)]
 
-        class Input(ctypes.Structure):
-            _anonymous_ = ('data',)
-            _fields_ = [('type', wintypes.DWORD), ('data', InputData)]
+def key_messages(vk, scan, extended=False):
+    if not scan or scan > 0xFF:
+        raise ValueError('Scan code de teclado invalido.')
+    lparam = 1 | (scan << 16) | (int(extended) << 24)
+    return [(0x0100, vk, lparam), (0x0101, vk, lparam | 0xC0000000)]
 
-        scan, extended = movement_scan(args.direction)
-        flags = 0x0008 | (0x0001 if extended else 0)
-        events = (Input * 2)()
-        for index in range(2):
-            events[index].type = 1
-            events[index].ki = KeyboardInput(0, scan, flags | (0x0002 if index else 0), 0, 0)
-        user.SendInput.argtypes = [wintypes.UINT, ctypes.POINTER(Input), ctypes.c_int]
-        user.SendInput.restype = wintypes.UINT
-        if user.GetForegroundWindow() != hwnd:
-            raise FocusLostError('Foco mudou antes do envio; Walker pausado. Use Continuar para retomar a rota.')
-        release = (Input * 1)()
-        release[0] = events[1]
-        sent = send_tap(user, events, release, ctypes.sizeof(Input))
-    print(json.dumps({'success': True, 'pid': args.pid, 'hwnd': hex(hwnd),
-                      'foreground': foreground, 'eventsSent': sent}))
+
+def post_checked(user, hwnd, message, result, counter):
+    if result.get('pid') is not None:
+        owner = wintypes.DWORD()
+        if not user.GetWindowThreadProcessId(hwnd, ctypes.byref(owner)) or owner.value != result['pid']:
+            raise ValueError('Identidade HWND/PID mudou durante o envio.')
+    ctypes.set_last_error(0)
+    accepted = bool(user.PostMessageW(hwnd, *message))
+    error = ctypes.get_last_error()
+    if not accepted:
+        result['win32Error'] = error
+        raise ValueError(f'PostMessageW rejeitado: Win32 error {error}.')
+    result[counter] += 1
+
+
+def send_tap(user, hwnd, messages, result, pointer=None, validate=None):
+    try:
+        if validate is not None:
+            validate()
+        if pointer is not None:
+            post_checked(user, hwnd, pointer, result, 'pointerEventsSent')
+        post_checked(user, hwnd, messages[0], result, 'eventsSent')
+        try:
+            time.sleep(0.04)
+        finally:
+            post_checked(user, hwnd, messages[1], result, 'eventsSent')
+    except Exception as error:
+        result.update(success=False, error=str(error), errorCode='INPUT_DISPATCH_FAILED', retrySafe=False)
+        raise DispatchError(str(error), result) from error
+    result['queuedAtMs'] = time.time_ns() // 1000000
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--pid', type=int, required=True)
+    operation = parser.add_mutually_exclusive_group(required=True)
+    operation.add_argument('--direction', type=int, choices=range(4))
+    operation.add_argument('--probe', action='store_true')
+    operation.add_argument('--focus', action='store_true')
+    args = parser.parse_args()
+    result = {'success': False, 'pid': args.pid, 'eventsSent': 0, 'pointerEventsSent': 0,
+              'transport': 'PostMessageW', 'effectVerified': False, 'retrySafe': False}
+    try:
+        if args.pid <= 0 or os.name != 'nt':
+            raise ValueError('Windows e PID positivo sao obrigatorios.')
+        user = ctypes.WinDLL('user32', use_last_error=True)
+        kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+        callback_type = configure_user(user)
+        validate_process(kernel, args.pid)
+        hwnd = find_window(user, args.pid, callback_type)
+        title, width, height = window_details(user, hwnd, args.pid)
+        result.update(hwnd=hex(hwnd), title=title, width=width, height=height,
+                      foreground=user.GetForegroundWindow() == hwnd)
+        if args.direction is not None:
+            scan, extended = movement_scan(args.direction)
+            messages = key_messages((0x26, 0x27, 0x28, 0x25)[args.direction], scan, extended)
+            def validate():
+                if window_details(user, hwnd, args.pid) != (title, width, height):
+                    raise ValueError('Janela mudou antes do envio.')
+            result['startedAtMs'] = time.time_ns() // 1000000
+            send_tap(user, hwnd, messages, result, validate=validate)
+        result['success'] = True
+    except Exception as error:
+        result.update(success=False, error=str(error), uncertain=result['eventsSent'] > 0 or result['pointerEventsSent'] > 0)
+    return result
 
 
 if __name__ == '__main__':
-    try:
-        main()
-    except Exception as error:
-        code = 'WALKER_FOCUS_LOST' if isinstance(error, FocusLostError) else None
-        print(json.dumps({'success': False, 'error': str(error), 'errorCode': code, 'eventsSent': 0}))
-        raise SystemExit(1)
+    outcome = main()
+    print(json.dumps(outcome))
+    raise SystemExit(0 if outcome['success'] else 1)

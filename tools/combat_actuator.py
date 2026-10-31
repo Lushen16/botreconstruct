@@ -1,13 +1,15 @@
-"""PID-bound Win32 combat input. Success means queued messages, not damage."""
+"""PID-bound background combat messages. Success means queued, not applied."""
 
 import argparse
 import ctypes
 import json
+import hashlib
 import os
-import sys
+from pathlib import Path
 import time
 from ctypes import wintypes
 from creature_identity import TargetMovedError
+from walker_input import configure_user, validate_process, find_window, window_details, key_messages, send_tap
 
 
 def key_code(key):
@@ -22,28 +24,113 @@ def key_code(key):
     return {'space': 0x20, 'escape': 0x1B, 'tab': 9}.get(normalized)
 
 
-def find_target_window(user, pid):
-    found = []
+def dispatch(user, kernel, pid, hwnd, request, result):
+    title, width, height = window_details(user, hwnd, pid)
+    player_name = request.get('playerName')
+    if player_name is not None and (not isinstance(player_name, str) or not player_name.strip()
+                                    or title != 'PokeAlliance - ' + player_name):
+        raise ValueError('Titulo da janela diverge do jogador esperado.')
+    result.update(hwnd=hex(hwnd), title=title, width=width, height=height,
+                  foreground=user.GetForegroundWindow() == hwnd)
 
-    def enum_proc(hwnd, _lparam):
-        if not user.IsWindowVisible(hwnd) or user.GetWindow(hwnd, 4):
-            return True
-        proc_id = wintypes.DWORD()
-        user.GetWindowThreadProcessId(hwnd, ctypes.byref(proc_id))
-        if proc_id.value == pid:
-            buf = ctypes.create_unicode_buffer(1024)
-            user.GetWindowTextW(hwnd, buf, 1024)
-            title = buf.value.strip()
-            if "pokealliance" in title.lower():
-                found.append((hwnd, title))
-        return True
+    def validate_window():
+        if window_details(user, hwnd, pid) != (title, width, height):
+            raise ValueError('Janela mudou antes do envio.')
 
-    cb = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)(enum_proc)
-    user.EnumWindows(cb, 0)
-    if not found:
-        return None, None
-    found.sort(key=lambda item: len(item[1]), reverse=True)
-    return found[0]
+    kind = request.get('kind', 'key')
+    result['kind'] = kind
+    if kind == 'probe':
+        result['success'] = True
+        return result
+    if kind not in ('key', 'attack', 'click', 'useWith'):
+        raise ValueError(f'Tipo desconhecido: {kind}')
+    if kind in ('attack', 'click', 'useWith'):
+        x, y = request.get('x'), request.get('y')
+        expected_width, expected_height = request.get('width'), request.get('height')
+        if ((expected_width is not None and expected_width != width)
+                or (expected_height is not None and expected_height != height)):
+            raise ValueError('Janela redimensionada; recalibre o viewport antes de atacar.')
+        if type(x) is not int or type(y) is not int or not (0 <= x < width and 0 <= y < height):
+            raise ValueError('Coordenadas invalidas para o viewport.')
+        lparam = (y << 16) | x
+        click_messages = ([(0x0204, 2, lparam), (0x0205, 0, lparam)] if kind == 'attack'
+                          else [(0x0201, 1, lparam), (0x0202, 0, lparam)])
+        result.update(x=x, y=y)
+    if kind in ('key', 'useWith'):
+        key = request.get('key')
+        vk = key_code(key) if isinstance(key, str) else None
+        if vk is None or (kind == 'useWith' and not (0x70 <= vk <= 0x7B or key.strip().isascii()
+                                                   and len(key.strip()) == 1 and key.strip().isalnum())):
+            raise ValueError(f'Tecla invalida: {key}')
+        messages = key_messages(vk, user.MapVirtualKeyW(vk, 0), vk in (0x25, 0x26, 0x27, 0x28))
+        result['key'] = key
+    if kind == 'useWith' and (not player_name or request.get('width') is None or request.get('height') is None
+                              or not isinstance(request.get('itemGuard'), dict)):
+        raise ValueError('useWith exige playerName, dimensoes e itemGuard.')
+    if kind == 'useWith' and (type(request.get('itemId')) is not int or not 1 <= request['itemId'] <= 65535
+                              or type(request.get('targetId')) is not int
+                              or request['targetId'] != request['itemGuard'].get('item', {}).get('id')):
+        raise ValueError('IDs useWith invalidos ou divergentes do corpo observado.')
+
+    def validate_ball():
+        guard = request.get('ballGuard')
+        if (not isinstance(guard, dict) or guard.get('itemId') != request.get('itemId')
+                or guard.get('key') != request.get('key') or guard.get('mode') != 'useWith'
+                or guard.get('source') != 'live-confirmation'):
+            raise ValueError('Bola/hotkey sem associacao confirmada.')
+        filename = Path(guard['configFile'])
+        if not filename.is_file() or filename.stat().st_size > 4 * 1024 * 1024:
+            raise ValueError('Configuracao da bola indisponivel.')
+        if hashlib.sha256(filename.read_bytes()).hexdigest() != guard.get('configSha256'):
+            raise ValueError('Configuracao da bola mudou antes do envio.')
+
+    def validate_target():
+        validate_window()
+        if request.get('targetGuard') is not None:
+            from creature_identity import validate_guard
+            memory = kernel.OpenProcess(0x0410, False, pid)
+            if not memory:
+                raise ValueError('Leitura de memoria indisponivel para targetGuard.')
+            try:
+                def read(address, size):
+                    buffer = ctypes.create_string_buffer(size)
+                    count = ctypes.c_size_t()
+                    if not kernel.ReadProcessMemory(memory, address, buffer, size, ctypes.byref(count)):
+                        return None
+                    return buffer.raw[:count.value]
+                result['identityGuard'] = validate_guard(request['targetGuard'], pid,
+                    read, {'typeOffset': 0x186})
+            finally:
+                kernel.CloseHandle(memory)
+        validate_window()
+
+    result['startedAtMs'] = time.time_ns() // 1000000
+    if kind == 'useWith':
+        from item_identity import validate_capture_guard
+        guard = request['itemGuard']
+        if type(guard.get('pid')) is not int or guard['pid'] != pid:
+            raise ValueError('itemGuard de outro PID ou ausente.')
+        memory = kernel.OpenProcess(0x0410, False, pid)
+        if not memory:
+            raise ValueError('Leitura de memoria indisponivel para itemGuard.')
+        try:
+            def validate_item():
+                validate_window()
+                validate_ball()
+                validate_capture_guard(memory, guard, time.time_ns() // 1000000)
+                validate_window()
+            send_tap(user, hwnd, messages, result, validate=validate_item)
+            result.pop('queuedAtMs', None)
+            time.sleep(0.08)
+            send_tap(user, hwnd, click_messages, result, pointer=(0x0200, 0, lparam), validate=validate_item)
+        finally:
+            kernel.CloseHandle(memory)
+    elif kind == 'key':
+        send_tap(user, hwnd, messages, result, validate=validate_target)
+    else:
+        send_tap(user, hwnd, click_messages, result, pointer=(0x0200, 0, lparam), validate=validate_target)
+    result['success'] = True
+    return result
 
 
 def main():
@@ -53,153 +140,29 @@ def main():
     parser.add_argument('--request')
     parser.add_argument('--probe', action='store_true')
     args = parser.parse_args()
-
-    if args.pid <= 0 or os.name != 'nt':
-        raise ValueError('Windows e PID positivo sao obrigatorios.')
-
-    user = ctypes.WinDLL('user32', use_last_error=True)
+    result = {'success': False, 'pid': args.pid, 'eventsSent': 0, 'pointerEventsSent': 0,
+              'transport': 'PostMessageW', 'effectVerified': False, 'retrySafe': False}
     try:
-        hDesk = user.OpenDesktopW('Default', 0, False, 0x1FF)
-        if hDesk:
-            user.SetThreadDesktop(hDesk)
-    except Exception:
-        pass
-
-    hwnd, title = find_target_window(user, args.pid)
-    if not hwnd:
-        raise ValueError(f'Janela do PokeAlliance nao encontrada para PID {args.pid}.')
-
-    rect = wintypes.RECT()
-    user.GetClientRect(hwnd, ctypes.byref(rect))
-    fg = user.GetForegroundWindow()
-    is_fg = (fg == hwnd)
-
-    if args.probe:
-        return {
-            'success': True,
-            'pid': args.pid,
-            'hwnd': hex(hwnd),
-            'title': title,
-            'width': rect.right,
-            'height': rect.bottom,
-            'eventsSent': 0,
-            'foreground': is_fg,
-            'transport': 'PostMessageW'
-        }
-
-    request = {}
-    if args.request:
-        request = json.loads(args.request)
-    elif args.key:
-        request = {'kind': 'key', 'key': args.key}
-    else:
-        raise ValueError('Comando ausente: forneca key ou --request.')
-
-    kind = request.get('kind', 'key')
-    background_allowed = request.get('allowBackground', False)
-
-    result = {
-        'success': True,
-        'pid': args.pid,
-        'hwnd': hex(hwnd),
-        'title': title,
-        'width': rect.right,
-        'height': rect.bottom,
-        'eventsSent': 0,
-        'foreground': is_fg,
-        'transport': 'PostMessageW'
-    }
-
-    if kind in ('attack', 'click'):
-        x = request.get('x')
-        y = request.get('y')
-        w = request.get('width')
-        h = request.get('height')
-        if w is not None and w != rect.right or h is not None and h != rect.bottom:
-            raise ValueError('Janela redimensionada; recalibre o viewport antes de atacar.')
-        if not isinstance(x, int) or not isinstance(y, int) or not (0 <= x < rect.right) or not (0 <= y < rect.bottom):
-            raise ValueError(f'Coordenadas invalidas ({x}, {y}) para viewport {rect.right}x{rect.bottom}.')
-
-        lparam = (y << 16) | (x & 0xFFFF)
-        if kind == 'click':
-            messages = [(0x0201, 1, lparam), (0x0202, 0, lparam)]
-        else:
-            messages = [(0x0204, 2, lparam), (0x0205, 0, lparam)]
-        result.update(kind=kind, x=x, y=y)
-    elif kind == 'key':
-        key_str = request.get('key')
-        vk = key_code(key_str) if isinstance(key_str, str) else None
-        if vk is None:
-            raise ValueError(f'Tecla invalida: {key_str}')
-        scan = user.MapVirtualKeyW(vk, 0)
-        messages = [
-            (0x0100, vk, 1 | (scan << 16)),
-            (0x0101, vk, 0xC0000001 | (scan << 16))
-        ]
-        result.update(kind='key', key=key_str)
-    else:
-        raise ValueError(f'Tipo desconhecido: {kind}')
-
-    if not is_fg and not background_allowed:
-        user.SetForegroundWindow(hwnd)
-        time.sleep(0.02)
-        if user.GetForegroundWindow() != hwnd:
-            return {
-                **result,
-                'success': False,
-                'errorCode': 'WALKER_FOCUS_LOST',
-                'error': 'Foco mudou antes do combate.'
-            }
-
-    if request.get('targetGuard') is not None:
-        import scan_creatures as sc
-        from creature_identity import validate_guard
-        memory = sc.k32.OpenProcess(sc.PROCESS_QUERY_INFORMATION | sc.PROCESS_VM_READ, False, args.pid)
-        if not memory:
-            raise ValueError('Leitura de memoria indisponivel para targetGuard.')
-        try:
-            # The version/profile gate runs once before the module starts.
-            # Re-reading and hashing the whole module image here costs seconds
-            # and blows the actuator timeout; the dispatch guard only needs the
-            # live struct identity (type/id/pos/floor/control block).
-            profile = {"typeOffset": 0x186}
-            result['identityGuard'] = validate_guard(
-                request['targetGuard'],
-                args.pid,
-                lambda address, size: sc.read_mem(memory, address, size),
-                profile
-            )
-        finally:
-            sc.k32.CloseHandle(memory)
-
-    result['startedAtMs'] = time.time_ns() // 1000000
-
-    if kind in ('attack', 'click'):
-        user.PostMessageW(hwnd, 0x0200, 0, messages[0][2])
-        result['pointerEventsSent'] = 1
-
-    try:
-        if not user.PostMessageW(hwnd, messages[0][0], messages[0][1], messages[0][2]):
-            raise ctypes.WinError(ctypes.get_last_error())
-        result['eventsSent'] = 1
-        time.sleep(0.04)
-    finally:
-        released = bool(user.PostMessageW(hwnd, messages[1][0], messages[1][1], messages[1][2]))
-        result['eventsSent'] += int(released)
-
-    if result['eventsSent'] != 2:
-        raise ValueError('Envio incompleto de mensagens Win32.')
-
-    result['queuedAtMs'] = time.time_ns() // 1000000
-    result['effectVerified'] = False
+        if args.pid <= 0 or os.name != 'nt':
+            raise ValueError('Windows e PID positivo sao obrigatorios.')
+        user = ctypes.WinDLL('user32', use_last_error=True)
+        kernel = ctypes.WinDLL('kernel32', use_last_error=True)
+        callback_type = configure_user(user)
+        validate_process(kernel, args.pid)
+        hwnd = find_window(user, args.pid, callback_type)
+        request = ({'kind': 'probe'} if args.probe else json.loads(args.request) if args.request
+                   else {'kind': 'key', 'key': args.key})
+        if not isinstance(request, dict):
+            raise ValueError('Request deve ser objeto JSON.')
+        dispatch(user, kernel, args.pid, hwnd, request, result)
+    except Exception as error:
+        result.update(success=False, error=str(error), uncertain=result['eventsSent'] > 0 or result['pointerEventsSent'] > 0)
+        if (isinstance(error, TargetMovedError) or isinstance(error.__cause__, TargetMovedError)) and result['eventsSent'] == 0 and result['pointerEventsSent'] == 0:
+            result['errorCode'] = 'COMBAT_TARGET_MOVED'
     return result
 
 
 if __name__ == '__main__':
-    try:
-        outcome = main()
-        if outcome is not None:
-            print(json.dumps(outcome))
-    except Exception as exc:
-        print(f"Erro: {exc}", file=sys.stderr)
-        sys.exit(1)
+    outcome = main()
+    print(json.dumps(outcome))
+    raise SystemExit(0 if outcome['success'] else 1)

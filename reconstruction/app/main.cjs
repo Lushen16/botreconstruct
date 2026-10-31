@@ -14,6 +14,7 @@ const { createSimulation } = require('../local-runtime.cjs');
 const { createMonitorRuntime } = require('../monitor-runtime.cjs');
 const { createRouteStore, loadWalkerProfile } = require('../route-store.cjs');
 const { createCreatureSource } = require('../../tools/creature_bridge.cjs');
+const { createItemSource } = require('../item-source.cjs');
 const { SettingsStore, validateConfig, MAX_BYTES } = require('../settings.cjs');
 const os = require('node:os');
 const { OtmmReader } = require('../otmm.cjs');
@@ -35,7 +36,10 @@ const SNAPSHOT_FILE = path.resolve(root, process.env.PKA_SESSION_FILE || 'live-s
 const PROVIDER = path.join(root, 'tools', 'pka_live_session.py');
 let liveProvider = null;
 let creatureProvider = null;
+let itemProvider = null;
+let itemProviderAttempt = null;
 const CREATURES_FILE = path.resolve(root, process.env.PKA_CREATURES_FILE || path.join(dataRoot, 'live-creatures.json'));
+const ITEMS_FILE = path.resolve(root, process.env.PKA_ITEMS_FILE || path.join(dataRoot, 'live-items.json'));
 let livePid = null;
 let lastProviderState = null;
 let engineRuntime = null;
@@ -129,6 +133,24 @@ function providerStatus(value) {
   }
 }
 
+function startItemProvider(python, pid, playerName) {
+  if (!keyboardBackend || process.env.PKA_ITEMS_FILE || itemProvider
+      || typeof playerName !== 'string' || !playerName.trim()) return;
+  const identity = JSON.stringify([pid, playerName.trim()]);
+  if (itemProviderAttempt === identity) return;
+  itemProviderAttempt = identity;
+  const child = spawn(python, [path.join(root, 'tools/scan_items.py'), '--pid', String(pid),
+    '--player', playerName.trim(), '--output', ITEMS_FILE, '--interval', '0.2'],
+  { cwd: root, windowsHide: true, stdio: ['ignore', 'ignore', 'pipe'] });
+  itemProvider = child;
+  child.stderr.on('data', value => console.error('item scanner:', value.toString().trim()));
+  child.on('error', error => console.error('item scanner:', error.message));
+  child.on('exit', code => {
+    console.error('item scanner exit:', code);
+    if (itemProvider === child) itemProvider = null;
+  });
+}
+
 function startLiveProvider() {
   if (smoke || audit || liveProvider || !fs.existsSync(PROVIDER)) return;
   const python = process.env.PKA_PYTHON || 'python';
@@ -145,10 +167,12 @@ function startLiveProvider() {
       creatureProvider.on('error', error => console.error('creature scanner:', error.message));
       creatureProvider.on('exit', code => { console.error('creature scanner exit:', code); creatureProvider = null; });
     }
+    startItemProvider(python, livePid, process.env.PKA_PLAYER_NAME);
     providerStatus({ status: 'starting' });
     createInterface({ input: liveProvider.stdout }).on('line', line => {
       try {
         const status = JSON.parse(line);
+        if (status.ok && status.pid === livePid) startItemProvider(python, livePid, status.player?.name);
         providerStatus({ status: status.ok ? 'observing' : status.errorCode === 'process-access-denied' ? 'blocked' : 'waiting',
           error: status.error || null, errorCode: status.errorCode || null, win32Error: status.win32Error ?? null });
       } catch {}
@@ -212,6 +236,8 @@ function mapInfo(controller) {
 }
 
 function stopLiveProvider() {
+  itemProviderAttempt = null;
+  if (itemProvider) { try { itemProvider.kill(); } catch {} itemProvider = null; }
   if (creatureProvider) { try { creatureProvider.kill(); } catch {} creatureProvider = null; }
   if (!liveProvider) return;
   try { liveProvider.kill(); } catch (_) { /* ignore */ }
@@ -256,6 +282,7 @@ const ready = app.whenReady().then(async () => {
     getSession: () => getLiveSessions()[0] || null,
     playerName: process.env.PKA_PLAYER_NAME,
     creatureSource: createCreatureSource(CREATURES_FILE),
+    itemSource: createItemSource(ITEMS_FILE),
     transportFile: path.resolve(root, process.env.PKA_COMBAT_CONFIG || 'local-data/keyboard-combat.json'),
     onDispatch: record => fs.appendFileSync(path.join(dataRoot, 'combat-dispatch.jsonl'), JSON.stringify(record) + '\n'),
   }) : new EngineRuntime({

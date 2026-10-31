@@ -80,3 +80,11 @@ Executado contra um Rattata real no processo ativo:
 - **Inspeção de Memória do Tile**: Tile `0x1e63f30fb60` verificado com 3 things (`m_things` em `+0x50`).
 - **Arremesso**: Hotkey `'B'` acionada e clique esquerdo disparado no pixel `(1031, 404)`.
 - **Relatório de Validação**: Salvo na íntegra em [`captures/catch_telemetry.json`](file:///C:/Users/yago/Documents/Clone/RECONSTRUÇAO%20OFIcial/captures/catch_telemetry.json).
+# Correção operacional — 30/10/2026
+
+O relatório abaixo é histórico. O antigo tools/catch_engine.py foi substituído
+por um launcher do Electron: timeout, falha RPM e desaparecimento da criatura
+não comprovam morte, e THROWN_SUCCESS não comprova captura. O pipeline atual usa
+Item+0xD4 para o hash comprovado, guardas de identidade e PostMessageW sem foco;
+exige confirmação da associação bola/hotkey/modo, sem fabricá-la.
+Veja BACKGROUND_CAPTURE.md para configuração, testes e limitações atuais.

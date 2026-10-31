@@ -32,16 +32,26 @@ function createKeyboardInput(options = {}) {
     run(options.python || process.env.PKA_PYTHON || 'python', args,
       { windowsHide: true, timeout: 2000, maxBuffer: 16384 }, (error, stdout) => {
         let result;
-        try { result = JSON.parse(stdout); } catch { return reject(Error('Emissor de teclado sem resposta JSON valida.')); }
-        if (error || result.success !== true || result.pid !== pid) {
-          const failure = Error(result.error || 'Emissor de teclado rejeitou a operacao.');
-          if (result.success === false && result.errorCode === 'WALKER_FOCUS_LOST' && result.eventsSent === 0) {
+        try { result = JSON.parse(stdout); } catch {
+          const failure = Error('Emissor de teclado sem resposta JSON valida.');
+          failure.retrySafe = false;
+          failure.uncertain = true;
+          return reject(failure);
+        }
+        if (error || !result || result.success !== true || result.pid !== pid) {
+          const failure = Error(result?.error || 'Emissor de teclado rejeitou a operacao.');
+          failure.result = result;
+          failure.retrySafe = false;
+          if (result?.success === false && result.pid === pid && result.errorCode === 'WALKER_FOCUS_LOST' && result.eventsSent === 0) {
             failure.code = 'WALKER_FOCUS_LOST';
           }
           return reject(failure);
         }
-        if (result.eventsSent !== (direction === null ? 0 : 2) || ((direction !== null || focus) && result.foreground !== true)) {
-          return reject(Error('Emissor sem confirmacao de foco ou de eventos de teclado.'));
+        if (result.eventsSent !== (direction === null ? 0 : 2) || result.transport !== 'PostMessageW' || result.effectVerified !== false) {
+          const failure = Error('Emissor sem confirmacao de mensagens background.');
+          failure.result = result;
+          failure.retrySafe = false;
+          return reject(failure);
         }
         resolve(result);
       });
@@ -98,6 +108,7 @@ class WalkerInputRuntime extends EventEmitter {
     if (module !== 'walker' || !enabled) throw Error('Target e Healer indisponíveis no modo teclado/RPM: este backend executa somente Walker; falta integrar o backend de combate.');
     await this.pause();
     const epoch = this.epoch;
+    const lastDispatch = this.pid === pid ? this.lastDispatch : -Infinity;
     if (!Number.isInteger(pid) || pid <= 0) throw Error('Selecione o PID do cliente.');
     const session = this.getSession();
     const issue = positionIssue(session, pid, this.playerName, this.now());
@@ -114,12 +125,12 @@ class WalkerInputRuntime extends EventEmitter {
     }
     await this.input(pid, null, true);
     if (epoch !== this.epoch) throw Error('Inicio do Walker cancelado.');
-    const afterFocus = positionIssue(this.getSession(), pid, playerName, this.now());
-    if (afterFocus) throw Error(afterFocus);
+    const afterProbe = positionIssue(this.getSession(), pid, playerName, this.now());
+    if (afterProbe) throw Error(afterProbe);
     this.playerName = playerName;
     this.pid = pid;
     this.engine = engine;
-    this.lastDispatch = -Infinity;
+    this.lastDispatch = lastDispatch;
     this.lastSnapshotAt = null;
     this.last = null;
     this.modules = ['walker'];
@@ -154,8 +165,8 @@ class WalkerInputRuntime extends EventEmitter {
     if (issue) throw Error(issue);
     await this.input(this.pid, null, true);
     if (epoch !== this.epoch) return this.state;
-    const afterFocus = positionIssue(this.getSession(), this.pid, this.playerName, this.now());
-    if (afterFocus) throw Error(afterFocus);
+    const afterProbe = positionIssue(this.getSession(), this.pid, this.playerName, this.now());
+    if (afterProbe) throw Error(afterProbe);
     this.paused = false;
     this.last = null;
     this.startTimer();
@@ -191,7 +202,7 @@ class WalkerInputRuntime extends EventEmitter {
         this.lastDispatch = this.now();
       }
       if (epoch !== this.epoch) return null;
-      this.last = { ...result, status: 'walking', inputAccepted: events.length > 0 };
+      this.last = { ...result, status: 'walking', inputAccepted: events.length > 0, effectVerified: false };
       if (result.action === 'done' || (result.action === 'idle' && this.engine.state.finished)) {
         this.paused = true;
         this.modules = [];
@@ -210,7 +221,7 @@ class WalkerInputRuntime extends EventEmitter {
         this.changed();
         return this.last;
       }
-      this.last = { status: 'error', error: error.message };
+      this.last = { status: 'error', error: error.message, transportResult: error.result, effectVerified: false, retrySafe: false };
       this.engine = null;
       this.modules = [];
       this.changed();

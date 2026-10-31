@@ -1,0 +1,16 @@
+actionBarSettings:
+  ACTION_BAR_6:
+    itemId: 15650
+    type: 3
+    action: 6
+hotkeys:
+  hotkeyProfile_1:
+    actions:
+      ACTION_BAR_6:
+        keys:
+          chatDisabled:
+            primaryKey:
+              key: B
+          chatEnabled:
+            primaryKey:
+              key: B

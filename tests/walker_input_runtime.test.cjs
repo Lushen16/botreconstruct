@@ -39,7 +39,7 @@ test('normal launcher enables RPM Walker only with matching live window identity
   await value.runtime.pause();
 });
 
-test('character switching while acquiring game focus cancels the Walker before any movement', async () => {
+test('character switching during the background probe cancels Walker before movement', async () => {
   const value = fixture();
   value.runtime.playerName = '';
   value.raw.clientWindowTitle = 'PokeAlliance - Ash';
@@ -71,7 +71,7 @@ test('position checks reject changed PID, name, invalid coordinates and stale/fu
   assert.match(positionIssue(session, 42, 'Ash', 10000), /invalida/);
 });
 
-test('starting Walker focuses the chosen client without emitting a movement until tick', async () => {
+test('starting Walker probes the chosen client without movement until tick', async () => {
   const value = fixture();
   await value.start();
   assert.deepEqual(value.sent, [{ pid: 42, direction: null, focus: true }]);
@@ -159,7 +159,7 @@ test('a walk route declared on another floor is accepted (z-agnostic)', async ()
   assert.deepEqual(value.runtime.state.modules, ['walker']);
 });
 
-test('unsupported modules, empty routes and unsupported actions are rejected before focus', async () => {
+test('unsupported modules, empty routes and unsupported actions are rejected before probe', async () => {
   for (const module of ['target', 'healer', 'all']) {
     const value = fixture();
     await assert.rejects(value.runtime.setModules(module, true, 42, value.config), /somente Walker/);
@@ -213,7 +213,7 @@ test('overlapping ticks do not duplicate sends and stop waits for the in-flight 
   assert.deepEqual(value.runtime.modules, []);
 });
 
-test('pause or close during focus cancels a pending start', async () => {
+test('pause or close during background probe cancels a pending start', async () => {
   const value = fixture();
   let release;
   value.runtime.input = () => new Promise(resolve => { release = resolve; });
@@ -267,7 +267,8 @@ test('input helper passes PID without shell interpolation and rejects malformed 
   let captured;
   const input = createKeyboardInput({ execFile: (executable, args, options, callback) => {
     captured = { executable, args, options };
-    callback(null, JSON.stringify({ success: true, pid: 42, eventsSent: 2, foreground: true }));
+    callback(null, JSON.stringify({ success: true, pid: 42, eventsSent: 2, foreground: false,
+      transport: 'PostMessageW', effectVerified: false }));
   } });
   await input(42, 1);
   assert.deepEqual(captured.args.slice(1), ['--pid', '42', '--direction', '1']);
@@ -275,7 +276,7 @@ test('input helper passes PID without shell interpolation and rejects malformed 
   assert.equal(captured.options.timeout, 2000);
   for (const response of ['bad', '{"success":false,"error":"no focus"}', '{"success":true,"pid":99}',
     '{"success":true,"pid":42,"eventsSent":0,"foreground":true}',
-    '{"success":true,"pid":42,"eventsSent":2,"foreground":false}']) {
+    '{"success":true,"pid":42,"eventsSent":2,"transport":"SendInput"}']) {
     const rejected = createKeyboardInput({ execFile: (_exe, _args, _options, callback) => callback(null, response) });
     await assert.rejects(rejected(42, 1));
   }
@@ -284,13 +285,13 @@ test('input helper passes PID without shell interpolation and rejects malformed 
   for (const direction of [4, 5, 6, 7]) await assert.rejects(input(42, direction), /invalida/);
 });
 
-test('verified focus loss pauses without discarding the route and resumes only on request', async () => {
+test('legacy explicit focus rejection remains compatible and resumes only on request', async () => {
   const value = fixture();
   await value.start();
   const engine = value.runtime.engine;
   const input = value.runtime.input;
   value.runtime.input = createKeyboardInput({ execFile: (_exe, _args, _options, callback) => {
-    callback(Error('exit 1'), JSON.stringify({ success: false, error: 'Cliente sem foco',
+    callback(Error('exit 1'), JSON.stringify({ success: false, pid: 42, error: 'Rejeicao legada',
       errorCode: 'WALKER_FOCUS_LOST', eventsSent: 0 }));
   } });
   const result = await value.runtime.tick();

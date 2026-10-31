@@ -1,5 +1,12 @@
 # Engenharia Reversa e Arquitetura do Motor de Looting (OTClient / PokeAlliance)
 
+> Correção de 30/10/2026: os VAs e o PID deste relatório são históricos, não reutilizáveis.
+> No executável SHA-256 473df25c1edd23e7464ad3ba9b923a603051a8b4ae8004a95c06402f678294e6,
+> o ID de Item é uint16 em +0xD4, observado no getter RVA 0x706010
+> (0fb781d4000000c3), slot virtual 3 da vtable RVA 0x1F3FCD0.
+> A atribuição anterior de ID em +0x38 está revogada para esse hash.
+> Veja BACKGROUND_CAPTURE.md para integração, guardas e limites de validação.
+
 ## 1. Visão Geral e Descobertas RTTI
 
 Através de inspeção RTTI MSVC x64 e leitura direta da memória do processo `PokeAlliance_dx.exe` (PID `25492`), mapeamos com precisão cirúrgica todas as estruturas centrais responsáveis por tiles, corpos, itens e contêineres:
@@ -30,13 +37,13 @@ Através de inspeção RTTI MSVC x64 e leitura direta da memória do processo `P
   - `+0x70`: `uint16 z`
 
 ### Estrutura `Item` (`0x7ff718ebfcd0`)
+- `+0xD4`: ID uint16 comprovado estaticamente para o hash indicado na correção.
 - `+0x00`: Vtable (`0x7ff718ebfcd0`)
 - `+0x08`: Self-pointer / Shared Object
 - `+0x20`: Posição do Item no mapa `Position m_position`:
   - `+0x20`: `int32 x` (coordenada global do mapa quando no chão, ou `65535` quando em contêiner)
   - `+0x24`: `int32 y`
   - `+0x28`: `uint16 z`
-- `+0x38`: `uint16 m_clientId` / `m_serverId` (identificador numérico do item/corpo)
 - `+0x3C`..`+0x4C`: Parâmetros de renderização (RGBA / float `1.0f`)
 
 ### Estrutura `Container` (`0x7ff718ebfc98`)

@@ -76,43 +76,36 @@ test('launcher checks actual RPM access before opening the app and makes UAC ele
   assert.match(source, /Start-Process -FilePath \$electron[^\r\n]*-WindowStyle Normal/);
 });
 
-test('keyboard helper waits for actual focus and releases a held key on interruption', t => {
+test('keyboard helper posts background taps and releases on interruption', t => {
   if (process.platform !== 'win32') return t.skip('Windows input helper');
   const script = [
     'import sys',
     'from unittest.mock import Mock,patch',
     'sys.path.insert(0,"tools")',
-    'from walker_input import focus_window,send_tap,movement_scan',
+    'from walker_input import send_tap,movement_scan,key_messages',
     'assert [movement_scan(direction) for direction in range(4)] == [(0x48,True),(0x4d,True),(0x50,True),(0x4b,True)]',
     'for direction in [4,5,6,7,-1,True]:',
     '    try: movement_scan(direction)',
     '    except ValueError: pass',
     '    else: raise AssertionError("non-arrow input accepted")',
     'user=Mock()',
-    'user.SetForegroundWindow.return_value=True',
-    'user.GetForegroundWindow.side_effect=[1,42]',
+    'user.PostMessageW.return_value=True',
+    'messages=key_messages(0x26,0x48,True)',
+    'result={"eventsSent":0}',
     'with patch("walker_input.time.sleep") as sleep:',
-    '    assert focus_window(user,42)==(True,True)',
-    '    sleep.assert_called_once_with(0.01)',
-    'user.GetForegroundWindow.side_effect=None',
-    'user.GetForegroundWindow.return_value=1',
-    'user.SetForegroundWindow.return_value=False',
-    'assert focus_window(user,42)==(False,False)',
-    'user.SetForegroundWindow.return_value=True',
-    'assert focus_window(user,42,0)==(False,True)',
-    'user.SendInput.side_effect=[1,1]',
-    'with patch("walker_input.time.sleep") as sleep:',
-    '    assert send_tap(user,"down","up",40)==2',
+    '    send_tap(user,42,messages,result)',
     '    sleep.assert_called_once_with(0.04)',
-    'assert user.SendInput.call_args_list[-1].args==(1,"up",40)',
-    'user.SendInput.reset_mock(side_effect=True)',
-    'user.SendInput.side_effect=[1,1]',
+    'assert result["eventsSent"]==2',
+    'assert user.PostMessageW.call_args_list[-1].args==(42,*messages[1])',
+    'user.PostMessageW.reset_mock()',
+    'result={"eventsSent":0}',
     'with patch("walker_input.time.sleep",side_effect=RuntimeError("interrupted")):',
-    '    try: send_tap(user,"down","up",40)',
-    '    except RuntimeError: pass',
+    '    try: send_tap(user,42,messages,result)',
+    '    except ValueError: pass',
     '    else: raise AssertionError("interruption lost")',
-    'assert user.SendInput.call_args_list[-1].args==(1,"up",40)',
+    'assert user.PostMessageW.call_args_list[-1].args==(42,*messages[1])',
+    'assert result["eventsSent"]==2 and result["success"] is False',
   ].join('\n');
-  const run = spawnSync(process.env.PKA_PYTHON || 'python', ['-c', script], { cwd: root, encoding: 'utf8', timeout: 10000 });
+  const run = spawnSync(process.env.PKA_PYTHON || 'python', ['-B', '-c', script], { cwd: root, encoding: 'utf8', timeout: 10000 });
   assert.equal(run.status, 0, run.stderr || run.stdout);
 });

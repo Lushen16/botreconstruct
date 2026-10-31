@@ -4,6 +4,103 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const { RpmCombatRuntime } = require('../reconstruction/rpm-combat-runtime.cjs');
 const { projectTarget, createCombatInput } = require('../reconstruction/keyboard-combat.cjs');
+const { EXECUTABLE_SHA256, LAYOUT_ID } = require('../reconstruction/item-source.cjs');
+const fs = require('node:fs');
+const path = require('node:path');
+const crypto = require('node:crypto');
+
+function captureFixture() {
+  const value = fixture();
+  value.config.looting = { captureEnabled: true, captureAfterCombat: true, maxCaptureDist: 3,
+    captureDelay: 300, captureEntries: [{ corpseId: 4029, ballId: 15650, fallbackBallId: 3156 }] };
+  value.transport.captureHotkeys = { '15650': 'B' };
+  value.transport.clientConfig = path.join(__dirname, 'fixtures/capture-client.otml');
+  value.transport.captureBindingVerification = { source: 'live-confirmation',
+    verifiedAt: new Date(1000).toISOString(), useWithActions: [6],
+    configSha256: crypto.createHash('sha256').update(fs.readFileSync(value.transport.clientConfig)).digest('hex') };
+  const scan = { schemaVersion: 1, pid: 42, generatedAt: value.telemetry.creaturesGeneratedAt,
+    processStartedAt: 'session-one', moduleBase: '0x140000000', executableSha256: EXECUTABLE_SHA256,
+    layoutId: LAYOUT_ID, complete: true, truncated: false, readErrors: [],
+    player: structuredClone(value.telemetry.creaturePlayer),
+    itemIdentityProfile: { executableSha256: EXECUTABLE_SHA256, layoutId: LAYOUT_ID },
+    items: [{ id: 4029, stack: 2, pos: { x: 101, y: 100, z: 7 }, struct_va: '0x400', tile_va: '0x500' }] };
+  value.runtime.itemSource = () => scan;
+  return { ...value, scan, refreshItems: () => { scan.generatedAt = value.telemetry.creaturesGeneratedAt; } };
+}
+
+test('RPM pipeline waits for combat, dispatches configured ball by corpse ID, then resumes Walker', async () => {
+  const value = captureFixture();
+  await value.start('walker'); await value.start('target');
+  assert.equal((await value.runtime.tick()).action, 'attack');
+  assert.equal(value.runtime.state.capture.reason, 'capture-after-combat');
+  value.telemetry.creatures = value.telemetry.creatures.filter(creature => creature.creatureType === 3);
+  value.advance(); value.refreshItems();
+  const index = value.runtime.engine.state.index;
+  assert.equal((await value.runtime.tick()).status, 'capture');
+  const request = value.events.at(-1).request;
+  assert.equal(request.kind, 'useWith'); assert.equal(request.key, 'B');
+  assert.equal(request.itemId, 15650); assert.equal(request.targetId, 4029);
+  assert.equal(request.x, 432); assert.equal(request.itemGuard.item.struct_va, '0x400');
+  assert.equal(value.runtime.engine.state.index, index);
+  assert.equal(value.runtime.state.capture.effectVerified, false);
+  value.advance(); value.refreshItems(); await value.runtime.tick();
+  assert.equal(value.events.filter(event => event.request?.kind === 'useWith').length, 1);
+  assert.equal(value.events.at(-1).input[1], 1);
+});
+
+test('RPM does not infer a corpse from disappearance, timeouts or failed item reads', async () => {
+  for (const modify of [scan => { scan.items = []; }, scan => { scan.complete = false; },
+    scan => { scan.pid = 99; }, scan => { scan.generatedAt = new Date(1).toISOString(); },
+    scan => { scan.items[0].id = 77; }, scan => { scan.readErrors = ['RPM failed']; }]) {
+    const value = captureFixture(); modify(value.scan);
+    value.telemetry.creatures = value.telemetry.creatures.filter(creature => creature.creatureType === 3);
+    await value.start('target'); await value.runtime.tick();
+    assert.equal(value.events.filter(event => event.request).length, 0);
+  }
+});
+
+test('RPM revalidates the latest item stream and blocks a moved corpse before input', async () => {
+  const value = captureFixture(); let reads = 0;
+  value.config.looting.captureAfterCombat = false;
+  value.runtime.itemSource = () => {
+    reads++;
+    return reads === 1 ? value.scan : { ...value.scan, items: [] };
+  };
+  await value.start('walker'); await value.runtime.tick();
+  assert.equal(value.events.filter(event => event.request).length, 0);
+  assert.equal(value.runtime.state.capture.status, 'blocked');
+});
+
+test('RPM uncertain useWith pauses without retry or falsely reporting capture', async () => {
+  const value = captureFixture(); let attempts = 0;
+  value.config.looting.captureAfterCombat = false;
+  value.runtime.combatInput = async () => { attempts++; throw Error('partial: two messages queued'); };
+  await value.start('walker');
+  assert.equal((await value.runtime.tick()).status, 'error');
+  value.advance(); value.refreshItems(); assert.equal(await value.runtime.tick(), null);
+  assert.equal(attempts, 1); assert.equal(value.runtime.state.paused, true);
+  assert.equal(value.runtime.state.capture.effectVerified, false);
+});
+
+test('Walker-only after-combat capture requires independent fresh combat perception', async () => {
+  const value = captureFixture(); await value.start('walker');
+  await value.runtime.tick();
+  assert.equal(value.events.filter(event => event.request?.kind === 'useWith').length, 0);
+  assert.equal(value.runtime.state.capture.reason, 'capture-after-combat');
+  value.advance(); value.refreshItems();
+  value.telemetry.creaturesGeneratedAt = new Date(1).toISOString();
+  await value.runtime.tick();
+  assert.equal(value.events.filter(event => event.request?.kind === 'useWith').length, 0);
+});
+
+test('Adding Walker preserves the shared combat dispatch cooldown', async () => {
+  const value = fixture(); await value.start('target');
+  await value.runtime.tick(); await value.start('walker');
+  assert.equal(await value.runtime.tick(), null);
+  assert.equal(value.events.filter(event => event.request).length, 1);
+  value.advance(250); await value.runtime.tick();
+  assert.equal(value.events.filter(event => event.request).length, 2);
+});
 
 function fixture() {
   let clock = 10000;

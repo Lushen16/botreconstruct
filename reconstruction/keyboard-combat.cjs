@@ -33,19 +33,31 @@ function projectTarget(view, player, creature) {
 function createCombatInput(options = {}) {
   const run = options.execFile || execFile;
   return (pid, request) => new Promise((resolve, reject) => {
+    if (!Number.isInteger(pid) || pid <= 0 || !request || typeof request !== 'object' || Array.isArray(request)
+        || !['key', 'attack', 'click', 'useWith', 'probe'].includes(request.kind || 'key')) {
+      reject(Error('PID ou request de combate invalido.')); return;
+    }
+    const expectedEvents = request.kind === 'useWith' ? 4 : request.kind === 'probe' ? 0 : 2;
     run(options.python || process.env.PKA_PYTHON || 'python',
       [path.resolve(__dirname, '../tools/combat_actuator.py'), String(pid), '--request', JSON.stringify(request)],
       { windowsHide: true, timeout: 3000, maxBuffer: 16384 }, (error, stdout, stderr) => {
         let result;
         try { result = JSON.parse(stdout); } catch {
           const detail = String(stderr || '').trim().split(/\r?\n/).filter(Boolean).pop();
-          reject(Error('Atuador de combate sem resposta JSON valida.' + (detail ? ' ' + detail : '')));
+          const failure = Error('Atuador de combate sem resposta JSON valida.' + (detail ? ' ' + detail : ''));
+          failure.retrySafe = false;
+          failure.uncertain = true;
+          reject(failure);
           return;
         }
-        if (error || result.success !== true || result.pid !== pid || result.eventsSent !== 2 || result.foreground !== true) {
-          const failure = Error(result.error || 'Atuador de combate rejeitou o envio.');
-          if (result.success === false && result.pid === pid && result.errorCode === 'WALKER_FOCUS_LOST' && result.eventsSent === 0) failure.code = 'WALKER_FOCUS_LOST';
-          if (result.success === false && result.pid === pid && result.errorCode === 'COMBAT_TARGET_MOVED' && result.eventsSent === 0) failure.code = 'COMBAT_TARGET_MOVED';
+        if (error || !result || result.success !== true || result.pid !== pid || result.eventsSent !== expectedEvents
+            || result.transport !== 'PostMessageW' || result.effectVerified !== false) {
+          const failure = Error(result?.error || 'Atuador de combate rejeitou o envio.');
+          failure.result = result;
+          failure.retrySafe = false;
+          failure.uncertain = true;
+          if (result?.success === false && result.pid === pid && result.errorCode === 'COMBAT_TARGET_MOVED'
+              && result.eventsSent === 0 && (result.pointerEventsSent || 0) === 0) failure.code = 'COMBAT_TARGET_MOVED';
           reject(failure); return;
         }
         resolve(result);

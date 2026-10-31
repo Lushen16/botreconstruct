@@ -8,11 +8,16 @@ const { createTargetEngine } = require('./engines/target-engine.cjs');
 const { createLureEngine } = require('./engines/lure-engine.cjs');
 const { mergeCreatureSnapshot } = require('../tools/creature_bridge.cjs');
 const { readBindings, projectTarget, createCombatInput } = require('./keyboard-combat.cjs');
+const { CaptureRuntime } = require('./capture-runtime.cjs');
+const { captureRequest } = require('./capture-input.cjs');
+const { mergeItemSnapshot } = require('./item-source.cjs');
 
 class RpmCombatRuntime extends WalkerInputRuntime {
   constructor(options = {}) {
     super({ ...options, allowedActions: ['walk', 'wait', 'box', 'safespot'] });
     this.creatureSource = options.creatureSource;
+    this.itemSource = options.itemSource;
+    this.capture = new CaptureRuntime();
     this.loadTransport = options.loadTransport || (() => {
       const transport = JSON.parse(fs.readFileSync(options.transportFile, 'utf8'));
       const clientConfig = transport.clientConfig || (process.env.APPDATA
@@ -97,12 +102,15 @@ class RpmCombatRuntime extends WalkerInputRuntime {
       phase: this.last?.error || (this.paused ? 'Teclado/RPM pausado'
         : this.modules.join(' + ') + ': ' + (this.last?.action || 'aguardando')),
       targetEffectVerified: false, lastCombatDispatch: this.dispatchLog.at(-1) || null,
+      capture: { ...this.capture.last },
       phases: { target: this.modules.includes('target') ? this.last?.status || 'aguardando' : 'off' } };
   }
 
   updateConfig(config) {
     if (!this.combat || (isDeepStrictEqual(this.config?.target, config.target)
-        && isDeepStrictEqual(this.config?.hoenn, config.hoenn))) return;
+        && isDeepStrictEqual(this.config?.hoenn, config.hoenn))) {
+      this.config = structuredClone(config); return;
+    }
     this.combat = createTargetEngine(config); this.lure = createLureEngine(config);
     this.config = structuredClone(config); this.queue = []; this.lastCombatSnapshot = null; this.targetView = null;
   }
@@ -120,7 +128,11 @@ class RpmCombatRuntime extends WalkerInputRuntime {
       const wasPaused = this.paused;
       if (enabled) {
         if (targetActive && pid !== this.pid) throw Error('Pare os modulos antes de trocar o PID.');
+        const transport = this.loadTransport();
+        if (pid !== this.pid) this.capture.reset();
         const state = await super.setModules(module, enabled, pid, config);
+        this.config = structuredClone(config);
+        this.transport = transport;
         if (targetActive) { this.modules.push('target'); this.changed(); }
         return { ...state, ...this.state };
       }
@@ -159,6 +171,7 @@ class RpmCombatRuntime extends WalkerInputRuntime {
     const after = positionIssue(refreshed, pid, this.playerName, this.now())
       || (!refreshed.capabilities.targetKeyboard && (refreshed.capabilities.targetKeyboardIssue || 'Criaturas RPM indisponiveis.'));
     if (after) throw Error(after);
+    if (pid !== this.pid) this.capture.reset();
     this.pid = pid; this.playerName ||= session.telemetry.playerName;
     this.transport = transport; this.config = structuredClone(config);
     this.combat = createTargetEngine(config); this.lure = createLureEngine(config);
@@ -192,10 +205,81 @@ class RpmCombatRuntime extends WalkerInputRuntime {
     try { return await this.inFlight; } finally { this.inFlight = null; }
   }
 
+  captureTelemetry(session) {
+    if (!this.itemSource) throw Error('Capture: fonte RPM de itens indisponivel.');
+    const telemetry = mergeItemSnapshot(session, this.itemSource(), this.now()).telemetry;
+    const identity = JSON.stringify([telemetry.itemPid, telemetry.itemIdentityProfile.processStartedAt,
+      telemetry.itemIdentityProfile.moduleBase]);
+    if (this.captureSession !== identity) {
+      this.capture.reset(); this.captureSession = identity;
+    }
+    return telemetry;
+  }
+
+  async tryCapture(session, epoch, inCombat) {
+    if (this.config?.looting?.captureEnabled !== true) {
+      this.capture.last = { status: 'off', effectVerified: false }; return null;
+    }
+    let telemetry;
+    try { telemetry = this.captureTelemetry(session); }
+    catch (error) {
+      this.capture.last = { status: 'blocked', reason: error.message, effectVerified: false }; return null;
+    }
+    const candidate = this.capture.plan(telemetry, this.config, this.now(), { inCombat });
+    if (!candidate || this.now() - this.lastDispatch < 250) return null;
+    const latest = this.getSession();
+    const issue = positionIssue(latest, this.pid, this.playerName, this.now());
+    if (issue) throw Error(issue);
+    if (this.config.looting.captureAfterCombat === true) {
+      const perception = this.sessions.find(value => value.pid === this.pid);
+      if (!perception?.capabilities.targetKeyboard
+          || createTargetEngine(this.config).inspect(perception.telemetry).length > 0) {
+        this.capture.last = { status: 'blocked', reason: 'capture-after-combat', effectVerified: false };
+        return null;
+      }
+    }
+    const current = this.captureTelemetry(latest);
+    const plan = this.capture.revalidate(candidate, current, this.config);
+    if (plan.state !== 'DISPATCH_PLANNED') {
+      this.capture.last = { status: 'blocked', reason: plan.reason, effectVerified: false }; return null;
+    }
+    const request = captureRequest(this.loadTransport(), current, candidate, plan, this.config);
+    if (epoch !== this.epoch || this.paused) return null;
+    let result;
+    try { result = await this.combatInput(this.pid, request); }
+    catch (error) {
+      this.capture.last = { status: 'error', reason: error.message, effectVerified: false,
+        outcome: 'unknown', retrySafe: false, transportResult: error.result };
+      throw error;
+    }
+    this.lastDispatch = this.now();
+    this.capture.record(candidate, this.config, this.lastDispatch, true);
+    const record = { ...result, generatedAt: new Date(this.lastDispatch).toISOString(), command: 'useWith',
+      parameter: plan.parameter, inputAccepted: true, effectVerified: false };
+    this.dispatchLog.push(record); this.dispatchLog = this.dispatchLog.slice(-100);
+    this.onDispatch(record);
+    if (epoch !== this.epoch) return null;
+    this.last = { status: 'capture', action: 'useWith', inputAccepted: true, effectVerified: false };
+    this.changed(); return this.last;
+  }
+
   async runTick(epoch) {
-    if (!this.modules.includes('target') || !this.combat) return super.runTick(epoch);
     let attemptedSnapshot = null;
     try {
+      if (!this.modules.includes('target') || !this.combat) {
+        const session = this.getSession();
+        const issue = positionIssue(session, this.pid, this.playerName, this.now());
+        if (issue) throw Error(issue);
+        let inCombat;
+        if (this.config?.looting?.captureAfterCombat === true) {
+          const perception = this.sessions.find(value => value.pid === this.pid);
+          if (perception?.capabilities.targetKeyboard) {
+            inCombat = createTargetEngine(this.config).inspect(perception.telemetry).length > 0;
+          }
+        } else inCombat = false;
+        const capture = await this.tryCapture(session, epoch, inCombat);
+        return capture || super.runTick(epoch);
+      }
       const session = this.sessions.find(value => value.pid === this.pid);
       const issue = positionIssue(session, this.pid, this.playerName, this.now());
       if (issue) throw Error(issue);
@@ -208,6 +292,8 @@ class RpmCombatRuntime extends WalkerInputRuntime {
       if (this.retryCombatSnapshot === telemetry.creaturesGeneratedAt) return null;
       this.retryCombatSnapshot = null;
       const candidates = this.combat.inspect(telemetry);
+      const capture = await this.tryCapture(session, epoch, candidates.length > 0);
+      if (capture) return capture;
       if (this.queue.length && !candidates.some(creature => creature.id === this.queue[0].targetId)) {
         this.queue = []; this.combat.clearTarget(); this.targetView = null;
       }
@@ -293,7 +379,8 @@ class RpmCombatRuntime extends WalkerInputRuntime {
         this.changed(); return this.last;
       }
       this.paused = true; this.epoch++; clearInterval(this.timer); this.timer = null; this.queue = []; this.targetView = null;
-      this.last = { status: error.code === 'WALKER_FOCUS_LOST' ? 'paused' : 'error', error: error.message, inputAccepted: false };
+      this.last = { status: error.code === 'WALKER_FOCUS_LOST' ? 'paused' : 'error', error: error.message,
+        inputAccepted: false, transportResult: error.result, effectVerified: false, retrySafe: false };
       this.changed(); return this.last;
     }
   }

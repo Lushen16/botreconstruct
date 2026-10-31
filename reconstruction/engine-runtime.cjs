@@ -5,6 +5,8 @@ const { createAutomation, createRecorder, gateReason } = require('./automation.c
 const { encodeCommand } = require('./protocol.cjs');
 const { mergeCreatureSnapshot } = require('../tools/creature_bridge.cjs');
 const nativeAdapter = require('./native-adapter.cjs');
+const { CaptureRuntime } = require('./capture-runtime.cjs');
+const { createTargetEngine } = require('./engines/target-engine.cjs');
 
 const MODULES = Object.freeze(['target', 'walker', 'healer']);
 
@@ -30,6 +32,8 @@ class EngineRuntime extends EventEmitter {
     this.last = null;
     this.moving = false;
     this.engaged = false;
+    this.capture = new CaptureRuntime();
+    this.config = null;
   }
 
   get sessions() {
@@ -43,7 +47,7 @@ class EngineRuntime extends EventEmitter {
         : this.last.status === 'blocked' ? 'Aguardando: ' + this.last.reason : this.last.status;
     return { modules: [...this.modules], pid: this.pid, paused: this.paused, phase,
       phases: {}, status: this.last?.status || 'idle', reason: this.last?.reason || null,
-      error: this.last?.error || null };
+      error: this.last?.error || null, capture: { ...this.capture.last } };
   }
 
   async bounded(operation, label) {
@@ -86,8 +90,10 @@ class EngineRuntime extends EventEmitter {
       await this.adapter.close();
       this.adapter = null;
     }
+    if (pid !== this.pid) this.capture.reset();
     this.pid = pid;
     if (changed || !this.automation) {
+      this.config = structuredClone(config);
       this.automation = createAutomation(structuredClone(config), { now: this.now,
         isEnabled: name => this.modules.includes(name),
         hotkeysBlocked: () => this.lastHotkeyAt !== null && this.now() - this.lastHotkeyAt < 250 });
@@ -201,6 +207,7 @@ class EngineRuntime extends EventEmitter {
     if (this.adapter && pid !== this.pid) { await this.adapter.close(); this.adapter = null; }
     this.pid = pid;
     if (!this.automation) {
+      this.config = structuredClone(config || {});
       this.automation = createAutomation(structuredClone(config || {}), { now: this.now,
         isEnabled: name => this.modules.includes(name),
         hotkeysBlocked: () => this.lastHotkeyAt !== null && this.now() - this.lastHotkeyAt < 250 });
@@ -235,12 +242,26 @@ class EngineRuntime extends EventEmitter {
         return this.last;
       }
       const recorder = createRecorder();
-      const result = this.automation.tick(snapshot, recorder);
+      let captureCandidate = null;
+      const result = this.automation.tick(snapshot, recorder, (telemetry, inCombat) => {
+        captureCandidate = this.capture.plan(telemetry, this.config, this.now(), { inCombat });
+        if (this.lastHotkeyAt !== null && this.now() - this.lastHotkeyAt < 250) return null;
+        if (captureCandidate) {
+          const latest = this.snapshot();
+          const reason = gateReason(latest);
+          if (reason) throw Error('Sessao mudou antes da captura: ' + reason);
+          const plan = this.capture.revalidate(captureCandidate, latest.telemetry, this.config);
+          if (plan.state !== 'DISPATCH_PLANNED') throw Error('Corpo mudou antes da captura: ' + plan.reason);
+          recorder.command(plan.command, plan.parameter);
+          return { status: 'capture', emitted: [['useWith', plan.parameter]], effectVerified: false };
+        }
+        return null;
+      });
       for (const event of recorder.events) {
         if (!this.adapter.supportedCommands.includes(event.name)) throw Error('Comando sem suporte: ' + event.name);
         encodeCommand(1, event.name, event.parameter, event.extra);
       }
-      if ((this.moving && ['blocked', 'combat', 'heal', 'revive'].includes(result.status))
+      if ((this.moving && ['blocked', 'combat', 'heal', 'revive', 'capture'].includes(result.status))
           || (this.engaged && result.status !== 'combat')) {
         if (await this.bounded(() => this.adapter.pauseWalker(true, { pid: this.pid }), 'stop') !== true) {
           throw Error('Walker sem confirmacao de parada.');
@@ -250,17 +271,28 @@ class EngineRuntime extends EventEmitter {
       }
       for (const event of recorder.events) {
         if (this.paused || epoch !== this.epoch) break;
-        const reason = gateReason(this.snapshot());
+        const current = this.snapshot();
+        const reason = gateReason(current);
         if (reason) throw Error('Sessao mudou antes do envio: ' + reason);
-        if (event.name === 'hotkey' && this.lastHotkeyAt !== null && this.now() - this.lastHotkeyAt < 250) {
+        if (event.name === 'useWith' && captureCandidate) {
+          if (this.config?.looting?.captureAfterCombat === true
+              && createTargetEngine(this.config).inspect(current.telemetry).length > 0) {
+            throw Error('Combate observado antes do envio da captura.');
+          }
+          const plan = this.capture.revalidate(captureCandidate, current.telemetry, this.config);
+          if (plan.state !== 'DISPATCH_PLANNED') throw Error('Corpo mudou antes do envio: ' + plan.reason);
+          event.parameter = plan.parameter;
+        }
+        if (['hotkey', 'useWith'].includes(event.name) && this.lastHotkeyAt !== null && this.now() - this.lastHotkeyAt < 250) {
           throw Error('Lote excedeu o Global Cooldown.');
         }
         const adapter = this.adapter;
-        if (event.name === 'hotkey') this.lastHotkeyAt = this.now();
+        if (['hotkey', 'useWith'].includes(event.name)) this.lastHotkeyAt = this.now();
         this.automation.recordDispatch(event.name, event.parameter, this.now());
         const ack = await this.bounded(() => adapter.command(event.name, event.parameter,
           { pid: this.pid, extra: event.extra }), event.name);
         if (ack !== true) throw Error('Comando sem ACK positivo: ' + event.name);
+        if (event.name === 'useWith' && captureCandidate) this.capture.record(captureCandidate, this.config, this.now(), true);
         if (event.name === 'walk') this.moving = true;
         if (event.name === 'attack') this.engaged = true;
       }

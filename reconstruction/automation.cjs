@@ -116,7 +116,7 @@ function createAutomation(config, options = {}) {
     return { status: 'revive', pauseWalker: true, emitted, reason };
   }
 
-  function huntStep(telemetry, output, now, hotkeysBlocked) {
+  function huntStep(telemetry, output, now, hotkeysBlocked, beforeActions) {
     const health = telemetry.healthPercent;
     if (!Number.isFinite(health) || health <= 0 || health > 100) return blocked('invalid-health');
     if (!isPosition(telemetry.position) || !Array.isArray(telemetry.creatures)) return blocked('invalid-perception');
@@ -136,6 +136,8 @@ function createAutomation(config, options = {}) {
     if (pendingRevive) return pendingRevive;
     const detected = target.inspect(telemetry).length;
     if (detected) {
+      const capture = beforeActions?.(telemetry, true);
+      if (capture) return capture;
       const fight = target.step(telemetry, output, now, { hotkeysBlocked });
       const revive = reviveStep(telemetry, output, now);
       if (revive) return { ...revive, detected, fight, emitted: [...fight.emitted, ...revive.emitted] };
@@ -154,11 +156,13 @@ function createAutomation(config, options = {}) {
       return { status: 'heal', pauseWalker: true, detected, emitted: heal.emitted,
         blocked: heal.blocked, reason: state.recovering ? 'await-health-recovery' : 'healer-cleanup' };
     }
+    const capture = beforeActions?.(telemetry, false);
+    if (capture) return capture;
     const walk = walker.step(telemetry, output, now);
     return { status: 'walking', pauseWalker: false, detected, walk, emitted: walk.emitted, reason: walk.reason || null };
   }
 
-  function tick(snapshot, sink = createRecorder()) {
+  function tick(snapshot, sink = createRecorder(), beforeActions) {
     const reason = gateReason(snapshot);
     if (reason) {
       return blocked(reason);
@@ -186,7 +190,7 @@ function createAutomation(config, options = {}) {
     } };
     state.ticks += 1;
     if (hunt) {
-      state.last = huntStep(telemetry, output, now, hotkeysBlocked);
+      state.last = huntStep(telemetry, output, now, hotkeysBlocked, beforeActions);
       return state.last;
     }
     const pendingRevive = reviveStep(telemetry, output, now);
@@ -199,6 +203,8 @@ function createAutomation(config, options = {}) {
       state.last = { status: 'heal', reason: null, emitted: heal.emitted, blocked: heal.blocked };
       return state.last;
     }
+    const capture = beforeActions?.(telemetry, target.inspect(telemetry).length > 0);
+    if (capture) { state.last = capture; return capture; }
     if (!enabled('target')) target.clearTarget();
     const fight = !enabled('target') ? { action: 'idle', emitted: [] } : target.step(telemetry, output, now, {
       luring: config?.target?.luring?.enabled === true, hotkeysBlocked,
