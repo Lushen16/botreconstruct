@@ -158,3 +158,31 @@ test('RPM combat readiness surfaces the real scanner error instead of missing na
   const issues = context.PkaDiagnostics.targetStartIssues(context.PkaSchema.createConfig(), session);
   assert.match(issues[0].message, /Initial discovery pending/u);
 });
+
+test('RPM combat readiness surfaces scanner identity errors even without a Walker position', () => {
+  const context = diagnostics();
+  const session = { source: 'rpm', capabilities: { walkerKeyboard: false, targetKeyboard: false,
+    targetKeyboardIssue: 'Nome do jogador RPM divergente.' }, online: true, stale: false, ageMs: 10,
+    telemetry: { nativeVerified: false } };
+  const issues = context.PkaDiagnostics.targetStartIssues(context.PkaSchema.createConfig(), session);
+  assert.match(issues[0].message, /divergente/u);
+  assert.ok(!issues.some(issue => issue.message.includes('Backend teclado/RPM ativo')));
+});
+
+test('RPM combat readiness skips Medicine, PokeStop and Revive requirements the runtime does not execute', () => {
+  const context = diagnostics();
+  const config = context.PkaSchema.createConfig();
+  config.target.monsters = [];
+  config.target.combo.enabled = true;
+  config.target.combo.useMedicine = true;
+  config.target.autoRevive.enabled = true;
+  const base = { capabilities: { walkerKeyboard: true, targetKeyboard: true },
+    online: true, stale: false, ageMs: 10, telemetry: { nativeVerified: false } };
+  const rpmIssues = context.PkaDiagnostics.targetStartIssues(config, { ...base, source: 'rpm' });
+  assert.ok(rpmIssues.some(issue => issue.path === 'target.monsters'));
+  const nativeIssues = context.PkaDiagnostics.targetStartIssues(config, { ...base, source: 'native' });
+  for (const issuePath of ['target.combo.medicineHotkey', 'target.autoRevive.hotkey']) {
+    assert.equal(rpmIssues.some(issue => issue.path === issuePath), false);
+    assert.ok(nativeIssues.some(issue => issue.path === issuePath));
+  }
+});

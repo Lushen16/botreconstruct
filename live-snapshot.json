@@ -6,7 +6,7 @@
   },
   "pid": 25492,
   "image": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe",
-  "generatedAt": "2026-10-31T00:53:21.585567+00:00",
+  "generatedAt": "2026-10-31T01:12:53.079364+00:00",
   "player": {
     "name": "Nobutdopai",
     "pos": {
@@ -44,6 +44,6 @@
     "module_base": "0x7ff716f80000"
   },
   "creaturesGeneratedAt": "2026-10-29T02:57:16.973150+00:00",
-  "clientWindowTitle": "PokeAlliance - Nobutdopai",
+  "clientWindowTitle": "PokeAlliance",
   "online": true
 }

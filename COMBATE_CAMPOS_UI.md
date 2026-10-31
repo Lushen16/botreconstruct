@@ -56,7 +56,7 @@ consumo no código: não significa execução comprovada no jogo.
 | ignoredCreaturesText | Corrigido nesta rodada; regressões para nomes e curingas. |
 | shinyPriorityEnabled | Lógica existente; exige shinyIcon ou metadados lookType confiáveis. |
 | instanceModeEnabled | Bloqueado pelo diagnóstico original; rotina ausente. |
-| lowHpComboPercent | Pendente: motor lê combo.lowHpComboPercent, caminho diferente do schema; também não reproduz o desvio emergencial do Perfect. |
+| lowHpComboPercent | Caminho corrigido nesta rodada: motor lê target.lowHpComboPercent e mantém combo.lowHpComboPercent apenas como fallback de perfis antigos. A semântica aplicada é a do spec (vida acima do limite = só attack); o rótulo de emergência da UI e o desvio do Perfect continuam não reproduzidos. |
 | monsters[].name | Seleção existente: exato, *, prefixo terminado em *; curingas gerais na lista de inclusão ainda não são completos. |
 | monsters[].range | Filtro existente por distância ao treinador; posição do Pokémon ainda precisa ser distinguida para a contagem original. |
 | monsters[].priority | Ordenação existente por menor número. |
@@ -68,7 +68,7 @@ consumo no código: não significa execução comprovada no jogo.
 | combo.enabled | Seleciona ataque simples ou combo no motor existente. |
 | combo.sequenceText, combo.stepDelay | Rotação manual existente; escolha entre manual e nativo corrigida. |
 | combo.useNativeSequence | Corrigido para não usar sequência manual oculta; !autocombo opaco não informa o término da rotação. |
-| combo.lureDelay | Não aplicado como espera antes da primeira skill. |
+| combo.lureDelay | Corrigido nesta rodada: espera desde a parada/alvo atual antes da primeira skill; as skills seguintes usam stepDelay. |
 | combo.finishRemainingCount, combo.finishIgnoreShiny | Não integrados ao encerramento de combate/retomada da rota. |
 | combo.usePokeStop | UI valida conditionEvents; fluxo do Target não executa a preparação completa. |
 | combo.useMedicine, combo.useMedicineBeforeCombo | Sem sequência correspondente no Target; a Medicine de Hoenn tem configurações próprias. |
@@ -83,9 +83,15 @@ consumo no código: não significa execução comprovada no jogo.
 | luring.enabled, luring.maxDistance | Lógica existente em lure-engine; normalização restringe distância a 16, schema aceita 30. |
 | luring.frontEnabled, luring.frontRegroupMargin, luring.frontRegroupSteps | Lógica existente; fidelidade integral dos parâmetros e transições ainda pendente. |
 | luring.randomEnabled, luring.randomMinSeconds, luring.randomMaxSeconds | Lógica existente; limites locais de 5..3600 s diferem do schema de 1..3600000 s. |
-| lureSkill.enabled, lureSkill.move, lureSkill.hpPercent | Parcial: aceita uma mN; UI anuncia sequência de buffs com intervalo de 250 ms. |
+| lureSkill.enabled, lureSkill.move, lureSkill.hpPercent | Parcial: aceita uma mN; o RPM agora repassa luring.enabled ao motor e executa o buff enquanto lura. A UI anuncia sequência de buffs com intervalo de 250 ms, ainda não aceita. |
 | healSkill.enabled, healSkill.move, healSkill.hpPercent | Parcial: usa healthPercent genérico; não executa a Medicine anterior anunciada na UI. |
 | combatStanceAuto.enabled | Alternância ofensivo/defensivo não integrada ao Target. |
+
+No backend teclado/RPM, o diagnóstico de Target deixa de exigir Medicine,
+PokeStop e Revive, que esse runtime não executa, e passa a mostrar o erro real
+de identidade/varredura mesmo quando a posição do Walker ainda não está
+disponível. Monstros vazios e Modo instância continuam bloqueando. A supressão
+não declara efeito no jogo: apenas evita exigir hotkeys sem consumidor.
 
 As extensões skills, globalCooldownMs, combo.hotkey e combo.nativeHotkey da
 reconstrução não aparecem como esses campos no schema original consultado.

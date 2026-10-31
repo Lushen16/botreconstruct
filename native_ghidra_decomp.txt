@@ -1,2 +1,0 @@
-===== RVA 0x9b4c0 =====
-CREATE FAILED: Function body must contain the entrypoint

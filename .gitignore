@@ -27,3 +27,20 @@ __pycache__/
 # Local dumps / captures captures
 captures/
 dumps/
+
+# Debug and session dumps
+live-*
+*.err
+*.lock
+*.png
+audit-*.txt
+combat-*.txt
+test-results*.txt
+validation-*.txt
+native_*disasm*.txt
+native_*decomp*.txt
+pointer-scan-*.json
+tilemap-live.json
+walker-restart.json
+walker-input-probe.json
+local-data/dumps/

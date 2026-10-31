@@ -109,3 +109,22 @@ Ultima execucao: node tools/validate.cjs, 29/10/2026, 16:21:23 UTC.
 Node: 521 testes, 513 aprovados, oito ignorados, zero falhas.
 Electron: 521 testes, 521 aprovados, zero ignorados/falhas.
 Build, smoke e auditoria local da UI: exitCode 0.
+
+## Ajustes de fidelidade no runtime RPM (30/10/2026)
+
+- O motor de Target passa a ler target.lowHpComboPercent, com
+  combo.lowHpComboPercent apenas como fallback de perfis antigos.
+- combo.lureDelay passa a atrasar a primeira skill contada desde a parada/alvo
+  atual; as skills seguintes continuam usando stepDelay.
+- O runtime RPM repassa target.luring.enabled ao motor, ativando lureSkill
+  (e o buff de HP) enquanto o Walker lura.
+- O diagnostico de Target no backend teclado/RPM deixa de exigir Medicine,
+  PokeStop e Revive, nao executados por esse runtime, e mostra o erro real de
+  identidade/varredura mesmo sem posicao do Walker. Monstros vazios e Modo
+  instancia continuam bloqueando.
+
+Validacao: node tools/validate.cjs, 30/10/2026.
+Node: 537 testes, 529 aprovados, oito ignorados, zero falhas.
+Electron: 537 testes, 537 aprovados, zero ignorados/falhas.
+Build, smoke e auditoria local da UI: exitCode 0. Nenhum desses testes prova
+efeito no cliente real; nativeVerified e effectVerified continuam false.

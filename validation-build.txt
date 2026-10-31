@@ -1,1 +1,0 @@
-{"app":"C:\\Users\\yago\\Documents\\Clone\\RECONSTRUÇAO OFIcial\\reconstruction\\app","copied_original_files":42,"archive_sha256":"0cc1cf89ee210714c150ed6270c9f44afc90e1d0bc2a790c6ab7b9eb77438e24"}
