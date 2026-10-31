@@ -9,6 +9,12 @@ const distance = (a, b) => {
   if (a.z !== b.z) return Infinity;
   return Math.max(Math.abs(a.x - b.x), Math.abs(a.y - b.y));
 };
+// Plane-only helpers: floor-agnostic navigation for parallel instances/floors.
+const samePlane = (a, b) => Boolean(a) && Boolean(b) && a.x === b.x && a.y === b.y;
+const planeDistance = (a, b) => {
+  if (!isPosition(a) || !isPosition(b)) return Infinity;
+  return Math.max(Math.abs(a.x - b.x), Math.abs(a.y - b.y));
+};
 const adjacent = (a, b) => distance(a, b) <= 1;
 
 function direction(from, to) {
@@ -98,6 +104,6 @@ function textFits(value, maximum, label) {
 }
 
 module.exports = {
-  DIRECTIONS, isPosition, sameTile, distance, adjacent, direction, ignoredNames, normalizeName, matchesName, isIgnored,
+  DIRECTIONS, isPosition, sameTile, samePlane, distance, planeDistance, adjacent, direction, ignoredNames, normalizeName, matchesName, isIgnored,
   parseSequence, byteLength, activePokemon, ready, runtimeMismatch, Cooldown, requirePositiveInteger, textFits,
 };

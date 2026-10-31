@@ -216,6 +216,7 @@ class RpmCombatRuntime extends WalkerInputRuntime {
         const events = [];
         const fight = this.combat.step(telemetry, { command: (name, parameter) => events.push({ name, parameter }) }, this.now(), {
           keyboardTransport: true,
+          luring: this.config?.target?.luring?.enabled === true,
         });
         if (fight.action === 'idle' || fight.action === 'luring') {
           this.queue = [];

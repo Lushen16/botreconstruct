@@ -1,6 +1,6 @@
 'use strict';
 
-const { sameTile, distance, direction, isPosition } = require('./shared.cjs');
+const { sameTile, samePlane, planeDistance, direction, isPosition } = require('./shared.cjs');
 
 const ACTIONS = Object.freeze(['walk', 'safespot', 'box', 'stairs', 'wait', 'say']);
 const STAIRS_TIMEOUT_MS = 5000;
@@ -36,7 +36,7 @@ function createWalkerEngine(config) {
     let best = 0;
     let bestDistance = Infinity;
     for (let index = 0; index < waypoints.length; index += 1) {
-      const current = distance(position, waypoints[index].pos);
+      const current = planeDistance(position, waypoints[index].pos);
       if (current < bestDistance) { bestDistance = current; best = index; }
     }
     return best;
@@ -98,11 +98,14 @@ function createWalkerEngine(config) {
       }
       return next(emitted, 'say');
     }
-    if (waypoint.action === 'stairs' && sameTile(position, waypoint.pos)) {
-      state.pendingStairs = { fromZ: waypoint.pos.z, deadline: now + STAIRS_TIMEOUT_MS };
+    // Walking is plane-based: reaching (x, y) counts as arrived on any z.
+    // Only a stairs waypoint verifies z, by waiting for the floor to change
+    // from the floor observed when the stair tile was reached.
+    if (waypoint.action === 'stairs' && samePlane(position, waypoint.pos)) {
+      state.pendingStairs = { fromZ: position.z, deadline: now + STAIRS_TIMEOUT_MS };
       return { action: 'hold', emitted: [], reason: 'stairs' };
     }
-    if (sameTile(position, waypoint.pos)) return next([], 'arrived');
+    if (samePlane(position, waypoint.pos)) return next([], 'arrived');
 
     const target = smart ? smartTarget(position, waypoint) : waypoint.pos;
     if (target.x === position.x && target.y === position.y) {

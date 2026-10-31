@@ -52,6 +52,29 @@ test('RPM target uses real entity schema, queues attack then configured keys wit
   assert.equal(value.runtime.state.targetEffectVerified, false);
 });
 
+test('RPM sends the configured lure skill while Target luring is enabled', async () => {
+  const value = fixture();
+  value.config.target.luring = { enabled: true };
+  value.config.target.lureSkill = { enabled: true, hpPercent: 50, move: 'm3' };
+  value.transport.bindings.m3 = 'F3'; value.telemetry.healthPercent = 100;
+  await value.start('target');
+  await value.runtime.tick();
+  value.advance();
+  assert.equal((await value.runtime.tick()).action, 'talk');
+  assert.equal(value.events.at(-1).request.key, 'F3');
+});
+
+test('RPM ignores the configured lure skill while Target luring is disabled', async () => {
+  const value = fixture();
+  value.config.target.lureSkill = { enabled: true, hpPercent: 50, move: 'm3' };
+  value.transport.bindings.m3 = 'F3'; value.telemetry.healthPercent = 100;
+  await value.start('target');
+  await value.runtime.tick();
+  value.advance();
+  assert.equal((await value.runtime.tick()).action, 'talk');
+  assert.equal(value.events.at(-1).request.key, 'F1');
+});
+
 test('Target activation and deactivation preserve the running Walker and its index', async () => {
   const value = fixture(); await value.start('walker');
   const engine = value.runtime.engine;

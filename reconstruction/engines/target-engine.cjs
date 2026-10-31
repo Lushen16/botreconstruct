@@ -96,6 +96,11 @@ function createTargetEngine(config, options = {}) {
     return parseSequence(combo.sequenceText);
   }
 
+  function comboReady(now, fallbackDelay) {
+    if (state.comboIndex === 0) return now - state.targetSince >= Math.max(0, Number(combo.lureDelay) || 0);
+    return state.comboAt.ready(now, Math.max(0, Number(combo.stepDelay) || fallbackDelay));
+  }
+
   function step(telemetry, sink, now, context = {}) {
     tickNow = now;
     if (!Number.isFinite(now)) {
@@ -167,7 +172,7 @@ function createTargetEngine(config, options = {}) {
 
     if (!comboEnabled) return { action: emitted.length ? 'attack' : 'hold', emitted, targetId: creature.id };
 
-    const lowHpGate = Number(combo.lowHpComboPercent);
+    const lowHpGate = Number(target.lowHpComboPercent ?? combo.lowHpComboPercent);
     if (Number.isInteger(lowHpGate) && lowHpGate > 0 && !(Number.isFinite(health) && health <= lowHpGate)) {
       return { action: 'attack', emitted, targetId: creature.id, reason: 'low-hp-gate' };
     }
@@ -177,8 +182,7 @@ function createTargetEngine(config, options = {}) {
         || (typeof combo.hotkey === 'string' && combo.hotkey.trim());
       if (nativeHotkey) {
         if (context.hotkeysBlocked) return { action: 'combat', emitted, targetId: creature.id, native: true };
-        const delay = state.comboIndex === 0 ? 0 : Math.max(0, Number(combo.stepDelay) || 1000);
-        if (state.comboAt.ready(now, delay)) {
+        if (comboReady(now, 1000)) {
           send('hotkey', nativeHotkey);
           state.comboIndex += 1;
           state.comboAt.use(now);
@@ -191,8 +195,7 @@ function createTargetEngine(config, options = {}) {
     const steps = sequence(telemetry);
     if (!steps.length) {
       if (combo.useNativeSequence === true && !context.hotkeysBlocked) {
-        const delay = state.comboIndex === 0 ? 0 : Math.max(0, Number(combo.stepDelay) || 1000);
-        if (state.comboAt.ready(now, delay)) {
+        if (comboReady(now, 1000)) {
           send('combo', '!autocombo', activeUuid ? { expectedUuid: activeUuid } : undefined);
           state.comboIndex += 1;
           state.comboAt.use(now);
@@ -203,8 +206,7 @@ function createTargetEngine(config, options = {}) {
       return { action: 'attack', emitted, targetId: creature.id, reason: 'empty-combo' };
     }
     if (state.comboIndex >= steps.length) return { action: 'combat', emitted, targetId: creature.id, reason: 'combo-done' };
-    const delay = state.comboIndex === 0 ? 0 : Math.max(0, Number(combo.stepDelay) || 0);
-    if (!state.comboAt.ready(now, delay)) return { action: 'combat', emitted, targetId: creature.id };
+    if (!comboReady(now, 0)) return { action: 'combat', emitted, targetId: creature.id };
     const move = steps[state.comboIndex];
     const guard = activeUuid ? { expectedUuid: activeUuid, attackTargetId: creature.id } : undefined;
     if (!guard && context.keyboardTransport !== true) {

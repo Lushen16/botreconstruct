@@ -148,6 +148,29 @@ test('combo follows the sequence with identity guard and step delay', () => {
   assert.equal(engine.step(telemetry, recorder, 4000).reason, 'combo-done');
 });
 
+test('combo emergency gate uses the schema target.lowHpComboPercent path', () => {
+  const engine = createTargetEngine(config({ target: { lowHpComboPercent: 50,
+    combo: { enabled: true, sequenceText: 'm1', stepDelay: 250 } } }));
+  const recorder = createRecorder();
+  const telemetry = { position: { x: 100, y: 100, z: 7 }, activeSlot: 1, roster, pokemonName: 'Charizard',
+    creatures: [creature(7, 101, 100)] };
+  assert.equal(engine.step({ ...telemetry, healthPercent: 90 }, recorder, 0).reason, 'low-hp-gate');
+  assert.deepEqual(recorder.events.map(event => event.name), ['attack']);
+  engine.step({ ...telemetry, healthPercent: 40 }, recorder, 250);
+  assert.deepEqual(recorder.events.map(event => [event.name, event.parameter]), [['attack', 7], ['talk', 'm1']]);
+});
+
+test('combo waits lureDelay before the first skill', () => {
+  const engine = createTargetEngine(config({ target: { combo: { enabled: true, sequenceText: 'm1',
+    stepDelay: 250, lureDelay: 1000 } } }));
+  const recorder = createRecorder();
+  const telemetry = { position: { x: 100, y: 100, z: 7 }, activeSlot: 1, roster, pokemonName: 'Charizard',
+    healthPercent: 90, creatures: [creature(7, 101, 100)] };
+  assert.deepEqual(engine.step(telemetry, recorder, 0).emitted, [['attack', 7]]);
+  assert.deepEqual(engine.step(telemetry, recorder, 999).emitted, []);
+  assert.deepEqual(engine.step(telemetry, recorder, 1000).emitted.at(-1), ['talk', 'm1']);
+});
+
 test('combo without an identity guard reports the block instead of sending', () => {
   const engine = createTargetEngine(config({ target: { combo: { enabled: true, sequenceText: 'm1' } } }));
   const recorder = createRecorder();

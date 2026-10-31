@@ -107,11 +107,9 @@ class WalkerInputRuntime extends EventEmitter {
     if (!Array.isArray(waypoints) || !waypoints.length) throw Error('A rota precisa de waypoints.');
     if (waypoints.some(waypoint => !this.allowedActions.includes(waypoint.action))) throw Error('Walker teclado aceita somente ' + this.allowedActions.join(', ') + '; outras acoes precisam do backend correspondente.');
     const engine = createWalkerEngine({ ...config, walker: { ...config.walker, smartWalking: true } });
-    const floor = this.getSession().telemetry.position.z;
     for (const waypoint of engine.waypoints()) {
       const pos = waypoint.pos;
       if (pos.x < 0 || pos.x >= 65535 || pos.y < 0 || pos.y >= 65535 || pos.z < 0 || pos.z > 15) throw Error('Waypoint fora dos limites.');
-      if (pos.z !== floor) throw Error('Walker teclado exige rota no mesmo andar; transicoes precisam de confirmacao propria.');
       if (waypoint.action === 'wait' && (!/^[0-9]+$/.test(String(waypoint.param)) || Number(waypoint.param) > 3600000)) throw Error('Wait invalido: use 0 a 3600000 ms.');
     }
     await this.input(pid, null, true);
@@ -180,7 +178,6 @@ class WalkerInputRuntime extends EventEmitter {
       if (this.now() - this.lastDispatch < 250) return null;
       if (session.generatedAt === this.lastSnapshotAt) return null;
       this.lastSnapshotAt = session.generatedAt;
-      if (this.engine.waypoints()[this.engine.state.index]?.pos.z !== session.telemetry.position.z) throw Error('Andar mudou durante a rota.');
       const events = [];
       const result = this.engine.step(session.telemetry, { command: (name, value) => events.push({ name, value }) }, this.now());
       if (['stuck', 'floor-mismatch', 'stairs-timeout'].includes(result.reason)) throw Error('Rota interrompida: ' + result.reason);

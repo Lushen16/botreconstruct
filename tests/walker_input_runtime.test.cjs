@@ -139,25 +139,34 @@ test('stale RPM stops execution without dispatch and requires a new start', asyn
   await assert.rejects(value.runtime.togglePause(), /Inicie/);
 });
 
-test('changed PID and floor during a route stop the backend', async () => {
-  for (const field of ['pid', 'floor']) {
-    const value = fixture();
-    await value.start();
-    if (field === 'pid') value.raw.pid = 99;
-    else value.raw.player.pos.z = 8;
-    assert.equal((await value.runtime.tick()).status, 'error');
-    assert.equal(value.sent.length, 1);
-  }
+test('changed PID stops the backend while a floor change keeps the route (z-agnostic)', async () => {
+  const pidChange = fixture();
+  await pidChange.start();
+  pidChange.raw.pid = 99;
+  assert.equal((await pidChange.runtime.tick()).status, 'error');
+  assert.equal(pidChange.sent.length, 1);
+  const floorChange = fixture();
+  await floorChange.start();
+  floorChange.refresh(10300, { x: 100, y: 100, z: 8 });
+  assert.equal((await floorChange.runtime.tick()).status, 'walking');
+  assert.equal(floorChange.runtime.paused, false);
 });
 
-test('unsupported modules, empty routes, different floors and unsupported actions are rejected before focus', async () => {
+test('a walk route declared on another floor is accepted (z-agnostic)', async () => {
+  const value = fixture();
+  value.config.walker.waypoints = [{ action: 'walk', pos: { x: 100, y: 100, z: 8 } }];
+  await value.start();
+  assert.deepEqual(value.runtime.state.modules, ['walker']);
+});
+
+test('unsupported modules, empty routes and unsupported actions are rejected before focus', async () => {
   for (const module of ['target', 'healer', 'all']) {
     const value = fixture();
     await assert.rejects(value.runtime.setModules(module, true, 42, value.config), /somente Walker/);
     assert.equal(value.sent.length, 0);
   }
   for (const route of [[], [{ action: 'say', pos: { x: 100, y: 100, z: 7 }, param: 'text' }],
-    [{ action: 'walk', pos: { x: 100, y: 100, z: 8 } }], [{ action: 'wait', pos: { x: 100, y: 100, z: 7 }, param: 'bad' }]]) {
+    [{ action: 'wait', pos: { x: 100, y: 100, z: 7 }, param: 'bad' }]]) {
     const value = fixture();
     value.config.walker.waypoints = route;
     await assert.rejects(value.start());
