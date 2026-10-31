@@ -118,8 +118,10 @@ def read_entity(read, va, layout, filters):
     x, y, z = struct.unpack("<iih", position)
     if not sc.plausible_coords(x, y, z, filters):
         return None
+    hp_raw = read(va + layout.hp_offset, 1)
+    hp = hp_raw[0] if (hp_raw and len(hp_raw) == 1 and hp_raw[0] <= 100) else 100
     return {"name": name.decode("ascii", "replace"),
-            "pos": {"x": x, "y": y, "z": z}, "struct_va": hex(va)}
+            "pos": {"x": x, "y": y, "z": z}, "hp": hp, "healthPercent": hp, "struct_va": hex(va)}
 
 
 def resolve_chain(read, module_base, chain_rva, offsets, layout, filters):

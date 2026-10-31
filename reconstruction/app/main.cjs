@@ -148,7 +148,10 @@ function startCreatureProvider(python, pid, playerName) {
   child.on('error', error => console.error('creature scanner:', error.message));
   child.on('exit', code => {
     console.error('creature scanner exit:', code);
-    if (creatureProvider === child) creatureProvider = null;
+    if (creatureProvider === child) {
+      creatureProvider = null;
+      creatureProviderAttempt = null;
+    }
   });
 }
 
@@ -166,7 +169,10 @@ function startItemProvider(python, pid, playerName) {
   child.on('error', error => console.error('item scanner:', error.message));
   child.on('exit', code => {
     console.error('item scanner exit:', code);
-    if (itemProvider === child) itemProvider = null;
+    if (itemProvider === child) {
+      itemProvider = null;
+      itemProviderAttempt = null;
+    }
   });
 }
 
@@ -196,10 +202,17 @@ function startLiveProvider() {
       providerStatus({ status: 'error', error: line.slice(0, 2000) });
     });
     liveProvider.on('error', error => { providerStatus({ status: 'error', error: error.message }); liveProvider = null; });
-    liveProvider.on('exit', code => { providerStatus({ status: 'stopped', exitCode: code }); liveProvider = null; });
+    liveProvider.on('exit', code => {
+      providerStatus({ status: 'stopped', exitCode: code });
+      liveProvider = null;
+      livePid = null;
+      creatureProviderAttempt = null;
+      itemProviderAttempt = null;
+    });
   } catch (error) {
-    providerStatus({ status: 'blocked', error: error.message });
+    providerStatus({ status: 'waiting', error: error.message });
     liveProvider = null;
+    livePid = null;
   }
 }
 
@@ -486,6 +499,9 @@ const ready = app.whenReady().then(async () => {
       if (!window || window.isDestroyed()) {
         clearInterval(liveTimer);
         return;
+      }
+      if (!liveProvider && !simEnabled) {
+        startLiveProvider();
       }
       window.webContents.send('pka:snapshot', controller.snapshot());
     }, 1000);

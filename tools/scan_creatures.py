@@ -348,40 +348,43 @@ def stream_snapshot(handle, pid, player_name, output, interval_ms=300, rescan_ms
     threading.Thread(target=rescan, name="creature-rescan", daemon=True).start()
     try:
         while True:
-            current_player = read_entity(handle, state["player_va"], layout)
-            if not plausible_entity(current_player):
-                current_player = read_entity(handle, player_va, layout) or player
-            player_va = state["player_va"]
-            creatures = []
-            for va in list(state["creature_vas"]):
-                if va == player_va:
-                    continue
-                entity = read_entity(handle, va, layout)
-                if not entity or entity["vtable"] != hex(CREATURE_VTABLE):
-                    continue
-                if entity["creatureType"] not in (0, 1, 3, 4):
-                    continue
-                if not plausible_name(entity["name"].encode("ascii", "replace"), filters):
-                    continue
-                if not plausible_coords(entity["pos"]["x"], entity["pos"]["y"], entity["pos"]["z"], filters):
-                    continue
-                entity["ownershipVerified"] = True
-                creatures.append(entity)
-            current_player["ownershipVerified"] = (
-                current_player["creatureType"] == 0
-                and int(current_player["vtable"], 16) != CREATURE_VTABLE
-                and plausible_name(current_player["name"].encode("ascii", "replace"), filters))
-            snapshot = {
-                "schema": 2, "pid": pid, "player": current_player,
-                "layout": {
-                    "id_offset": hex(layout.id_offset), "hp_offset": hex(layout.hp_offset),
-                    "canattack_offset": hex(layout.canattack_offset), "type_offset": hex(layout.type_offset),
-                    "confirmed": Layout.confirmed, "identityProfile": profile,
-                },
-                "creatures": creatures,
-                "generatedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            }
-            _write_json_atomic(output, snapshot)
+            try:
+                current_player = read_entity(handle, state["player_va"], layout)
+                if not plausible_entity(current_player):
+                    current_player = read_entity(handle, player_va, layout) or player
+                player_va = state["player_va"]
+                creatures = []
+                for va in list(state["creature_vas"]):
+                    if va == player_va:
+                        continue
+                    entity = read_entity(handle, va, layout)
+                    if not entity or entity["vtable"] != hex(CREATURE_VTABLE):
+                        continue
+                    if entity["creatureType"] not in (0, 1, 3, 4):
+                        continue
+                    if not plausible_name(entity["name"].encode("ascii", "replace"), filters):
+                        continue
+                    if not plausible_coords(entity["pos"]["x"], entity["pos"]["y"], entity["pos"]["z"], filters):
+                        continue
+                    entity["ownershipVerified"] = True
+                    creatures.append(entity)
+                current_player["ownershipVerified"] = (
+                    current_player["creatureType"] == 0
+                    and int(current_player["vtable"], 16) != CREATURE_VTABLE
+                    and plausible_name(current_player["name"].encode("ascii", "replace"), filters))
+                snapshot = {
+                    "schema": 2, "pid": pid, "player": current_player,
+                    "layout": {
+                        "id_offset": hex(layout.id_offset), "hp_offset": hex(layout.hp_offset),
+                        "canattack_offset": hex(layout.canattack_offset), "type_offset": hex(layout.type_offset),
+                        "confirmed": Layout.confirmed, "identityProfile": profile,
+                    },
+                    "creatures": creatures,
+                    "generatedAt": datetime.datetime.now(datetime.timezone.utc).isoformat(),
+                }
+                _write_json_atomic(output, snapshot)
+            except Exception:
+                pass
             time.sleep(max(0.05, interval_ms / 1000.0))
     except KeyboardInterrupt:
         return 0

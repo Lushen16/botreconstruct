@@ -8,8 +8,10 @@ function rpmSession(raw, now = Date.now()) {
   if (!raw || !Number.isInteger(raw.pid) || raw.pid <= 0 || !isPosition(raw.player?.pos)
       || typeof raw.player.name !== 'string' || !raw.player.name.trim()
       || !Number.isFinite(ageMs) || ageMs < 0) return null;
-  const health = raw.player.healthPercent;
-  const healthPercent = Number.isFinite(health) && health >= 0 && health <= 100 ? health : undefined;
+  const health = Number.isFinite(raw.player?.healthPercent) ? raw.player.healthPercent
+    : Number.isFinite(raw.player?.hp) ? raw.player.hp
+    : 100;
+  const healthPercent = Number.isFinite(health) && health >= 0 && health <= 100 ? health : 100;
   const creaturesAge = now - Date.parse(raw.creaturesGeneratedAt);
   const freshCreatures = Number.isFinite(creaturesAge) && creaturesAge >= 0 && creaturesAge <= 1000;
   return {

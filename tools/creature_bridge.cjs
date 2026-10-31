@@ -11,7 +11,7 @@ const root = path.resolve(__dirname, '..');
 function createCreatureSource(file, options = {}) {
   const absolute = path.resolve(file);
   const now = options.now || Date.now;
-  const maxAgeMs = options.maxAgeMs ?? 1000;
+  const maxAgeMs = options.maxAgeMs ?? 2500;
   let previous = null;
   const fresh = snapshot => {
     const age = now() - Date.parse(snapshot?.generatedAt);

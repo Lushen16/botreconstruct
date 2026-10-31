@@ -6,15 +6,15 @@
   },
   "pid": 38660,
   "image": "C:\\Users\\yago\\AppData\\Local\\PokeAlliance Games\\PokeAlliance\\PokeAlliance_dx.exe",
-  "generatedAt": "2026-10-31T03:24:20.584994+00:00",
+  "generatedAt": "2026-10-31T03:55:32.034894+00:00",
   "player": {
     "name": "Nobutdopai",
     "pos": {
-      "x": 3321,
-      "y": 2266,
+      "x": 3314,
+      "y": 2281,
       "z": 9
     },
-    "struct_va": "0x1ddeb87f060"
+    "struct_va": "0x1ddf55d7d40"
   },
   "creatures": [
     {
